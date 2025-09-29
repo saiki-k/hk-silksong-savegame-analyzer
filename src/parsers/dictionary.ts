@@ -1,4 +1,5 @@
 export type FlagParsingInfo = { type: 'flag'; internalId: string };
+export type FlagMultiParsingInfo = { type: 'flagMulti'; internalId: string[] };
 export type FlagIntParsingInfo = { type: 'flagInt'; internalId: [string, number] };
 export type FlagReturnParsingInfo = { type: 'flagReturn'; internalId: string };
 export type ToolParsingInfo = { type: 'tool'; internalId: string[] };
@@ -8,7 +9,7 @@ export type CollectableParsingInfo = { type: 'collectable'; internalId: string }
 export type RelictParsingInfo = { type: 'relict'; internalId: string };
 export type QuestParsingInfo = { type: 'quest'; internalId: string };
 export type SceneDataParsingInfo = { type: 'sceneData'; internalId: [string, string, boolean?] };
-export type ParsingInfo = FlagParsingInfo | FlagIntParsingInfo | FlagReturnParsingInfo | ToolParsingInfo | JournalParsingInfo | CrestParsingInfo | CollectableParsingInfo | RelictParsingInfo |QuestParsingInfo | SceneDataParsingInfo;
+export type ParsingInfo = FlagParsingInfo | FlagMultiParsingInfo | FlagIntParsingInfo | FlagReturnParsingInfo | ToolParsingInfo | JournalParsingInfo | CrestParsingInfo | CollectableParsingInfo | RelictParsingInfo |QuestParsingInfo | SceneDataParsingInfo;
 
 export type CategoryItem = {
   name: string;
@@ -375,7 +376,7 @@ export const CATEGORIES: CollectableCategory[] = [
       { name: 'Key of Apostate', whichAct: 0, completionPercent: 0, prereqs: [], location: 'Putrified Ducts: Bottom-left: Inside a cage. Hit it a few times to get the key out', parsingInfo: { type: 'flag', internalId: 'HasSlabKeyC' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478963' },
       { name: 'Architects Key', whichAct: 0, completionPercent: 0, prereqs: ['Aquire 25 Tools'], location: 'Underworks: Can be purchased from Twelfth Architect for 110 Rosaries. Used to unlock the Chapel of the Architect', parsingInfo: { type: 'flag', internalId: 'PurchasedArchitectKey' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478729' },
       { name: 'Diving Bell Key', whichAct: 3, completionPercent: 0, prereqs: [], location: 'Deep Docks: Used for the Diving Bell', parsingInfo: { type: 'flag', internalId: 'BallowGivenKey' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479279' },
-      { name: 'White Key', whichAct: 0, completionPercent: 0, prereqs: [], location: 'Songclave: On a corpse at the edge of the area. Sold by Jubilana if you dont pick it up before completing The Wandering Merchant Wish. Unlocks the Locked Elevator in Whiteward', parsingInfo: { type: 'flag', internalId: 'collectedWardKey' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478599' },
+      { name: 'White Key', whichAct: 0, completionPercent: 0, prereqs: [], location: 'Songclave: On a corpse at the edge of the area. Sold by Jubilana if you dont pick it up before completing The Wandering Merchant Wish. Unlocks the Locked Elevator in Whiteward', parsingInfo: { type: 'flagMulti', internalId: ['collectedWardKey','MerchantEnclaveWardKey'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478599' },
       { name: 'Surgeons Key', whichAct: 0, completionPercent: 0, prereqs: ['Clawline'], location: 'Whiteward: Top-Right: Dangle from a metal ring for a few seconds, and a corpse will eventually appear holding this key. Used to open locked trapdoor in Whiteward', parsingInfo: { type: 'flag', internalId: 'collectedWardBossKey' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478923' },
   ],
   },
@@ -631,6 +632,16 @@ export function isItemUnlockedInPlayerSave(itemParsingInfo: ParsingInfo, saveDat
     flag: (flagName: string) => {
       const val = !!playerData[flagName];
       return { unlocked: val };
+    },
+    flagMulti: (flagNames: string[]) => {
+      let unlocked = false;
+      for (const flagName of flagNames) {
+        if (!!playerData[flagName]) {
+          unlocked = true;
+          break;
+        }
+      }
+      return { unlocked };
     },
     flagInt: ([flagName, value]: [string, number]) => {
       const actual = playerData[flagName] ?? 0;
