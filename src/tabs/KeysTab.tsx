@@ -16,7 +16,6 @@ export function KeysTab({ parsedJson, decrypted }: TabRenderProps) {
   return (
     <div className="text-white">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-2xl font-bold mb-4">WORK IN PROGRESS</h2>
         <table className="w-full table-auto border-collapse divide-y divide-gray-600">
           <thead>
             <tr className="text-left">
