@@ -362,7 +362,7 @@ export const CATEGORIES: CollectableCategory[] = [
       { name: 'Nyleth',                     whichAct: 3, completionPercent: 0, prereqs: [], location: 'Section behind a breakable wall on the left of the elevator shaft of the Grand Gate.' , parsingInfo: { type: 'flag', internalId: 'defeatedFlowerQueen' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479404' },
       { name: 'Skarrsinger Karmelita',      whichAct: 3, completionPercent: 0, prereqs: ['Elegy Of The Deep','Silk Soar'], location: ' Can be found in the northeast of Far Fields.', parsingInfo: { type: 'flag', internalId: 'defeatedAntQueen' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479198' },
       { name: 'Crust King Khann',           whichAct: 3, completionPercent: 0, prereqs: ['Elegy Of The Deep'], location: 'Can be found in the Coral Tower, Northeast in Sand of Karak.', parsingInfo: { type: 'flag', internalId: 'defeatedCoralKing' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479392' },
-      { name: 'Summoned Saviour',           whichAct: 3, completionPercent: 0, prereqs: [], location: 'Can be found in the extreme bottom left of Bonegrave behind a breakable wall, a sub area of Moss Grotto.', parsingInfo: { type: 'journal', internalId: ['Abyss Mass', 1] }, mapLink:  'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479494'},
+      { name: 'Summoned Saviour',           whichAct: 3, completionPercent: 0, prereqs: [], location: 'Can be found in the extreme bottom left of Bonegrave behind a breakable wall, a sub area of Moss Grotto.', parsingInfo: { type: 'journal', internalId: ['Abyss Mass', 1] }, mapLink:  'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479740'},
       { name: 'Lost Lace',                  whichAct: 3, completionPercent: 0, prereqs: [], location: 'Located in The Abyss, under the vast Void Ocean that lies within.', parsingInfo: { type: 'journal', internalId:['Lost Lace', 1] }, mapLink:  'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479471'},
     ]
   },
@@ -713,3 +713,4 @@ export function isItemUnlockedInPlayerSave(itemParsingInfo: ParsingInfo, saveDat
   // @ts-ignore
   return typeHandlers[itemParsingInfo.type](itemParsingInfo.internalId);
 }
+
