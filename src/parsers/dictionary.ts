@@ -114,8 +114,8 @@ export const CATEGORIES: CollectableCategory[] = [
 
       // Silk Hearts
       { name: 'Silk Heart 1', section: 'Silk Hearts', whichAct: 1, completionPercent: 1, prereqs: ['Silkspear'], location: 'The Marrow: Defeat the Bell Beast', parsingInfo: { type: 'sceneVisited', internalId: 'Memory_Silk_Heart_BellBeast' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477879' },
-      { name: 'Silk Heart 2', section: 'Silk Hearts', whichAct: 0, completionPercent: 1, prereqs: [], location: 'Whiteward: Defeat The Unravelled (behind locked trapdoor. Requires Surgeons Key', parsingInfo: { type: 'sceneVisited', internalId:'Memory_Silk_Heart_WardBoss' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479082' },
-      { name: 'Silk Heart 3', section: 'Silk Hearts', whichAct: 0, completionPercent: 1, prereqs: [], location: 'The Cradle: Defeat Lace', parsingInfo: { type: 'sceneVisited', internalId:'Memory_Silk_Heart_LaceTower' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479089' },
+      { name: 'Silk Heart 2', section: 'Silk Hearts', whichAct: 2, completionPercent: 1, prereqs: [], location: 'Whiteward: Defeat The Unravelled (behind locked trapdoor. Requires Surgeons Key', parsingInfo: { type: 'sceneVisited', internalId:'Memory_Silk_Heart_WardBoss' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479082' },
+      { name: 'Silk Heart 3', section: 'Silk Hearts', whichAct: 2, completionPercent: 1, prereqs: [], location: 'The Cradle: Defeat Lace', parsingInfo: { type: 'sceneVisited', internalId:'Memory_Silk_Heart_LaceTower' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479089' },
   ],
   },
   {
@@ -731,4 +731,5 @@ export function isItemUnlockedInPlayerSave(itemParsingInfo: ParsingInfo, saveDat
   // @ts-ignore
   return typeHandlers[itemParsingInfo.type](itemParsingInfo.internalId);
 }
+
 
