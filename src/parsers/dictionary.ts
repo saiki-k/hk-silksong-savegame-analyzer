@@ -9,7 +9,8 @@ export type CollectableParsingInfo = { type: 'collectable'; internalId: string }
 export type RelictParsingInfo = { type: 'relict'; internalId: string };
 export type QuestParsingInfo = { type: 'quest'; internalId: string };
 export type SceneDataParsingInfo = { type: 'sceneData'; internalId: [string, string, boolean?] };
-export type ParsingInfo = FlagParsingInfo | FlagMultiParsingInfo | FlagIntParsingInfo | FlagReturnParsingInfo | ToolParsingInfo | JournalParsingInfo | CrestParsingInfo | CollectableParsingInfo | RelictParsingInfo |QuestParsingInfo | SceneDataParsingInfo;
+export type SceneVistedParsingInfo = { type: 'sceneVisited'; internalId: string };
+export type ParsingInfo = FlagParsingInfo | FlagMultiParsingInfo | FlagIntParsingInfo | FlagReturnParsingInfo | ToolParsingInfo | JournalParsingInfo | CrestParsingInfo | CollectableParsingInfo | RelictParsingInfo |QuestParsingInfo | SceneDataParsingInfo | SceneVistedParsingInfo;
 
 export type CategoryItem = {
   name: string;
@@ -100,10 +101,10 @@ export const CATEGORIES: CollectableCategory[] = [
       { name: 'Needle Upgrade 4 (Pale Steel Needle)', section: 'Needle Upgrades', whichAct: 3, completionPercent: 1, prereqs: [], location: 'Bellhart: Complete Ecstasy of the End Wish (Appears on the notice board in Bellhart ACT 3 after finding every Lost Flea). Speak to Plinney and pay 680 Rosaries', parsingInfo: { type: 'flagInt', internalId: ['nailUpgrades',4] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479444' },
 
       // Tool Pouch Upgrades
-      { name: 'Tool Pouch Upgrade 1', section: 'Tool Pouch Upgrades', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Far Fields: Pilgrims Rest, purchased from Mort for 220 Rosaries', parsingInfo: { type: 'flagInt', internalId: ['ToolPouchUpgrades',1] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477946' },
+      { name: 'Tool Pouch Upgrade 1', section: 'Tool Pouch Upgrades', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Far Fields: Pilgrims Rest, purchased from Mort for 220 Rosaries', parsingInfo: { type: 'flag', internalId: 'PurchasedPilgrimsRestToolPouch' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477946' },
       { name: 'Tool Pouch Upgrade 2', section: 'Tool Pouch Upgrades', whichAct: 1, completionPercent: 1, prereqs: [], location: 'The Marrow: Complete Loddies first challenge by hitting the target 15 times, or find it here in Act 3', parsingInfo: { type: 'flagInt', internalId: ['ToolPouchUpgrades',2] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478252' },
-      { name: 'Tool Pouch Upgrade 3', section: 'Tool Pouch Upgrades', whichAct: 2, completionPercent: 1, prereqs: [], location: 'Greymoor: Halfway Home, complete Bugs of Pharloom Wish', parsingInfo: { type: 'flagInt', internalId: ['ToolPouchUpgrades',3] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479167' },
-      { name: 'Tool Pouch Upgrade 4', section: 'Tool Pouch Upgrades', whichAct: 2, completionPercent: 1, prereqs: [], location: 'Putrified Ducts: Fleatopia, find 20 Lost Fleas in Pharloom', parsingInfo: { type: 'flagInt', internalId: ['ToolPouchUpgrades',4] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479436' },
+      { name: 'Tool Pouch Upgrade 3', section: 'Tool Pouch Upgrades', whichAct: 2, completionPercent: 1, prereqs: [], location: 'Greymoor: Halfway Home, complete Bugs of Pharloom Wish', parsingInfo: { type: 'quest', internalId: 'Journal' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479167' },
+      { name: 'Tool Pouch Upgrade 4', section: 'Tool Pouch Upgrades', whichAct: 2, completionPercent: 1, prereqs: [], location: 'Putrified Ducts: Fleatopia, find 20 Lost Fleas in Pharloom', parsingInfo: { type: 'quest', internalId: 'Save the Fleas' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479436' },
 
       // Crafting Kit Upgrades
       { name: 'Crafting Kit Upgrade 1', section: 'Crafting Kit Upgrades', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Deep Docks: Can be purchased from Forge Daughter for 180 Rosaries', parsingInfo: { type: 'flag', internalId: 'PurchasedForgeToolKit' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477919' },
@@ -112,9 +113,9 @@ export const CATEGORIES: CollectableCategory[] = [
       { name: 'Crafting Kit Upgrade 4', section: 'Crafting Kit Upgrades', whichAct: 2, completionPercent: 1, prereqs: [], location: 'Underworks: Purchased from Twelfth Architect for 450 Rosaries', parsingInfo: { type: 'flag', internalId: 'PurchasedArchitectToolKit' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478728' },
 
       // Silk Hearts
-      { name: 'Silk Heart 1', section: 'Silk Hearts', whichAct: 1, completionPercent: 1, prereqs: ['Silkspear'], location: 'The Marrow: Defeat the Bell Beast', parsingInfo: { type: 'flagInt', internalId: ['silkRegenMax',1] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477879' },
-      { name: 'Silk Heart 2', section: 'Silk Hearts', whichAct: 0, completionPercent: 1, prereqs: [], location: 'Whiteward: Defeat The Unravelled (behind locked trapdoor. Requires Surgeons Key', parsingInfo: { type: 'flagInt', internalId: ['silkRegenMax',2] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479082' },
-      { name: 'Silk Heart 3', section: 'Silk Hearts', whichAct: 0, completionPercent: 1, prereqs: [], location: 'The Cradle: Defeat Lace', parsingInfo: { type: 'flagInt', internalId: ['silkRegenMax',3] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479089' },
+      { name: 'Silk Heart 1', section: 'Silk Hearts', whichAct: 1, completionPercent: 1, prereqs: ['Silkspear'], location: 'The Marrow: Defeat the Bell Beast', parsingInfo: { type: 'sceneVisited', internalId: 'Memory_Silk_Heart_BellBeast' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477879' },
+      { name: 'Silk Heart 2', section: 'Silk Hearts', whichAct: 0, completionPercent: 1, prereqs: [], location: 'Whiteward: Defeat The Unravelled (behind locked trapdoor. Requires Surgeons Key', parsingInfo: { type: 'sceneVisited', internalId:'Memory_Silk_Heart_WardBoss' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479082' },
+      { name: 'Silk Heart 3', section: 'Silk Hearts', whichAct: 0, completionPercent: 1, prereqs: [], location: 'The Cradle: Defeat Lace', parsingInfo: { type: 'sceneVisited', internalId:'Memory_Silk_Heart_LaceTower' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479089' },
   ],
   },
   {
@@ -723,9 +724,11 @@ export function isItemUnlockedInPlayerSave(itemParsingInfo: ParsingInfo, saveDat
       const match = allEntries.find((x: any) => x.SceneName === sceneName && x.ID === Id);
       return { unlocked: inverse ? match?.Value === false : match?.Value === true };
     },
+    sceneVisited: (sceneName: string) => {
+      return { unlocked: !!playerData?.scenesVisited?.includes(sceneName) };
+    },
   };
   // @ts-ignore
   return typeHandlers[itemParsingInfo.type](itemParsingInfo.internalId);
 }
-
 
