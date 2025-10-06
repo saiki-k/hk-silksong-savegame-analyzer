@@ -316,6 +316,20 @@ export const CATEGORIES: CollectableCategory[] = [
       { name: 'Memory Locket 20', whichAct: 2, completionPercent: 0, prereqs: [], location: 'Sands of Karak: Held by a corpse at the top of the area', parsingInfo: { type: 'sceneData', internalId: ['Coral_23', 'Collectable Item Pickup'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479204' },
   ],
   },
+   {
+    name: 'Craftmetals',
+    description: 'Craftmetals',
+    items: [
+      { name: 'Craftmetal 1', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Bone Bottom: Can be bought from Pebb for 60 rosaries', parsingInfo: { type: 'flag', internalId: 'PurchasedBonebottomToolMetal' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477838' },
+      { name: 'Craftmetal 2', whichAct: 1, completionPercent: 0, prereqs: [], location: 'The Marrow: At the end of a boobytrapped tunnel in the Secret Room', parsingInfo: { type: 'sceneData', internalId: ['Bone_07', 'Collectable Item Pickup - Tool Metal'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477894' },
+      { name: 'Craftmetal 3', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Deep Docks: Inside a chest behind the blockade. Whack it, or get one of the nearby enemies explosive projectiles to clear it', parsingInfo: { type: 'sceneData', internalId: ['Dock_03', 'Collectable Item Pickup'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477937' },
+      { name: 'Craftmetal 4', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Blasted Steps: At the end of a Passage filled with worms and falling rocks', parsingInfo: { type: 'sceneData', internalId: ['Coral_32', 'Collectable Item Pickup - Tool Metal'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478541' },
+      { name: 'Craftmetal 5', whichAct: 2, completionPercent: 0, prereqs: [], location: 'Underworks: At the end of a lava-filled tunnel. Taking it will trigger an Undercrank ambush', parsingInfo: { type: 'sceneData', internalId: ['Under_19b', 'Collectable Item Pickup - Tool Metal'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478711' },
+      { name: 'Craftmetal 6', whichAct: 2, completionPercent: 0, prereqs: ['Faydown Cloak'], location: 'Putrified Ducts: Far-right of Pale Lake, in a crevice above the water', parsingInfo: { type: 'sceneData', internalId: ['Aqueduct_05', 'Collectable Item Pickup - Tool Metal'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479139' },
+      { name: 'Craftmetal 7', whichAct: 2, completionPercent: 0, prereqs: [], location: 'Wisp Thicket: At the end of a hidden path, found in the top-left part of the area filled with fire wisp spawners', parsingInfo: { type: 'sceneData', internalId: ['Wisp_05', 'Collectable Item Pickup - Tool Metal'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479157' },
+      { name: 'Craftmetal 8', whichAct: 2, completionPercent: 0, prereqs: [], location: 'Songclave: Can be purchased from Jubilana for 180 Rosaries. Need to complete The Lost Merchant Wish', parsingInfo: { type: 'flag', internalId: 'MerchantEnclaveToolMetal' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479250' },
+  ],
+  },
   {
     name: 'Bosses',
     description: 'Bosses',

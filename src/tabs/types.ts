@@ -11,6 +11,7 @@ export type TabId =
   | "Relics"
   | "Fleas"
   | "Memory Lockets"
+  | "Craftmetals"
   | "Keys"
   | "Bosses"
   | "Hunters Journal"
