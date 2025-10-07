@@ -37,12 +37,8 @@ export function BossesTab({ parsedJson, decrypted }: TabRenderProps) {
                   <td className="px-2 py-1 text-center w-[56px] align-middle">
                     <span className="text-xs text-blue-200 mt-1 font-normal"/>
                   </td>
-                  <td className={`px-2 py-1 max-w-[120px] truncate 
-                    ${!unlocked ? "blur-sm hover:blur-none transition duration-100" : ""}`}
-                  >
-                    {item.name}
-                  </td>
-                  <td className={`px-2 py-1 relative relative min-w-[140px] max-w-[260px] break-words whitespace-pre-line 
+                  <td className={`px-2 py-1 break-words whitespace-pre-line ${!unlocked ? "blur-sm hover:blur-none transition duration-100" : ""}`}>{item.name}</td>
+                  <td className={`px-2 py-1 relative min-w-[140px] max-w-[260px] break-words whitespace-pre-line 
                       ${!unlocked ? "blur-sm hover:blur-none transition duration-100" : ""}`}>
                     {item.location || "TODO"}
                   </td>

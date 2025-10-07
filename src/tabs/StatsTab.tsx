@@ -32,14 +32,18 @@ export function StatsTab({ parsedJson, decrypted }: TabRenderProps) {
             <tbody>
               {stats.map((item, index) => {
                 const { returnValue } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
-                let displayValue: string | number | undefined = returnValue;
-                if (item.name.toLowerCase() === 'playtime' && typeof returnValue === 'number') {
+                let displayValue = '';
+                if (item.name === 'Steel Soul Mode') {
+                  displayValue = returnValue === 1 ? 'Yes' : returnValue === 0 ? 'No' : '';
+                } else if (item.name.toLowerCase() === 'playtime' && typeof returnValue === 'number') {
                   displayValue = formatSecondsToHMS(returnValue);
+                } else if (returnValue !== undefined) {
+                  displayValue = String(returnValue);
                 }
                 return (
                   <tr key={index} className="border-b border-gray-700 last:border-b-0">      
-                    <td className="px-2 py-1 truncate whitespace-nowrap">{item.name}</td>
-                    <td className="px-2 py-1 w-[100px] text-center whitespace-nowrap">{displayValue !== undefined ? String(displayValue) : ''}</td>
+                    <td className="px-2 py-1 whitespace-nowrap">{item.name}</td>
+                    <td className="px-2 py-1 w-[100px] text-center whitespace-nowrap">{displayValue}</td>
                   </tr>
                 );
               })}

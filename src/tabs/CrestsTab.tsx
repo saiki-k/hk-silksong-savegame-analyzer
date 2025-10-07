@@ -44,7 +44,7 @@ export function CrestsTab({ parsedJson, decrypted }: TabRenderProps) {
                       {item.completionPercent ? `+${item.completionPercent}%` : ""}
                     </span>
                   </td>
-                  <td className="px-2 py-1 min-w-[120px] max-w-[220px] truncate">{item.name}</td>
+                  <td className="px-2 py-1 break-words whitespace-pre-line">{item.name}</td>
                   <td className={`px-2 py-1 relative min-w-[140px] max-w-[260px] break-words whitespace-pre-line 
                       ${!unlocked ? "blur-sm hover:blur-none transition duration-100" : ""}`}>
                     {item.location}
