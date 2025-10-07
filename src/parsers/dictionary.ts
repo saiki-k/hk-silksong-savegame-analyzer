@@ -94,11 +94,16 @@ export const CATEGORIES: CollectableCategory[] = [
     name: 'Upgrades',
     description: 'Each Upgrade Counts 1% towards completion',
     items: [
+
       // Needle Upgrades
       { name: 'Needle Upgrade 1 (Sharpened Needle)', section: 'Needle Upgrades', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Bellhart: Speak to Plinney after defeating Widow', parsingInfo: { type: 'flagInt', internalId: ['nailUpgrades',1] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478210' },
       { name: 'Needle Upgrade 2 (Shining Needle)', section: 'Needle Upgrades', whichAct: 2, completionPercent: 1, prereqs: [], location: 'Bellhart: Get Pale Oil by completingthe Pinmasters Oil Wish. Speak to Plinney and give him the Pale Oil', parsingInfo: { type: 'flagInt', internalId: ['nailUpgrades',2] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478211' },
       { name: 'Needle Upgrade 3 (Hivesteel Needle)', section: 'Needle Upgrades', whichAct: 2, completionPercent: 1, prereqs: [], location: 'Bellhart: Get Pale Oil by completing the Great Taste of Pharloom Wish. Speak to Plinney and pay 450 Rosaries + 1 Pale Oil', parsingInfo: { type: 'flagInt', internalId: ['nailUpgrades',3] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478889' },
       { name: 'Needle Upgrade 4 (Pale Steel Needle)', section: 'Needle Upgrades', whichAct: 3, completionPercent: 1, prereqs: [], location: 'Bellhart: Complete Ecstasy of the End Wish (Appears on the notice board in Bellhart ACT 3 after finding every Lost Flea). Speak to Plinney and pay 680 Rosaries', parsingInfo: { type: 'flagInt', internalId: ['nailUpgrades',4] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479444' },
+
+      // Cloak Upgrades
+      { name: 'Drifters Cloak (Glide)', section: 'Cloak Upgrades', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Far Fields: Complete Seamstress Wish Flexile Spines', parsingInfo: { type: 'flag', internalId: 'hasBrolly' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477971' },
+      { name: 'Faydown Cloak (Double Jump)', section: 'Cloak Upgrades',whichAct: 2, completionPercent: 0, prereqs: ['Needoline','Clawline'], location: 'Top of Mount Fay', parsingInfo: { type: 'flag', internalId: 'hasDoubleJump' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479103' },
 
       // Tool Pouch Upgrades
       { name: 'Tool Pouch Upgrade 1', section: 'Tool Pouch Upgrades', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Far Fields: Pilgrims Rest, purchased from Mort for 220 Rosaries', parsingInfo: { type: 'flag', internalId: 'PurchasedPilgrimsRestToolPouch' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477946' },
@@ -212,12 +217,10 @@ export const CATEGORIES: CollectableCategory[] = [
     description: 'Each Crest counts 1% towards completion (except Hunter Crest)',
     items: [
       { name: 'Swift Step (Dash / Sprint)', whichAct: 1, completionPercent: 1, prereqs: [], location: 'At the top of Deep Rocks', parsingInfo: { type: 'flag', internalId: 'hasDash' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477915' },
-      { name: 'Drifters Cloak (Glide)', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Far Fields: Complete Seamstress Wish Flexile Spines', parsingInfo: { type: 'flag', internalId: 'hasBrolly' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477971' },
       { name: 'Clawline (Needle Harpoon)', whichAct: 2, completionPercent: 1, prereqs: [], location: 'In The Cauldron (right side from Underworks', parsingInfo: { type: 'flag', internalId: 'hasHarpoonDash' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478714' },
       { name: 'Cling Grip (Walljump)', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Shellwood', parsingInfo: { type: 'flag', internalId: 'hasWalljump' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478189' },
       { name: 'Needolin', whichAct: 1, completionPercent: 1, prereqs: [], location: 'On Top of Bellhart (Deafeat Widow)', parsingInfo: { type: 'flag', internalId: 'hasNeedolin' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478199' },
       { name: 'Needle Strike', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Blasted Steps far left', parsingInfo: { type: 'flag', internalId: 'hasChargeSlash' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478510' },
-      { name: 'Faydown Cloak (Double Jump)', whichAct: 2, completionPercent: 0, prereqs: ['Needoline','Clawline'], location: 'Top of Mount Fay', parsingInfo: { type: 'flag', internalId: 'hasDoubleJump' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479103' },
       { name: 'Silk Soar (Highjump)', whichAct: 3, completionPercent: 1, prereqs: [], location: 'Bottom right of the abyss', parsingInfo: { type: 'flag', internalId: 'hasSuperJump' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479288' },
       { name: 'Sylphsong', whichAct: 2, completionPercent: 1, prereqs: [], location: 'Use 18 Memory Lockets and bind Eva', parsingInfo: { type: 'flag', internalId: 'HasBoundCrestUpgrader' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479654' },
       { name: 'Everbloom', whichAct: 3, completionPercent: 1, prereqs: [], location: 'Complete The Old Hearts wish', parsingInfo: { type: 'collectable', internalId: 'White Flower' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479387' },
