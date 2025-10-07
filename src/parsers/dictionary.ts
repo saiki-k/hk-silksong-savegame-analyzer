@@ -93,7 +93,7 @@ export const CATEGORIES: CollectableCategory[] = [
   },
     {
     name: 'Upgrades',
-    description: 'Each Upgrade Counts 1% towards completion',
+    description: 'Each Upgrade Counts 1% towards completion. Except for the Cloak Upgrades',
     items: [
 
       // Needle Upgrades
@@ -215,7 +215,7 @@ export const CATEGORIES: CollectableCategory[] = [
   },
   {
     name: 'Ancestral Arts',
-    description: 'Each Crest counts 1% towards completion (except Hunter Crest)',
+    description: 'Each Ancestral Art counts 1% towards completion',
     items: [
       { name: 'Swift Step (Dash / Sprint)', whichAct: 1, completionPercent: 1, prereqs: [], location: 'At the top of Deep Rocks', parsingInfo: { type: 'flag', internalId: 'hasDash' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477915' },
       { name: 'Clawline (Needle Harpoon)', whichAct: 2, completionPercent: 1, prereqs: [], location: 'In The Cauldron (right side from Underworks', parsingInfo: { type: 'flag', internalId: 'hasHarpoonDash' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478714' },
