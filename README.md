@@ -21,5 +21,5 @@ http://silksong-completionist.com/
 Big thank you to:  
 Greatly inspired by: https://reznormichael.github.io/hollow-knight-completion-check/ (RIP)  
 Savegame decypher code from: https://martinshift.github.io/silksaver/  
-Help with the code and filling in all the savegame data: [@theezeb](https://github.com/theezeb), [@btastic](https://github.com/btastic), [@TheSaneWriter](https://github.com/TheSaneWriter)  
+Help with the code and filling in all the savegame data: [@theezeb](https://github.com/theezeb), [@btastic](https://github.com/btastic), [@TheSaneWriter](https://github.com/TheSaneWriter), [@saiki-k](https://github.com/saiki-k)  
 Huge help for what counts towards the 100%: https://www.reddit.com/r/Silksong/comments/1ng54do/list_of_requirements_to_get_100_completion/
