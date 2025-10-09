@@ -11,6 +11,7 @@ export type QuestParsingInfo = { type: 'quest'; internalId: string };
 export type SceneDataParsingInfo = { type: 'sceneData'; internalId: [string, string, boolean?] };
 export type SceneVistedParsingInfo = { type: 'sceneVisited'; internalId: string };
 export type ParsingInfo = FlagParsingInfo | FlagMultiParsingInfo | FlagIntParsingInfo | FlagReturnParsingInfo | ToolParsingInfo | JournalParsingInfo | CrestParsingInfo | CollectableParsingInfo | RelictParsingInfo |QuestParsingInfo | SceneDataParsingInfo | SceneVistedParsingInfo;
+export type ParsingInfoMulti = ParsingInfo[];
 
 export type CategoryItem = {
   name: string;
@@ -19,7 +20,7 @@ export type CategoryItem = {
   completionPercent: number;
   prereqs: string[];
   location: string;
-  parsingInfo: ParsingInfo;
+  parsingInfo: ParsingInfo | ParsingInfoMulti;
   mapLink: string;
   killsRequired?: number;
 };
@@ -108,7 +109,7 @@ export const CATEGORIES: CollectableCategory[] = [
 
       // Tool Pouch Upgrades
       { name: 'Tool Pouch Upgrade 1', section: 'Tool Pouch Upgrades', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Far Fields: Pilgrims Rest, purchased from Mort for 220 Rosaries', parsingInfo: { type: 'flag', internalId: 'PurchasedPilgrimsRestToolPouch' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477946' },
-      { name: 'Tool Pouch Upgrade 2', section: 'Tool Pouch Upgrades', whichAct: 1, completionPercent: 1, prereqs: [], location: 'The Marrow: Complete Loddies first challenge by hitting the target 15 times, or find it here in Act 3', parsingInfo: { type: 'flagInt', internalId: ['pinGalleriesCompleted',1] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478252' },
+      { name: 'Tool Pouch Upgrade 2', section: 'Tool Pouch Upgrades', whichAct: 1, completionPercent: 1, prereqs: [], location: 'The Marrow: Complete Loddies first challenge by hitting the target 15 times, or find it here in Act 3', parsingInfo: [{ type: 'flagInt', internalId: ['pinGalleriesCompleted',1] }, { type: 'sceneData', internalId: ['Bone_12', 'Ladybug Craft Pickup'] }], mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478252' },
       { name: 'Tool Pouch Upgrade 3', section: 'Tool Pouch Upgrades', whichAct: 2, completionPercent: 1, prereqs: [], location: 'Greymoor: Halfway Home, complete Bugs of Pharloom Wish', parsingInfo: { type: 'quest', internalId: 'Journal' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479167' },
       { name: 'Tool Pouch Upgrade 4', section: 'Tool Pouch Upgrades', whichAct: 2, completionPercent: 1, prereqs: [], location: 'Putrified Ducts: Fleatopia, find 20 Lost Fleas in Pharloom', parsingInfo: { type: 'sceneData', internalId: ['Aqueduct_05','Caravan Troupe Leader Fleatopia NPC'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479436' },
 
@@ -648,7 +649,24 @@ export const CATEGORIES: CollectableCategory[] = [
 ];
 
 // Check if a category item is unlocked in the save data
-export function isItemUnlockedInPlayerSave(itemParsingInfo: ParsingInfo, saveData: any): { unlocked: boolean, returnValue?: number } {
+export function isItemUnlockedInPlayerSave(itemParsingInfo: ParsingInfo | ParsingInfoMulti, saveData: any): { unlocked: boolean, returnValue?: number } {
+  // Handle ParsingInfoMulti
+  if (Array.isArray(itemParsingInfo)) {
+    let unlocked = false;
+    let returnValue: number | undefined;
+
+    for (const parsingInfo of itemParsingInfo) {
+      const result = isItemUnlockedInPlayerSave(parsingInfo, saveData);
+      if (result.unlocked) {
+        unlocked = true;
+        returnValue = result.returnValue;
+        break;
+      }
+    }
+
+    return { unlocked, returnValue };
+  }
+
   const playerData = saveData.playerData ?? {};
   const typeHandlers = {
     flag: (flagName: string) => {
