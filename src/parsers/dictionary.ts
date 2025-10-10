@@ -44,11 +44,11 @@ export const CATEGORIES: CollectableCategory[] = [
   },
   {
     name: 'Mask Shards',
-    description: 'Each mask shard counts 0.25% towards completion.',
+    description: 'Each Mask Shard counts 0.25% towards completion.',
     items: [
       { name: 'Mask Shard 1', whichAct: 1, completionPercent: 0.25, prereqs: [], location: 'Purchased from Bonebottom', parsingInfo: { type: 'flag', internalId: 'PurchasedBonebottomHeartPiece' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477840' },
       { name: 'Mask Shard 2', whichAct: 1, completionPercent: 0.25, prereqs: ['Swift Step'], location: 'Behind a breakable wall in the Wormways', parsingInfo: { type: 'sceneData', internalId: ['Crawl_02', 'Heart Piece'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478091' },
-      { name: 'Mask Shard 3', whichAct: 1, completionPercent: 0.25, prereqs: ['Drifters cloak'], location: 'Left of the seamstress', parsingInfo: { type: 'sceneData', internalId: ['Bone_East_20', 'Heart Piece'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477975' },
+      { name: 'Mask Shard 3', whichAct: 1, completionPercent: 0.25, prereqs: ['Drifter\'s Cloak'], location: 'Left of the seamstress', parsingInfo: { type: 'sceneData', internalId: ['Bone_East_20', 'Heart Piece'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477975' },
       { name: 'Mask Shard 4', whichAct: 1, completionPercent: 0.25, prereqs: [], location: 'At the end of a parkour section in Shellwood', parsingInfo: { type: 'sceneData', internalId: ['Shellwood_14', 'Heart Piece'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478177' },
       { name: 'Mask Shard 5', whichAct: 1, completionPercent: 0.25, prereqs: ['Cling Grip'], location: 'Near the Deep Docks entrance in the Marrow', parsingInfo: { type: 'sceneData', internalId: ['Dock_08', 'Heart Piece'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477901' },
       { name: 'Mask Shard 6', whichAct: 1, completionPercent: 0.25, prereqs: ['Needolin'], location: 'Behind a breakable wall in Weavenest Atla', parsingInfo: { type: 'sceneData', internalId: ['Weave_05b', 'Heart Piece'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478233' },
@@ -94,18 +94,17 @@ export const CATEGORIES: CollectableCategory[] = [
   },
     {
     name: 'Upgrades',
-    description: 'Each Upgrade Counts 1% towards completion. Except for the Cloak Upgrades',
+    description: 'Each Upgrade (except for the Cloak Upgrades) counts 1% towards completion.',
     items: [
+      // Cloak Upgrades
+      { name: 'Drifter\'s Cloak (Glide)', section: 'Cloak Upgrades', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Far Fields: Complete Seamstress Wish Flexile Spines', parsingInfo: { type: 'flag', internalId: 'hasBrolly' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477971' },
+      { name: 'Faydown Cloak (Double Jump)', section: 'Cloak Upgrades',whichAct: 2, completionPercent: 0, prereqs: ['Needoline','Clawline'], location: 'Top of Mount Fay', parsingInfo: { type: 'flag', internalId: 'hasDoubleJump' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479103' },
 
       // Needle Upgrades
       { name: 'Needle Upgrade 1 (Sharpened Needle)', section: 'Needle Upgrades', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Bellhart: Speak to Plinney after defeating Widow', parsingInfo: { type: 'flagInt', internalId: ['nailUpgrades',1] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478210' },
       { name: 'Needle Upgrade 2 (Shining Needle)', section: 'Needle Upgrades', whichAct: 2, completionPercent: 1, prereqs: [], location: 'Bellhart: Get Pale Oil by completingthe Pinmasters Oil Wish. Speak to Plinney and give him the Pale Oil', parsingInfo: { type: 'flagInt', internalId: ['nailUpgrades',2] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478211' },
       { name: 'Needle Upgrade 3 (Hivesteel Needle)', section: 'Needle Upgrades', whichAct: 2, completionPercent: 1, prereqs: [], location: 'Bellhart: Get Pale Oil by completing the Great Taste of Pharloom Wish. Speak to Plinney and pay 450 Rosaries + 1 Pale Oil', parsingInfo: { type: 'flagInt', internalId: ['nailUpgrades',3] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478889' },
       { name: 'Needle Upgrade 4 (Pale Steel Needle)', section: 'Needle Upgrades', whichAct: 3, completionPercent: 1, prereqs: [], location: 'Bellhart: Complete Ecstasy of the End Wish (Appears on the notice board in Bellhart ACT 3 after finding every Lost Flea). Speak to Plinney and pay 680 Rosaries', parsingInfo: { type: 'flagInt', internalId: ['nailUpgrades',4] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479444' },
-
-      // Cloak Upgrades
-      { name: 'Drifters Cloak (Glide)', section: 'Cloak Upgrades', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Far Fields: Complete Seamstress Wish Flexile Spines', parsingInfo: { type: 'flag', internalId: 'hasBrolly' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477971' },
-      { name: 'Faydown Cloak (Double Jump)', section: 'Cloak Upgrades',whichAct: 2, completionPercent: 0, prereqs: ['Needoline','Clawline'], location: 'Top of Mount Fay', parsingInfo: { type: 'flag', internalId: 'hasDoubleJump' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479103' },
 
       // Tool Pouch Upgrades
       { name: 'Tool Pouch Upgrade 1', section: 'Tool Pouch Upgrades', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Far Fields: Pilgrims Rest, purchased from Mort for 220 Rosaries', parsingInfo: { type: 'flag', internalId: 'PurchasedPilgrimsRestToolPouch' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477946' },
@@ -127,9 +126,9 @@ export const CATEGORIES: CollectableCategory[] = [
   },
   {
     name: 'Tools',
-    description: 'Nearly every Tool counts 1% towards completion.',
+    description: 'Every Tool (with a couple of exceptions) counts 1% towards completion.',
     items: [
-      //White Tools
+      // White Tools
       { name: 'Silkspear', section: 'Silk Skills', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Mossgrotto: Mosshome', parsingInfo: { type: 'tool', internalId: ['Silk Spear'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477871' },
       { name: 'Thread Storm', section: 'Silk Skills', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Greymoore: Top of Craw Lake', parsingInfo: { type: 'tool', internalId: ['Thread Sphere'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478061' },
       { name: 'Cross Stitch', section: 'Silk Skills', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Bilewater: Exhaust Organ, Defeat Phantom', parsingInfo: { type: 'tool', internalId: ['Parry'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478371' },
@@ -137,7 +136,7 @@ export const CATEGORIES: CollectableCategory[] = [
       { name: 'Rune Rage', section: 'Silk Skills', whichAct: 1, completionPercent: 1, prereqs: [], location: 'The Slab: Defeat First Sinner', parsingInfo: { type: 'tool', internalId: ['Silk Bomb'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479025' },
       { name: 'Pale Nails', section: 'Silk Skills', whichAct: 3, completionPercent: 1, prereqs: ['Silk Soar'], location: 'The Cradle: Top of the Cradle', parsingInfo: { type: 'tool', internalId: ['Silk Boss Needle'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479606' },
       
-      //Red Tools
+      // Red Tools
       { name: 'Straight Pin', section: 'Attack Tools', whichAct: 1, completionPercent: 1, prereqs: [], location: 'The Marrow: On the upper level of Grindles cell', parsingInfo: { type: 'tool', internalId: ['Straight Pin'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477899' },
       { name: 'Threefold Pin', section: 'Attack Tools', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Greymoor: Craw Lake, In the Secret Room, entered by walking through the wall on the right side', parsingInfo: { type: 'tool', internalId: ['Tri Pin'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478058' },
       { name: 'Sting Shard', section: 'Attack Tools', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Deep Docks: Can be purchased from Forge Daughter for 140 Rosaries + 1 Craftmetal', parsingInfo: { type: 'tool', internalId: ['Sting Shard'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477917' },
@@ -199,7 +198,7 @@ export const CATEGORIES: CollectableCategory[] = [
   },
   {
     name: 'Crests',
-    description: 'Each Crest counts 1% towards completion (except Hunter Crest)',
+    description: 'Each Crest (except Hunter Crest) counts 1% towards completion.',
     items: [
       { name: 'Hunter Crest', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Default Crest, already equipped at the beginning', parsingInfo: { type: 'crest', internalId: 'Hunter' }, mapLink: '' },
       { name: 'Hunter Crest 2', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Talk to Eva in Weavnest Atla', parsingInfo: { type: 'crest', internalId: 'Hunter_v2' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478228' },
@@ -237,12 +236,12 @@ export const CATEGORIES: CollectableCategory[] = [
       { name: 'Choral Commandment 3', whichAct: 2, completionPercent: 0, prereqs: [], location: 'At the end of a room above the Hidden Passage in Whiteward, easiest to reach via Silk Soar', parsingInfo: { type: 'relict', internalId: 'Seal Chit Silk Siphon' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478919' },
       { name: 'Choral Commandment 4', whichAct: 2, completionPercent: 0, prereqs: ['The Lost Merchant Wish completed'], location: 'Can be purchased from Jubilana (Songclave) for 210 Rosaries', parsingInfo: { type: 'relict', internalId: 'Seal Chit City Merchant' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479251' },
       
-      { name: 'Weaver Effigy 1', whichAct: 1, completionPercent: 0, prereqs: [], location: 'In a secret room above Bone Bottom. Easiest to reach wit Drifters Cloak and floating down from above.', parsingInfo: { type: 'relict', internalId: 'Weaver Totem Bonetown_upper_room' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478093' },
+      { name: 'Weaver Effigy 1', whichAct: 1, completionPercent: 0, prereqs: [], location: 'In a secret room above Bone Bottom. Easiest to reach wit Drifter\'s Cloak and floating down from above.', parsingInfo: { type: 'relict', internalId: 'Weaver Totem Bonetown_upper_room' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478093' },
       { name: 'Weaver Effigy 2', whichAct: 2, completionPercent: 0, prereqs: ['Cling Grip'], location: 'Shellwood Witch Tunnel', parsingInfo: { type: 'relict', internalId: 'Weaver Totem Witch' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478794' },
       { name: 'Weaver Effigy 3', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Bottom Right of the Slab. On a corpse', parsingInfo: { type: 'relict', internalId: 'Weaver Totem Slab_Bottom' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479034' },
       
       { name: 'Bone Scroll 1', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Greymore Secret Room. Swim all the way to the right', parsingInfo: { type: 'relict', internalId: 'Bone Record Greymoor_flooded_corridor' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478142' },
-      { name: 'Bone Scroll 2', whichAct: 1, completionPercent: 0, prereqs: ['Drifters cloak'], location: 'Far fields secret Room. Reachable by Drifters Cloak', parsingInfo: { type: 'relict', internalId: 'Bone Record Bone_East_14' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478213' },
+      { name: 'Bone Scroll 2', whichAct: 1, completionPercent: 0, prereqs: ['Drifter\'s Cloak'], location: 'Far fields secret Room. Reachable by Drifter\'s Cloak', parsingInfo: { type: 'relict', internalId: 'Bone Record Bone_East_14' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478213' },
       { name: 'Bone Scroll 3', whichAct: 2, completionPercent: 0, prereqs: [], location: 'Left side of Underworks behind a breakable wall', parsingInfo: { type: 'relict', internalId: 'Bone Record Understore_Map_Room' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478553' },
       { name: 'Bone Scroll 4', whichAct: 2, completionPercent: 0, prereqs: [], location: 'Top of Wisp Thicket Platform Challange', parsingInfo: { type: 'relict', internalId: 'Bone Record Wisp Top' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479150' },
       
@@ -272,7 +271,7 @@ export const CATEGORIES: CollectableCategory[] = [
       { name: 'Lost Flea 6', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Greymore: Above and to the right of Craw Lake', parsingInfo: { type: 'flag', internalId: 'SavedFlea_Greymoor_15b' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478145' },
       { name: 'Lost Flea 7', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Greymore: Reached through the top of the tower', parsingInfo: { type: 'flag', internalId: 'SavedFlea_Greymoor_06' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478287' },
       { name: 'Lost Flea 8', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Shellwood: At the bottom of a pit filled with Pollenica (and a few Phacia) enemies', parsingInfo: { type: 'flag', internalId: 'SavedFlea_Shellwood_03' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478176' },
-      { name: 'Lost Flea 9', whichAct: 1, completionPercent: 0, prereqs: ['Drifters Cloak', 'Cling Grip'], location: 'Far Fields: Hidden parkour path to the right of far fields bellway', parsingInfo: { type: 'flag', internalId: 'SavedFlea_Bone_East_10_Church' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478219' },
+      { name: 'Lost Flea 9', whichAct: 1, completionPercent: 0, prereqs: ['Drifter\'s Cloak', 'Cling Grip'], location: 'Far Fields: Hidden parkour path to the right of far fields bellway', parsingInfo: { type: 'flag', internalId: 'SavedFlea_Bone_East_10_Church' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478219' },
       { name: 'Lost Flea 10', whichAct: 1, completionPercent: 0, prereqs: ['Cling Grip'], location: 'Top of Blasted Steps', parsingInfo: { type: 'flag', internalId: 'SavedFlea_Coral_35' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478386' },
       { name: 'Lost Flea 11', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Sinners Road: Jump over the first cage, then hit the easternmost side of the one holding the flea to set it free.', parsingInfo: { type: 'flag', internalId: 'SavedFlea_Dust_12' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478360' },
       { name: 'Lost Flea 12', whichAct: 2, completionPercent: 0, prereqs: [], location: 'Inside the Exhaust Organ, there is a room with a silk refill spindle. Go left from there to access it.', parsingInfo: { type: 'flag', internalId: 'SavedFlea_Dust_09' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478378' },

@@ -12,7 +12,7 @@ http://silksong-completionist.com/
 - Craftmetals
 - Keys
 - Bosses
-- Hunters Journal
+- Hunter's Journal
 
 ## Issues
 - If you find errors just create a issue on this repository. Or if you already have a fix create a pull request.
