@@ -7,6 +7,7 @@ function formatSecondsToHMS(seconds: number): string {
     .map(unit => String(unit).padStart(2, '0'))
     .join(':');
 }
+
 import { CATEGORIES, isItemUnlockedInPlayerSave } from "../parsers/dictionary";
 import type { TabRenderProps } from "./types";
 
@@ -33,8 +34,8 @@ export function StatsTab({ parsedJson, decrypted }: TabRenderProps) {
               {stats.map((item, index) => {
                 const { returnValue } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
                 let displayValue = '';
-                if (item.name === 'Steel Soul Mode') {
-                  displayValue = returnValue === 1 ? 'Yes' : returnValue === 0 ? 'No' : '';
+                if (item.name === 'Game Mode') {
+                  displayValue = returnValue === 1 ? 'Steel Soul' : returnValue === 0 ? 'Classic' : '';
                 } else if (item.name.toLowerCase() === 'playtime' && typeof returnValue === 'number') {
                   displayValue = formatSecondsToHMS(returnValue);
                 } else if (returnValue !== undefined) {

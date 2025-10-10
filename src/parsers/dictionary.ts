@@ -3,7 +3,7 @@ export type FlagMultiParsingInfo = { type: 'flagMulti'; internalId: string[] };
 export type FlagIntParsingInfo = { type: 'flagInt'; internalId: [string, number] };
 export type FlagReturnParsingInfo = { type: 'flagReturn'; internalId: string };
 export type ToolParsingInfo = { type: 'tool'; internalId: string[] };
-export type JournalParsingInfo = { type: 'journal'; internalId: [string, number] }; // [creature name, required kills number]
+export type JournalParsingInfo = { type: 'journal'; internalId: [string, number] }; // [creature name, no. of required kills]
 export type CrestParsingInfo = { type: 'crest'; internalId: string };
 export type CollectableParsingInfo = { type: 'collectable'; internalId: string };
 export type RelictParsingInfo = { type: 'relict'; internalId: string };
@@ -39,7 +39,7 @@ export const CATEGORIES: CollectableCategory[] = [
       { name: 'Playtime', whichAct: 1, completionPercent: 0, prereqs: [], location: '', parsingInfo: { type: 'flagReturn', internalId: 'playTime' }, mapLink: '' },
       { name: 'Rosaries', whichAct: 1, completionPercent: 0, prereqs: [], location: '', parsingInfo: { type: 'flagReturn', internalId: 'geo' }, mapLink: '' },
       { name: 'Shell Shards', whichAct: 1, completionPercent: 0, prereqs: [], location: '', parsingInfo: { type: 'flagReturn', internalId: 'ShellShards' }, mapLink: '' },
-      { name: 'Steel Soul Mode', whichAct: 1, completionPercent: 0, prereqs: [], location: '', parsingInfo: { type: 'flagReturn', internalId: 'permadeathMode' }, mapLink: '' },
+      { name: 'Game Mode', whichAct: 1, completionPercent: 0, prereqs: [], location: '', parsingInfo: { type: 'flagReturn', internalId: 'permadeathMode' }, mapLink: '' },
     ],
   },
   {
