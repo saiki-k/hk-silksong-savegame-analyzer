@@ -16,7 +16,7 @@ The analyzer currently tracks everything needed for **100% completion**, includi
 - Crests
 - Ancestral Arts
 - 🧰 Upgrades
-	- Cloak Upgrades
+	- Cloak Upgrades (these don't contribute any %)
 	- Needle Upgrades
 	- Tool Pouch Upgrades
 	- Tool Kit Upgrades
