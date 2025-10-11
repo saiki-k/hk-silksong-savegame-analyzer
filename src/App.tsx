@@ -25,7 +25,7 @@ const PLATFORM_OPTIONS: PlatformOption[] = [
     path: "%USERPROFILE%/AppData/LocalLow/Team Cherry/Hollow Knight Silksong/",
     note: (
       <>
-        /SteamID/userX.dat (where X = 1-4, denotes the savegame slot)  {" "}
+        /SteamID/userX.dat (where X = 1-4, denotes the save slot)  {" "}
         <a
           href="https://store.steampowered.com/account/remotestorageapp/?appid=1030300"
           className="underline text-green-300 hover:text-green-200"
@@ -43,7 +43,7 @@ const PLATFORM_OPTIONS: PlatformOption[] = [
     path: "~/.local/share/Team Cherry/Hollow Knight Silksong/",
     note: (
       <>
-        /SteamID/userX.dat (where X = 1-4, denotes the savegame slot)  {" "}
+        /SteamID/userX.dat (where X = 1-4, denotes the save slot)  {" "}
         <a
           href="https://store.steampowered.com/account/remotestorageapp/?appid=1030300"
           className="underline text-green-300 hover:text-green-200"
@@ -72,7 +72,7 @@ const PLATFORM_OPTIONS: PlatformOption[] = [
     path: "~/.config/unity3d/Team Cherry/Hollow Knight Silksong/",
     note: (
       <>
-        /(a folder with random characters)/userX.dat (where X = 1-4, denotes the savegame slot)
+        /(a folder with random characters)/userX.dat (where X = 1-4, denotes the save slot)
       </>
     ),
   },
@@ -186,7 +186,7 @@ export default function App() {
 
         {showToast && (
           <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-[#454d5c] text-white px-4 py-2 rounded shadow-lg z-50">
-            Copied to Clipboard!
+            Copied to clipboard.
           </div>
         )}
 
@@ -211,7 +211,7 @@ export default function App() {
               savePlain,
             })
           ) : (
-            <div className="text-white text-center">No Savefile loaded</div>
+            <div className="text-white text-center">No Savefile loaded.</div>
           )}
         </div>
         <footer className="w-full mt-8 py-4  text-white text-center text-sm  ">
