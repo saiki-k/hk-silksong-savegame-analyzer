@@ -2,7 +2,18 @@
 
 For all the completionists out there, I created a tool that helps you track your in-game progress directly from your savefile.
 
+
+## ⚙️ Usage
+
 🔗 **Try it here:** [silksong-completionist.com](https://silksong-completionist.com/)
+
+Using the analyzer is simple!
+
+Just drag and drop your savefile into the upload box on the site, or click the box to browse and upload it.
+
+If you’re unsure where your savefile is located, the savefile paths for most platforms are conveniently listed right above the upload area.
+
+Once uploaded, the analyzer will automatically parse your data and display your progress towards 100% completion.
 
 
 ## 📊 What It Tracks
