@@ -9,22 +9,28 @@ interface GenericTabProps extends TabRenderProps {
   tabLabel: string;
 }
 
-function GenericTableSection({ 
-  section, 
-  items, 
+function GenericTableSection({
+  section,
+  sectionsLength,
   parsedJson 
-}: { 
-  section: string; 
-  items: CategoryItem[]; 
+}: {
+  section: { name: string | undefined; description: string | undefined; items: CategoryItem[] };
+  sectionsLength: number;
   parsedJson: any;
 }) {
-  if (items.length === 0) return null;
+  if (section.items.length === 0) return null;
   
   return (
     <div className="mb-8">
-      {section !== "Main" && (
-        <h2 className="text-xl font-bold mb-2 text-blue-200">{section}</h2>
+      {sectionsLength > 1 && (
+        <div className="mb-4">
+          <h2 className="text-xl font-bold mb-2 text-blue-200">{section.name}</h2>
+          {section.description && section.description.trim() && (
+            <p className="text-sm text-gray-300 mb-2">{section.description}</p>
+          )}
+        </div>
       )}
+      
       <div className="max-w-3xl mx-auto">
         <table className="w-full border-collapse divide-y divide-gray-600 table-fixed">
           <colgroup>
@@ -46,7 +52,7 @@ function GenericTableSection({
             </tr>
           </thead>
           <tbody>
-            {items.map((item, index) => {
+            {section.items.map((item, index) => {
               const { unlocked } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
               return (
                 <tr key={index} className="border-b border-gray-700 last:border-b-0">
@@ -129,11 +135,19 @@ export function GenericTab({ parsedJson, decrypted, tabLabel }: GenericTabProps)
 
   return (
     <div className="text-white">
+      {normalizedCategory.sections.length === 1 && (
+        <div className="mb-4">
+          <h2 className="text-xl font-bold mb-2 text-blue-200">{normalizedCategory.name}</h2>
+          {normalizedCategory.description && normalizedCategory.description.trim() && normalizedCategory.description.trim() !== normalizedCategory.name && (
+            <p className="text-sm text-gray-300 mb-2">{normalizedCategory.description}</p>
+          )}
+        </div>
+      )}
       {normalizedCategory.sections.map((section, sectionIndex) => (
         <GenericTableSection
           key={section.name || sectionIndex}
-          section={section.name || "Main"}
-          items={section.items}
+          section={section}
+          sectionsLength={normalizedCategory.sections.length}
           parsedJson={parsedJson}
         />
       ))}

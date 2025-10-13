@@ -2,14 +2,13 @@ import type { Dispatch, ReactNode, SetStateAction } from "react";
 
 export type TabId =
   | "Stats"
-  | "Mask Shards"
-  | "Spool Fragments"
+  | "Masks & Spools"
+  | "Abilities"
   | "Upgrades"
   | "Tools"
   | "Crests"
-  | "Ancestral Arts"
   | "Relics"
-  | "Fleas"
+  | "Lost Fleas"
   | "Memory Lockets"
   | "Craftmetals"
   | "Keys"

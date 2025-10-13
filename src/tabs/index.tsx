@@ -17,14 +17,13 @@ function createGenericTab(tabLabel: string, options = { useCount: false }): TabD
 
 export const tabDefinitions: TabDefinition[] = [
   { id: "Stats", tabLabel: "Stats", render: props => <StatsTab {...props} /> },
-  createGenericTab("Mask Shards"),
-  createGenericTab("Spool Fragments"),
+  createGenericTab("Masks & Spools"),
+  createGenericTab("Abilities"),
   createGenericTab("Upgrades"),
   createGenericTab("Tools"),
   createGenericTab("Crests"),
-  createGenericTab("Ancestral Arts"),
   createGenericTab("Relics", { useCount: true }),
-  createGenericTab("Fleas", { useCount: true }),
+  createGenericTab("Lost Fleas", { useCount: true }),
   createGenericTab("Memory Lockets", { useCount: true }),
   createGenericTab("Craftmetals", { useCount: true }),
   createGenericTab("Keys", { useCount: true }),

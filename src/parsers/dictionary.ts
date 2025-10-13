@@ -1,12 +1,11 @@
 import type { ParsingInfo, ParsingInfoMulti, NormalisedTrackableCategory, TrackableCategory } from './types';
 
 import { stats } from './categories/stats';
-import { maskShards } from './categories/maskShards';
-import { spoolFragments } from './categories/spoolFragments';
+import { masksAndSpools } from './categories/masksAndSpools';
+import { abilities } from './categories/abilities';
 import { upgrades } from './categories/upgrades';
 import { tools } from './categories/tools';
 import { crests } from './categories/crests';
-import { ancestralArts } from './categories/ancestralArts';
 import { relics } from './categories/relics';
 import { fleas } from './categories/fleas';
 import { memoryLockets } from './categories/memoryLockets';
@@ -18,12 +17,11 @@ import { huntersJournal } from './categories/huntersJournal';
 
 export const CATEGORIES: (NormalisedTrackableCategory | TrackableCategory)[] = [
   stats,
-  maskShards,
-  spoolFragments,
+  masksAndSpools,
+  abilities,
   upgrades,
   tools,
   crests,
-  ancestralArts,
   relics,
   fleas,
   memoryLockets,

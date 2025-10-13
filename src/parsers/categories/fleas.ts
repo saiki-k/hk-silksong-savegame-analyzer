@@ -1,8 +1,8 @@
 import type { NormalisedTrackableCategory } from '../types';
 
 export const fleas: NormalisedTrackableCategory = {
-  name: 'Fleas',
-  description: 'Fleas',
+  name: 'Lost Fleas',
+  description: 'Lost Fleas',
   sections: [
     {
       name: 'Main',

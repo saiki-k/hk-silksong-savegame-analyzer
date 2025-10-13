@@ -5,20 +5,8 @@ export const tools: NormalisedTrackableCategory = {
   description: 'Every Tool (with a couple of exceptions) counts 1% towards completion.',
   sections: [
     {
-      name: 'Silk Skills',
-      description: '',
-      items: [
-        { name: 'Silkspear', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Moss Grotto (Mosshome)', parsingInfo: { type: 'tool', internalId: ['Silk Spear'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477871' },
-        { name: 'Thread Storm', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Greymoor (Craw Lake): At the top.', parsingInfo: { type: 'tool', internalId: ['Thread Sphere'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478061' },
-        { name: 'Cross Stitch', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Bilewater (Exhaust Organ): Defeat Phantom.', parsingInfo: { type: 'tool', internalId: ['Parry'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478371' },
-        { name: 'Sharpdart', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Wormways (Weavernest)', parsingInfo: { type: 'tool', internalId: ['Silk Charge'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479079' },
-        { name: 'Rune Rage', whichAct: 1, completionPercent: 1, prereqs: [], location: 'The Slab: Defeat First Sinner.', parsingInfo: { type: 'tool', internalId: ['Silk Bomb'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479025' },
-        { name: 'Pale Nails', whichAct: 3, completionPercent: 1, prereqs: ['Silk Soar'], location: 'The Cradle: At the top.', parsingInfo: { type: 'tool', internalId: ['Silk Boss Needle'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479606' },
-      ]
-    },
-    {
-      name: 'Attack Tools',
-      description: '',
+      name: 'Red (Attack) Tools',
+      description: 'Each of these tools (except a couple of temporarily obtainable ones) count 1% towards completion.',
       items: [
         { name: 'Straight Pin', whichAct: 1, completionPercent: 1, prereqs: [], location: 'The Marrow: On the upper level of Grindle\'s cell.', parsingInfo: { type: 'tool', internalId: ['Straight Pin'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477899' },
         { name: 'Threefold Pin', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Greymoor (Craw Lake): In a secret room entered by walking through the wall on the right side.', parsingInfo: { type: 'tool', internalId: ['Tri Pin'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478058' },
@@ -43,8 +31,8 @@ export const tools: NormalisedTrackableCategory = {
       ]
     },
     {
-      name: 'Defense Tools',
-      description: '',
+      name: 'Blue (Defense) Tools',
+      description: 'Each of these tools count 1% towards completion.',
       items: [
         { name: "Druid's Eye / Druid's Eyes", whichAct: 1, completionPercent: 1, prereqs: [], location: 'Moss Grotto (Mosshome): Complete "Berry Picking" wish. Give 4 more Mossberries to Moss Druid for the upgrade.', parsingInfo: { type: 'tool', internalId: ['Mosscreep Tool 1','Mosscreep Tool 2'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478255' },
         { name: 'Magma Bell', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Deep Docks: Sold by Forge Daughter for 110 Rosaries and 1 Craftmetal.', parsingInfo: { type: 'tool', internalId: ['Lava Charm'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477918' },
@@ -70,8 +58,8 @@ export const tools: NormalisedTrackableCategory = {
       ]
     },
     {
-      name: 'Exploration Tools',
-      description: '',
+      name: 'Yellow (Exploration) Tools',
+      description: 'Each of these tools count 1% towards completion.',
       items: [
         { name: 'Compass', whichAct: 1, completionPercent: 1, prereqs: [], location: 'The Marrow: Sold by Shakra for 70 Rosaries.', parsingInfo: { type: 'tool', internalId: ['Compass'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477851' },
         { name: 'Shard Pendant', whichAct: 1, completionPercent: 1, prereqs: [], location: 'The Marrow', parsingInfo: { type: 'tool', internalId: ['Bone Necklace'] }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477848' },
