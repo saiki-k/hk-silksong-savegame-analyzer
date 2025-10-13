@@ -11,7 +11,7 @@ import { FleasTab, getFleasExtra } from "./FleasTab";
 import { MemoryLocketsTab, getMemoryLocketsExtra } from "./MemoryLocketsTab";
 import { CraftMetalsTab, getCraftMetalsExtra } from "./CraftMetalsTab";
 import { KeysTab, getKeysExtra } from "./KeysTab";
-import { WishesTab, getWishesExtra } from "./WishesTab";
+import { QuestsTab, getQuestsExtra } from "./QuestsTab";
 import { BossesTab, getBossesExtra } from "./BossesTab";
 import { getHuntersJournalExtra, HuntersJournalTab } from "./HuntersJournalTab";
 import { JsonEditorTab } from "./JsonEditorTab";
@@ -89,10 +89,10 @@ export const tabDefinitions: TabDefinition[] = [
     getExtra: getKeysExtra,
   },
   {
-    id: "Wishes",
-    label: "Wishes",
-    render: props => <WishesTab {...props} />,
-    getExtra: getWishesExtra,
+    id: "Quests",
+    label: "Quests",
+    render: props => <QuestsTab {...props} />,
+    getExtra: getQuestsExtra,
   },
   {
     id: "Bosses",

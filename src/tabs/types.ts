@@ -13,7 +13,7 @@ export type TabId =
   | "Memory Lockets"
   | "Craftmetals"
   | "Keys"
-  | "Wishes"
+  | "Quests"
   | "Bosses"
   | "Hunter's Journal"
   | "JSON Editor";

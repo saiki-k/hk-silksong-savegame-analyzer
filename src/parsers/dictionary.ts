@@ -13,7 +13,7 @@ import { memoryLockets } from './categories/memoryLockets';
 import { craftmetals } from './categories/craftmetals';
 import { bosses } from './categories/bosses';
 import { keys } from './categories/keys';
-import { wishes } from './categories/wishes';
+import { quests } from './categories/quests';
 import { huntersJournal } from './categories/huntersJournal';
 
 export const CATEGORIES: TrackableCategory[] = [
@@ -30,7 +30,7 @@ export const CATEGORIES: TrackableCategory[] = [
   craftmetals,
   bosses,
   keys,
-  wishes,
+  quests,
   huntersJournal
 ];
 
