@@ -5,26 +5,31 @@ import type { TabRenderProps } from "./types";
 
 const CATEGORY_NAME = "Wishes";
 
-export function WishesTab({ parsedJson, decrypted }: TabRenderProps) {
-  if (!decrypted || !parsedJson) {
-    return <div className="text-white text-center">Load a save file to view Wishes data.</div>;
-  }
+type WishItem = (typeof CATEGORIES)[number]["items"][number];
 
-  const wishCategory = CATEGORIES.find(cat => cat.name === CATEGORY_NAME);
-  const wishes = wishCategory?.items ?? [];
-
+function WishesTableSection({ section, wishes, parsedJson }: { section: string; wishes: WishItem[]; parsedJson: any }) {
+  if (wishes.length === 0) return null;
   return (
-    <div className="text-white">
+    <div className="mb-8">
+      <h2 className="text-xl font-bold mb-2 text-blue-200">{section}</h2>
       <div className="max-w-3xl mx-auto">
-        <table className="w-full table-auto border-collapse divide-y divide-gray-600">
+        <table className="w-full border-collapse divide-y divide-gray-600 table-fixed">
+          <colgroup>
+            <col style={{ width: "56px" }} />
+            <col style={{ width: "56px" }} />
+            <col style={{ width: "220px" }} />
+            <col style={{ width: "260px" }} />
+            <col style={{ width: "48px" }} />
+            <col style={{ width: "64px" }} />
+          </colgroup>
           <thead>
             <tr className="text-left">
-              <th className="px-2 py-1 w-[56px]" />
-              <th className="px-2 py-1 w-[56px] text-center" />
-              <th className="px-2 py-1 min-w-[120px] max-w-[220px]">Name</th>
-              <th className="px-2 py-1 min-w-[140px] max-w-[260px]">Location</th>
-              <th className="px-2 py-1 w-[48px]">Act</th>
-              <th className="px-2 py-1 w-[64px]" />
+              <th className="px-2 py-1" />
+              <th className="px-2 py-1 text-center" />
+              <th className="px-2 py-1">Name</th>
+              <th className="px-2 py-1">Location</th>
+              <th className="px-2 py-1">Act</th>
+              <th className="px-2 py-1" />
             </tr>
           </thead>
           <tbody>
@@ -32,10 +37,10 @@ export function WishesTab({ parsedJson, decrypted }: TabRenderProps) {
               const { unlocked } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
               return (
                 <tr key={index} className="border-b border-gray-700 last:border-b-0">
-                  <td className="px-2 py-1 text-center w-[56px] align-middle">
+                  <td className="px-2 py-1 text-center align-middle">
                     <span className={unlocked ? "text-green-400" : "text-red-400"}>{unlocked ? "[x]" : "[ ]"}</span>
                   </td>
-                  <td className="px-2 py-1 text-center w-[56px] align-middle">
+                  <td className="px-2 py-1 text-center align-middle">
                     <span className="text-xs text-blue-200 mt-1 font-normal" />
                   </td>
                   <td className="px-2 py-1 break-words whitespace-pre-line">{item.name}</td>
@@ -44,7 +49,7 @@ export function WishesTab({ parsedJson, decrypted }: TabRenderProps) {
                     {item.location}
                   </td>
                   <td className={`px-2 py-1 w-[48px] text-center ${!unlocked ? "blur-sm hover:blur-none transition duration-100" : ""}`}>{item.whichAct}</td>
-                 <td className="px-2 py-1 w-[64px] text-center">
+                  <td className="px-2 py-1 text-center">
                     <button
                       className={`flex-1 min-w-[48px] py-2 rounded font-semibold transition-colors text-xs ${
                         item.mapLink
@@ -66,6 +71,30 @@ export function WishesTab({ parsedJson, decrypted }: TabRenderProps) {
           </tbody>
         </table>
       </div>
+    </div>
+  );
+}
+
+export function WishesTab({ parsedJson, decrypted }: TabRenderProps) {
+  if (!decrypted || !parsedJson) {
+    return <div className="text-white text-center">Load a save file to view Wishes data.</div>;
+  }
+
+  const wishCategory = CATEGORIES.find(cat => cat.name === CATEGORY_NAME);
+  const wishes = wishCategory?.items ?? [];
+
+  const sections = Array.from(new Set(wishes.map(w => w.section).filter((s): s is string => typeof s === "string")));
+
+  return (
+    <div className="text-white">
+      {sections.map(section => (
+        <WishesTableSection
+          key={section}
+          section={section}
+          wishes={wishes.filter(w => w.section === section)}
+          parsedJson={parsedJson}
+        />
+      ))}
     </div>
   );
 }
