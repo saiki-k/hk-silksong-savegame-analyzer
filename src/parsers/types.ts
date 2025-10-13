@@ -25,7 +25,7 @@ export type CategoryItem = {
   killsRequired?: number;
 };
 
-export type CollectableCategory = {
+export type TrackableCategory = {
   name: string;
   description: string;
   items: CategoryItem[];

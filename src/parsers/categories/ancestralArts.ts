@@ -1,6 +1,6 @@
-import type { CollectableCategory } from '../types';
+import type { TrackableCategory } from '../types';
 
-export const ancestralArts: CollectableCategory = {
+export const ancestralArts: TrackableCategory = {
   name: 'Ancestral Arts',
   description: 'Each Ancestral Art counts 1% towards completion',
   items: [

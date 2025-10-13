@@ -1,6 +1,6 @@
-import type { CollectableCategory } from '../types';
+import type { TrackableCategory } from '../types';
 
-export const tools: CollectableCategory = {
+export const tools: TrackableCategory = {
   name: 'Tools',
   description: 'Every Tool (with a couple of exceptions) counts 1% towards completion.',
   items: [

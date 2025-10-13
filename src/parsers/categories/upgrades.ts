@@ -1,6 +1,6 @@
-import type { CollectableCategory } from '../types';
+import type { TrackableCategory } from '../types';
 
-export const upgrades: CollectableCategory = {
+export const upgrades: TrackableCategory = {
   name: 'Upgrades',
   description: 'Each Upgrade (except for the Cloak Upgrades) counts 1% towards completion.',
   items: [

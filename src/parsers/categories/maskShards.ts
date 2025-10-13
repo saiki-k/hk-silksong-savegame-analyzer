@@ -1,6 +1,6 @@
-import type { CollectableCategory } from '../types';
+import type { TrackableCategory } from '../types';
 
-export const maskShards: CollectableCategory = {
+export const maskShards: TrackableCategory = {
   name: 'Mask Shards',
   description: 'Each Mask Shard counts 0.25% towards completion.',
   items: [

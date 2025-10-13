@@ -1,6 +1,6 @@
-import type { CollectableCategory } from '../types';
+import type { TrackableCategory } from '../types';
 
-export const spoolFragments: CollectableCategory = {
+export const spoolFragments: TrackableCategory = {
   name: 'Spool Fragments',
   description: 'Each Spool Fragment counts 0.5% towards completion.',
   items: [

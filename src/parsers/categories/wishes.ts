@@ -1,6 +1,6 @@
-import type { CollectableCategory } from '../types';
+import type { TrackableCategory } from '../types';
 
-export const wishes: CollectableCategory = {
+export const wishes: TrackableCategory = {
   name: 'Wishes',
   description: 'Wishes',
   items: [

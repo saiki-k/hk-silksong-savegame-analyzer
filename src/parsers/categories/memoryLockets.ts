@@ -1,6 +1,6 @@
-import type { CollectableCategory } from '../types';
+import type { TrackableCategory } from '../types';
 
-export const memoryLockets: CollectableCategory = {
+export const memoryLockets: TrackableCategory = {
   name: 'Memory Lockets',
   description: 'Memory Lockets',
   items: [

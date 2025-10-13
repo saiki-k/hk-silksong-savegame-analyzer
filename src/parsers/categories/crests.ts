@@ -1,6 +1,6 @@
-import type { CollectableCategory } from '../types';
+import type { TrackableCategory } from '../types';
 
-export const crests: CollectableCategory = {
+export const crests: TrackableCategory = {
   name: 'Crests',
   description: 'Each Crest (except Hunter Crest) counts 1% towards completion.',
   items: [
