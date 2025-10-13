@@ -4,11 +4,11 @@ import { formatSecondsToHMS } from "./utils";
 
 export function StatsTab({ parsedJson, decrypted }: TabRenderProps) {
   if (!decrypted || !parsedJson) {
-    return <div className="text-white text-center">Load a save file to view mask shard data.</div>;
+    return <div className="text-white text-center">Load a savefile to view "Stats" data.</div>;
   }
 
   const statsCategory = CATEGORIES.find(cat => cat.name === "Stats");
-  const stats = statsCategory?.items ?? [];
+  const stats = (statsCategory && 'items' in statsCategory) ? statsCategory.items : [];
 
   return (
     <div className="text-white">

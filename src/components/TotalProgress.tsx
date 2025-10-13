@@ -8,7 +8,15 @@ export function TotalProgress({ parsedJson }: TotalProgressProps) {
   let percent = 0;
   if (parsedJson) {
     // Flatten all items from all categories
-    const allItems = CATEGORIES.flatMap(category => category.items);
+    const allItems = CATEGORIES.flatMap(category => {
+      if ('items' in category) {
+        // Legacy TrackableCategory
+        return category.items;
+      } else {
+        // NormalisedTrackableCategory
+        return category.sections.flatMap(section => section.items);
+      }
+    });
     // Only count items with a positive completionPercent
     const itemsWithPercent = allItems.filter(item => typeof item.completionPercent === 'number' && item.completionPercent > 0);
 

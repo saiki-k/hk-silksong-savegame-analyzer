@@ -6,11 +6,11 @@ const JOURNAL_CATEGORY_NAME = "Hunter's Journal";
 
 export function HuntersJournalTab({ parsedJson, decrypted }: TabRenderProps) {
   if (!decrypted || !parsedJson) {
-    return <div className="text-white text-center">Load a save file to view the hunter's journal.</div>;
+    return <div className="text-white text-center">Load a savefile to view "Hunter's Journal" data.</div>;
   }
 
   const journalCategory = CATEGORIES.find(cat => cat.name === JOURNAL_CATEGORY_NAME);
-  const journalEntries = journalCategory?.items ?? [];
+  const journalEntries = (journalCategory && 'items' in journalCategory) ? journalCategory.items : [];
 
   return (
     <div className="text-white">
@@ -91,7 +91,7 @@ export function getHuntersJournalExtra({ parsedJson, decrypted }: { parsedJson: 
   }
 
   const journalCategory = CATEGORIES.find(cat => cat.name === JOURNAL_CATEGORY_NAME);
-  const journalEntries = journalCategory?.items ?? [];
+  const journalEntries = (journalCategory && 'items' in journalCategory) ? journalCategory.items : [];
 
   if (journalEntries.length === 0) {
     return null;

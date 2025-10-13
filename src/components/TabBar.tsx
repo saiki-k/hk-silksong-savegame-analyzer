@@ -24,7 +24,7 @@ export function TabBar({ tabs, activeTab, onSelect, parsedJson, decrypted }: Tab
             } ${!decrypted ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-600"}`}
           >
             <div className="flex flex-col items-center">
-              <span>{tab.label}</span>
+              <span>{tab.tabLabel}</span>
               {extra}
             </div>
           </button>

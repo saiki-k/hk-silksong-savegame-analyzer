@@ -56,13 +56,13 @@ export function JsonEditorTab({ jsonText, setJsonText, saveEncrypted, savePlain 
           onClick={saveEncrypted}
           className="bg-[#24344d] text-white hover:bg-blue-600 font-semibold py-2 px-4 rounded flex-1"
         >
-          Save Encrypted (.dat)
+          Save as (encrypted) .dat
         </button>
         <button
           onClick={savePlain}
           className="bg-[#24344d] text-white hover:bg-blue-600 font-semibold py-2 px-4 rounded flex-1"
         >
-          Save Plain (.json)
+          Save as (plain) .json
         </button>
       </div>
     </div>

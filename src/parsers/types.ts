@@ -25,8 +25,20 @@ export type CategoryItem = {
   killsRequired?: number;
 };
 
+export type CategorySection = {
+  name: string | undefined;
+  description: string | undefined;
+  items: CategoryItem[];
+};
+
 export type TrackableCategory = {
   name: string;
   description: string;
   items: CategoryItem[];
+};
+
+export type NormalisedTrackableCategory = {
+  name: string;
+  description: string;
+  sections: CategorySection[];
 };

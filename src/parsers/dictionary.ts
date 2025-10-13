@@ -1,4 +1,4 @@
-import type { ParsingInfo, ParsingInfoMulti, TrackableCategory } from './types';
+import type { ParsingInfo, ParsingInfoMulti, NormalisedTrackableCategory, TrackableCategory } from './types';
 
 import { stats } from './categories/stats';
 import { maskShards } from './categories/maskShards';
@@ -16,7 +16,7 @@ import { keys } from './categories/keys';
 import { quests } from './categories/quests';
 import { huntersJournal } from './categories/huntersJournal';
 
-export const CATEGORIES: TrackableCategory[] = [
+export const CATEGORIES: (NormalisedTrackableCategory | TrackableCategory)[] = [
   stats,
   maskShards,
   spoolFragments,
