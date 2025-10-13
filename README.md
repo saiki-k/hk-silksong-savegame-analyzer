@@ -40,7 +40,8 @@ The analyzer currently tracks everything needed for **100% completion**, includi
 - Craftmetals
 - Keys
 
-### 👑
+### 📋
+- Wishes (Quests)
 - Bosses
 - Hunter’s Journal Entries
 
