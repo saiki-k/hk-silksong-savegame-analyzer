@@ -6,7 +6,7 @@ export const quests: NormalisedTrackableCategory = {
   sections: [
     {
       name: 'Objectives',
-      description: '',
+      description: 'Main story objectives that Hornet must complete to progress through the game.',
       items: [
         { name: 'The Great Citadel', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Bone Bottom: Ascend through the lands of Pharloom to reach the Citadel at the kingdom\'s peak.', parsingInfo: { type: 'quest', internalId: 'Citadel Seeker' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477834' },
         { name: 'The Threadspun Town', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Bellhart: Defeat Widow.', parsingInfo: { type: 'quest', internalId: 'The Threadspun Town' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478028' },
@@ -33,7 +33,7 @@ export const quests: NormalisedTrackableCategory = {
     },
     {
       name: 'Wishes · Wayfarer',
-      description: '',
+      description: 'Wishes involving travel and exploration, finding something or someone in the world.',
       items: [
         { name: 'The Lost Fleas', whichAct: 1, completionPercent: 0, prereqs: [], location: 'The Marrow: Wish from Fleamaster Mooshka.', parsingInfo: [{ type: 'quest', internalId: 'Save the Fleas' }, { type: 'quest', internalId: 'Save the Fleas Pre' }], mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477857' },
         { name: 'My Missing Courier', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Bellhart: On the Wishwall (appears after defeating Widow).', parsingInfo: { type: 'quest', internalId: 'Save Courier Short' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478207' },
@@ -54,7 +54,7 @@ export const quests: NormalisedTrackableCategory = {
     },
     {
       name: 'Wishes · Gather',
-      description: '',
+      description: 'Wishes requiring collection of a specific amount or variety of items.',
       items: [
         { name: 'Berry Picking', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Moss Grotto (Mosshome): Wish from Moss Druid.', parsingInfo: { type: 'quest', internalId: 'Mossberry Collection 1' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477876' },
         { name: 'Rite of the Pollip', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Shellwood: Wish from Greyroot.', parsingInfo: { type: 'quest', internalId: 'Shell Flowers' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478173' },
@@ -66,7 +66,7 @@ export const quests: NormalisedTrackableCategory = {
     },
     {
       name: 'Wishes · Donate',
-      description: '',
+      description: 'Wishes requiring donation of shell shards or rosaries for construction and improvements.',
       items: [
         { name: 'Bone Bottom Repairs', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Bone Bottom: On the Wishwall.', parsingInfo: { type: 'quest', internalId: 'Building Materials' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477884' },
         { name: 'A Lifesaving Bridge', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Bone Bottom: On the Wishwall (appears after you reach Greymoor).', parsingInfo: { type: 'quest', internalId: 'Building Materials (Bridge)' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478220' },
@@ -79,7 +79,7 @@ export const quests: NormalisedTrackableCategory = {
     },
     {
       name: 'Wishes · Hunt',
-      description: '',
+      description: 'Wishes involving hunting a certain number or type of normal enemies for specific objectives.',
       items: [
         { name: 'Garb of the Pilgrims', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Bone Bottom: On the Wishwall.', parsingInfo: { type: 'quest', internalId: 'Pilgrim Rags' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477885' },
         { name: 'Flexile Spines', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Far Fields: Wish from Seamstress.', parsingInfo: { type: 'quest', internalId: 'Brolly Get' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477964' },
@@ -93,7 +93,7 @@ export const quests: NormalisedTrackableCategory = {
     },
     {
       name: 'Wishes · Grand Hunt',
-      description: '',
+      description: 'Wishes involving hunting and defeating boss-level enemies to achieve objectives.',
       items: [
         { name: 'The Terrible Tyrant', whichAct: 1, completionPercent: 0, prereqs: ['Cling Grip'], location: 'Bone Bottom: On the Wishwall (appears after acquiring Cling Grip).', parsingInfo: { type: 'quest', internalId: 'Skull King' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478223' },
         { name: 'Savage Beastfly', whichAct: 2, completionPercent: 0, prereqs: [], location: 'Bellhart: On the Wishwall (appears sometime in ACT 2, provided that Savage Beastfly in Hunter\'s March (Chapel of the Beast) is defeated).', parsingInfo: { type: 'quest', internalId: 'Beastfly Hunt' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478799' },
@@ -104,7 +104,7 @@ export const quests: NormalisedTrackableCategory = {
     },
     {
       name: 'Wishes · Delivery',
-      description: '',
+      description: 'Wishes requiring delivery of fragile packages from one location to another without using fast travel.',
       items: [
         { name: 'Bone Bottom Supplies', whichAct: 2, completionPercent: 0, prereqs: [], location: 'Bellhart: Wish from Couriers Tipp & Pill (accessible after completing "My Missing Courier" and "My Missing Brother" wishes).', parsingInfo: { type: 'quest', internalId: 'Courier Delivery Bonebottom' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478313' },
         { name: 'Pilgrim\'s Rest Supplies', whichAct: 2, completionPercent: 0, prereqs: [], location: 'Bellhart: Wish from Couriers Tipp & Pill (accessible after completing "My Missing Courier" and "My Missing Brother" wishes).', parsingInfo: { type: 'quest', internalId: 'Courier Delivery Pilgrims Rest' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478313' },
@@ -117,35 +117,35 @@ export const quests: NormalisedTrackableCategory = {
     },
     {
       name: 'Wishes · Learn',
-      description: '',
+      description: 'Unique wish to learn about the creatures of Pharloom.',
       items: [
         { name: 'Bugs of Pharloom', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Greymoor (Halfway Home): Wish from Nuu.', parsingInfo: { type: 'quest', internalId: 'Journal' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478042' },
       ]
     },
     {
       name: 'Wishes · Collect',
-      description: '',
+      description: 'Unique wish to collect souls (and a trap) for a special objective.',
       items: [
         { name: 'Silk and Soul', whichAct: 2, completionPercent: 0, prereqs: [], location: 'Songclave: On the Wishwall (appears after defeating Lace, saving 25 Fleas and moving the caravan to Fleatopia, unlocking the Bellhome, completing all the available wishes, and talking to the Caretaker).', parsingInfo: { type: 'quest', internalId: 'Soul Snare Pre' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479243' },
       ]
     },
     {
       name: 'Wishes · Sprint',
-      description: '',
+      description: 'Unique wish to prove speed and agility.',
       items: [
         { name: 'Fastest in Pharloom', whichAct: 3, completionPercent: 0, prereqs: ['Silk Soar'], location: 'Far Fields: Wish from Sprintmaster Swift.', parsingInfo: { type: 'quest', internalId: 'Sprintmaster Race' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479193' },
       ]
     },
     {
       name: 'Wishes · Witness',
-      description: '',
+      description: 'Unique wish triggered by interacting with a mysterious riddle tablet.',
       items: [
         { name: 'Passing of the Age', whichAct: 3, completionPercent: 0, prereqs: ['Silk Soar'], location: 'Putrified Ducts (Pale Lake): Interact with the riddle tablet.', parsingInfo: { type: 'quest', internalId: 'Mr Mushroom' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479142' },
       ]
     },
     {
       name: 'Wishes · Steel',
-      description: '',
+      description: 'Unique wish given by a seer, available only in Steel Soul mode.',
       items: [
         { name: 'A Vassal Lost (Steel Soul Wish)', whichAct: 2, completionPercent: 0, prereqs: [], location: 'Shellwood: (Steel Soul Only) Wish from Steel Seer Zi.', parsingInfo: { type: 'quest', internalId: 'Steel Sentinel Pt2' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479727' },
       ]

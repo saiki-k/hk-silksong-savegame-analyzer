@@ -2,7 +2,7 @@ import type { TrackableCategory } from '../types';
 
 export const huntersJournal: TrackableCategory = {
   name: 'Hunter\'s Journal',
-  description: 'Hunter\'s Journal',
+  description: 'Bugs and creatures encountered across various areas of Pharloom.',
   items: [
     { name: 'Mossgrub',                    killsRequired: 25, whichAct: 0, completionPercent: 0, prereqs: [],   location: '', parsingInfo: { type: 'journal', internalId: ['MossBone Crawler', 25] },  mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479075' },
     { name: 'Massive Mossgrub',            killsRequired: 3,  whichAct: 0, completionPercent: 0, prereqs: [],  location: '', parsingInfo: { type: 'journal', internalId: ['MossBone Crawler Fat', 3] },  mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480252' },

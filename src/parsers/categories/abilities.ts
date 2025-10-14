@@ -20,9 +20,9 @@ export const abilities: NormalisedTrackableCategory = {
       name: 'Silk Hearts',
       description: 'Each Silk Heart counts 1% towards completion.',
       items: [
-        { name: 'Silk Heart 1', whichAct: 1, completionPercent: 1, prereqs: ['Silkspear'], location: 'The Marrow: Defeat Bell Beast.', parsingInfo: { type: 'sceneVisited', internalId: 'Memory_Silk_Heart_BellBeast' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477879' },
-        { name: 'Silk Heart 2', whichAct: 2, completionPercent: 1, prereqs: [], location: 'Whiteward: Defeat The Unravelled (beneath a locked trapdoor, requires Surgeon\'s Key).', parsingInfo: { type: 'sceneVisited', internalId:'Memory_Silk_Heart_WardBoss' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479082' },
-        { name: 'Silk Heart 3', whichAct: 2, completionPercent: 1, prereqs: [], location: 'The Cradle: Defeat Lace.', parsingInfo: { type: 'sceneVisited', internalId:'Memory_Silk_Heart_LaceTower' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479089' },
+        { name: 'Silk Heart #1', whichAct: 1, completionPercent: 1, prereqs: ['Silkspear'], location: 'The Marrow: Defeat Bell Beast.', parsingInfo: { type: 'sceneVisited', internalId: 'Memory_Silk_Heart_BellBeast' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477879' },
+        { name: 'Silk Heart #2', whichAct: 2, completionPercent: 1, prereqs: [], location: 'Whiteward: Defeat The Unravelled (beneath a locked trapdoor, requires Surgeon\'s Key).', parsingInfo: { type: 'sceneVisited', internalId:'Memory_Silk_Heart_WardBoss' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479082' },
+        { name: 'Silk Heart #3', whichAct: 2, completionPercent: 1, prereqs: [], location: 'The Cradle: Defeat Lace.', parsingInfo: { type: 'sceneVisited', internalId:'Memory_Silk_Heart_LaceTower' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479089' },
       ]
     },
     {

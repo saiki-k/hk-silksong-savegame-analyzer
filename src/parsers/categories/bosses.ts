@@ -2,7 +2,7 @@ import type { NormalisedTrackableCategory } from '../types';
 
 export const bosses: NormalisedTrackableCategory = {
   name: 'Bosses',
-  description: 'Bosses',
+  description: '🎶Epic battle music...🎶',
   sections: [
     {
       name: 'Main',

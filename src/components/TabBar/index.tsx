@@ -13,7 +13,7 @@ export function TabBar({ tabs, activeTab, onSelect, parsedJson, decrypted }: Tab
     <div className="flex justify-between mt-4 mb-2 flex-wrap gap-2">
       {tabs.map(tab => {
         const isActive = tab.id === activeTab;
-        const extra = decrypted && parsedJson ? tab.getExtra?.({ parsedJson, decrypted }) : null;
+        const progress = decrypted && parsedJson ? tab.getProgress?.({ parsedJson, decrypted }) : null;
         return (
           <button
             key={tab.id}
@@ -25,7 +25,7 @@ export function TabBar({ tabs, activeTab, onSelect, parsedJson, decrypted }: Tab
           >
             <div className="flex flex-col items-center">
               <span>{tab.tabLabel}</span>
-              {extra}
+              {progress}
             </div>
           </button>
         );
