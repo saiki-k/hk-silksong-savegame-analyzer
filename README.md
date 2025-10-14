@@ -29,7 +29,7 @@ The analyzer comprehensively tracks everything that contributes to 100% completi
   - Silk Hearts
   - Cloak Abilities *(these don't contribute any % towards 100% completion)*
   - Ancestral Arts
-  - Everbloom
+  - Other (Unique) Abilities: <details><summary>Spoiler</summary>Sylphsong</details><details><summary>Spoiler</summary>Everbloom</details>
 - **Upgrades**
   - Needle Upgrades
   - Tool Pouch Upgrades
