@@ -2,21 +2,25 @@ import type { Dispatch, ReactNode, SetStateAction } from "react";
 
 export type TabId =
   | "Stats"
-  | "Mask Shards"
-  | "Spool Fragments"
+  | "Masks & Spools"
+  | "Abilities"
   | "Upgrades"
   | "Tools"
   | "Crests"
-  | "Ancestral Arts"
+  | "Lost Fleas"
   | "Relics"
-  | "Fleas"
   | "Memory Lockets"
   | "Craftmetals"
+  | "Mossberries"
   | "Keys"
-  | "Wishes"
+  | "Maps"
+  | "Bellways"
+  | "Ventrica Stations"
+  | "Mementos"
+  | "Quests"
   | "Bosses"
   | "Hunter's Journal"
-  | "JSON Editor";
+  | "Save Editor";
 
 export interface TabRenderProps {
   parsedJson: unknown;
@@ -29,7 +33,19 @@ export interface TabRenderProps {
 
 export interface TabDefinition {
   id: TabId;
-  label: string;
+  tabLabel: string;
   render: (props: TabRenderProps) => ReactNode;
-  getExtra?: (props: { parsedJson: unknown; decrypted: boolean }) => ReactNode;
+  getProgress?: (props: { parsedJson: unknown; decrypted: boolean }) => ReactNode;
+}
+
+export interface ProgressData {
+  type: 'count' | 'percentage';
+  current: number;
+  total: number;
+}
+
+export interface HuntersJournalProgressData {
+  completed: number;
+  encountered: number;
+  total: number;
 }

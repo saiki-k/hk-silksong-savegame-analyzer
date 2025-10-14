@@ -6,8 +6,8 @@ import { FileUpload } from "./components/FileUpload";
 import { TabBar } from "./components/TabBar";
 import { TotalProgress } from "./components/TotalProgress";
 import { useSaveFile } from "./hooks/useSaveFile";
-import { tabDefinitions } from "./tabs";
-import type { TabId } from "./tabs/types";
+import { tabDefinitions } from "./components/tabs";
+import type { TabId } from "./components/tabs/types";
 
 type PlatformId = "SteamWindows" | "SteamDeck" | "GamePassPC" | "macOS" | "Linux" | "Switch";
 

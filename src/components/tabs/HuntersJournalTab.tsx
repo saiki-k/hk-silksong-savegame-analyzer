@@ -1,19 +1,24 @@
-import type { ReactNode } from "react";
 import type { TabRenderProps } from "./types";
-import { CATEGORIES, isItemUnlockedInPlayerSave } from "../parsers/dictionary";
+import { CATEGORIES, isItemUnlockedInPlayerSave } from "../../parsers/dictionary";
 
 const JOURNAL_CATEGORY_NAME = "Hunter's Journal";
 
 export function HuntersJournalTab({ parsedJson, decrypted }: TabRenderProps) {
   if (!decrypted || !parsedJson) {
-    return <div className="text-white text-center">Load a save file to view the hunter's journal.</div>;
+    return <div className="text-white text-center">Load a savefile to view "Hunter's Journal" data.</div>;
   }
 
   const journalCategory = CATEGORIES.find(cat => cat.name === JOURNAL_CATEGORY_NAME);
-  const journalEntries = journalCategory?.items ?? [];
+  const journalEntries = (journalCategory && 'items' in journalCategory) ? journalCategory.items : [];
 
   return (
     <div className="text-white">
+      <div className="mb-4">
+        <h2 className="text-xl font-bold mb-2 text-blue-200">Hunter's Journal</h2>
+        {journalCategory && journalCategory.description && journalCategory.description.trim() && journalCategory.description.trim() !== journalCategory.name && (
+          <p className="text-sm text-gray-300 mb-2">{journalCategory.description}</p>
+        )}
+      </div>
       <div className="max-w-3xl mx-auto">
         <table className="w-full table-auto border-collapse divide-y divide-gray-600">
           <thead>
@@ -85,40 +90,3 @@ function getHuntersJournalStatusColor(unlocked: boolean, killsAchieved: number |
   return "";
 }
 
-export function getHuntersJournalExtra({ parsedJson, decrypted }: { parsedJson: unknown; decrypted: boolean }): ReactNode {
-  if (!decrypted || !parsedJson) {
-    return null;
-  }
-
-  const journalCategory = CATEGORIES.find(cat => cat.name === JOURNAL_CATEGORY_NAME);
-  const journalEntries = journalCategory?.items ?? [];
-
-  if (journalEntries.length === 0) {
-    return null;
-  }
-
-  let completed = 0;
-  let encountered = 0;
-
-  journalEntries.forEach(entry => {
-    const { returnValue: killsAchieved } = isItemUnlockedInPlayerSave(entry.parsingInfo, parsedJson);
-    if (
-      killsAchieved !== undefined &&
-      entry.killsRequired !== undefined &&
-      typeof killsAchieved === "number" &&
-      killsAchieved > 0
-    ) {
-      encountered += 1;
-      if (killsAchieved >= entry.killsRequired) {
-        completed += 1;
-      }
-    }
-  });
-
-  return (
-    <div className="text-xs mt-1 font-normal">
-      <span className="text-green-400 font-bold">{`Completed ${completed} / ${journalEntries.length}`}</span><br />
-      <span className="text-yellow-400 font-bold">{`Encountered ${encountered} / ${journalEntries.length}`}</span>
-    </div>
-  );
-}
