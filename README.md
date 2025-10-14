@@ -18,40 +18,54 @@ Once uploaded, the analyzer will automatically parse your data and display your 
 
 ## 📊 What It Tracks
 
-The analyzer currently tracks everything needed for **100% completion**, including:
+The analyzer comprehensively tracks everything that contributes to 100% completion in Hollow Knight: Silksong, as well as many additional collectibles and features.
 
 ### 🧩 Core Progress Items (that count towards **100% completion**)
-- Mask Shards
-- Spool Fragments
-- Tools
-- Crests
-- Ancestral Arts
-- 🧰 Upgrades
-	- Cloak Upgrades (these don't contribute any %)
-	- Needle Upgrades
-	- Tool Pouch Upgrades
-	- Tool Kit Upgrades
-	- Silk Hearts
+- **Masks & Spools**
+  - Mask Shards
+  - Spool Fragments
+- **Abilities**
+  - Silk Skills
+  - Silk Hearts
+  - Cloak Abilities *(these don't contribute any % towards 100% completion)*
+  - Ancestral Arts
+  - Everbloom
+- **Upgrades**
+  - Needle Upgrades
+  - Tool Pouch Upgrades
+  - Tool Kit Upgrades
+- **Tools**
+- **Crests**
 
-### 💎 Other Collectibles
-- Relics
-- Fleas
-- Memory Lockets
-- Craftmetals
-- Keys
+### 💎 Collectibles & Resources
+- **Lost Fleas**
+- **Relics**
+- **Memory Lockets**
+- **Craftmetals**
+- **Mossberries**
+- **Keys**
+- **Mementos**
 
-### 📋
-- Wishes (Quests)
-- Bosses
-- Hunter’s Journal Entries
+### 🗺️ Exploration & Navigation
+- **Maps**
+- **Bellways**
+- **Ventrica Stations**
+
+### 📋 Progression & Journal Entries
+- **Quests**
+- **Bosses**
+- **Hunter's Journal**
+
+### 🔧 Advanced Feature(s)
+- **Save Editor**: A featured (JSON) editor with real-time validation for savefile modification
 
 
 ## 🐞 Issues & Contributions
 
 If you spot an error or missing data:
 
-- 🐛 **Report it:** Open an issue in this repository.
-- 🛠️ **Fix it:** Submit a pull request if you’ve already solved it!
+- 🐛 **Report it**: Open an issue in this repository.
+- 🛠️ **Fix it**: Submit a pull request if you’ve already solved it!
 
 
 ## 💖 Credits
