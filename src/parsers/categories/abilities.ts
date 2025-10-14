@@ -30,7 +30,7 @@ export const abilities: NormalisedTrackableCategory = {
       description: 'Cloak Abilities do not count any % towards completion.',
       items: [
         { name: 'Drifter\'s Cloak (Glide)', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Far Fields: Complete Seamstress\' "Flexile Spines" wish.', parsingInfo: { type: 'flag', internalId: 'hasBrolly' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477971' },
-        { name: 'Faydown Cloak (Double Jump)', whichAct: 2, completionPercent: 0, prereqs: ['Needolin','Clawline'], location: 'Mount Fay: At the summit.', parsingInfo: { type: 'flag', internalId: 'hasDoubleJump' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479103' },
+        { name: 'Faydown Cloak (Double Jump)', whichAct: 2, completionPercent: 0, prereqs: ['Needolin', 'Clawline'], location: 'Mount Fay: At the summit.', parsingInfo: { type: 'flag', internalId: 'hasDoubleJump' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479103' },
       ]
     },
     {
@@ -43,13 +43,13 @@ export const abilities: NormalisedTrackableCategory = {
         { name: 'Needolin', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Bellhart: Deafeat Widow.', parsingInfo: { type: 'flag', internalId: 'hasNeedolin' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478199' },
         { name: 'Needle Strike', whichAct: 1, completionPercent: 1, prereqs: [], location: 'Blasted Steps (Pinstress\' Home)', parsingInfo: { type: 'flag', internalId: 'hasChargeSlash' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478510' },
         { name: 'Silk Soar (Super Jump)', whichAct: 3, completionPercent: 1, prereqs: [], location: 'The Abyss', parsingInfo: { type: 'flag', internalId: 'hasSuperJump' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479288' },
-        { name: 'Sylphsong', whichAct: 2, completionPercent: 1, prereqs: [], location: 'Weavnest Atla: Bind Eva after unlocking a total of 32 tool slots (excluding Hunter Crest slots) via Memory Lockets and acquiring new Crests.', parsingInfo: { type: 'flag', internalId: 'HasBoundCrestUpgrader' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479654' },
       ],
     },
     {
-      name: 'Everbloom',
-      description: 'Everbloom counts 1% towards completion.',
+      name: 'Unique Abilities',
+      description: 'These count 1% towards completion.',
       items: [
+        { name: 'Sylphsong', whichAct: 2, completionPercent: 1, prereqs: [], location: 'Weavnest Atla: Bind Eva after unlocking a total of 32 tool slots (excluding Hunter Crest slots) via Memory Lockets and acquiring new Crests.', parsingInfo: { type: 'flag', internalId: 'HasBoundCrestUpgrader' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479654' },
         { name: 'Everbloom', whichAct: 3, completionPercent: 1, prereqs: [], location: 'Complete "The Old Hearts" wish.', parsingInfo: { type: 'collectable', internalId: 'White Flower' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479387' },
       ],
     },
