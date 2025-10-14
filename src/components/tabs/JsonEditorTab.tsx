@@ -1,59 +1,97 @@
-import { useMemo, useState } from "react";
+import { useState, useEffect } from "react";
+import Editor from '@monaco-editor/react';
 
 import type { TabRenderProps } from "./types";
 
-export function JsonEditorTab({ jsonText, setJsonText, saveEncrypted, savePlain }: TabRenderProps) {
-  const [search, setSearch] = useState("");
+function KeyboardButton({ children }: { children: React.ReactNode }) {
+  return (
+    <kbd className="min-h-7.5 inline-flex justify-center items-center py-1 px-1.5 mx-0.5 bg-white border border-gray-200 font-mono text-sm text-gray-800 shadow-[0px_2px_0px_0px_rgba(0,0,0,0.08)] dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200 dark:shadow-[0px_2px_0px_0px_rgba(255,255,255,0.1)] rounded-md">
+      {children}
+    </kbd>
+  );
+}
 
-  const filteredJson = useMemo(() => {
-    if (!search) return jsonText;
-    const lower = search.toLowerCase();
-    return jsonText
-      .split("\n")
-      .filter(line => line.toLowerCase().includes(lower))
-      .join("\n");
-  }, [jsonText, search]);
+export function JsonEditorTab({ jsonText, setJsonText, saveEncrypted, savePlain }: TabRenderProps) {
+  const [isValidJson, setIsValidJson] = useState(true);
+
+  // Validate JSON on initial load
+  useEffect(() => {
+    try {
+      JSON.parse(jsonText);
+      setIsValidJson(true);
+    } catch {
+      setIsValidJson(false);
+    }
+  }, [jsonText]);
 
   const handleChange = (value: string) => {
-    if (!search) {
-      setJsonText(value);
-      return;
+    // Validate JSON
+    try {
+      JSON.parse(value);
+      setIsValidJson(true);
+    } catch {
+      setIsValidJson(false);
     }
-
-    const originalLines = jsonText.split("\n");
-    const lower = search.toLowerCase();
-    const editedLines = value.split("\n");
-    let filteredIndex = 0;
-
-    const mergedLines = originalLines.map(line => {
-      if (!line.toLowerCase().includes(lower)) return line;
-      const replacement = editedLines[filteredIndex];
-      filteredIndex += 1;
-      return typeof replacement === "string" ? replacement : line;
-    });
-
-    setJsonText(mergedLines.join("\n"));
+    setJsonText(value);
   };
 
   return (
     <div className="text-white">
       <div className="mb-4">
         <h2 className="text-xl font-bold mb-2 text-blue-200">Save Editor</h2>
-        <p className="text-sm text-gray-300 mb-2">View and/or edit the uploaded savefile in JSON format.</p>
+        <p className="text-sm text-gray-300">
+          View and/or edit the uploaded savefile in JSON format. Use{' '}
+          <KeyboardButton>Ctrl</KeyboardButton>
+          <span className="text-gray-400 mx-1">or</span>
+          <KeyboardButton>⌘</KeyboardButton>
+          <span className="text-gray-400 mx-1">+</span>
+          <KeyboardButton>F</KeyboardButton>
+          {' '} to search within the editor.
+        </p>
       </div>
-      <input
-        type="text"
-        placeholder="Search JSON..."
-        value={search}
-        onChange={event => setSearch(event.target.value)}
-        className="w-full p-2 rounded bg-[#24344d] text-white border border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-      <textarea
-        className="w-full h-96 p-3 rounded bg-[#0d1b2a] text-white font-mono overflow-auto resize-none mt-2"
-        value={filteredJson}
-        onChange={event => handleChange(event.target.value)}
-        spellCheck={false}
-      />
+
+      <div className="flex justify-end mb-1">
+        <span className={`inline-flex items-center justify-center text-xs px-2 py-0.5 rounded-lg ${
+          isValidJson ? 'bg-green-600 text-white' : 'bg-red-600 text-white'
+        }`}>
+          {isValidJson ? '✓ Valid JSON' : '✗ Invalid JSON'}
+        </span>
+      </div>
+
+      <div className="border border-gray-600 rounded overflow-hidden">
+        <Editor
+          height="400px"
+          defaultLanguage="json"
+          value={jsonText}
+          onChange={(value) => handleChange(value || "")}
+          theme="vs-dark"
+          options={{
+            minimap: { enabled: false },
+            scrollBeyondLastLine: false,
+            fontSize: 14,
+            lineNumbers: 'on',
+            renderWhitespace: 'selection',
+            automaticLayout: true,
+            formatOnPaste: true,
+            formatOnType: false, // Disable auto-formatting while typing for performance
+            wordWrap: 'on',
+            tabSize: 2,
+            insertSpaces: true,
+            bracketPairColorization: { enabled: true },
+            folding: true,
+            foldingHighlight: true,
+            showFoldingControls: 'always',
+            matchBrackets: 'always',
+            contextmenu: true,
+            find: {
+              addExtraSpaceOnTop: false,
+              autoFindInSelection: 'never',
+              seedSearchStringFromSelection: 'always'
+            }
+          }}
+        />
+      </div>
+
       <div className="flex flex-col md:flex-row gap-2 mt-2">
         <button
           onClick={saveEncrypted}
