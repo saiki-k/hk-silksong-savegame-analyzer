@@ -57,7 +57,7 @@ The analyzer comprehensively tracks everything that contributes to 100% completi
 - **Hunter's Journal**
 
 ### 🔧 Advanced Feature(s)
-- **Save Editor**: A featured (JSON) editor with real-time validation for savefile modification
+- **Save Editor**: A feature-rich editor with advanced search and real-time (JSON) validation capabilities, for savefile modification
 
 
 ## 🐞 Issues & Contributions
