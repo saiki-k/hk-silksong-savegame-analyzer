@@ -10,9 +10,14 @@ import { relics } from './categories/relics';
 import { fleas } from './categories/fleas';
 import { memoryLockets } from './categories/memoryLockets';
 import { craftmetals } from './categories/craftmetals';
-import { bosses } from './categories/bosses';
+import { mossberries } from './categories/mossberries';
 import { keys } from './categories/keys';
+import { maps } from './categories/maps';
+import { bellways } from './categories/bellways';
+import { ventricaStations } from './categories/ventricaStations';
+import { mementos } from './categories/mementos';
 import { quests } from './categories/quests';
+import { bosses } from './categories/bosses';
 import { huntersJournal } from './categories/huntersJournal';
 
 export const CATEGORIES: (NormalisedTrackableCategory | TrackableCategory)[] = [
@@ -22,13 +27,18 @@ export const CATEGORIES: (NormalisedTrackableCategory | TrackableCategory)[] = [
   upgrades,
   tools,
   crests,
-  relics,
   fleas,
+  relics,
   memoryLockets,
   craftmetals,
-  bosses,
+  mossberries,
   keys,
+  maps,
+  bellways,
+  ventricaStations,
+  mementos,
   quests,
+  bosses,
   huntersJournal
 ];
 
@@ -144,6 +154,12 @@ export function isItemUnlockedInPlayerSave(itemParsingInfo: ParsingInfo | Parsin
 
     sceneVisited: (sceneName: string) => {
       return { unlocked: !!playerData?.scenesVisited?.includes(sceneName) };
+    },
+
+    mementoDeposit: (mementoName: string) => {
+      const mementos = playerData?.MementosDeposited?.savedData ?? [];
+      const unlocked = mementos.some((entry: any) => entry.Name === mementoName && entry.Data?.IsDeposited);
+      return { unlocked };
     },
   };
   // @ts-ignore

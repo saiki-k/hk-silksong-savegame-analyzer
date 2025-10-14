@@ -10,7 +10,8 @@ export type RelictParsingInfo = { type: 'relict'; internalId: string };
 export type QuestParsingInfo = { type: 'quest'; internalId: string };
 export type SceneDataParsingInfo = { type: 'sceneData'; internalId: [string, string, boolean?] };
 export type SceneVistedParsingInfo = { type: 'sceneVisited'; internalId: string };
-export type ParsingInfo = FlagParsingInfo | FlagMultiParsingInfo | FlagIntParsingInfo | FlagReturnParsingInfo | ToolParsingInfo | JournalParsingInfo | CrestParsingInfo | CollectableParsingInfo | RelictParsingInfo |QuestParsingInfo | SceneDataParsingInfo | SceneVistedParsingInfo;
+export type MementoDepositParsingInfo = { type: 'mementoDeposit'; internalId: string };
+export type ParsingInfo = FlagParsingInfo | FlagMultiParsingInfo | FlagIntParsingInfo | FlagReturnParsingInfo | ToolParsingInfo | JournalParsingInfo | CrestParsingInfo | CollectableParsingInfo | RelictParsingInfo | QuestParsingInfo | SceneDataParsingInfo | SceneVistedParsingInfo | MementoDepositParsingInfo;
 export type ParsingInfoMulti = ParsingInfo[];
 
 export type CategoryItem = {

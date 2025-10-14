@@ -26,6 +26,14 @@ export const abilities: NormalisedTrackableCategory = {
       ]
     },
     {
+      name: 'Cloak Abilities',
+      description: 'Cloak Abilities do not count any % towards completion.',
+      items: [
+        { name: 'Drifter\'s Cloak (Glide)', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Far Fields: Complete Seamstress\' "Flexile Spines" wish.', parsingInfo: { type: 'flag', internalId: 'hasBrolly' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477971' },
+        { name: 'Faydown Cloak (Double Jump)', whichAct: 2, completionPercent: 0, prereqs: ['Needolin','Clawline'], location: 'Mount Fay: At the summit.', parsingInfo: { type: 'flag', internalId: 'hasDoubleJump' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479103' },
+      ]
+    },
+    {
       name: 'Ancestral Arts',
       description: 'Each Ancestral Art counts 1% towards completion.',
       items: [
@@ -44,14 +52,6 @@ export const abilities: NormalisedTrackableCategory = {
       items: [
         { name: 'Everbloom', whichAct: 3, completionPercent: 1, prereqs: [], location: 'Complete "The Old Hearts" wish.', parsingInfo: { type: 'collectable', internalId: 'White Flower' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479387' },
       ],
-    },
-    {
-      name: 'Cloak Abilities',
-      description: 'Cloak Abilities do not count any % towards completion.',
-      items: [
-        { name: 'Drifter\'s Cloak (Glide)', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Far Fields: Complete Seamstress\' "Flexile Spines" wish.', parsingInfo: { type: 'flag', internalId: 'hasBrolly' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477971' },
-        { name: 'Faydown Cloak (Double Jump)', whichAct: 2, completionPercent: 0, prereqs: ['Needolin','Clawline'], location: 'Mount Fay: At the summit.', parsingInfo: { type: 'flag', internalId: 'hasDoubleJump' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479103' },
-      ]
     },
   ],
 };

@@ -17,18 +17,16 @@ export function formatSecondsToHMS(seconds: number): string {
     .join(':');
 }
 
-
-
 export function getGenericProgress({ 
   parsedJson, 
   decrypted, 
   tabLabel,
-  useCount = false
+  isPercentProgress = true
 }: { 
   parsedJson: unknown; 
   decrypted: boolean;
   tabLabel: string;
-  useCount?: boolean;
+  isPercentProgress?: boolean;
 }): ProgressData | null {
   if (!decrypted || !parsedJson) {
     return null;
@@ -46,22 +44,7 @@ export function getGenericProgress({
     return null;
   }
 
-  if (useCount) {
-    let unlockedCount = 0;
-    
-    allItems.forEach(item => {
-      const { unlocked } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
-      if (unlocked) {
-        unlockedCount += 1;
-      }
-    });
-
-    return {
-      type: 'count',
-      current: unlockedCount,
-      total: allItems.length
-    };
-  } else {
+  if (isPercentProgress) {
     let currentPercent = 0;
     let maxPercent = 0;
 
@@ -80,6 +63,22 @@ export function getGenericProgress({
       total: maxPercent,
     };
   }
+
+  // Count-based progress
+  let unlockedCount = 0;
+  
+  allItems.forEach(item => {
+    const { unlocked } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
+    if (unlocked) {
+      unlockedCount += 1;
+    }
+  });
+
+  return {
+    type: 'count',
+    current: unlockedCount,
+    total: allItems.length
+  };
 }
 
 export function getHuntersJournalProgress({ parsedJson, decrypted }: { parsedJson: unknown; decrypted: boolean }): HuntersJournalProgressData | null {

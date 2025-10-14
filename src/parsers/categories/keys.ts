@@ -17,7 +17,7 @@ export const keys: NormalisedTrackableCategory = {
     },
     {
       name: 'Keys of The Slab',
-      description: 'They are used to open the doors in The Slab.',
+      description: 'They are used to open the gates in The Slab.',
       items: [
         { name: 'Key of Indolent', whichAct: 1, completionPercent: 0, prereqs: [], location: 'The Slab: At the edge of a room entered from above.', parsingInfo: { type: 'flag', internalId: 'HasSlabKeyA' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478467' },
         { name: 'Key of Heretic', whichAct: 1, completionPercent: 0, prereqs: [], location: 'The Slab: Dropped by the final enemy in a room entered from above.', parsingInfo: { type: 'flag', internalId: 'HasSlabKeyB' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478474' },

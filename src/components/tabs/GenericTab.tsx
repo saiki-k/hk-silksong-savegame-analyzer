@@ -43,7 +43,7 @@ function GenericTableSection({
               <th className="px-2 py-1" />
               <th className="px-2 py-1 text-center" />
               <th className="px-2 py-1">Name</th>
-              <th className="px-2 py-1">Location</th>
+              <th className="px-2 py-1">Details</th>
               <th className="px-2 py-1">Act</th>
               <th className="px-2 py-1" />
             </tr>

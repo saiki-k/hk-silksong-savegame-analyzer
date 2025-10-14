@@ -5,11 +5,11 @@ interface TabProgressProps {
   parsedJson: unknown;
   decrypted: boolean;
   tabLabel: string;
-  useCount?: boolean;
+  isPercentProgress?: boolean;
   isHuntersJournal?: boolean;
 }
 
-export function TabProgress({ parsedJson, decrypted, tabLabel, useCount = false, isHuntersJournal = false }: TabProgressProps): ReactNode {
+export function TabProgress({ parsedJson, decrypted, tabLabel, isPercentProgress = true, isHuntersJournal = false }: TabProgressProps): ReactNode {
   if (!decrypted || !parsedJson) {
     return null;
   }
@@ -26,7 +26,7 @@ export function TabProgress({ parsedJson, decrypted, tabLabel, useCount = false,
     );
   }
 
-  const progressData = getGenericProgress({ parsedJson, decrypted, tabLabel, useCount });
+  const progressData = getGenericProgress({ parsedJson, decrypted, tabLabel, isPercentProgress });
   if (!progressData) return null;
 
   if (progressData.type === 'count') {
