@@ -2,7 +2,7 @@ import type { NormalisedTrackableCategory } from '../types';
 
 export const mossberries: NormalisedTrackableCategory = {
   name: 'Mossberries',
-  description: 'Sweet berries with poisonous seeds, that grow in moist environments. Initially gathered as a part of a wish, later used to trade for Rosaries and other rewards.',
+  description: 'Sweet berries with poisonous seeds, that grow in moist environments. Initially gathered as a part of a wish, later used to trade for Rosaries (and a Tool upgrade).',
   sections: [
     {
       name: 'Main',
