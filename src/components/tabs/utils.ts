@@ -56,7 +56,7 @@ export function getGenericProgress({
     });
 
     return {
-      type: "percentage",
+      progressType: "Generic Percent Progress",
       current: currentPercent,
       total: maxPercent,
     };
@@ -73,7 +73,7 @@ export function getGenericProgress({
   });
 
   return {
-    type: "count",
+    progressType: "Generic Count Progress",
     current: unlockedCount,
     total: allItems.length,
   };
@@ -117,6 +117,7 @@ export function getHuntersJournalProgress({
   });
 
   return {
+    progressType: "Hunter's Journal Progress",
     completed,
     encountered,
     total: journalEntries.length,

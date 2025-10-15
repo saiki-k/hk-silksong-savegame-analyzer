@@ -40,12 +40,13 @@ export interface TabDefinition {
 }
 
 export interface ProgressData {
-  type: "count" | "percentage";
+  progressType: "Generic Count Progress" | "Generic Percent Progress";
   current: number;
   total: number;
 }
 
 export interface HuntersJournalProgressData {
+  progressType: "Hunter's Journal Progress";
   completed: number;
   encountered: number;
   total: number;
