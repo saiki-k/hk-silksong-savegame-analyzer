@@ -13,7 +13,7 @@ function GenericTableSection({
 }: {
   section: CategorySection;
   sectionsLength: number;
-  parsedJson: any;
+  parsedJson: unknown;
 }) {
   if (section.items.length === 0) return null;
   

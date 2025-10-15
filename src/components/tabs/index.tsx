@@ -1,4 +1,4 @@
-﻿import type { TabDefinition } from "./types";
+﻿import type { TabId, TabDefinition } from "./types";
 import { StatsTab } from "./StatsTab";
 import { GenericTab } from "./GenericTab";
 import { HuntersJournalTab } from "./HuntersJournalTab";
@@ -9,7 +9,7 @@ import { JsonEditorTab } from "./JsonEditorTab";
 function createGenericTab(tabLabel: string, options = { isPercentProgress: false }): TabDefinition {
   const { isPercentProgress } = options;
   return {
-    id: tabLabel as any, // Cast to TabId since we know these match
+    id: tabLabel as TabId,
     tabLabel,
     render: props => <GenericTab {...props} tabLabel={tabLabel} />,
     getProgress: ({ parsedJson, decrypted }) => <TabProgress parsedJson={parsedJson} decrypted={decrypted} tabLabel={tabLabel} isPercentProgress={isPercentProgress} />,
