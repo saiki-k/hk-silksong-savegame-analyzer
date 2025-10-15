@@ -16,6 +16,11 @@ function GenericTableSection({
   parsedJson: unknown;
 }) {
   if (section.items.length === 0) return null;
+  
+  const itemsWithUnlockStatus = section.items.map((item) => ({
+    ...item,
+    unlocked: isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson).unlocked,
+  }));
 
   return (
     <div className="mb-8">
@@ -50,12 +55,11 @@ function GenericTableSection({
             </tr>
           </thead>
           <tbody>
-            {section.items.map((item, index) => {
-              const { unlocked } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
+            {itemsWithUnlockStatus.map((item, index) => {
               return (
                 <tr key={index} className="border-b border-gray-700 last:border-b-0 group">
                   <td className="px-2 py-1 text-center align-middle">
-                    <span className={unlocked ? "text-green-400" : "text-red-400"}>{unlocked ? "[x]" : "[ ]"}</span>
+                    <span className={item.unlocked ? "text-green-400" : "text-red-400"}>{item.unlocked ? "[x]" : "[ ]"}</span>
                   </td>
                   <td className="px-2 py-1 text-center align-middle">
                     <span className="text-xs text-blue-200 mt-1 font-normal">
@@ -64,20 +68,20 @@ function GenericTableSection({
                   </td>
                   <td
                     className={`px-2 py-1 break-words whitespace-pre-line group-hover:blur-none transition duration-100 ${
-                      !unlocked ? "blur-sm" : ""
+                      !item.unlocked ? "blur-sm" : ""
                     }`}
                   >
                     {item.name}
                   </td>
                   <td
                     className={`px-2 py-1 relative min-w-[140px] max-w-[260px] break-words whitespace-pre-line group-hover:blur-none transition duration-100 ${
-                      !unlocked ? "blur-sm" : ""
+                      !item.unlocked ? "blur-sm" : ""
                     }`}
                   >
                     {item.location}
                   </td>
                   <td
-                    className={`px-2 py-1 w-[48px] text-center ${!unlocked ? "blur-sm group-hover:blur-none transition duration-100" : ""}`}
+                    className={`px-2 py-1 w-[48px] text-center ${!item.unlocked ? "blur-sm group-hover:blur-none transition duration-100" : ""}`}
                   >
                     {item.whichAct}
                   </td>

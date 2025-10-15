@@ -9,6 +9,7 @@ export const silkeaters: NormalisedTrackableCategory = {
     {
       name: "Main",
       description: "",
+      hasGameModeSpecificItems: true,
       items: [
         {
           name: "Silkeater · Deep Docks",

@@ -48,6 +48,7 @@ export type CategorySection = {
   description: string | undefined;
   descriptionMarkup?: ReactNode;
   items: CategoryItem[];
+  hasGameModeSpecificItems?: boolean;
 };
 
 export type TrackableCategory = {
@@ -61,5 +62,5 @@ export type NormalisedTrackableCategory = {
   name: string;
   description: string;
   sections: CategorySection[];
-  hasGameModeSpecificItems?: boolean;
+  hasGameModeSpecificItems?: boolean; // Redundant but keeping it here for consistency with TrackableCategory
 };

@@ -1,14 +1,28 @@
-import { CATEGORIES, isItemUnlockedInPlayerSave } from "../../parsers/dictionary";
+import { stats } from "../../parsers/categories/stats";
+import { isItemUnlockedInPlayerSave } from "../../parsers/dictionary";
 import type { TabRenderProps } from "./types";
 import { formatSecondsToHMS } from "./utils";
 
-export function StatsTab({ parsedJson, decrypted }: TabRenderProps) {
+export function StatsTab({ parsedJson, decrypted }: TabRenderProps) {  
   if (!decrypted || !parsedJson) {
     return <div className="text-white text-center">Load a savefile to view "Stats" data.</div>;
   }
 
-  const statsCategory = CATEGORIES.find(cat => cat.name === "Stats");
-  const stats = statsCategory && "items" in statsCategory ? statsCategory.items : [];
+  const statsWithDisplayValues = stats.items.map((item) => {
+    const { returnValue } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
+    let displayValue = "";
+    if (item.name === "Game Mode") {
+      displayValue = returnValue === 1 ? "Steel Soul" : returnValue === 0 ? "Classic" : "";
+    } else if (item.name.toLowerCase() === "playtime" && typeof returnValue === "number") {
+      displayValue = formatSecondsToHMS(returnValue);
+    } else if (returnValue !== undefined) {
+      displayValue = String(returnValue);
+    }
+    return {
+      ...item,
+      displayValue,
+    };
+  });
 
   return (
     <div className="text-white">
@@ -22,20 +36,11 @@ export function StatsTab({ parsedJson, decrypted }: TabRenderProps) {
               </tr>
             </thead>
             <tbody>
-              {stats.map((item, index) => {
-                const { returnValue } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
-                let displayValue = "";
-                if (item.name === "Game Mode") {
-                  displayValue = returnValue === 1 ? "Steel Soul" : returnValue === 0 ? "Classic" : "";
-                } else if (item.name.toLowerCase() === "playtime" && typeof returnValue === "number") {
-                  displayValue = formatSecondsToHMS(returnValue);
-                } else if (returnValue !== undefined) {
-                  displayValue = String(returnValue);
-                }
+              {statsWithDisplayValues.map((item, index) => {
                 return (
                   <tr key={index} className="border-b border-gray-700 last:border-b-0">
                     <td className="px-2 py-1 whitespace-nowrap">{item.name}</td>
-                    <td className="px-2 py-1 w-[100px] text-center whitespace-nowrap">{displayValue}</td>
+                    <td className="px-2 py-1 w-[100px] text-center whitespace-nowrap">{item.displayValue}</td>
                   </tr>
                 );
               })}

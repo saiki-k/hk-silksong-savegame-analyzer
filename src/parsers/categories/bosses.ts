@@ -8,6 +8,7 @@ export const bosses: NormalisedTrackableCategory = {
     {
       name: "Main",
       description: "",
+      hasGameModeSpecificItems: true,
       items: [
         {
           name: "Moss Mother",
