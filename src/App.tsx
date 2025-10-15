@@ -25,7 +25,7 @@ const PLATFORM_OPTIONS: PlatformOption[] = [
     path: "%USERPROFILE%/AppData/LocalLow/Team Cherry/Hollow Knight Silksong/",
     note: (
       <>
-        /SteamID/userX.dat (where X = 1-4, denotes the save slot)  {" "}
+        /SteamID/userX.dat (where X = 1-4, denotes the save slot){" "}
         <a
           href="https://store.steampowered.com/account/remotestorageapp/?appid=1030300"
           className="underline text-green-300 hover:text-green-200"
@@ -43,7 +43,7 @@ const PLATFORM_OPTIONS: PlatformOption[] = [
     path: "~/.local/share/Team Cherry/Hollow Knight Silksong/",
     note: (
       <>
-        /SteamID/userX.dat (where X = 1-4, denotes the save slot)  {" "}
+        /SteamID/userX.dat (where X = 1-4, denotes the save slot){" "}
         <a
           href="https://store.steampowered.com/account/remotestorageapp/?appid=1030300"
           className="underline text-green-300 hover:text-green-200"
@@ -70,11 +70,7 @@ const PLATFORM_OPTIONS: PlatformOption[] = [
     id: "Linux",
     label: "Linux",
     path: "~/.config/unity3d/Team Cherry/Hollow Knight Silksong/",
-    note: (
-      <>
-        /(a folder with random characters)/userX.dat (where X = 1-4, denotes the save slot)
-      </>
-    ),
+    note: <>/(a folder with random characters)/userX.dat (where X = 1-4, denotes the save slot)</>,
   },
   {
     id: "Switch",
@@ -114,8 +110,7 @@ export default function App() {
   const [showToast, setShowToast] = useState(false);
   const [activePlatformId, setActivePlatformId] = useState<PlatformId>("SteamWindows");
 
-  const activePlatform =
-    PLATFORM_OPTIONS.find(platform => platform.id === activePlatformId) ?? PLATFORM_OPTIONS[0];
+  const activePlatform = PLATFORM_OPTIONS.find(platform => platform.id === activePlatformId) ?? PLATFORM_OPTIONS[0];
 
   const handleCopyPath = () => {
     navigator.clipboard.writeText(activePlatform.path);
@@ -137,9 +132,7 @@ export default function App() {
       }}
     >
       <div className="w-full max-w-4xl bg-[#1a1313cc] rounded-lg shadow-lg p-5 mt-0 space-y-5 backdrop-blur-sm">
-        <h1 className="text-2xl font-bold text-white text-center">
-          Hollow Knight: Silksong Savegame Analyzer
-        </h1>
+        <h1 className="text-2xl font-bold text-white text-center">Hollow Knight: Silksong Savegame Analyzer</h1>
 
         <div className="text-center text-sm">
           <div className="flex flex-wrap justify-center gap-2 mb-3">
@@ -164,10 +157,7 @@ export default function App() {
           </div>
 
           <p className="font-bold text-white mb-4">
-            <span
-              className="text-green-500 hover:underline cursor-pointer"
-              onClick={handleCopyPath}
-            >
+            <span className="text-green-500 hover:underline cursor-pointer" onClick={handleCopyPath}>
               {activePlatform.path}
             </span>
             <br />
@@ -177,12 +167,7 @@ export default function App() {
           </p>
         </div>
 
-        <FileUpload
-          fileName={fileName}
-          onFileSelected={handleFile}
-          onDrop={handleDrop}
-          onDragOver={handleDragOver}
-        />
+        <FileUpload fileName={fileName} onFileSelected={handleFile} onDrop={handleDrop} onDragOver={handleDragOver} />
 
         {showToast && (
           <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-[#454d5c] text-white px-4 py-2 rounded shadow-lg z-50">
@@ -215,14 +200,45 @@ export default function App() {
           )}
         </div>
         <footer className="w-full mt-8 py-4  text-white text-center text-sm  ">
-          Made by <a href="https://github.com/br3zzly" target="_blank" className="underline">Br3zzly</a><br />
-          With help from <a href="https://github.com/theezeb" target="_blank" className="underline">theezeb</a>, <a href="https://github.com/btastic" target="_blank" className="underline">btastic</a>, <a href="https://github.com/TheSaneWriter" target="_blank" className="underline">TheSaneWriter</a>, <a href="https://github.com/saiki-k" target="_blank" className="underline">saiki-k</a><br />
-          <a href="https://github.com/Br3zzly/hk-silksong-savegame-analyzer" target="_blank"className="underline">GitHub Repo</a><br />
-          <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3571462700" target="_blank" className="underline">Steam Guide</a><br />
-          <a href="https://www.buymeacoffee.com/Br3zzly" target="_blank" className="underline">Buy me a coffee</a>
+          Made by{" "}
+          <a href="https://github.com/br3zzly" target="_blank" className="underline">
+            Br3zzly
+          </a>
+          <br />
+          With help from{" "}
+          <a href="https://github.com/theezeb" target="_blank" className="underline">
+            theezeb
+          </a>
+          ,{" "}
+          <a href="https://github.com/btastic" target="_blank" className="underline">
+            btastic
+          </a>
+          ,{" "}
+          <a href="https://github.com/TheSaneWriter" target="_blank" className="underline">
+            TheSaneWriter
+          </a>
+          ,{" "}
+          <a href="https://github.com/saiki-k" target="_blank" className="underline">
+            saiki-k
+          </a>
+          <br />
+          <a href="https://github.com/Br3zzly/hk-silksong-savegame-analyzer" target="_blank" className="underline">
+            GitHub Repo
+          </a>
+          <br />
+          <a
+            href="https://steamcommunity.com/sharedfiles/filedetails/?id=3571462700"
+            target="_blank"
+            className="underline"
+          >
+            Steam Guide
+          </a>
+          <br />
+          <a href="https://www.buymeacoffee.com/Br3zzly" target="_blank" className="underline">
+            Buy me a coffee
+          </a>
         </footer>
       </div>
     </div>
   );
 }
-

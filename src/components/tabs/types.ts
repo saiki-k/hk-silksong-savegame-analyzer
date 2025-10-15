@@ -12,11 +12,12 @@ export type TabId =
   | "Memory Lockets"
   | "Craftmetals"
   | "Mossberries"
+  | "Silkeaters"
   | "Keys"
+  | "Mementos"
   | "Maps"
   | "Bellways"
   | "Ventrica Stations"
-  | "Mementos"
   | "Quests"
   | "Bosses"
   | "Hunter's Journal"
@@ -39,12 +40,13 @@ export interface TabDefinition {
 }
 
 export interface ProgressData {
-  type: 'count' | 'percentage';
+  progressType: "Generic Count Progress" | "Generic Percent Progress";
   current: number;
   total: number;
 }
 
 export interface HuntersJournalProgressData {
+  progressType: "Hunter's Journal Progress";
   completed: number;
   encountered: number;
   total: number;

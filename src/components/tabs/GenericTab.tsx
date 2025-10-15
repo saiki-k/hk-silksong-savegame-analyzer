@@ -1,6 +1,6 @@
 import { CATEGORIES, isItemUnlockedInPlayerSave } from "../../parsers/dictionary";
 import type { TabRenderProps } from "./types";
-import type { CategoryItem, NormalisedTrackableCategory } from "../../parsers/types";
+import type { NormalisedTrackableCategory, CategorySection } from "../../parsers/types";
 
 interface GenericTabProps extends TabRenderProps {
   tabLabel: string;
@@ -9,14 +9,19 @@ interface GenericTabProps extends TabRenderProps {
 function GenericTableSection({
   section,
   sectionsLength,
-  parsedJson 
+  parsedJson,
 }: {
-  section: { name: string | undefined; description: string | undefined; items: CategoryItem[] };
+  section: CategorySection;
   sectionsLength: number;
-  parsedJson: any;
+  parsedJson: unknown;
 }) {
   if (section.items.length === 0) return null;
-  
+
+  const itemsWithUnlockStatus = section.items.map(item => ({
+    ...item,
+    unlocked: isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson).unlocked,
+  }));
+
   return (
     <div className="mb-8">
       {sectionsLength > 1 && (
@@ -25,9 +30,10 @@ function GenericTableSection({
           {section.description && section.description.trim() && (
             <p className="text-sm text-gray-300 mb-2">{section.description}</p>
           )}
+          {section.descriptionMarkup && <div className="text-sm text-gray-300 mb-2">{section.descriptionMarkup}</div>}
         </div>
       )}
-      
+
       <div className="max-w-3xl mx-auto">
         <table className="w-full border-collapse divide-y divide-gray-600 table-fixed">
           <colgroup>
@@ -49,13 +55,12 @@ function GenericTableSection({
             </tr>
           </thead>
           <tbody>
-            {section.items.map((item, index) => {
-              const { unlocked } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
+            {itemsWithUnlockStatus.map((item, index) => {
               return (
-                <tr key={index} className="border-b border-gray-700 last:border-b-0">
+                <tr key={index} className="border-b border-gray-700 last:border-b-0 group">
                   <td className="px-2 py-1 text-center align-middle">
-                    <span className={unlocked ? "text-green-400" : "text-red-400"}>
-                      {unlocked ? "[x]" : "[ ]"}
+                    <span className={item.unlocked ? "text-green-400" : "text-red-400"}>
+                      {item.unlocked ? "[x]" : "[ ]"}
                     </span>
                   </td>
                   <td className="px-2 py-1 text-center align-middle">
@@ -63,12 +68,23 @@ function GenericTableSection({
                       {item.completionPercent ? `+${item.completionPercent}%` : ""}
                     </span>
                   </td>
-                  <td className="px-2 py-1 break-words whitespace-pre-line">{item.name}</td>
-                  <td className={`px-2 py-1 relative min-w-[140px] max-w-[260px] break-words whitespace-pre-line 
-                      ${!unlocked ? "blur-sm hover:blur-none transition duration-100" : ""}`}>
+                  <td
+                    className={`px-2 py-1 break-words whitespace-pre-line group-hover:blur-none transition duration-100 ${
+                      !item.unlocked ? "blur-sm" : ""
+                    }`}
+                  >
+                    {item.name}
+                  </td>
+                  <td
+                    className={`px-2 py-1 relative min-w-[140px] max-w-[260px] break-words whitespace-pre-line group-hover:blur-none transition duration-100 ${
+                      !item.unlocked ? "blur-sm" : ""
+                    }`}
+                  >
                     {item.location}
                   </td>
-                  <td className={`px-2 py-1 w-[48px] text-center ${!unlocked ? "blur-sm hover:blur-none transition duration-100" : ""}`}>
+                  <td
+                    className={`px-2 py-1 w-[48px] text-center ${!item.unlocked ? "blur-sm group-hover:blur-none transition duration-100" : ""}`}
+                  >
                     {item.whichAct}
                   </td>
                   <td className="px-2 py-1 text-center">
@@ -112,9 +128,14 @@ export function GenericTab({ parsedJson, decrypted, tabLabel }: GenericTabProps)
       {categoryData.sections.length === 1 && (
         <div className="mb-4">
           <h2 className="text-xl font-bold mb-2 text-blue-200">{categoryData.name}</h2>
-          {categoryData.description && categoryData.description.trim() && categoryData.description.trim() !== categoryData.name && (
-            <p className="text-sm text-gray-300 mb-2">{categoryData.description}</p>
-          )}
+          {categoryData.description &&
+            categoryData.description.trim() &&
+            categoryData.description.trim() !== categoryData.name && (
+              <div
+                className="text-sm text-gray-300 mb-2"
+                dangerouslySetInnerHTML={{ __html: categoryData.description }}
+              />
+            )}
         </div>
       )}
       {categoryData.sections.map((section, sectionIndex) => (

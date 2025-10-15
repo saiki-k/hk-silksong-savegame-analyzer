@@ -1,4 +1,4 @@
-﻿import type { TabDefinition } from "./types";
+﻿import type { TabId, TabDefinition } from "./types";
 import { StatsTab } from "./StatsTab";
 import { GenericTab } from "./GenericTab";
 import { HuntersJournalTab } from "./HuntersJournalTab";
@@ -9,10 +9,17 @@ import { JsonEditorTab } from "./JsonEditorTab";
 function createGenericTab(tabLabel: string, options = { isPercentProgress: false }): TabDefinition {
   const { isPercentProgress } = options;
   return {
-    id: tabLabel as any, // Cast to TabId since we know these match
+    id: tabLabel as TabId,
     tabLabel,
     render: props => <GenericTab {...props} tabLabel={tabLabel} />,
-    getProgress: ({ parsedJson, decrypted }) => <TabProgress parsedJson={parsedJson} decrypted={decrypted} tabLabel={tabLabel} isPercentProgress={isPercentProgress} />,
+    getProgress: ({ parsedJson, decrypted }) => (
+      <TabProgress
+        parsedJson={parsedJson}
+        decrypted={decrypted}
+        tabLabel={tabLabel}
+        isPercentProgress={isPercentProgress}
+      />
+    ),
   };
 }
 
@@ -29,15 +36,23 @@ export const tabDefinitions: TabDefinition[] = [
   createGenericTab("Memory Lockets"),
   createGenericTab("Craftmetals"),
   createGenericTab("Mossberries"),
-  createGenericTab("Keys"),
+  createGenericTab("Silkeaters"),
 
+  createGenericTab("Keys"),
+  createGenericTab("Mementos"),
   createGenericTab("Maps"),
   createGenericTab("Bellways"),
   createGenericTab("Ventrica Stations"),
-  createGenericTab("Mementos"),
   createGenericTab("Quests"),
-  createGenericTab("Bosses"),
 
-  { id: "Hunter's Journal", tabLabel: "Hunter's Journal", render: props => <HuntersJournalTab {...props} />, getProgress: ({ parsedJson, decrypted }) => <TabProgress parsedJson={parsedJson} decrypted={decrypted} tabLabel="Hunter's Journal" isHuntersJournal={true} /> },
+  createGenericTab("Bosses"),
+  {
+    id: "Hunter's Journal",
+    tabLabel: "Hunter's Journal",
+    render: props => <HuntersJournalTab {...props} />,
+    getProgress: ({ parsedJson, decrypted }) => (
+      <TabProgress parsedJson={parsedJson} decrypted={decrypted} tabLabel="Hunter's Journal" isHuntersJournal={true} />
+    ),
+  },
   { id: "Save Editor", tabLabel: "Save Editor", render: props => <JsonEditorTab {...props} /> },
 ];

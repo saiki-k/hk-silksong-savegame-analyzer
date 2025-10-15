@@ -43,6 +43,7 @@ The analyzer comprehensively tracks everything that contributes to 100% completi
 - **Memory Lockets**
 - **Craftmetals**
 - **Mossberries**
+- **Silkeaters**
 - **Keys**
 - **Mementos**
 

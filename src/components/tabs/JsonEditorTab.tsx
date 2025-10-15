@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Editor from '@monaco-editor/react';
+import Editor from "@monaco-editor/react";
 
 import type { TabRenderProps } from "./types";
 
@@ -40,21 +40,21 @@ export function JsonEditorTab({ jsonText, setJsonText, saveEncrypted, savePlain 
       <div className="mb-4">
         <h2 className="text-xl font-bold mb-2 text-blue-200">Save Editor</h2>
         <p className="text-sm text-gray-300">
-          View and/or edit the uploaded savefile in JSON format. Use{' '}
-          <KeyboardButton>Ctrl</KeyboardButton>
+          View and/or edit the uploaded savefile in JSON format. Use <KeyboardButton>Ctrl</KeyboardButton>
           <span className="text-gray-400 mx-1">or</span>
           <KeyboardButton>⌘</KeyboardButton>
           <span className="text-gray-400 mx-1">+</span>
-          <KeyboardButton>F</KeyboardButton>
-          {' '} to search within the editor.
+          <KeyboardButton>F</KeyboardButton> to search within the editor.
         </p>
       </div>
 
       <div className="flex justify-end mb-1">
-        <span className={`inline-flex items-center justify-center text-xs px-2 py-0.5 rounded-lg ${
-          isValidJson ? 'bg-green-600 text-white' : 'bg-red-600 text-white'
-        }`}>
-          {isValidJson ? '✓ Valid JSON' : '✗ Invalid JSON'}
+        <span
+          className={`inline-flex items-center justify-center text-xs px-2 py-0.5 rounded-lg ${
+            isValidJson ? "bg-green-600 text-white" : "bg-red-600 text-white"
+          }`}
+        >
+          {isValidJson ? "✓ Valid JSON" : "✗ Invalid JSON"}
         </span>
       </div>
 
@@ -63,31 +63,31 @@ export function JsonEditorTab({ jsonText, setJsonText, saveEncrypted, savePlain 
           height="400px"
           defaultLanguage="json"
           value={jsonText}
-          onChange={(value) => handleChange(value || "")}
+          onChange={value => handleChange(value || "")}
           theme="vs-dark"
           options={{
             minimap: { enabled: false },
             scrollBeyondLastLine: false,
             fontSize: 14,
-            lineNumbers: 'on',
-            renderWhitespace: 'selection',
+            lineNumbers: "on",
+            renderWhitespace: "selection",
             automaticLayout: true,
             formatOnPaste: true,
             formatOnType: false, // Disable auto-formatting while typing for performance
-            wordWrap: 'on',
+            wordWrap: "on",
             tabSize: 2,
             insertSpaces: true,
             bracketPairColorization: { enabled: true },
             folding: true,
             foldingHighlight: true,
-            showFoldingControls: 'always',
-            matchBrackets: 'always',
+            showFoldingControls: "always",
+            matchBrackets: "always",
             contextmenu: true,
             find: {
               addExtraSpaceOnTop: false,
-              autoFindInSelection: 'never',
-              seedSearchStringFromSelection: 'always'
-            }
+              autoFindInSelection: "never",
+              seedSearchStringFromSelection: "always",
+            },
           }}
         />
       </div>

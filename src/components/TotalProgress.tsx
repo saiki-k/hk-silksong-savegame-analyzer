@@ -9,31 +9,33 @@ export function TotalProgress({ parsedJson }: TotalProgressProps) {
   if (parsedJson) {
     // Flatten all items from all categories
     const allItems = CATEGORIES.flatMap(category => {
-      if ('items' in category) {
-        // Legacy TrackableCategory
-        return category.items;
-      } else {
+      if ("sections" in category) {
         // NormalisedTrackableCategory
         return category.sections.flatMap(section => section.items);
+      } else {
+        // Legacy TrackableCategory
+        return category.items;
       }
     });
-    // Only count items with a positive completionPercent
-    const itemsWithPercent = allItems.filter(item => typeof item.completionPercent === 'number' && item.completionPercent > 0);
 
-    let unlockedSum = 0;
-    let maxSum = 0;
+    // Only count items with a positive completionPercent
+    const itemsWithPercent = allItems.filter(
+      item => typeof item.completionPercent === "number" && item.completionPercent > 0
+    );
+
+    let unlockedPercent = 0;
     for (const item of itemsWithPercent) {
-      maxSum += item.completionPercent;
       const { unlocked } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
       if (unlocked) {
-        unlockedSum += item.completionPercent;
+        unlockedPercent += item.completionPercent ?? 0;
       }
     }
-    // percent = maxSum > 0 ? Math.round((unlockedSum / maxSum) * 100) : 0;
-    // Use unlockedSum directly to reflect total completion percentage
-    percent = unlockedSum;
+
+    percent = unlockedPercent;
   }
 
+  // NOTE: Added for a future, when DLCs drop, when TOTAL_PERCENT might become > 100
+  const TOTAL_PERCENT = 100;
   return (
     <div className="w-full my-4">
       <div className="flex justify-between text-sm text-blue-200 mb-1">
@@ -43,7 +45,7 @@ export function TotalProgress({ parsedJson }: TotalProgressProps) {
       <div className="w-full bg-[#24344d] rounded-full h-3">
         <div
           className="bg-blue-600 h-3 rounded-full transition-all duration-500"
-          style={{ width: `${percent}%` }}
+          style={{ width: `${(percent / TOTAL_PERCENT) * 100}%` }}
         />
       </div>
     </div>

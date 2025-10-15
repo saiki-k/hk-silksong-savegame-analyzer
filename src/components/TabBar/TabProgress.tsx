@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { useMemo } from "react";
 import { formatPercent, getGenericProgress, getHuntersJournalProgress } from "../tabs/utils";
 
 interface TabProgressProps {
@@ -9,37 +10,53 @@ interface TabProgressProps {
   isHuntersJournal?: boolean;
 }
 
-export function TabProgress({ parsedJson, decrypted, tabLabel, isPercentProgress = true, isHuntersJournal = false }: TabProgressProps): ReactNode {
-  if (!decrypted || !parsedJson) {
+export function TabProgress({
+  parsedJson,
+  decrypted,
+  tabLabel,
+  isPercentProgress = false,
+  isHuntersJournal = false,
+}: TabProgressProps): ReactNode {
+  // Memoize progress calculations - only recalculate when save data changes
+  const progressData = useMemo(() => {
+    if (!decrypted || !parsedJson) {
+      return null;
+    }
+
+    if (isHuntersJournal) {
+      return getHuntersJournalProgress({ parsedJson, decrypted });
+    }
+
+    return getGenericProgress({ parsedJson, decrypted, tabLabel, isPercentProgress });
+  }, [parsedJson, decrypted, tabLabel, isPercentProgress, isHuntersJournal]);
+
+  if (!progressData) {
     return null;
   }
 
-  if (isHuntersJournal) {
-    const progressData = getHuntersJournalProgress({ parsedJson, decrypted });
-    if (!progressData) return null;
-
+  if (progressData.progressType === "Hunter's Journal Progress") {
     return (
       <div className="text-xs mt-1 font-normal">
-        <span className="text-green-400 font-bold">{`Completed ${progressData.completed} / ${progressData.total}`}</span><br />
+        <span className="text-green-400 font-bold">{`Completed ${progressData.completed} / ${progressData.total}`}</span>
+        <br />
         <span className="text-yellow-400 font-bold">{`Encountered ${progressData.encountered} / ${progressData.total}`}</span>
       </div>
     );
   }
 
-  const progressData = getGenericProgress({ parsedJson, decrypted, tabLabel, isPercentProgress });
-  if (!progressData) return null;
-
-  if (progressData.type === 'count') {
+  if (progressData.progressType === "Generic Count Progress") {
     return (
-      <div className="text-xs text-blue-200 mt-1 font-normal">
-        {`${progressData.current}/${progressData.total}`}
-      </div>
+      <div className="text-xs text-blue-200 mt-1 font-normal">{`${progressData.current}/${progressData.total}`}</div>
     );
-  } else {
+  }
+
+  if (progressData.progressType === "Generic Percent Progress") {
     return (
       <div className="text-xs text-blue-200 mt-1 font-normal">
         {`${formatPercent(progressData.current)} / ${formatPercent(progressData.total)}`}
       </div>
     );
   }
+
+  return null;
 }

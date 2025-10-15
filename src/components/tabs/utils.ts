@@ -8,22 +8,20 @@ export function formatPercent(value: number): string {
 }
 
 export function formatSecondsToHMS(seconds: number): string {
-  if (isNaN(seconds) || seconds < 0) return '';
+  if (isNaN(seconds) || seconds < 0) return "";
   const h = Math.floor(seconds / 3600);
   const m = Math.floor((seconds % 3600) / 60);
   const s = Math.floor(seconds % 60);
-  return [h, m, s]
-    .map(unit => String(unit).padStart(2, '0'))
-    .join(':');
+  return [h, m, s].map(unit => String(unit).padStart(2, "0")).join(":");
 }
 
-export function getGenericProgress({ 
-  parsedJson, 
-  decrypted, 
+export function getGenericProgress({
+  parsedJson,
+  decrypted,
   tabLabel,
-  isPercentProgress = true
-}: { 
-  parsedJson: unknown; 
+  isPercentProgress = false,
+}: {
+  parsedJson: unknown;
   decrypted: boolean;
   tabLabel: string;
   isPercentProgress?: boolean;
@@ -58,7 +56,7 @@ export function getGenericProgress({
     });
 
     return {
-      type: 'percentage',
+      progressType: "Generic Percent Progress",
       current: currentPercent,
       total: maxPercent,
     };
@@ -66,7 +64,7 @@ export function getGenericProgress({
 
   // Count-based progress
   let unlockedCount = 0;
-  
+
   allItems.forEach(item => {
     const { unlocked } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
     if (unlocked) {
@@ -75,20 +73,26 @@ export function getGenericProgress({
   });
 
   return {
-    type: 'count',
+    progressType: "Generic Count Progress",
     current: unlockedCount,
-    total: allItems.length
+    total: allItems.length,
   };
 }
 
-export function getHuntersJournalProgress({ parsedJson, decrypted }: { parsedJson: unknown; decrypted: boolean }): HuntersJournalProgressData | null {
+export function getHuntersJournalProgress({
+  parsedJson,
+  decrypted,
+}: {
+  parsedJson: unknown;
+  decrypted: boolean;
+}): HuntersJournalProgressData | null {
   if (!decrypted || !parsedJson) {
     return null;
   }
 
   const JOURNAL_CATEGORY_NAME = "Hunter's Journal";
   const journalCategory = CATEGORIES.find(cat => cat.name === JOURNAL_CATEGORY_NAME);
-  const journalEntries = (journalCategory && 'items' in journalCategory) ? journalCategory.items : [];
+  const journalEntries = journalCategory && "items" in journalCategory ? journalCategory.items : [];
 
   if (journalEntries.length === 0) {
     return null;
@@ -113,8 +117,9 @@ export function getHuntersJournalProgress({ parsedJson, decrypted }: { parsedJso
   });
 
   return {
+    progressType: "Hunter's Journal Progress",
     completed,
     encountered,
-    total: journalEntries.length
+    total: journalEntries.length,
   };
 }
