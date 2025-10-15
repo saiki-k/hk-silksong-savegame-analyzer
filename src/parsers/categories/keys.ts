@@ -11,8 +11,7 @@ export const keys: NormalisedTrackableCategory = {
       htmlDescription: `
         <details>
           <summary><strong>Spoiler: Simple Lock Locations</strong></summary>
-          <br>
-          Four locks can be found in 
+          Four Simple Locks can be found throughout the game; they're in 
           <button 
             onclick="window.open('https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478090', '_blank')" 
             class="inline-flex items-center px-2 py-1 bg-[#24344d] text-white hover:bg-blue-600 rounded text-xs font-semibold transition-colors cursor-pointer border-0"
