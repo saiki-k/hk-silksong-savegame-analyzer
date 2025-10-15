@@ -37,6 +37,8 @@ export type CategoryItem = {
   parsingInfo: ParsingInfo | ParsingInfoMulti;
   mapLink: string;
   killsRequired?: number;
+  onlyFoundInClassicMode?: boolean;
+  onlyFoundInSteelSoulMode?: boolean;
 };
 
 export type CategorySection = {

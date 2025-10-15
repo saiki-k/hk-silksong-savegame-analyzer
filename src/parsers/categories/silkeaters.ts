@@ -31,6 +31,7 @@ export const silkeaters: NormalisedTrackableCategory = {
             "Blasted Steps: In the eastern area, east of where Shakra appears (This Silkeater is replaced by Steel Seer Zi in Steel Soul Mode).",
           parsingInfo: { type: "sceneData", internalId: ["Coral_37", "Silk Grub Large Cocoon"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478505",
+          onlyFoundInClassicMode: true,
         },
         {
           name: "Silkeater · Exhaust Organ",

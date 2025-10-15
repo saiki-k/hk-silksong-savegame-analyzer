@@ -1771,6 +1771,7 @@ export const huntersJournal: TrackableCategory = {
       location: "",
       parsingInfo: { type: "journal", internalId: ["Abyss Mass", 1] },
       mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480310",
+      onlyFoundInSteelSoulMode: true,
     },
     {
       name: "Wingmould",

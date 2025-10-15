@@ -323,6 +323,7 @@ export const bosses: NormalisedTrackableCategory = {
             "Can be found at the extreme bottom-left of Bonegrave behind a breakable wall, a sub area of Moss Grotto.",
           parsingInfo: { type: "journal", internalId: ["Abyss Mass", 1] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479740",
+          onlyFoundInSteelSoulMode: true,
         },
         {
           name: "Lost Lace",
