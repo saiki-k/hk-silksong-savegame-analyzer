@@ -19,7 +19,7 @@ export function getGenericProgress({
   parsedJson,
   decrypted,
   tabLabel,
-  isPercentProgress = true,
+  isPercentProgress = false,
 }: {
   parsedJson: unknown;
   decrypted: boolean;

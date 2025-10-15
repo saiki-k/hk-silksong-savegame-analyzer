@@ -13,7 +13,7 @@ export function TabProgress({
   parsedJson,
   decrypted,
   tabLabel,
-  isPercentProgress = true,
+  isPercentProgress = false,
   isHuntersJournal = false,
 }: TabProgressProps): ReactNode {
   if (!decrypted || !parsedJson) {
