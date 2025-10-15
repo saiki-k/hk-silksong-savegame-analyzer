@@ -12,7 +12,14 @@ function createGenericTab(tabLabel: string, options = { isPercentProgress: false
     id: tabLabel as TabId,
     tabLabel,
     render: props => <GenericTab {...props} tabLabel={tabLabel} />,
-    getProgress: ({ parsedJson, decrypted }) => <TabProgress parsedJson={parsedJson} decrypted={decrypted} tabLabel={tabLabel} isPercentProgress={isPercentProgress} />,
+    getProgress: ({ parsedJson, decrypted }) => (
+      <TabProgress
+        parsedJson={parsedJson}
+        decrypted={decrypted}
+        tabLabel={tabLabel}
+        isPercentProgress={isPercentProgress}
+      />
+    ),
   };
 }
 
@@ -30,15 +37,22 @@ export const tabDefinitions: TabDefinition[] = [
   createGenericTab("Craftmetals"),
   createGenericTab("Mossberries"),
   createGenericTab("Silkeaters"),
-  
+
   createGenericTab("Keys"),
   createGenericTab("Mementos"),
   createGenericTab("Maps"),
   createGenericTab("Bellways"),
   createGenericTab("Ventrica Stations"),
   createGenericTab("Quests"),
-  
+
   createGenericTab("Bosses"),
-  { id: "Hunter's Journal", tabLabel: "Hunter's Journal", render: props => <HuntersJournalTab {...props} />, getProgress: ({ parsedJson, decrypted }) => <TabProgress parsedJson={parsedJson} decrypted={decrypted} tabLabel="Hunter's Journal" isHuntersJournal={true} /> },
+  {
+    id: "Hunter's Journal",
+    tabLabel: "Hunter's Journal",
+    render: props => <HuntersJournalTab {...props} />,
+    getProgress: ({ parsedJson, decrypted }) => (
+      <TabProgress parsedJson={parsedJson} decrypted={decrypted} tabLabel="Hunter's Journal" isHuntersJournal={true} />
+    ),
+  },
   { id: "Save Editor", tabLabel: "Save Editor", render: props => <JsonEditorTab {...props} /> },
 ];

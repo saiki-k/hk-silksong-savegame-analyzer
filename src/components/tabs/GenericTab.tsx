@@ -9,14 +9,14 @@ interface GenericTabProps extends TabRenderProps {
 function GenericTableSection({
   section,
   sectionsLength,
-  parsedJson 
+  parsedJson,
 }: {
   section: CategorySection;
   sectionsLength: number;
   parsedJson: unknown;
 }) {
   if (section.items.length === 0) return null;
-  
+
   return (
     <div className="mb-8">
       {sectionsLength > 1 && (
@@ -26,14 +26,11 @@ function GenericTableSection({
             <p className="text-sm text-gray-300 mb-2">{section.description}</p>
           )}
           {section.htmlDescription && section.htmlDescription.trim() && (
-            <div 
-              className="text-sm text-gray-300 mb-2" 
-              dangerouslySetInnerHTML={{ __html: section.htmlDescription }}
-            />
+            <div className="text-sm text-gray-300 mb-2" dangerouslySetInnerHTML={{ __html: section.htmlDescription }} />
           )}
         </div>
       )}
-      
+
       <div className="max-w-3xl mx-auto">
         <table className="w-full border-collapse divide-y divide-gray-600 table-fixed">
           <colgroup>
@@ -60,9 +57,7 @@ function GenericTableSection({
               return (
                 <tr key={index} className="border-b border-gray-700 last:border-b-0">
                   <td className="px-2 py-1 text-center align-middle">
-                    <span className={unlocked ? "text-green-400" : "text-red-400"}>
-                      {unlocked ? "[x]" : "[ ]"}
-                    </span>
+                    <span className={unlocked ? "text-green-400" : "text-red-400"}>{unlocked ? "[x]" : "[ ]"}</span>
                   </td>
                   <td className="px-2 py-1 text-center align-middle">
                     <span className="text-xs text-blue-200 mt-1 font-normal">
@@ -70,11 +65,15 @@ function GenericTableSection({
                     </span>
                   </td>
                   <td className="px-2 py-1 break-words whitespace-pre-line">{item.name}</td>
-                  <td className={`px-2 py-1 relative min-w-[140px] max-w-[260px] break-words whitespace-pre-line 
-                      ${!unlocked ? "blur-sm hover:blur-none transition duration-100" : ""}`}>
+                  <td
+                    className={`px-2 py-1 relative min-w-[140px] max-w-[260px] break-words whitespace-pre-line 
+                      ${!unlocked ? "blur-sm hover:blur-none transition duration-100" : ""}`}
+                  >
                     {item.location}
                   </td>
-                  <td className={`px-2 py-1 w-[48px] text-center ${!unlocked ? "blur-sm hover:blur-none transition duration-100" : ""}`}>
+                  <td
+                    className={`px-2 py-1 w-[48px] text-center ${!unlocked ? "blur-sm hover:blur-none transition duration-100" : ""}`}
+                  >
                     {item.whichAct}
                   </td>
                   <td className="px-2 py-1 text-center">
@@ -118,12 +117,14 @@ export function GenericTab({ parsedJson, decrypted, tabLabel }: GenericTabProps)
       {categoryData.sections.length === 1 && (
         <div className="mb-4">
           <h2 className="text-xl font-bold mb-2 text-blue-200">{categoryData.name}</h2>
-          {categoryData.description && categoryData.description.trim() && categoryData.description.trim() !== categoryData.name && (
-            <div 
-              className="text-sm text-gray-300 mb-2" 
-              dangerouslySetInnerHTML={{ __html: categoryData.description }}
-            />
-          )}
+          {categoryData.description &&
+            categoryData.description.trim() &&
+            categoryData.description.trim() !== categoryData.name && (
+              <div
+                className="text-sm text-gray-300 mb-2"
+                dangerouslySetInnerHTML={{ __html: categoryData.description }}
+              />
+            )}
         </div>
       )}
       {categoryData.sections.map((section, sectionIndex) => (

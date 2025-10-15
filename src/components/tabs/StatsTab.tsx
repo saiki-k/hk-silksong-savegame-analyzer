@@ -8,7 +8,7 @@ export function StatsTab({ parsedJson, decrypted }: TabRenderProps) {
   }
 
   const statsCategory = CATEGORIES.find(cat => cat.name === "Stats");
-  const stats = (statsCategory && 'items' in statsCategory) ? statsCategory.items : [];
+  const stats = statsCategory && "items" in statsCategory ? statsCategory.items : [];
 
   return (
     <div className="text-white">
@@ -24,16 +24,16 @@ export function StatsTab({ parsedJson, decrypted }: TabRenderProps) {
             <tbody>
               {stats.map((item, index) => {
                 const { returnValue } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
-                let displayValue = '';
-                if (item.name === 'Game Mode') {
-                  displayValue = returnValue === 1 ? 'Steel Soul' : returnValue === 0 ? 'Classic' : '';
-                } else if (item.name.toLowerCase() === 'playtime' && typeof returnValue === 'number') {
+                let displayValue = "";
+                if (item.name === "Game Mode") {
+                  displayValue = returnValue === 1 ? "Steel Soul" : returnValue === 0 ? "Classic" : "";
+                } else if (item.name.toLowerCase() === "playtime" && typeof returnValue === "number") {
                   displayValue = formatSecondsToHMS(returnValue);
                 } else if (returnValue !== undefined) {
                   displayValue = String(returnValue);
                 }
                 return (
-                  <tr key={index} className="border-b border-gray-700 last:border-b-0">      
+                  <tr key={index} className="border-b border-gray-700 last:border-b-0">
                     <td className="px-2 py-1 whitespace-nowrap">{item.name}</td>
                     <td className="px-2 py-1 w-[100px] text-center whitespace-nowrap">{displayValue}</td>
                   </tr>

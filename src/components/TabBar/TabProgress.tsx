@@ -9,7 +9,13 @@ interface TabProgressProps {
   isHuntersJournal?: boolean;
 }
 
-export function TabProgress({ parsedJson, decrypted, tabLabel, isPercentProgress = true, isHuntersJournal = false }: TabProgressProps): ReactNode {
+export function TabProgress({
+  parsedJson,
+  decrypted,
+  tabLabel,
+  isPercentProgress = true,
+  isHuntersJournal = false,
+}: TabProgressProps): ReactNode {
   if (!decrypted || !parsedJson) {
     return null;
   }
@@ -20,7 +26,8 @@ export function TabProgress({ parsedJson, decrypted, tabLabel, isPercentProgress
 
     return (
       <div className="text-xs mt-1 font-normal">
-        <span className="text-green-400 font-bold">{`Completed ${progressData.completed} / ${progressData.total}`}</span><br />
+        <span className="text-green-400 font-bold">{`Completed ${progressData.completed} / ${progressData.total}`}</span>
+        <br />
         <span className="text-yellow-400 font-bold">{`Encountered ${progressData.encountered} / ${progressData.total}`}</span>
       </div>
     );
@@ -29,11 +36,9 @@ export function TabProgress({ parsedJson, decrypted, tabLabel, isPercentProgress
   const progressData = getGenericProgress({ parsedJson, decrypted, tabLabel, isPercentProgress });
   if (!progressData) return null;
 
-  if (progressData.type === 'count') {
+  if (progressData.type === "count") {
     return (
-      <div className="text-xs text-blue-200 mt-1 font-normal">
-        {`${progressData.current}/${progressData.total}`}
-      </div>
+      <div className="text-xs text-blue-200 mt-1 font-normal">{`${progressData.current}/${progressData.total}`}</div>
     );
   } else {
     return (

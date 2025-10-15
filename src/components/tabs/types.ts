@@ -40,7 +40,7 @@ export interface TabDefinition {
 }
 
 export interface ProgressData {
-  type: 'count' | 'percentage';
+  type: "count" | "percentage";
   current: number;
   total: number;
 }

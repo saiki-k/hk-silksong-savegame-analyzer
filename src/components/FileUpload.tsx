@@ -23,13 +23,12 @@ export function FileUpload({ fileName, onFileSelected, onDrop, onDragOver }: Fil
       onClick={() => inputRef.current?.click()}
       className="border-2 border-dashed border-black rounded-lg p-5 text-center cursor-pointer hover:bg-[#82979e] text-white"
     >
-      {fileName ? <p>{fileName} selected</p> : <p>Drag and drop a Savefile here, or click to browse and upload it...</p>}
-      <input
-        ref={inputRef}
-        type="file"
-        className="hidden"
-        onChange={handleChange}
-      />
+      {fileName ? (
+        <p>{fileName} selected</p>
+      ) : (
+        <p>Drag and drop a Savefile here, or click to browse and upload it...</p>
+      )}
+      <input ref={inputRef} type="file" className="hidden" onChange={handleChange} />
     </div>
   );
 }
