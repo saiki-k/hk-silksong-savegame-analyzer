@@ -189,3 +189,21 @@ export function isItemUnlockedInPlayerSave(
   // @ts-expect-error - Dynamic function call based on parsing type
   return typeHandlers[itemParsingInfo.type](itemParsingInfo.internalId);
 }
+
+// Check if an item should be shown in the current game mode
+export function isItemInCurrentGameMode(
+  item: { onlyFoundInClassicMode?: boolean; onlyFoundInSteelSoulMode?: boolean },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  saveData: any
+): boolean {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const playerData = (saveData as any).playerData ?? {};
+  const isCurrentModeClassic = playerData.permadeathMode === 0;
+
+  const itemIsNotInCurrentGameMode = (
+    (item.onlyFoundInSteelSoulMode && isCurrentModeClassic) ||
+    (item.onlyFoundInClassicMode && !isCurrentModeClassic)
+  );
+
+  return !itemIsNotInCurrentGameMode;
+}
