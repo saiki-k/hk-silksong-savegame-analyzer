@@ -3,12 +3,12 @@ import { isItemUnlockedInPlayerSave } from "../../parsers/dictionary";
 import type { TabRenderProps } from "./types";
 import { formatSecondsToHMS } from "./utils";
 
-export function StatsTab({ parsedJson, decrypted }: TabRenderProps) {  
+export function StatsTab({ parsedJson, decrypted }: TabRenderProps) {
   if (!decrypted || !parsedJson) {
     return <div className="text-white text-center">Load a savefile to view "Stats" data.</div>;
   }
 
-  const statsWithDisplayValues = stats.items.map((item) => {
+  const statsWithDisplayValues = stats.items.map(item => {
     const { returnValue } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
     let displayValue = "";
     if (item.name === "Game Mode") {

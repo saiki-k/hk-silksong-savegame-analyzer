@@ -2,13 +2,12 @@ import type { TabRenderProps } from "./types";
 import { huntersJournal } from "../../parsers/categories/huntersJournal";
 import { isItemUnlockedInPlayerSave } from "../../parsers/dictionary";
 
-
-export function HuntersJournalTab({ parsedJson, decrypted }: TabRenderProps) {  
+export function HuntersJournalTab({ parsedJson, decrypted }: TabRenderProps) {
   if (!decrypted || !parsedJson) {
     return <div className="text-white text-center">Load a savefile to view "Hunter's Journal" data.</div>;
   }
 
-  const journalEntriesWithUnlockStatus = huntersJournal.items.map((item) => {
+  const journalEntriesWithUnlockStatus = huntersJournal.items.map(item => {
     const { unlocked, returnValue: killsAchieved } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
     return {
       ...item,
@@ -40,7 +39,9 @@ export function HuntersJournalTab({ parsedJson, decrypted }: TabRenderProps) {
               return (
                 <tr key={index} className="border-b border-gray-700 last:border-b-0 group">
                   <td className="px-2 py-1 text-center w-[56px] align-middle">
-                    <span className={getHuntersJournalStatusColor(item.unlocked, item.killsAchieved, item.killsRequired)}>
+                    <span
+                      className={getHuntersJournalStatusColor(item.unlocked, item.killsAchieved, item.killsRequired)}
+                    >
                       {item.unlocked && (item.killsAchieved ?? 0) >= (item.killsRequired ?? 0) ? "[x]" : "[ ]"}
                     </span>
                   </td>

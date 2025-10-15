@@ -16,8 +16,8 @@ function GenericTableSection({
   parsedJson: unknown;
 }) {
   if (section.items.length === 0) return null;
-  
-  const itemsWithUnlockStatus = section.items.map((item) => ({
+
+  const itemsWithUnlockStatus = section.items.map(item => ({
     ...item,
     unlocked: isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson).unlocked,
   }));
@@ -59,7 +59,9 @@ function GenericTableSection({
               return (
                 <tr key={index} className="border-b border-gray-700 last:border-b-0 group">
                   <td className="px-2 py-1 text-center align-middle">
-                    <span className={item.unlocked ? "text-green-400" : "text-red-400"}>{item.unlocked ? "[x]" : "[ ]"}</span>
+                    <span className={item.unlocked ? "text-green-400" : "text-red-400"}>
+                      {item.unlocked ? "[x]" : "[ ]"}
+                    </span>
                   </td>
                   <td className="px-2 py-1 text-center align-middle">
                     <span className="text-xs text-blue-200 mt-1 font-normal">
