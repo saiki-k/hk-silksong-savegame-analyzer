@@ -1,6 +1,6 @@
 import { CATEGORIES, isItemUnlockedInPlayerSave } from "../../parsers/dictionary";
 import type { TabRenderProps } from "./types";
-import type { CategoryItem, NormalisedTrackableCategory } from "../../parsers/types";
+import type { NormalisedTrackableCategory, CategorySection } from "../../parsers/types";
 
 interface GenericTabProps extends TabRenderProps {
   tabLabel: string;
@@ -11,7 +11,7 @@ function GenericTableSection({
   sectionsLength,
   parsedJson 
 }: {
-  section: { name: string | undefined; description: string | undefined; items: CategoryItem[] };
+  section: CategorySection;
   sectionsLength: number;
   parsedJson: any;
 }) {
@@ -24,6 +24,12 @@ function GenericTableSection({
           <h2 className="text-xl font-bold mb-2 text-blue-200">{section.name}</h2>
           {section.description && section.description.trim() && (
             <p className="text-sm text-gray-300 mb-2">{section.description}</p>
+          )}
+          {section.htmlDescription && section.htmlDescription.trim() && (
+            <div 
+              className="text-sm text-gray-300 mb-2" 
+              dangerouslySetInnerHTML={{ __html: section.htmlDescription }}
+            />
           )}
         </div>
       )}
@@ -113,7 +119,10 @@ export function GenericTab({ parsedJson, decrypted, tabLabel }: GenericTabProps)
         <div className="mb-4">
           <h2 className="text-xl font-bold mb-2 text-blue-200">{categoryData.name}</h2>
           {categoryData.description && categoryData.description.trim() && categoryData.description.trim() !== categoryData.name && (
-            <p className="text-sm text-gray-300 mb-2">{categoryData.description}</p>
+            <div 
+              className="text-sm text-gray-300 mb-2" 
+              dangerouslySetInnerHTML={{ __html: categoryData.description }}
+            />
           )}
         </div>
       )}

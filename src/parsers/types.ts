@@ -29,6 +29,7 @@ export type CategoryItem = {
 export type CategorySection = {
   name: string | undefined;
   description: string | undefined;
+  htmlDescription?: string;
   items: CategoryItem[];
 };
 

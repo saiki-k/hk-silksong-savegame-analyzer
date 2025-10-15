@@ -6,16 +6,17 @@ import { abilities } from './categories/abilities';
 import { upgrades } from './categories/upgrades';
 import { tools } from './categories/tools';
 import { crests } from './categories/crests';
-import { relics } from './categories/relics';
 import { fleas } from './categories/fleas';
+import { relics } from './categories/relics';
 import { memoryLockets } from './categories/memoryLockets';
 import { craftmetals } from './categories/craftmetals';
 import { mossberries } from './categories/mossberries';
+import { silkeaters } from './categories/silkeaters';
 import { keys } from './categories/keys';
+import { mementos } from './categories/mementos';
 import { maps } from './categories/maps';
 import { bellways } from './categories/bellways';
 import { ventricaStations } from './categories/ventricaStations';
-import { mementos } from './categories/mementos';
 import { quests } from './categories/quests';
 import { bosses } from './categories/bosses';
 import { huntersJournal } from './categories/huntersJournal';
@@ -32,11 +33,12 @@ export const CATEGORIES: (NormalisedTrackableCategory | TrackableCategory)[] = [
   memoryLockets,
   craftmetals,
   mossberries,
+  silkeaters,
   keys,
+  mementos,
   maps,
   bellways,
   ventricaStations,
-  mementos,
   quests,
   bosses,
   huntersJournal

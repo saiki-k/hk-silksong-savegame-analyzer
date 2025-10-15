@@ -7,6 +7,38 @@ export const keys: NormalisedTrackableCategory = {
     {
       name: 'Simple Keys',
       description: 'They are used to open simple locks. Each key can only be used once.',
+      // NOTE: We can probably use the savefile to track (specific scenes/bools) if these locks are unlocked. Not today!
+      htmlDescription: `
+        <details>
+          <summary><strong>Spoiler: Simple Lock Locations</strong></summary>
+          <br>
+          Four locks can be found in 
+          <button 
+            onclick="window.open('https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478090', '_blank')" 
+            class="inline-flex items-center px-2 py-1 bg-[#24344d] text-white hover:bg-blue-600 rounded text-xs font-semibold transition-colors cursor-pointer border-0"
+          >
+            Wormways
+          </button>, 
+          <button 
+            onclick="window.open('https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=476922', '_blank')" 
+            class="inline-flex items-center px-2 py-1 bg-[#24344d] text-white hover:bg-blue-600 rounded text-xs font-semibold transition-colors cursor-pointer border-0"
+          >
+            Deep Docks
+          </button>, 
+          <button 
+            onclick="window.open('https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478342', '_blank')" 
+            class="inline-flex items-center px-2 py-1 bg-[#24344d] text-white hover:bg-blue-600 rounded text-xs font-semibold transition-colors cursor-pointer border-0"
+          >
+            Sinner's Road
+          </button>, and 
+          <button 
+            onclick="window.open('https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478911', '_blank')" 
+            class="inline-flex items-center px-2 py-1 bg-[#24344d] text-white hover:bg-blue-600 rounded text-xs font-semibold transition-colors cursor-pointer border-0"
+          >
+            High Halls
+          </button>.
+        </details>
+      `,
       items: [
         // TODO: Grindle sells this item later, if it is not purchased until ACT 3. The internalId would probably not change, because we see Grindle's mates looting this location. However, adding a note here to verify this later...
         { name: 'Simple Key 1', whichAct: 1, completionPercent: 0, prereqs: [], location: 'Bone Bottom / Blasted Steps: Sold by Pebb for 500 Rosaries. If you don\'t purchase this from Pebb, it is sold by Grindle in ACT 3 for 600 Rosaries.', parsingInfo: { type: 'flag', internalId: 'PurchasedBonebottomFaithToken' }, mapLink: 'https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477839' },
