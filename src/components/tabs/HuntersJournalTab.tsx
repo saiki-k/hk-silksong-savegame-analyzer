@@ -38,7 +38,7 @@ export function HuntersJournalTab({ parsedJson, decrypted }: TabRenderProps) {
             {journalEntries.map((item, index) => {
               const { unlocked, returnValue: killsAchieved } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
               return (
-                <tr key={index} className="border-b border-gray-700 last:border-b-0">
+                <tr key={index} className="border-b border-gray-700 last:border-b-0 group">
                   <td className="px-2 py-1 text-center w-[56px] align-middle">
                     <span className={getHuntersJournalStatusColor(unlocked, killsAchieved, item.killsRequired)}>
                       {unlocked && (killsAchieved ?? 0) >= (item.killsRequired ?? 0) ? "[x]" : "[ ]"}
@@ -48,13 +48,26 @@ export function HuntersJournalTab({ parsedJson, decrypted }: TabRenderProps) {
                     <span className="text-xs text-blue-200 mt-1 font-normal" />
                   </td>
                   <td
-                    className={`px-2 py-1 min-w-[120px] max-w-[220px] truncate
-                    ${!unlocked ? "blur-sm hover:blur-none transition duration-100" : ""}`}
+                    className={`px-2 py-1 min-w-[120px] max-w-[220px] truncate group-hover:blur-none transition duration-100 ${
+                      !unlocked ? "blur-sm" : ""
+                    }`}
                   >
                     {item.name}
                   </td>
-                  <td className="px-2 py-1 min-w-[100px] max-w-[150px] text-center">{killsAchieved}</td>
-                  <td className="px-2 py-1 min-w-[100px] max-w-[150px] text-center">{item.killsRequired ?? "N/A"}</td>
+                  <td
+                    className={`px-2 py-1 min-w-[100px] max-w-[150px] text-center group-hover:blur-none transition duration-100 ${
+                      !unlocked ? "blur-sm" : ""
+                    }`}
+                  >
+                    {killsAchieved}
+                  </td>
+                  <td
+                    className={`px-2 py-1 min-w-[100px] max-w-[150px] text-center group-hover:blur-none transition duration-100 ${
+                      !unlocked ? "blur-sm" : ""
+                    }`}
+                  >
+                    {item.killsRequired ?? "N/A"}
+                  </td>
                   <td className="px-2 py-1 w-[64px] text-center">
                     <button
                       className={`flex-1 min-w-[48px] py-2 rounded font-semibold transition-colors text-xs ${

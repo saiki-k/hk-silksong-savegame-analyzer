@@ -25,11 +25,7 @@ function GenericTableSection({
           {section.description && section.description.trim() && (
             <p className="text-sm text-gray-300 mb-2">{section.description}</p>
           )}
-          {section.descriptionMarkup && (
-            <div className="text-sm text-gray-300 mb-2">
-              {section.descriptionMarkup}
-            </div>
-          )}
+          {section.descriptionMarkup && <div className="text-sm text-gray-300 mb-2">{section.descriptionMarkup}</div>}
         </div>
       )}
 
@@ -57,7 +53,7 @@ function GenericTableSection({
             {section.items.map((item, index) => {
               const { unlocked } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
               return (
-                <tr key={index} className="border-b border-gray-700 last:border-b-0">
+                <tr key={index} className="border-b border-gray-700 last:border-b-0 group">
                   <td className="px-2 py-1 text-center align-middle">
                     <span className={unlocked ? "text-green-400" : "text-red-400"}>{unlocked ? "[x]" : "[ ]"}</span>
                   </td>
@@ -66,15 +62,22 @@ function GenericTableSection({
                       {item.completionPercent ? `+${item.completionPercent}%` : ""}
                     </span>
                   </td>
-                  <td className="px-2 py-1 break-words whitespace-pre-line">{item.name}</td>
                   <td
-                    className={`px-2 py-1 relative min-w-[140px] max-w-[260px] break-words whitespace-pre-line 
-                      ${!unlocked ? "blur-sm hover:blur-none transition duration-100" : ""}`}
+                    className={`px-2 py-1 break-words whitespace-pre-line group-hover:blur-none transition duration-100 ${
+                      !unlocked ? "blur-sm" : ""
+                    }`}
+                  >
+                    {item.name}
+                  </td>
+                  <td
+                    className={`px-2 py-1 relative min-w-[140px] max-w-[260px] break-words whitespace-pre-line group-hover:blur-none transition duration-100 ${
+                      !unlocked ? "blur-sm" : ""
+                    }`}
                   >
                     {item.location}
                   </td>
                   <td
-                    className={`px-2 py-1 w-[48px] text-center ${!unlocked ? "blur-sm hover:blur-none transition duration-100" : ""}`}
+                    className={`px-2 py-1 w-[48px] text-center ${!unlocked ? "blur-sm group-hover:blur-none transition duration-100" : ""}`}
                   >
                     {item.whichAct}
                   </td>
