@@ -1,4 +1,5 @@
 import type { NormalisedTrackableCategory } from "../types";
+import SimpleLocksSpoiler from "../../components/descriptions/SimpleLocksSpoiler.tsx";
 
 export const keys: NormalisedTrackableCategory = {
   name: "Keys",
@@ -8,36 +9,7 @@ export const keys: NormalisedTrackableCategory = {
       name: "Simple Keys",
       description: "They are used to open simple locks. Each key can only be used once.",
       // NOTE: We can probably use the savefile to track (specific scenes/bools) if these locks are unlocked. Not today!
-      htmlDescription: `
-        <details>
-          <summary><strong>Spoiler: Simple Lock Locations</strong></summary>
-          Four Simple Locks can be found throughout the game; they're in 
-          <button 
-            onclick="window.open('https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478090', '_blank')" 
-            class="inline-flex items-center px-2 py-1 bg-[#24344d] text-white hover:bg-blue-600 rounded text-xs font-semibold transition-colors cursor-pointer border-0"
-          >
-            Wormways
-          </button>, 
-          <button 
-            onclick="window.open('https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=476922', '_blank')" 
-            class="inline-flex items-center px-2 py-1 bg-[#24344d] text-white hover:bg-blue-600 rounded text-xs font-semibold transition-colors cursor-pointer border-0"
-          >
-            Deep Docks
-          </button>, 
-          <button 
-            onclick="window.open('https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478342', '_blank')" 
-            class="inline-flex items-center px-2 py-1 bg-[#24344d] text-white hover:bg-blue-600 rounded text-xs font-semibold transition-colors cursor-pointer border-0"
-          >
-            Sinner's Road
-          </button>, and 
-          <button 
-            onclick="window.open('https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478911', '_blank')" 
-            class="inline-flex items-center px-2 py-1 bg-[#24344d] text-white hover:bg-blue-600 rounded text-xs font-semibold transition-colors cursor-pointer border-0"
-          >
-            High Halls
-          </button>.
-        </details>
-      `,
+      descriptionMarkup: <SimpleLocksSpoiler />,
       items: [
         // TODO: Grindle sells this item later, if it is not purchased until ACT 3. The internalId would probably not change, because we see Grindle's mates looting this location. However, adding a note here to verify this later...
         {

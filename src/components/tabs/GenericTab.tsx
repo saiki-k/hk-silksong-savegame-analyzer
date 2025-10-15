@@ -25,8 +25,10 @@ function GenericTableSection({
           {section.description && section.description.trim() && (
             <p className="text-sm text-gray-300 mb-2">{section.description}</p>
           )}
-          {section.htmlDescription && section.htmlDescription.trim() && (
-            <div className="text-sm text-gray-300 mb-2" dangerouslySetInnerHTML={{ __html: section.htmlDescription }} />
+          {section.descriptionMarkup && (
+            <div className="text-sm text-gray-300 mb-2">
+              {section.descriptionMarkup}
+            </div>
           )}
         </div>
       )}

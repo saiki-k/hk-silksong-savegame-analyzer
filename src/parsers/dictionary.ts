@@ -200,10 +200,8 @@ export function isItemInCurrentGameMode(
   const playerData = (saveData as any).playerData ?? {};
   const isCurrentModeClassic = playerData.permadeathMode === 0;
 
-  const itemIsNotInCurrentGameMode = (
-    (item.onlyFoundInSteelSoulMode && isCurrentModeClassic) ||
-    (item.onlyFoundInClassicMode && !isCurrentModeClassic)
-  );
+  const itemIsNotInCurrentGameMode =
+    (item.onlyFoundInSteelSoulMode && isCurrentModeClassic) || (item.onlyFoundInClassicMode && !isCurrentModeClassic);
 
   return !itemIsNotInCurrentGameMode;
 }

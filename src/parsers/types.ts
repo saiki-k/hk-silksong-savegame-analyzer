@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export type FlagParsingInfo = { type: "flag"; internalId: string };
 export type FlagMultiParsingInfo = { type: "flagMulti"; internalId: string[] };
 export type FlagIntParsingInfo = { type: "flagInt"; internalId: [string, number] };
@@ -44,7 +46,7 @@ export type CategoryItem = {
 export type CategorySection = {
   name: string | undefined;
   description: string | undefined;
-  htmlDescription?: string;
+  descriptionMarkup?: ReactNode;
   items: CategoryItem[];
 };
 
