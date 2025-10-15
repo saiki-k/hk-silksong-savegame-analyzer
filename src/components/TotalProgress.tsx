@@ -9,12 +9,12 @@ export function TotalProgress({ parsedJson }: TotalProgressProps) {
   if (parsedJson) {
     // Flatten all items from all categories
     const allItems = CATEGORIES.flatMap(category => {
-      if ("items" in category) {
-        // Legacy TrackableCategory
-        return category.items;
-      } else {
+      if ("sections" in category) {
         // NormalisedTrackableCategory
         return category.sections.flatMap(section => section.items);
+      } else {
+        // Legacy TrackableCategory
+        return category.items;
       }
     });
 
@@ -27,7 +27,7 @@ export function TotalProgress({ parsedJson }: TotalProgressProps) {
     for (const item of itemsWithPercent) {
       const { unlocked } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
       if (unlocked) {
-        unlockedPercent += item.completionPercent;
+        unlockedPercent += item.completionPercent ?? 0;
       }
     }
 

@@ -31,8 +31,8 @@ export type CategoryItem = {
   name: string;
   section?: string;
   whichAct: 0 | 1 | 2 | 3;
-  completionPercent: number;
-  prereqs: string[];
+  completionPercent?: number;
+  prereqs?: string[];
   location: string;
   parsingInfo: ParsingInfo | ParsingInfoMulti;
   mapLink: string;

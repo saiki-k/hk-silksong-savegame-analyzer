@@ -11,8 +11,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Mosslands",
           whichAct: 1,
-          completionPercent: 0,
-          prereqs: [],
           location: "Sold by Shakra for 40 Rosaries.",
           parsingInfo: { type: "flag", internalId: "HasMossGrottoMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479514",
@@ -20,8 +18,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "The Marrow",
           whichAct: 1,
-          completionPercent: 0,
-          prereqs: [],
           location: "Sold by Shakra for 50 Rosaries.",
           parsingInfo: { type: "flag", internalId: "HasBoneforestMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479515",
@@ -29,8 +25,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Deep Docks",
           whichAct: 1,
-          completionPercent: 0,
-          prereqs: [],
           location: "Sold by Shakra for 50 Rosaries.",
           parsingInfo: { type: "flag", internalId: "HasDocksMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479516",
@@ -38,8 +32,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Hunter's March",
           whichAct: 1,
-          completionPercent: 0,
-          prereqs: [],
           location: "Sold by Shakra for 70 Rosaries.",
           parsingInfo: { type: "flag", internalId: "HasHuntersNestMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479518",
@@ -47,8 +39,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Far Fields",
           whichAct: 1,
-          completionPercent: 0,
-          prereqs: [],
           location: "Sold by Shakra for 50 Rosaries.",
           parsingInfo: { type: "flag", internalId: "HasWildsMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479517",
@@ -56,8 +46,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Greymoor",
           whichAct: 1,
-          completionPercent: 0,
-          prereqs: [],
           location: "Sold by Shakra for 70 Rosaries.",
           parsingInfo: { type: "flag", internalId: "HasGreymoorMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479527",
@@ -65,8 +53,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Bellhart",
           whichAct: 1,
-          completionPercent: 0,
-          prereqs: [],
           location: "Sold by Shakra for 40 Rosaries, when you find her in Shellwoods onwards.",
           parsingInfo: { type: "flag", internalId: "HasBellhartMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479529",
@@ -74,8 +60,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Shellwood",
           whichAct: 1,
-          completionPercent: 0,
-          prereqs: [],
           location: "Sold by Shakra for 70 Rosaries.",
           parsingInfo: { type: "flag", internalId: "HasShellwoodMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479530",
@@ -83,8 +67,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Wormways",
           whichAct: 1,
-          completionPercent: 0,
-          prereqs: [],
           location: "Sold by Shakra for 70 Rosaries.",
           parsingInfo: { type: "flag", internalId: "HasCrawlMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479523",
@@ -92,8 +74,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Weavenest Atla",
           whichAct: 1,
-          completionPercent: 0,
-          prereqs: [],
           location: "Open Needolin Door to this area, then hit two glowing cylinders at the end of the corridor.",
           parsingInfo: { type: "flag", internalId: "HasWeavehomeMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478227",
@@ -101,8 +81,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Blasted Steps",
           whichAct: 1,
-          completionPercent: 0,
-          prereqs: [],
           location: "Sold by Shakra for 70 Rosaries.",
           parsingInfo: { type: "flag", internalId: "HasJudgeStepsMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479673",
@@ -110,8 +88,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Sinner's Road",
           whichAct: 1,
-          completionPercent: 0,
-          prereqs: [],
           location: "Sold by Shakra for 90 Rosaries.",
           parsingInfo: { type: "flag", internalId: "HasHangMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479526",
@@ -119,8 +95,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Grand Gate",
           whichAct: 2,
-          completionPercent: 0,
-          prereqs: [],
           location: "Purchased for 40 Rosaries from a machine displaying a model of the Citadel.",
           parsingInfo: { type: "flag", internalId: "HasSongGateMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478548",
@@ -128,8 +102,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Underworks",
           whichAct: 2,
-          completionPercent: 0,
-          prereqs: [],
           location: "Acquired from an interactable wooden board in a dimly lit room.",
           parsingInfo: { type: "flag", internalId: "HasCitadelUnderstoreMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478551",
@@ -137,8 +109,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Choral Chambers",
           whichAct: 2,
-          completionPercent: 0,
-          prereqs: [],
           location: "Purchased for 70 Rosaries from a machine displaying a model of the Citadel.",
           parsingInfo: { type: "flag", internalId: "HasCoralMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479733",
@@ -146,8 +116,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Whispering Vaults",
           whichAct: 2,
-          completionPercent: 0,
-          prereqs: [],
           location: "Purchased for 70 Rosaries from a machine displaying a model of the Citadel.",
           parsingInfo: { type: "flag", internalId: "HasLibraryMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478628",
@@ -155,8 +123,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Whiteward",
           whichAct: 2,
-          completionPercent: 0,
-          prereqs: [],
           location: "Purchased for 70 Rosaries from a machine displaying a model of the Citadel.",
           parsingInfo: { type: "flag", internalId: "HasWardMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478920",
@@ -164,8 +130,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Cogwork Core",
           whichAct: 2,
-          completionPercent: 0,
-          prereqs: [],
           location: "Acquired from a room above the bench.",
           parsingInfo: { type: "flag", internalId: "HasCogMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478612",
@@ -173,8 +137,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Memorium",
           whichAct: 2,
-          completionPercent: 0,
-          prereqs: [],
           location: "Purchased for 70 Rosaries from a machine displaying a model of the Citadel.",
           parsingInfo: { type: "flag", internalId: "HasArboriumMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479107",
@@ -182,8 +144,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "High Halls",
           whichAct: 2,
-          completionPercent: 0,
-          prereqs: [],
           location: "Purchased for 70 Rosaries from a machine displaying a model of the Citadel.",
           parsingInfo: { type: "flag", internalId: "HasHallsMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478907",
@@ -191,8 +151,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "The Slab",
           whichAct: 1,
-          completionPercent: 0,
-          prereqs: [],
           location: "Drawn on a corpse, found at the end of a secret passage next to the bench.",
           parsingInfo: { type: "flag", internalId: "HasSlabMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478468",
@@ -200,8 +158,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Mount Fay",
           whichAct: 1,
-          completionPercent: 0,
-          prereqs: [],
           location: "Sold by Shakra for 40 Rosaries.",
           parsingInfo: { type: "flag", internalId: "HasPeakMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479525",
@@ -209,8 +165,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Bilewater",
           whichAct: 1,
-          completionPercent: 0,
-          prereqs: [],
           location: "Sold by Shakra for 90 Rosaries.",
           parsingInfo: { type: "flag", internalId: "HasSwampMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479528",
@@ -218,8 +172,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Putrified Ducts",
           whichAct: 2,
-          completionPercent: 0,
-          prereqs: [],
           location: "Found at the top of a room, reached by letting yourself be grabbed by a Barnark.",
           parsingInfo: { type: "flag", internalId: "HasAqueductMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479128",
@@ -227,8 +179,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Sands of Karak",
           whichAct: 2,
-          completionPercent: 0,
-          prereqs: [],
           location: "Sold by Shakra for 90 Rosaries.",
           parsingInfo: { type: "flag", internalId: "HasCoralMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479524",
@@ -236,8 +186,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "The Cradle",
           whichAct: 2,
-          completionPercent: 0,
-          prereqs: [],
           location: "Purchased for 70 Rosaries from a machine displaying a model of the Citadel.",
           parsingInfo: { type: "flag", internalId: "HasCradleMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479095",
@@ -245,8 +193,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "Verdania",
           whichAct: 3,
-          completionPercent: 0,
-          prereqs: [],
           location: "Found in an old camp at the eastern end alongside a few deceased bugs, and a bench.",
           parsingInfo: { type: "flag", internalId: "HasCloverMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479382",
@@ -254,8 +200,6 @@ export const maps: NormalisedTrackableCategory = {
         {
           name: "The Abyss",
           whichAct: 3,
-          completionPercent: 0,
-          prereqs: [],
           location: "Found right on top of the southern bench.",
           parsingInfo: { type: "flag", internalId: "HasAbyssMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479282",
