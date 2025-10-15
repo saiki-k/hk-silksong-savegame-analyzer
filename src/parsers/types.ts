@@ -52,10 +52,12 @@ export type TrackableCategory = {
   name: string;
   description: string;
   items: CategoryItem[];
+  hasGameModeSpecificItems?: boolean;
 };
 
 export type NormalisedTrackableCategory = {
   name: string;
   description: string;
   sections: CategorySection[];
+  hasGameModeSpecificItems?: boolean;
 };

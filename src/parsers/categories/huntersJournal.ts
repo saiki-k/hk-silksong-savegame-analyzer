@@ -3,6 +3,7 @@ import type { TrackableCategory } from "../types";
 export const huntersJournal: TrackableCategory = {
   name: "Hunter's Journal",
   description: "Bugs and creatures encountered across various areas of Pharloom.",
+  hasGameModeSpecificItems: true,
   items: [
     {
       name: "Mossgrub",
