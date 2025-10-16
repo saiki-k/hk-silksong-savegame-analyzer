@@ -64,7 +64,7 @@ export const masksAndSpools: TrackableCategory = {
         },
         {
           name: "Mask Shard #7",
-          whichAct: 1,
+          whichAct: 2,
           completionPercent: 0.25,
           location: 'Bellhart: Complete "Savage Beastfly" wish.',
           parsingInfo: { type: "quest", internalId: "Beastfly Hunt" },
