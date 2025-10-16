@@ -1,6 +1,7 @@
-import { CATEGORIES, isItemUnlockedInPlayerSave, isItemInCurrentGameMode } from "../../parsers/dictionary";
-import { huntersJournal } from "../../parsers/categories/huntersJournal";
-import type { TrackableCategory } from "../../parsers/types";
+import { CATEGORIES } from "../../dictionary/categories";
+import { isItemUnlockedInPlayerSave, isItemInCurrentGameMode } from "../../dictionary/parsers";
+import { huntersJournal } from "../../dictionary/categories/huntersJournal";
+import type { TrackableCategory } from "../../dictionary/types";
 
 import type { ProgressData, HuntersJournalProgressData } from "./types";
 

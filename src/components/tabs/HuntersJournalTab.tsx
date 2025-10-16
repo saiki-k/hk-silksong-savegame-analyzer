@@ -1,6 +1,6 @@
 import type { TabRenderProps } from "./types";
-import { huntersJournal } from "../../parsers/categories/huntersJournal";
-import { isItemUnlockedInPlayerSave, isItemInCurrentGameMode } from "../../parsers/dictionary";
+import { huntersJournal } from "../../dictionary/categories/huntersJournal";
+import { isItemUnlockedInPlayerSave, isItemInCurrentGameMode } from "../../dictionary/parsers";
 
 export function HuntersJournalTab({ parsedJson, decrypted }: TabRenderProps) {
   if (!decrypted || !parsedJson) {
@@ -79,7 +79,7 @@ export function HuntersJournalTab({ parsedJson, decrypted }: TabRenderProps) {
                     <button
                       className={`flex-1 min-w-[48px] py-2 rounded font-semibold transition-colors text-xs ${
                         item.mapLink
-                          ? "bg-[#24344d] text-white hover:bg-blue-600"
+                          ? "bg-[#24344d] text-white hover:bg-blue-600 cursor-pointer"
                           : "bg-[#24344d] text-blue-200 opacity-50 cursor-not-allowed"
                       }`}
                       onClick={() => {

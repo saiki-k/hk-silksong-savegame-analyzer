@@ -1,6 +1,7 @@
-import { CATEGORIES, isItemUnlockedInPlayerSave, isItemInCurrentGameMode } from "../../parsers/dictionary";
+import { CATEGORIES } from "../../dictionary/categories";
+import { isItemUnlockedInPlayerSave, isItemInCurrentGameMode } from "../../dictionary/parsers";
 import type { TabRenderProps } from "./types";
-import type { TrackableCategory, CategorySection } from "../../parsers/types";
+import type { TrackableCategory, CategorySection } from "../../dictionary/types";
 
 interface GenericTabProps extends TabRenderProps {
   tabLabel: string;
@@ -15,11 +16,11 @@ function GenericTableSection({
   sectionsLength: number;
   parsedJson: unknown;
 }) {
-  if (section.items.length === 0) return null;
-
   const filteredItems = section.hasGameModeSpecificItems
     ? section.items.filter(item => isItemInCurrentGameMode(item, parsedJson))
     : section.items;
+
+  if (filteredItems.length === 0) return null;
 
   const itemsWithUnlockStatus = filteredItems.map(item => ({
     ...item,
@@ -95,7 +96,7 @@ function GenericTableSection({
                     <button
                       className={`flex-1 min-w-[48px] py-2 rounded font-semibold transition-colors text-xs ${
                         item.mapLink
-                          ? "bg-[#24344d] text-white hover:bg-blue-600"
+                          ? "bg-[#24344d] text-white hover:bg-blue-600 cursor-pointer"
                           : "bg-[#24344d] text-blue-200 opacity-50 cursor-not-allowed"
                       }`}
                       onClick={() => {

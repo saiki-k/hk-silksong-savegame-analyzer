@@ -1,4 +1,5 @@
-import { CATEGORIES, isItemUnlockedInPlayerSave } from "../parsers/dictionary";
+import { CATEGORIES } from "../dictionary/categories";
+import { isItemUnlockedInPlayerSave } from "../dictionary/parsers";
 
 interface TotalProgressProps {
   parsedJson: unknown;

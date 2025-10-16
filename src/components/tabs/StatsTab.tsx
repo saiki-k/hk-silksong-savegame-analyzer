@@ -1,5 +1,5 @@
-import { stats } from "../../parsers/categories/stats";
-import { isItemUnlockedInPlayerSave } from "../../parsers/dictionary";
+import { stats } from "../../dictionary/categories/stats";
+import { isItemUnlockedInPlayerSave } from "../../dictionary/parsers";
 import type { TabRenderProps } from "./types";
 import { formatSecondsToHMS } from "./utils";
 

@@ -1,5 +1,5 @@
 import type { TrackableCategory } from "../types";
-import SimpleLocksSpoiler from "../../components/descriptions/SimpleLocksSpoiler.tsx";
+import SimpleLocksDescriptionWithSpoilers from "../components/SimpleLocksDescriptionWithSpoilers.tsx";
 
 export const keys: TrackableCategory = {
   name: "Keys",
@@ -7,9 +7,8 @@ export const keys: TrackableCategory = {
   sections: [
     {
       name: "Simple Keys",
-      description: "They are used to open simple locks. Each key can only be used once.",
       // NOTE: We can probably use the savefile to track (specific scenes/bools) if these locks are unlocked. Not today!
-      descriptionMarkup: <SimpleLocksSpoiler />,
+      descriptionMarkup: <SimpleLocksDescriptionWithSpoilers />,
       items: [
         // TODO: Grindle sells this item later, if it is not purchased until ACT 3. The internalId would probably not change, because we see Grindle's mates looting this location. However, adding a note here to verify this later...
         {
