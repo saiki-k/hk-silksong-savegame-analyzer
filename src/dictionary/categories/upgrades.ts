@@ -1,6 +1,6 @@
-import type { NormalisedTrackableCategory } from "../types";
+import type { TrackableCategory } from "../types";
 
-export const upgrades: NormalisedTrackableCategory = {
+export const upgrades: TrackableCategory = {
   name: "Upgrades",
   description: "Each Upgrade counts 1% towards completion.",
   sections: [

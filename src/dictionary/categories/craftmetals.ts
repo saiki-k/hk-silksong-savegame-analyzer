@@ -1,13 +1,11 @@
-import type { NormalisedTrackableCategory } from "../types";
+import type { TrackableCategory } from "../types";
 
-export const craftmetals: NormalisedTrackableCategory = {
+export const craftmetals: TrackableCategory = {
   name: "Craftmetals",
   description:
     "Rare element found naturally within the rock and bone of Pharloom. Used by skilled craftsbugs in the construction of tools and trinkets.",
   sections: [
     {
-      name: "Main",
-      description: "",
       items: [
         // TODO: Grindle sells this item later, if it is not purchased until ACT 3. The internalId would probably not change, because we see Grindle's mates looting this location. However, adding a note here to verify this later...
         {

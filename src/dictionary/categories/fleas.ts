@@ -1,12 +1,10 @@
-import type { NormalisedTrackableCategory } from "../types";
+import type { TrackableCategory } from "../types";
 
-export const fleas: NormalisedTrackableCategory = {
+export const fleas: TrackableCategory = {
   name: "Lost Fleas",
   description: "Seek fleas across the lands of Pharloom and guide them to the Flea Caravan.",
   sections: [
     {
-      name: "Main",
-      description: "",
       items: [
         {
           name: "Lost Flea #1",

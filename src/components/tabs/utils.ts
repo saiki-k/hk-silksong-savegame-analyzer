@@ -1,5 +1,7 @@
-import { CATEGORIES, isItemUnlockedInPlayerSave } from "../../parsers/dictionary";
-import type { NormalisedTrackableCategory } from "../../parsers/types";
+import { CATEGORIES } from "../../dictionary/categories";
+import { isItemUnlockedInPlayerSave, isItemInCurrentGameMode } from "../../dictionary/parsers";
+import { huntersJournal } from "../../dictionary/categories/huntersJournal";
+import type { TrackableCategory } from "../../dictionary/types";
 
 import type { ProgressData, HuntersJournalProgressData } from "./types";
 
@@ -30,13 +32,18 @@ export function getGenericProgress({
     return null;
   }
 
-  const categoryData = CATEGORIES.find(cat => cat.name === tabLabel) as NormalisedTrackableCategory;
+  const categoryData = CATEGORIES.find(cat => cat.name === tabLabel) as TrackableCategory;
   if (!categoryData) {
     return null;
   }
 
-  // Flatten all items from all sections
-  const allItems = categoryData.sections.flatMap(section => section.items);
+  // Flatten all items from all sections, filtering by game mode if needed
+  const allItems = categoryData.sections.flatMap(section => {
+    const items = section.hasGameModeSpecificItems
+      ? section.items.filter(item => isItemInCurrentGameMode(item, parsedJson))
+      : section.items;
+    return items;
+  });
 
   if (allItems.length === 0) {
     return null;
@@ -90,9 +97,12 @@ export function getHuntersJournalProgress({
     return null;
   }
 
-  const JOURNAL_CATEGORY_NAME = "Hunter's Journal";
-  const journalCategory = CATEGORIES.find(cat => cat.name === JOURNAL_CATEGORY_NAME);
-  const journalEntries = journalCategory && "items" in journalCategory ? journalCategory.items : [];
+  // Get all items from sections and filter by game mode
+  const journalEntries = huntersJournal.sections.flatMap(section => {
+    return section.hasGameModeSpecificItems
+      ? section.items.filter(item => isItemInCurrentGameMode(item, parsedJson))
+      : section.items;
+  });
 
   if (journalEntries.length === 0) {
     return null;

@@ -1,13 +1,11 @@
-import type { NormalisedTrackableCategory } from "../types";
+import type { TrackableCategory } from "../types";
 
-export const mementos: NormalisedTrackableCategory = {
+export const mementos: TrackableCategory = {
   name: "Mementos",
   description:
     "Personal keepsakes and tokens of remembrance from various characters and places throughout Pharloom. These are only tracked once they've been placed in your Bellhome.",
   sections: [
     {
-      name: "Main",
-      description: "",
       items: [
         {
           name: "Grey Memento",

@@ -1,13 +1,11 @@
-import type { NormalisedTrackableCategory } from "../types";
+import type { TrackableCategory } from "../types";
 
-export const bellways: NormalisedTrackableCategory = {
+export const bellways: TrackableCategory = {
   name: "Bellways",
   description:
     "Fast travel stations throughout Pharloom that allow quick movement between discovered (and unlocked) Bellway stations.",
   sections: [
     {
-      name: "Main",
-      description: "",
       items: [
         {
           name: "Bone Bottom",

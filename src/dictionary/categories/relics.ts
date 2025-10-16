@@ -1,8 +1,8 @@
-import type { NormalisedTrackableCategory } from "../types";
+import type { TrackableCategory } from "../types";
 
-export const relics: NormalisedTrackableCategory = {
+export const relics: TrackableCategory = {
   name: "Relics",
-  description: "Relics",
+  description: "Ancient artifacts scattered across Pharloom.",
   sections: [
     {
       name: "Bone Scrolls",
@@ -12,8 +12,7 @@ export const relics: NormalisedTrackableCategory = {
         {
           name: "Bone Scroll #1",
           whichAct: 1,
-          location:
-            "Greymoor: Held by a corpse found after swimming all the way to the right in the corresponding secret room.",
+          location: "Greymoor: Held by a corpse found after swimming all the way to the right in a secret room.",
           parsingInfo: { type: "relict", internalId: "Bone Record Greymoor_flooded_corridor" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478142",
         },

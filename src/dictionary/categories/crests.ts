@@ -1,12 +1,10 @@
-import type { NormalisedTrackableCategory } from "../types";
+import type { TrackableCategory } from "../types";
 
-export const crests: NormalisedTrackableCategory = {
+export const crests: TrackableCategory = {
   name: "Crests",
   description: "Each of these (except Hunter Crest(s), and Vesticrest(s)) count 1% towards completion.",
   sections: [
     {
-      name: "Main",
-      description: "",
       items: [
         {
           name: "Hunter Crest",

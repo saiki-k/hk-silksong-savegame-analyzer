@@ -1,6 +1,7 @@
-import { CATEGORIES, isItemUnlockedInPlayerSave } from "../../parsers/dictionary";
+import { CATEGORIES } from "../../dictionary/categories";
+import { isItemUnlockedInPlayerSave, isItemInCurrentGameMode } from "../../dictionary/parsers";
 import type { TabRenderProps } from "./types";
-import type { NormalisedTrackableCategory, CategorySection } from "../../parsers/types";
+import type { TrackableCategory, CategorySection } from "../../dictionary/types";
 
 interface GenericTabProps extends TabRenderProps {
   tabLabel: string;
@@ -15,18 +16,22 @@ function GenericTableSection({
   sectionsLength: number;
   parsedJson: unknown;
 }) {
-  if (section.items.length === 0) return null;
+  const filteredItems = section.hasGameModeSpecificItems
+    ? section.items.filter(item => isItemInCurrentGameMode(item, parsedJson))
+    : section.items;
 
-  const itemsWithUnlockStatus = section.items.map(item => ({
+  if (filteredItems.length === 0) return null;
+
+  const itemsWithUnlockStatus = filteredItems.map(item => ({
     ...item,
     unlocked: isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson).unlocked,
   }));
 
   return (
     <div className="mb-8">
-      {sectionsLength > 1 && (
+      {sectionsLength > 1 && (section.name || section.description || section.descriptionMarkup) && (
         <div className="mb-4">
-          <h2 className="text-xl font-bold mb-2 text-blue-200">{section.name}</h2>
+          {section.name && <h2 className="text-xl font-bold mb-2 text-blue-200">{section.name}</h2>}
           {section.description && section.description.trim() && (
             <p className="text-sm text-gray-300 mb-2">{section.description}</p>
           )}
@@ -91,7 +96,7 @@ function GenericTableSection({
                     <button
                       className={`flex-1 min-w-[48px] py-2 rounded font-semibold transition-colors text-xs ${
                         item.mapLink
-                          ? "bg-[#24344d] text-white hover:bg-blue-600"
+                          ? "bg-[#24344d] text-white hover:bg-blue-600 cursor-pointer"
                           : "bg-[#24344d] text-blue-200 opacity-50 cursor-not-allowed"
                       }`}
                       onClick={() => {
@@ -118,7 +123,7 @@ export function GenericTab({ parsedJson, decrypted, tabLabel }: GenericTabProps)
     return <div className="text-white text-center">Load a savefile to view "{tabLabel}" data.</div>;
   }
 
-  const categoryData = CATEGORIES.find(cat => cat.name === tabLabel) as NormalisedTrackableCategory;
+  const categoryData = CATEGORIES.find(cat => cat.name === tabLabel) as TrackableCategory;
   if (!categoryData) {
     return <div className="text-white text-center">Category "{tabLabel}" not found.</div>;
   }
@@ -128,14 +133,9 @@ export function GenericTab({ parsedJson, decrypted, tabLabel }: GenericTabProps)
       {categoryData.sections.length === 1 && (
         <div className="mb-4">
           <h2 className="text-xl font-bold mb-2 text-blue-200">{categoryData.name}</h2>
-          {categoryData.description &&
-            categoryData.description.trim() &&
-            categoryData.description.trim() !== categoryData.name && (
-              <div
-                className="text-sm text-gray-300 mb-2"
-                dangerouslySetInnerHTML={{ __html: categoryData.description }}
-              />
-            )}
+          {categoryData.description && categoryData.description !== categoryData.name && (
+            <p className="text-sm text-gray-300 mb-2">{categoryData.description}</p>
+          )}
         </div>
       )}
       {categoryData.sections.map((section, sectionIndex) => (
