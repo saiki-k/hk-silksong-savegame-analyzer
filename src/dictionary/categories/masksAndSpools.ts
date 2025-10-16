@@ -16,7 +16,7 @@ export const masksAndSpools: TrackableCategory = {
           location:
             "Bone Bottom / Blasted Steps: Sold by Pebb for 300 Rosaries. If you don't purchase this from Pebb, it is sold by Grindle  in ACT 3 for 320 Rosaries.",
           parsingInfo: { type: "flag", internalId: "PurchasedBonebottomHeartPiece" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477840",
+          mapLink: "477840",
         },
         {
           name: "Mask Shard #2",
@@ -25,7 +25,7 @@ export const masksAndSpools: TrackableCategory = {
           prereqs: ["Swift Step"],
           location: "Wormways: Behind a breakable wall at the water's edge.",
           parsingInfo: { type: "sceneData", internalId: ["Crawl_02", "Heart Piece"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478091",
+          mapLink: "478091",
         },
         {
           name: "Mask Shard #3",
@@ -34,7 +34,7 @@ export const masksAndSpools: TrackableCategory = {
           prereqs: ["Drifter's Cloak"],
           location: "Far Fields: In a hidden area found towards the left of the Seamstress' Home.",
           parsingInfo: { type: "sceneData", internalId: ["Bone_East_20", "Heart Piece"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477975",
+          mapLink: "477975",
         },
         {
           name: "Mask Shard #4",
@@ -42,7 +42,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.25,
           location: "Shellwood: At the end of a platforming challenge in a room behind a breakable wall.",
           parsingInfo: { type: "sceneData", internalId: ["Shellwood_14", "Heart Piece"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478177",
+          mapLink: "478177",
         },
         {
           name: "Mask Shard #5",
@@ -51,7 +51,7 @@ export const masksAndSpools: TrackableCategory = {
           prereqs: ["Cling Grip"],
           location: "Deep Docks: Near the Deep Docks entrance, approach from The Marrow.",
           parsingInfo: { type: "sceneData", internalId: ["Dock_08", "Heart Piece"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477901",
+          mapLink: "477901",
         },
         {
           name: "Mask Shard #6",
@@ -60,7 +60,7 @@ export const masksAndSpools: TrackableCategory = {
           prereqs: ["Needolin"],
           location: "Weavenest Atla: Behind a breakable wall.",
           parsingInfo: { type: "sceneData", internalId: ["Weave_05b", "Heart Piece"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478233",
+          mapLink: "478233",
         },
         {
           name: "Mask Shard #7",
@@ -68,7 +68,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.25,
           location: 'Bellhart: Complete "Savage Beastfly" wish.',
           parsingInfo: { type: "quest", internalId: "Beastfly Hunt" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478800",
+          mapLink: "478800",
         },
         {
           name: "Mask Shard #8",
@@ -76,7 +76,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.25,
           location: "Cogwork Core: At the top of the left-most tunnel, reached after an arena battle.",
           parsingInfo: { type: "sceneData", internalId: ["Song_09", "Heart Piece"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478615",
+          mapLink: "478615",
         },
         {
           name: "Mask Shard #9",
@@ -84,7 +84,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.25,
           location: "Whispering Vaults",
           parsingInfo: { type: "sceneData", internalId: ["Library_05", "Heart Piece"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478671",
+          mapLink: "478671",
         },
         {
           name: "Mask Shard #10",
@@ -94,7 +94,7 @@ export const masksAndSpools: TrackableCategory = {
           location:
             "Bilewater: At the end of a couple of long corridors, filled with Slubberlugs and parasite-infested waters.",
           parsingInfo: { type: "sceneData", internalId: ["Shadow_13", "Heart Piece"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478849",
+          mapLink: "478849",
         },
         {
           name: "Mask Shard #11",
@@ -103,7 +103,7 @@ export const masksAndSpools: TrackableCategory = {
           prereqs: ["Clawline"],
           location: "Far Fields: At the top of the Skull Cavern.",
           parsingInfo: { type: "sceneData", internalId: ["Bone_East_LavaChallenge", "Heart Piece (1)"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478841",
+          mapLink: "478841",
         },
         {
           name: "Mask Shard #12",
@@ -112,7 +112,7 @@ export const masksAndSpools: TrackableCategory = {
           location:
             "The Slab: At the top of a room behind a locked door (requires Key of Apostate) that holds a platforming challenge.",
           parsingInfo: { type: "sceneData", internalId: ["Slab_17", "Heart Piece"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479001",
+          mapLink: "479001",
         },
         {
           name: "Mask Shard #13",
@@ -121,7 +121,7 @@ export const masksAndSpools: TrackableCategory = {
           prereqs: ["Faydown Cloak"],
           location: "Mount Fay: Inside a large hollow cylinder, in an area towards the left of the bottom-most bench.",
           parsingInfo: { type: "sceneData", internalId: ["Peak_04c", "Heart Piece"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479038",
+          mapLink: "479038",
         },
         {
           name: "Mask Shard #14",
@@ -130,7 +130,7 @@ export const masksAndSpools: TrackableCategory = {
           prereqs: ["Faydown Cloak"],
           location: "Wisp Thicket: At the end of a platforming challenge  in the left-most area.",
           parsingInfo: { type: "sceneData", internalId: ["Wisp_07", "Heart Piece"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479151",
+          mapLink: "479151",
         },
         {
           name: "Mask Shard #15",
@@ -138,7 +138,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.25,
           location: 'Songclave: Sold by Jubilana for 750 Rosaries, after completing "The Wandering Merchant" wish.',
           parsingInfo: { type: "flag", internalId: "MerchantEnclaveShellFragment" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478879",
+          mapLink: "478879",
         },
         {
           name: "Mask Shard #16",
@@ -147,7 +147,7 @@ export const masksAndSpools: TrackableCategory = {
           prereqs: ["Faydown Cloak"],
           location: "Blasted Steps: At the top of an area near the map boundary.",
           parsingInfo: { type: "sceneData", internalId: ["Coral_19b", "Heart Piece"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478498",
+          mapLink: "478498",
         },
         {
           name: "Mask Shard #17",
@@ -155,7 +155,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.25,
           location: 'Far Fields: Complete "Fastest in Pharloom" wish.',
           parsingInfo: { type: "quest", internalId: "Sprintmaster Race" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479194",
+          mapLink: "479194",
         },
         {
           name: "Mask Shard #18",
@@ -163,7 +163,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.25,
           location: 'Bellhart: Complete "The Hidden Hunter" wish.',
           parsingInfo: { type: "quest", internalId: "Ant Trapper" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479447",
+          mapLink: "479447",
         },
         {
           name: "Mask Shard #19",
@@ -171,7 +171,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.25,
           location: 'Bellhart: Complete "Dark Hearts" wish.',
           parsingInfo: { type: "quest", internalId: "Destroy Thread Cores" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479449",
+          mapLink: "479449",
         },
         {
           name: "Mask Shard #20",
@@ -180,7 +180,7 @@ export const masksAndSpools: TrackableCategory = {
           prereqs: ["Silk Soar"],
           location: "Mount Fay: At the very top of Brightvein.",
           parsingInfo: { type: "sceneData", internalId: ["Peak_06", "Heart Piece"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479460",
+          mapLink: "479460",
         },
       ],
     },
@@ -194,7 +194,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.5,
           location: "Bone Bottom: Above the Bone Bottom settlement.",
           parsingInfo: { type: "sceneData", internalId: ["Bone_11b", "Silk Spool"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478080",
+          mapLink: "478080",
         },
         {
           name: "Spool Fragment #2",
@@ -202,7 +202,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.5,
           location: "Deep Docks: At the end of a long room.",
           parsingInfo: { type: "sceneData", internalId: ["Bone_East_13", "Silk Spool"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477926",
+          mapLink: "477926",
         },
         {
           name: "Spool Fragment #3",
@@ -211,7 +211,7 @@ export const masksAndSpools: TrackableCategory = {
           prereqs: ["Cling Grip"],
           location: "Greymoor: In an area that's towards the top-right of the Bellshrine.",
           parsingInfo: { type: "sceneData", internalId: ["Greymoor_02", "Silk Spool"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478263",
+          mapLink: "478263",
         },
         {
           name: "Spool Fragment #4",
@@ -220,7 +220,7 @@ export const masksAndSpools: TrackableCategory = {
           prereqs: ["Cling Grip"],
           location: "The Slab: At the top of a frosty section towards the left.",
           parsingInfo: { type: "sceneData", internalId: ["Peak_01", "Silk Spool"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478475",
+          mapLink: "478475",
         },
         {
           name: "Spool Fragment #5",
@@ -229,7 +229,7 @@ export const masksAndSpools: TrackableCategory = {
           prereqs: ["Needolin"],
           location: "Weavenest Atla: Behind a breakable wall.",
           parsingInfo: { type: "sceneData", internalId: ["Weave_11", "Silk Spool"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478230",
+          mapLink: "478230",
         },
         {
           name: "Spool Fragment #6",
@@ -238,7 +238,7 @@ export const masksAndSpools: TrackableCategory = {
           prereqs: ["Needolin"],
           location: 'Bellhart: Sold by Frey for 270 Rosaries after completing "My Missing Courier" wish.',
           parsingInfo: { type: "flag", internalId: "PurchasedBelltownSpoolSegment" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478347",
+          mapLink: "478347",
         },
         {
           name: "Spool Fragment #7",
@@ -246,7 +246,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.5,
           location: "Greymoor: Fleamaster reward in Greymoor, after rescuing 14 Fleas.",
           parsingInfo: { type: "flagInt", internalId: ["CaravanTroupeLocation", 2] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478820",
+          mapLink: "478820",
         },
         {
           name: "Spool Fragment #8",
@@ -254,7 +254,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.5,
           location: "Cogwork Core (Bottom-right)",
           parsingInfo: { type: "sceneData", internalId: ["Cog_07", "Silk Spool"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478618",
+          mapLink: "478618",
         },
         {
           name: "Spool Fragment #9",
@@ -262,7 +262,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.5,
           location: "Underworks: In a hidden area, almost at the bottom-right.",
           parsingInfo: { type: "sceneData", internalId: ["Library_11b", "Silk Spool"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478704",
+          mapLink: "478704",
         },
         {
           name: "Spool Fragment #10",
@@ -270,7 +270,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.5,
           location: "Grand Gate: At the very top.",
           parsingInfo: { type: "sceneData", internalId: ["Song_19_entrance", "Silk Spool"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478586",
+          mapLink: "478586",
         },
         {
           name: "Spool Fragment #11",
@@ -278,7 +278,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.5,
           location: "Underworks: Behind an arena battle.",
           parsingInfo: { type: "sceneData", internalId: ["Under_10", "Silk Spool"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478931",
+          mapLink: "478931",
         },
         {
           name: "Spool Fragment #12",
@@ -286,7 +286,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.5,
           location: "Whiteward: At the bottom of the elevator shaft, requires the elevator to be called up first.",
           parsingInfo: { type: "sceneData", internalId: ["Ward_01", "Silk Spool"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479317",
+          mapLink: "479317",
         },
         {
           name: "Spool Fragment #13",
@@ -294,7 +294,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.5,
           location: 'Songclave: Complete "Balm for The Wounded" wish.',
           parsingInfo: { type: "quest", internalId: "Save Sherma" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479180",
+          mapLink: "479180",
         },
         {
           name: "Spool Fragment #14",
@@ -302,7 +302,7 @@ export const masksAndSpools: TrackableCategory = {
           completionPercent: 0.5,
           location: "Deep Docks (Bottom-right)",
           parsingInfo: { type: "sceneData", internalId: ["Dock_03c", "Silk Spool"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478825",
+          mapLink: "478825",
         },
         {
           name: "Spool Fragment #15",
@@ -311,7 +311,7 @@ export const masksAndSpools: TrackableCategory = {
           prereqs: ["Clawline"],
           location: "High Halls: At the very top.",
           parsingInfo: { type: "sceneData", internalId: ["Hang_03_top", "Silk Spool"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478909",
+          mapLink: "478909",
         },
         {
           name: "Spool Fragment #16",
@@ -320,7 +320,7 @@ export const masksAndSpools: TrackableCategory = {
           prereqs: ["Faydown Cloak"],
           location: "Memorium (Bottom-left)",
           parsingInfo: { type: "sceneData", internalId: ["Arborium_09", "Silk Spool"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479117",
+          mapLink: "479117",
         },
         {
           name: "Spool Fragment #17",
@@ -329,7 +329,7 @@ export const masksAndSpools: TrackableCategory = {
           prereqs: ["Faydown Cloak"],
           location: "Blasted Steps: Sold by Grindle for 680 Rosaries.",
           parsingInfo: { type: "flag", internalId: "purchasedGrindleSpoolPiece" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478527",
+          mapLink: "478527",
         },
         {
           name: "Spool Fragment #18",
@@ -338,7 +338,7 @@ export const masksAndSpools: TrackableCategory = {
           prereqs: ["Faydown Cloak"],
           location: 'Songclave: Sold by Jubilana for 500 Rosaries, after completing "The Lost Merchant" wish.',
           parsingInfo: { type: "flag", internalId: "MerchantEnclaveSpoolPiece" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479249",
+          mapLink: "479249",
         },
       ],
     },

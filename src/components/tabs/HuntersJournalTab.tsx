@@ -83,7 +83,10 @@ export function HuntersJournalTab({ parsedJson, decrypted }: TabRenderProps) {
                           : "bg-[#24344d] text-blue-200 opacity-50 cursor-not-allowed"
                       }`}
                       onClick={() => {
-                        if (item.mapLink) window.open(item.mapLink, "_blank", "noopener");
+                        if (item.mapLink) {
+                          const url = `https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=${item.mapLink}`;
+                          window.open(url, "_blank", "noopener");
+                        }
                       }}
                       disabled={!item.mapLink}
                       tabIndex={item.mapLink ? 0 : -1}

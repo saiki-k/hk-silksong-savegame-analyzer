@@ -14,7 +14,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "The Marrow: On the upper level of Grindle's cell.",
           parsingInfo: { type: "tool", internalId: ["Straight Pin"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477899",
+          mapLink: "477899",
         },
         {
           name: "Threefold Pin",
@@ -22,7 +22,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Greymoor (Craw Lake): In a secret room entered by walking through the wall on the right side.",
           parsingInfo: { type: "tool", internalId: ["Tri Pin"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478058",
+          mapLink: "478058",
         },
         {
           name: "Sting Shard",
@@ -30,7 +30,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Deep Docks: Sold by Forge Daughter for 140 Rosaries, and 1 Craftmetal.",
           parsingInfo: { type: "tool", internalId: ["Sting Shard"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477917",
+          mapLink: "477917",
         },
         {
           name: "Tacks",
@@ -39,7 +39,7 @@ export const tools: TrackableCategory = {
           location:
             "Sinner's Road: Complete Roach Guts Wish. In ACT 3, you can pick it up from the floor inside the hut.",
           parsingInfo: { type: "tool", internalId: ["Tack"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478365",
+          mapLink: "478365",
         },
         {
           name: "Longpin",
@@ -47,7 +47,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Bellhart: In a secret room behind a Wood Wasp nest.",
           parsingInfo: { type: "tool", internalId: ["Harpoon"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478158",
+          mapLink: "478158",
         },
         {
           name: "Curveclaw / Curvesickle",
@@ -56,7 +56,7 @@ export const tools: TrackableCategory = {
           location:
             'Hunter\'s March /  Far Fields: Sold by Mottled Skarr for 140 Rosaries. In ACT 3, you can upgrade the Curveclaw in a "Far Fields" room that is accessible by traversing up the airstream outside the Bellway, and to the right.',
           parsingInfo: { type: "tool", internalId: ["Curve Claws", "Curve Claws Upgraded"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478604",
+          mapLink: "478604",
         },
         {
           name: "Throwing Ring",
@@ -64,7 +64,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: 'Bilewater: Complete "Trail\'s End" wish.',
           parsingInfo: { type: "tool", internalId: ["Shakra Ring"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479242",
+          mapLink: "479242",
         },
         {
           name: "Pimpillo",
@@ -74,7 +74,7 @@ export const tools: TrackableCategory = {
           location:
             "Greymoor: Crafted at a table in the top-left secret room near Yarnaby's bellhome. Requires a Craftmetal.",
           parsingInfo: { type: "tool", internalId: ["Pimpilo"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478964",
+          mapLink: "478964",
         },
         {
           name: "Conchcutter",
@@ -82,7 +82,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Coral Tower: Found almost immediately after entering the Coral Tower.",
           parsingInfo: { type: "tool", internalId: ["Conch Drill"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479230",
+          mapLink: "479230",
         },
         {
           name: "Silkshot",
@@ -91,7 +91,7 @@ export const tools: TrackableCategory = {
           location:
             "Deep Docks / Underworks / Mount Fay: One of the 3 variants can be acquired using Ruined Tool, and a Craftmetal. One of the variants can be purchased from Forge Daughter for 240 Rosaries. A second variant can be purchased from Twelfth Architect for 130 Rosaries. The best variant can be crafted at the table near a bench, near the Mount Fay summit.",
           parsingInfo: { type: "tool", internalId: ["WebShot Forge", "WebShot Architect", "WebShot Weaver"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479497",
+          mapLink: "479497",
         },
         {
           name: "Delver's Drill",
@@ -99,7 +99,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Underworks: On a table at the bottom-left.",
           parsingInfo: { type: "tool", internalId: ["Screw Attack"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478577",
+          mapLink: "478577",
         },
         {
           name: "Cogwork Wheel",
@@ -107,7 +107,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Underworks: Sold by Twelfth Architect for 360 Rosaries and 1 Craftmetal.",
           parsingInfo: { type: "tool", internalId: ["Cogwork Saw"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478725",
+          mapLink: "478725",
         },
         {
           name: "Cogfly",
@@ -115,7 +115,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "High Halls: Crafted at a table in a room behind a breakable grill. Requires a Craftmetal.",
           parsingInfo: { type: "tool", internalId: ["Cogwork Flier"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478903",
+          mapLink: "478903",
         },
         {
           name: "Rosary Cannon",
@@ -123,7 +123,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "High Halls: Behind a breakable wall in the Rosary Storage (requires a Simple Key to unlock it).",
           parsingInfo: { type: "tool", internalId: ["Rosary Cannon"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478937",
+          mapLink: "478937",
         },
         {
           name: "Voltvessels",
@@ -131,7 +131,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Memorium (Top-right)",
           parsingInfo: { type: "tool", internalId: ["Lightning Rod"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479121",
+          mapLink: "479121",
         },
         {
           name: "Flintslate",
@@ -139,7 +139,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Deep Docks",
           parsingInfo: { type: "tool", internalId: ["Flintstone"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477986",
+          mapLink: "477986",
         },
         {
           name: "Flea Brew",
@@ -147,7 +147,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: 'Greymoor: Complete "The Lost Fleas" wish, and talk to Grishkin.',
           parsingInfo: { type: "tool", internalId: ["Flea Brew"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478025",
+          mapLink: "478025",
         },
         {
           name: "Plasmium Phial",
@@ -155,14 +155,14 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: 'Wormways: Complete "Alchemist\'s Assistant" wish.',
           parsingInfo: { type: "tool", internalId: ["Lifeblood Syringe"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478496",
+          mapLink: "478496",
         },
         {
           name: "Needle Phial",
           whichAct: 1,
           location: "Wormways: Temporary tool for collecting plasmium.",
           parsingInfo: { type: "tool", internalId: ["Extractor"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478496",
+          mapLink: "478496",
         },
         {
           name: "Snare Setter",
@@ -170,7 +170,7 @@ export const tools: TrackableCategory = {
           prereqs: ["Faydown Cloak"],
           location: 'Weavenest Atla: Required as a part of "Silk and Soul" wish.',
           parsingInfo: { type: "tool", internalId: ["Silk Snare"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479071",
+          mapLink: "479071",
         },
       ],
     },
@@ -185,7 +185,7 @@ export const tools: TrackableCategory = {
           location:
             'Moss Grotto (Mosshome): Complete "Berry Picking" wish. Give 4 more Mossberries to Moss Druid for the upgrade.',
           parsingInfo: { type: "tool", internalId: ["Mosscreep Tool 1", "Mosscreep Tool 2"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478255",
+          mapLink: "478255",
         },
         {
           name: "Magma Bell",
@@ -193,7 +193,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Deep Docks: Sold by Forge Daughter for 110 Rosaries and 1 Craftmetal.",
           parsingInfo: { type: "tool", internalId: ["Lava Charm"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477918",
+          mapLink: "477918",
         },
         {
           name: "Warding Bell",
@@ -201,7 +201,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Deep Docks",
           parsingInfo: { type: "tool", internalId: ["Bell Bind"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477935",
+          mapLink: "477935",
         },
         {
           name: "Pollip Pouch",
@@ -209,7 +209,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: 'Shellwood: Complete "Rite of the Pollip" wish.',
           parsingInfo: { type: "tool", internalId: ["Poison Pouch"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478294",
+          mapLink: "478294",
         },
         {
           name: "Fractured Mask",
@@ -218,7 +218,7 @@ export const tools: TrackableCategory = {
           location:
             "Hunter's March: Sold by Mottled Skarr for 260 Rosaries, or found on the ground in the same location, later in the game.",
           parsingInfo: { type: "tool", internalId: ["Fractured Mask"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478607",
+          mapLink: "478607",
         },
         {
           name: "Multibinder",
@@ -226,7 +226,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: 'Bellhart: Sold by Frey for 880 Rosaries, after completing "My Missing Courier" wish.',
           parsingInfo: { type: "tool", internalId: ["Multibind"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478203",
+          mapLink: "478203",
         },
         {
           name: "Weavelight",
@@ -234,7 +234,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Weavenest Atla: Inside a decoration on the ceiling of the rooftop where you fight 2 Moss Mothers.",
           parsingInfo: { type: "tool", internalId: ["White Ring"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479070",
+          mapLink: "479070",
         },
         {
           name: "Sawtooth Circlet",
@@ -242,7 +242,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Underworks: Sold by Twelfth Architect for 230 Rosaries and 1 Craftmetal.",
           parsingInfo: { type: "tool", internalId: ["Brolly Spike"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478726",
+          mapLink: "478726",
         },
         {
           name: "Injector Band",
@@ -250,7 +250,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Whiteward",
           parsingInfo: { type: "tool", internalId: ["Quickbind"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479182",
+          mapLink: "479182",
         },
         {
           name: "Spool Extender",
@@ -258,7 +258,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: 'Songclave: Sold by Jubilana for 720 Rosaries, after completing "The Wandering Merchant" wish.',
           parsingInfo: { type: "tool", internalId: ["Spool Extender"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478881",
+          mapLink: "478881",
         },
         {
           name: "Reserve Bind",
@@ -266,7 +266,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "High Halls: Defeat Second Sentinel.",
           parsingInfo: { type: "tool", internalId: ["Reserve Bind"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479254",
+          mapLink: "479254",
         },
         {
           name: "Claw Mirror / Claw Mirrors",
@@ -274,7 +274,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Whispering Vaults (The Stage): Defeat Trobbio. Defeat Tormented Trobbio for the upgrade.",
           parsingInfo: { type: "tool", internalId: ["Dazzle Bind", "Dazzle Bind Upgraded"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478691",
+          mapLink: "478691",
         },
         {
           name: "Memory Crystal",
@@ -282,7 +282,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Mount Fay: Inside a large crystal shard, at the end of a tunnel.",
           parsingInfo: { type: "tool", internalId: ["Revenge Crystal"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478947",
+          mapLink: "478947",
         },
         {
           name: "Snitch Pick",
@@ -290,7 +290,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Blasted Steps: Sold by Grindle for 740 Rosaries.",
           parsingInfo: { type: "tool", internalId: ["Thief Claw"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479201",
+          mapLink: "479201",
         },
         {
           name: "Volt Filament",
@@ -298,7 +298,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Coral Tower (Voltnest): Defeat Voltvyrm.",
           parsingInfo: { type: "tool", internalId: ["Zap Imbuement"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479224",
+          mapLink: "479224",
         },
         {
           name: "Quick Sling",
@@ -306,7 +306,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Bilewater: In a secret area above two breakable ceilings.",
           parsingInfo: { type: "tool", internalId: ["Quick Sling"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478848",
+          mapLink: "478848",
         },
         {
           name: "Wreath of Purity",
@@ -314,7 +314,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Putrified Ducts",
           parsingInfo: { type: "tool", internalId: ["Maggot Charm"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479133",
+          mapLink: "479133",
         },
         {
           name: "Longclaw",
@@ -322,7 +322,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: 'Putrified Ducts: Complete "Broodfeast" wish.',
           parsingInfo: { type: "tool", internalId: ["Longneedle"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479240",
+          mapLink: "479240",
         },
         {
           name: "Wispfire Latern",
@@ -330,7 +330,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Wisp Thicket: Defeat Father of the Flame.",
           parsingInfo: { type: "tool", internalId: ["Wisp Lantern"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479156",
+          mapLink: "479156",
         },
         {
           name: "Egg of Flealia",
@@ -338,7 +338,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Putrified Ducts (Fleatopia): Find every Lost Flea in Pharloom.",
           parsingInfo: { type: "tool", internalId: ["Flea Charm"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479439",
+          mapLink: "479439",
         },
         {
           name: "Pin Badge",
@@ -346,7 +346,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Mount Fay: Defeat Pinstress.",
           parsingInfo: { type: "tool", internalId: ["Pinstress Tool"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479466",
+          mapLink: "479466",
         },
       ],
     },
@@ -360,7 +360,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "The Marrow: Sold by Shakra for 70 Rosaries.",
           parsingInfo: { type: "tool", internalId: ["Compass"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477851",
+          mapLink: "477851",
         },
         {
           name: "Shard Pendant",
@@ -368,7 +368,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "The Marrow",
           parsingInfo: { type: "tool", internalId: ["Bone Necklace"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477848",
+          mapLink: "477848",
         },
         {
           name: "Magnetite Brooch",
@@ -377,7 +377,7 @@ export const tools: TrackableCategory = {
           location:
             "Bone Bottom / Blasted Steps: Sold by Pebb for 120 Rosaries. In ACT 3, the item can be bought from Grindle for 220 Rosaries.",
           parsingInfo: { type: "tool", internalId: ["Rosary Magnet"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477841",
+          mapLink: "477841",
         },
         {
           name: "Weighted Belt",
@@ -386,7 +386,7 @@ export const tools: TrackableCategory = {
           location:
             "Far Fields: Sold by Mort (Pilgrim's Rest) for 160 Rosaries. If it is not purchased from Mort, it can be found in a nearby location, in ACT 3.",
           parsingInfo: { type: "tool", internalId: ["Weighted Anklet"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477946",
+          mapLink: "477946",
         },
         {
           name: "Barbed Bracelet",
@@ -394,7 +394,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Sinner's Road (Bottom-right)",
           parsingInfo: { type: "tool", internalId: ["Barbed Wire"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478341",
+          mapLink: "478341",
         },
         {
           name: "Dead Bug's Purse / Shell Satchel",
@@ -403,7 +403,7 @@ export const tools: TrackableCategory = {
           location:
             "Wormways: Held by a corpse in a small room guarded by 2 Gromlings. Shell Satchel is only found in Steel Soul mode.",
           parsingInfo: { type: "tool", internalId: ["Dead Mans Purse", "Shell Satchel"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479081",
+          mapLink: "479081",
         },
         {
           name: "Magnetite Dice",
@@ -412,7 +412,7 @@ export const tools: TrackableCategory = {
           location:
             "Blasted Steps: Beat Lumble The Lucky at dice enough times, or return to this spot to simply pick it up after visiting the Choral Chambers. Can also be purchased from Grindle for 300 Rosaries in ACT 3.",
           parsingInfo: { type: "tool", internalId: ["Magnetite Dice"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479309",
+          mapLink: "479309",
         },
         {
           name: "Scuttlebrace",
@@ -420,7 +420,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Underworks: Sold by Twelfth Architect for 140 Rosaries and 1 Craftmetal.",
           parsingInfo: { type: "tool", internalId: ["Scuttlebrace"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478727",
+          mapLink: "478727",
         },
         {
           name: "Ascendant's Grip",
@@ -428,7 +428,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: 'Songclave: Sold by Jubilana for 350 Rosaries, after completing "The Wandering Merchant" wish.',
           parsingInfo: { type: "tool", internalId: ["Wallcling"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478878",
+          mapLink: "478878",
         },
         {
           name: "Spider Strings",
@@ -436,7 +436,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: 'Songclave: Sold by Jubilana for 320 Rosaries, after completing "The Lost Merchant" wish.',
           parsingInfo: { type: "tool", internalId: ["Musician Charm"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479248",
+          mapLink: "479248",
         },
         {
           name: "Silkspeed Anklets",
@@ -445,7 +445,7 @@ export const tools: TrackableCategory = {
           prereqs: ["Needolin", "Swift Step"],
           location: "Far Fields (Weavenest): Speed Challange. Use Swift Step, and run over all the pressure plates.",
           parsingInfo: { type: "tool", internalId: ["Sprintmaster"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478216",
+          mapLink: "478216",
         },
         {
           name: "Thief's Mark",
@@ -453,7 +453,7 @@ export const tools: TrackableCategory = {
           completionPercent: 1,
           location: "Blasted Steps: Sold by Grindle for 350 Rosaries.",
           parsingInfo: { type: "tool", internalId: ["Thief Charm"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478525",
+          mapLink: "478525",
         },
       ],
     },
