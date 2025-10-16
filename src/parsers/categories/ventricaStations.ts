@@ -1,6 +1,6 @@
-import type { NormalisedTrackableCategory } from "../types";
+import type { TrackableCategory } from "../types";
 
-export const ventricaStations: NormalisedTrackableCategory = {
+export const ventricaStations: TrackableCategory = {
   name: "Ventrica Stations",
   description: "Underground pneumatic transport system that connects major locations within The Citadel.",
   sections: [

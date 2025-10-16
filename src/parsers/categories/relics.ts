@@ -1,8 +1,8 @@
-import type { NormalisedTrackableCategory } from "../types";
+import type { TrackableCategory } from "../types";
 
-export const relics: NormalisedTrackableCategory = {
+export const relics: TrackableCategory = {
   name: "Relics",
-  description: "Relics",
+  description: "Ancient artifacts scattered across Pharloom.",
   sections: [
     {
       name: "Bone Scrolls",

@@ -1,6 +1,6 @@
-import type { NormalisedTrackableCategory } from "../types";
+import type { TrackableCategory } from "../types";
 
-export const silkeaters: NormalisedTrackableCategory = {
+export const silkeaters: TrackableCategory = {
   name: "Silkeaters",
   description:
     "These are the Silkeater cocoons found throughout Pharloom; breaking one lets you obtain a Silkeater. Consume them to retrieve lost valuables (cocoon corpse) after death. You can only obtain them before starting ACT 3, so be sure to find them all beforehand!",
@@ -28,8 +28,7 @@ export const silkeaters: NormalisedTrackableCategory = {
         {
           name: "Silkeater · Blasted Steps",
           whichAct: 1,
-          location:
-            "Blasted Steps: In the eastern area, east of where Shakra appears.",
+          location: "Blasted Steps: In the eastern area, east of where Shakra appears.",
           parsingInfo: { type: "sceneData", internalId: ["Coral_37", "Silk Grub Large Cocoon"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478505",
           onlyFoundInClassicMode: true,

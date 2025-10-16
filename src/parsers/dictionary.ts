@@ -1,4 +1,4 @@
-import type { ParsingInfo, ParsingInfoMulti, NormalisedTrackableCategory, TrackableCategory } from "./types";
+import type { ParsingInfo, ParsingInfoMulti, TrackableCategory } from "./types";
 
 import { stats } from "./categories/stats";
 import { masksAndSpools } from "./categories/masksAndSpools";
@@ -21,7 +21,7 @@ import { quests } from "./categories/quests";
 import { bosses } from "./categories/bosses";
 import { huntersJournal } from "./categories/huntersJournal";
 
-export const CATEGORIES: (NormalisedTrackableCategory | TrackableCategory)[] = [
+export const CATEGORIES: TrackableCategory[] = [
   stats,
   masksAndSpools,
   abilities,
@@ -44,7 +44,6 @@ export const CATEGORIES: (NormalisedTrackableCategory | TrackableCategory)[] = [
   huntersJournal,
 ];
 
-// Check if a category item is unlocked in the save data
 export function isItemUnlockedInPlayerSave(
   itemParsingInfo: ParsingInfo | ParsingInfoMulti,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

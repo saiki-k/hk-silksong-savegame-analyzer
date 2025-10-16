@@ -1,6 +1,6 @@
-import type { NormalisedTrackableCategory } from "../types";
+import type { TrackableCategory } from "../types";
 
-export const quests: NormalisedTrackableCategory = {
+export const quests: TrackableCategory = {
   name: "Quests",
   description: "Quests",
   sections: [

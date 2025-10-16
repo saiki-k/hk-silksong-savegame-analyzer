@@ -8,7 +8,10 @@ export function StatsTab({ parsedJson, decrypted }: TabRenderProps) {
     return <div className="text-white text-center">Load a savefile to view "Stats" data.</div>;
   }
 
-  const statsWithDisplayValues = stats.items.map(item => {
+  // Get all items from sections
+  const allItems = stats.sections.flatMap(section => section.items);
+
+  const statsWithDisplayValues = allItems.map(item => {
     const { returnValue } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
     let displayValue = "";
     if (item.name === "Game Mode") {

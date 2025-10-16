@@ -44,21 +44,14 @@ export type CategoryItem = {
 };
 
 export type CategorySection = {
-  name: string | undefined;
-  description: string | undefined;
+  name?: string;
+  description?: string;
   descriptionMarkup?: ReactNode;
   items: CategoryItem[];
   hasGameModeSpecificItems?: boolean;
 };
 
 export type TrackableCategory = {
-  name: string;
-  description: string;
-  items: CategoryItem[];
-  hasGameModeSpecificItems?: boolean;
-};
-
-export type NormalisedTrackableCategory = {
   name: string;
   description: string;
   sections: CategorySection[];

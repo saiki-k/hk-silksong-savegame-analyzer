@@ -9,13 +9,7 @@ export function TotalProgress({ parsedJson }: TotalProgressProps) {
   if (parsedJson) {
     // Flatten all items from all categories
     const allItems = CATEGORIES.flatMap(category => {
-      if ("sections" in category) {
-        // NormalisedTrackableCategory
-        return category.sections.flatMap(section => section.items);
-      } else {
-        // Legacy TrackableCategory
-        return category.items;
-      }
+      return category.sections.flatMap(section => section.items);
     });
 
     // Only count items with a positive completionPercent

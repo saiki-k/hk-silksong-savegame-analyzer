@@ -7,11 +7,13 @@ export function HuntersJournalTab({ parsedJson, decrypted }: TabRenderProps) {
     return <div className="text-white text-center">Load a savefile to view "Hunter's Journal" data.</div>;
   }
 
-  const filteredEntries = huntersJournal.hasGameModeSpecificItems 
-    ? huntersJournal.items.filter(item => isItemInCurrentGameMode(item, parsedJson))
-    : huntersJournal.items;
+  const journalEntries = huntersJournal.sections.flatMap(section => {
+    return section.hasGameModeSpecificItems
+      ? section.items.filter(item => isItemInCurrentGameMode(item, parsedJson))
+      : section.items;
+  });
 
-  const journalEntriesWithUnlockStatus = filteredEntries.map(item => {
+  const journalEntriesWithUnlockStatus = journalEntries.map(item => {
     const { unlocked, returnValue: killsAchieved } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
     return {
       ...item,

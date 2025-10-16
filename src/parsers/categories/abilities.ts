@@ -1,6 +1,6 @@
-import type { NormalisedTrackableCategory } from "../types";
+import type { TrackableCategory } from "../types";
 
-export const abilities: NormalisedTrackableCategory = {
+export const abilities: TrackableCategory = {
   name: "Abilities",
   description: "Each Ability (except Cloak Abilities) counts 1% towards completion.",
   sections: [

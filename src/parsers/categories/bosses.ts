@@ -1,12 +1,10 @@
-import type { NormalisedTrackableCategory } from "../types";
+import type { TrackableCategory } from "../types";
 
-export const bosses: NormalisedTrackableCategory = {
+export const bosses: TrackableCategory = {
   name: "Bosses",
   description: "🎶Epic battle music...🎶",
   sections: [
     {
-      name: "Main",
-      description: "",
       hasGameModeSpecificItems: true,
       items: [
         {

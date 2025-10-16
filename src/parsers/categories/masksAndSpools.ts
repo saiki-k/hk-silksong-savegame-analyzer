@@ -1,6 +1,6 @@
-import type { NormalisedTrackableCategory } from "../types";
+import type { TrackableCategory } from "../types";
 
-export const masksAndSpools: NormalisedTrackableCategory = {
+export const masksAndSpools: TrackableCategory = {
   name: "Masks & Spools",
   description: "Mask Shards & Spool Fragments",
   sections: [

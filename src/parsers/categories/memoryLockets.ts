@@ -1,12 +1,10 @@
-import type { NormalisedTrackableCategory } from "../types";
+import type { TrackableCategory } from "../types";
 
-export const memoryLockets: NormalisedTrackableCategory = {
+export const memoryLockets: TrackableCategory = {
   name: "Memory Lockets",
   description: "Memory Lockets are used to add new Tool slots to your Crests.",
   sections: [
     {
-      name: "Main",
-      description: "",
       items: [
         // TODO: Grindle sells this item later, if it is not purchased until ACT 3. The internalId would probably not change, because we see Grindle's mates looting this location. However, adding a note here to verify this later...
         {

@@ -1,9 +1,9 @@
-import type { NormalisedTrackableCategory } from "../types";
+import type { TrackableCategory } from "../types";
 import SimpleLocksSpoiler from "../../components/descriptions/SimpleLocksSpoiler.tsx";
 
-export const keys: NormalisedTrackableCategory = {
+export const keys: TrackableCategory = {
   name: "Keys",
-  description: "Keys",
+  description: "Keys found throughout Pharloom.",
   sections: [
     {
       name: "Simple Keys",

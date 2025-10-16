@@ -1,6 +1,6 @@
 import { CATEGORIES, isItemUnlockedInPlayerSave, isItemInCurrentGameMode } from "../../parsers/dictionary";
 import type { TabRenderProps } from "./types";
-import type { NormalisedTrackableCategory, CategorySection } from "../../parsers/types";
+import type { TrackableCategory, CategorySection } from "../../parsers/types";
 
 interface GenericTabProps extends TabRenderProps {
   tabLabel: string;
@@ -17,7 +17,7 @@ function GenericTableSection({
 }) {
   if (section.items.length === 0) return null;
 
-  const filteredItems = section.hasGameModeSpecificItems 
+  const filteredItems = section.hasGameModeSpecificItems
     ? section.items.filter(item => isItemInCurrentGameMode(item, parsedJson))
     : section.items;
 
@@ -28,9 +28,9 @@ function GenericTableSection({
 
   return (
     <div className="mb-8">
-      {sectionsLength > 1 && (
+      {sectionsLength > 1 && (section.name || section.description || section.descriptionMarkup) && (
         <div className="mb-4">
-          <h2 className="text-xl font-bold mb-2 text-blue-200">{section.name}</h2>
+          {section.name && <h2 className="text-xl font-bold mb-2 text-blue-200">{section.name}</h2>}
           {section.description && section.description.trim() && (
             <p className="text-sm text-gray-300 mb-2">{section.description}</p>
           )}
@@ -122,7 +122,7 @@ export function GenericTab({ parsedJson, decrypted, tabLabel }: GenericTabProps)
     return <div className="text-white text-center">Load a savefile to view "{tabLabel}" data.</div>;
   }
 
-  const categoryData = CATEGORIES.find(cat => cat.name === tabLabel) as NormalisedTrackableCategory;
+  const categoryData = CATEGORIES.find(cat => cat.name === tabLabel) as TrackableCategory;
   if (!categoryData) {
     return <div className="text-white text-center">Category "{tabLabel}" not found.</div>;
   }
@@ -132,14 +132,9 @@ export function GenericTab({ parsedJson, decrypted, tabLabel }: GenericTabProps)
       {categoryData.sections.length === 1 && (
         <div className="mb-4">
           <h2 className="text-xl font-bold mb-2 text-blue-200">{categoryData.name}</h2>
-          {categoryData.description &&
-            categoryData.description.trim() &&
-            categoryData.description.trim() !== categoryData.name && (
-              <div
-                className="text-sm text-gray-300 mb-2"
-                dangerouslySetInnerHTML={{ __html: categoryData.description }}
-              />
-            )}
+          {categoryData.description && categoryData.description !== categoryData.name && (
+            <p className="text-sm text-gray-300 mb-2">{categoryData.description}</p>
+          )}
         </div>
       )}
       {categoryData.sections.map((section, sectionIndex) => (

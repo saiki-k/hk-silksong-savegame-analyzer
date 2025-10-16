@@ -1,12 +1,10 @@
-import type { NormalisedTrackableCategory } from "../types";
+import type { TrackableCategory } from "../types";
 
-export const maps: NormalisedTrackableCategory = {
+export const maps: TrackableCategory = {
   name: "Maps",
   description: "Area maps that reveal the layouts (and secrets) of different regions in Pharloom.",
   sections: [
     {
-      name: "Main",
-      description: "",
       items: [
         {
           name: "Mosslands",
