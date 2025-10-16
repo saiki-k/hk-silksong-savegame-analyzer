@@ -3,7 +3,6 @@ import type { NormalisedTrackableCategory } from "../types";
 export const bosses: NormalisedTrackableCategory = {
   name: "Bosses",
   description: "🎶Epic battle music...🎶",
-  hasGameModeSpecificItems: true,
   sections: [
     {
       name: "Main",
@@ -319,7 +318,7 @@ export const bosses: NormalisedTrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479392",
         },
         {
-          name: "Summoned Saviour (Steel Soul Entry)",
+          name: "Summoned Saviour",
           whichAct: 3,
           location:
             "Can be found at the extreme bottom-left of Bonegrave behind a breakable wall, a sub area of Moss Grotto.",

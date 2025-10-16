@@ -612,14 +612,16 @@ export const quests: NormalisedTrackableCategory = {
     },
     {
       name: "Wishes · Steel",
-      description: "Unique wish given by a seer, available only in Steel Soul mode.",
+      description: "Unique wish given by a seer.",
+      hasGameModeSpecificItems: true,
       items: [
         {
-          name: "A Vassal Lost (Steel Soul Wish)",
+          name: "A Vassal Lost",
           whichAct: 2,
-          location: "Shellwood: (Steel Soul Only) Wish from Steel Seer Zi.",
+          location: "Shellwood: Wish from Steel Seer Zi.",
           parsingInfo: { type: "quest", internalId: "Steel Sentinel Pt2" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479727",
+          onlyFoundInSteelSoulMode: true,
         },
       ],
     },

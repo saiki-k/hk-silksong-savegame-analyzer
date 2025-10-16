@@ -1766,7 +1766,7 @@ export const huntersJournal: TrackableCategory = {
       mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480418",
     },
     {
-      name: "Summoned Saviour (Steel Soul Entry)",
+      name: "Summoned Saviour",
       killsRequired: 1,
       whichAct: 0,
       location: "",

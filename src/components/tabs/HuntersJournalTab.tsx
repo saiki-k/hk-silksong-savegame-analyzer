@@ -1,13 +1,17 @@
 import type { TabRenderProps } from "./types";
 import { huntersJournal } from "../../parsers/categories/huntersJournal";
-import { isItemUnlockedInPlayerSave } from "../../parsers/dictionary";
+import { isItemUnlockedInPlayerSave, isItemInCurrentGameMode } from "../../parsers/dictionary";
 
 export function HuntersJournalTab({ parsedJson, decrypted }: TabRenderProps) {
   if (!decrypted || !parsedJson) {
     return <div className="text-white text-center">Load a savefile to view "Hunter's Journal" data.</div>;
   }
 
-  const journalEntriesWithUnlockStatus = huntersJournal.items.map(item => {
+  const filteredEntries = huntersJournal.hasGameModeSpecificItems 
+    ? huntersJournal.items.filter(item => isItemInCurrentGameMode(item, parsedJson))
+    : huntersJournal.items;
+
+  const journalEntriesWithUnlockStatus = filteredEntries.map(item => {
     const { unlocked, returnValue: killsAchieved } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
     return {
       ...item,

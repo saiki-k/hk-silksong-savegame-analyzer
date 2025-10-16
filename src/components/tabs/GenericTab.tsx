@@ -1,4 +1,4 @@
-import { CATEGORIES, isItemUnlockedInPlayerSave } from "../../parsers/dictionary";
+import { CATEGORIES, isItemUnlockedInPlayerSave, isItemInCurrentGameMode } from "../../parsers/dictionary";
 import type { TabRenderProps } from "./types";
 import type { NormalisedTrackableCategory, CategorySection } from "../../parsers/types";
 
@@ -17,7 +17,11 @@ function GenericTableSection({
 }) {
   if (section.items.length === 0) return null;
 
-  const itemsWithUnlockStatus = section.items.map(item => ({
+  const filteredItems = section.hasGameModeSpecificItems 
+    ? section.items.filter(item => isItemInCurrentGameMode(item, parsedJson))
+    : section.items;
+
+  const itemsWithUnlockStatus = filteredItems.map(item => ({
     ...item,
     unlocked: isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson).unlocked,
   }));
