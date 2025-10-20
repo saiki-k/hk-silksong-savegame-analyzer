@@ -10,6 +10,7 @@ function GenericSectionTable({
   section,
   sectionsLength,
   parsedJson,
+  inShowEverythingMode,
   showUnlocked,
   showSpoilers,
   actFilter,
@@ -17,6 +18,7 @@ function GenericSectionTable({
   section: CategorySection;
   sectionsLength: number;
   parsedJson: unknown;
+  inShowEverythingMode: boolean;
   showUnlocked: boolean;
   showSpoilers: boolean;
   actFilter?: Set<1 | 2 | 3>;
@@ -24,6 +26,7 @@ function GenericSectionTable({
   const visibleItems = filterItems({
     items: section.items,
     parsedJson,
+    inShowEverythingMode,
     showUnlocked,
     actFilter,
     hasGameModeSpecificItems: section.hasGameModeSpecificItems,
@@ -115,9 +118,9 @@ function GenericSectionTable({
 export function GenericContent({
   saveFileObj,
   tabLabel,
+  inShowEverythingMode,
   showUnlocked,
   showSpoilers,
-  inShowEverythingMode,
   actFilter,
 }: TabContentProps) {
   if (!saveFileObj || !tabLabel) {
@@ -141,6 +144,7 @@ export function GenericContent({
     const visibleItems = filterItems({
       items: section.items,
       parsedJson: saveFileObj.state.parsedJson,
+      inShowEverythingMode: inShowEverythingMode ?? false,
       showUnlocked: showUnlocked ?? false,
       actFilter,
       hasGameModeSpecificItems: section.hasGameModeSpecificItems,
@@ -163,6 +167,7 @@ export function GenericContent({
             section={section}
             sectionsLength={categoryData.sections.length}
             parsedJson={saveFileObj.state.parsedJson}
+            inShowEverythingMode={inShowEverythingMode ?? false}
             showUnlocked={showUnlocked ?? false}
             showSpoilers={showSpoilers ?? false}
             actFilter={actFilter}

@@ -27,16 +27,18 @@ export function TabProgress({
       return getHuntersJournalProgress({
         parsedJson: saveFileObj.state.parsedJson,
         isSavefileDecrypted: saveFileObj.state.isSavefileDecrypted,
+        inShowEverythingMode,
       });
     }
 
     return getGenericProgress({
       parsedJson: saveFileObj.state.parsedJson,
       isSavefileDecrypted: saveFileObj.state.isSavefileDecrypted,
+      inShowEverythingMode,
       tabLabel,
       isPercentProgression,
     });
-  }, [saveFileObj.state.parsedJson, saveFileObj.state.isSavefileDecrypted, tabLabel, isPercentProgression]);
+  }, [inShowEverythingMode, saveFileObj.state.parsedJson, saveFileObj.state.isSavefileDecrypted, tabLabel, isPercentProgression]);
 
   if (!progressData) {
     return null;

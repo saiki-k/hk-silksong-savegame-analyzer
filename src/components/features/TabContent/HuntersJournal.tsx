@@ -37,6 +37,7 @@ export function HuntersJournalContent({
   const visibleEntries = filterItems({
     items: allEntries,
     parsedJson: saveFileObj.state.parsedJson,
+    inShowEverythingMode: inShowEverythingMode ?? false,
     showUnlocked: showUnlocked ?? false,
     actFilter,
     hasGameModeSpecificItems: true,

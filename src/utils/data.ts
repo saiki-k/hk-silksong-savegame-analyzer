@@ -7,6 +7,7 @@ import { huntersJournal } from "../dictionary/categories/huntersJournal";
 interface GetGenericProgressParams {
   parsedJson: unknown;
   isSavefileDecrypted: boolean;
+  inShowEverythingMode: boolean;
   tabLabel: string;
   isPercentProgression?: boolean;
 }
@@ -20,6 +21,7 @@ interface ProgressData {
 export function getGenericProgress({
   parsedJson,
   isSavefileDecrypted,
+  inShowEverythingMode,
   tabLabel,
   isPercentProgression = false,
 }: GetGenericProgressParams): ProgressData | null {
@@ -33,9 +35,10 @@ export function getGenericProgress({
   }
 
   const allItems = categoryData.sections.flatMap(section => {
-    const items = section.hasGameModeSpecificItems
-      ? section.items.filter(item => isItemInCurrentGameMode(item, parsedJson))
-      : section.items;
+    const items =
+      section.hasGameModeSpecificItems && !inShowEverythingMode
+        ? section.items.filter(item => isItemInCurrentGameMode(item, parsedJson))
+        : section.items;
     return items;
   });
 
@@ -83,6 +86,7 @@ export function getGenericProgress({
 interface GetHuntersJournalProgressParams {
   parsedJson: unknown;
   isSavefileDecrypted: boolean;
+  inShowEverythingMode: boolean;
 }
 
 interface HuntersJournalProgressData {
@@ -95,13 +99,14 @@ interface HuntersJournalProgressData {
 export function getHuntersJournalProgress({
   parsedJson,
   isSavefileDecrypted,
+  inShowEverythingMode,
 }: GetHuntersJournalProgressParams): HuntersJournalProgressData | null {
   if (!isSavefileDecrypted || !parsedJson) {
     return null;
   }
 
   const journalEntries = huntersJournal.sections.flatMap(section => {
-    return section.hasGameModeSpecificItems
+    return section.hasGameModeSpecificItems && !inShowEverythingMode
       ? section.items.filter(item => isItemInCurrentGameMode(item, parsedJson))
       : section.items;
   });
@@ -144,6 +149,7 @@ export interface FilteredItem extends CategoryItem {
 interface FilterItemsParams {
   items: CategoryItem[];
   parsedJson: unknown;
+  inShowEverythingMode: boolean;
   showUnlocked: boolean;
   actFilter?: Set<1 | 2 | 3>;
   hasGameModeSpecificItems?: boolean;
@@ -153,6 +159,7 @@ interface FilterItemsParams {
 export function filterItems({
   items,
   parsedJson,
+  inShowEverythingMode,
   showUnlocked,
   actFilter,
   hasGameModeSpecificItems = false,
@@ -161,7 +168,7 @@ export function filterItems({
   const result: FilteredItem[] = [];
 
   for (const item of items) {
-    if (hasGameModeSpecificItems && !isItemInCurrentGameMode(item, parsedJson)) {
+    if (hasGameModeSpecificItems && !inShowEverythingMode && !isItemInCurrentGameMode(item, parsedJson)) {
       continue;
     }
 
