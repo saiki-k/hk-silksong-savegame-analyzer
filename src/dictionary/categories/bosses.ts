@@ -12,63 +12,63 @@ export const bosses: TrackableCategory = {
           whichAct: 1,
           locationDetails: "Appears beside the Ruined Chapel, at the end of Moss Grotto.",
           parsingInfo: { type: "flag", internalId: "defeatedMossMother" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=476904",
+          mapLink: "476904",
         },
         {
           name: "Bell Beast",
           whichAct: 1,
           locationDetails: "The Bell Beast can be found at the very top of The Marrow.",
           parsingInfo: { type: "flag", internalId: "defeatedBellBeast" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477879",
+          mapLink: "477879",
         },
         {
           name: "Lace",
           whichAct: 1,
           locationDetails: "Encounter her at the entrance of Deep Docks.",
           parsingInfo: { type: "flag", internalId: "defeatedLace1" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=476915",
+          mapLink: "476915",
         },
         {
           name: "Fourth Chorus",
           whichAct: 1,
           locationDetails: "Wakes up to fight you after receiving the Drifter's Cloak.",
           parsingInfo: { type: "flag", internalId: "defeatedSongGolem" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477978",
+          mapLink: "477978",
         },
         {
           name: "Savage Beastfly",
           whichAct: 1,
           locationDetails: "Deep inside the Chapel of the Beast.",
           parsingInfo: { type: "flag", internalId: "defeatedBoneFlyerGiant" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478019",
+          mapLink: "478019",
         },
         {
           name: "Sister Splinter",
           whichAct: 1,
           locationDetails: "At north end of Shellwood.",
           parsingInfo: { type: "flag", internalId: "defeatedSplinterQueen" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478137",
+          mapLink: "478137",
         },
         {
           name: "Skull Tyrant",
           whichAct: 1,
           locationDetails: "Skull Tyrant is first found in The Marrow (center dome).",
           parsingInfo: { type: "flag", internalId: "skullKingDefeated" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478136",
+          mapLink: "478136",
         },
         {
           name: "Moorwing",
           whichAct: 1,
           locationDetails: "Past three rooms towards the west of the Greymoor Bellway.",
           parsingInfo: { type: "flag", internalId: "defeatedVampireGnatBoss" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478453",
+          mapLink: "478453",
         },
         {
           name: "Widow",
           whichAct: 1,
           locationDetails: "Encountered in the room just towards the north of Bellhart.",
           parsingInfo: { type: "flag", internalId: "spinnerDefeated" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478138",
+          mapLink: "478138",
         },
         {
           name: "Great Conchflies",
@@ -76,7 +76,7 @@ export const bosses: TrackableCategory = {
           locationDetails:
             "In the north-west section of the Blasted Steps, Hornet encounters a room filled with pinkish conch shells.",
           parsingInfo: { type: "flag", internalId: "defeatedCoralDrillers" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478506",
+          mapLink: "478506",
         },
         {
           name: "Last Judge",
@@ -84,7 +84,7 @@ export const bosses: TrackableCategory = {
           locationDetails:
             "Activate all five bellshrines (The Marrow, Deep Docks, Far Fields, Greymoor, Shellwood) and play the Needolin outside the Grand Gate to begin the fight. If it's proving difficult, you can skip it by fighting Phantom instead.",
           parsingInfo: { type: "flag", internalId: "defeatedLastJudge" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478545",
+          mapLink: "478545",
         },
         {
           name: "Phantom",
@@ -92,35 +92,35 @@ export const bosses: TrackableCategory = {
           locationDetails:
             "In a room at the top of the Exhaust Organ, which acts as an alternative entrance to the Citadel, skipping the Last Judge boss.",
           parsingInfo: { type: "flag", internalId: "defeatedPhantom" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478370",
+          mapLink: "478370",
         },
         {
           name: "Cogwork Dancers",
           whichAct: 2,
           locationDetails: "Cogwork Dancers are fought in the central area of Cogwork Core.",
           parsingInfo: { type: "flag", internalId: "defeatedCogworkDancers" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478606",
+          mapLink: "478606",
         },
         {
           name: "Trobbio",
           whichAct: 2,
           locationDetails: "Encountered at The Stage after traversing through the Whispering Vaults.",
           parsingInfo: { type: "flag", internalId: "defeatedTrobbio" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480343",
+          mapLink: "480343",
         },
         {
           name: "Garmond and Zaza (Missable Entry)",
           whichAct: 2,
           locationDetails: "Only available in ACT 2. South-east part of Songclave.",
           parsingInfo: { type: "journal", internalId: ["Garmond_Zaza", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479361",
+          mapLink: "479361",
         },
         {
           name: "Forebrothers Signis & Gron",
           whichAct: 2,
           locationDetails: "In an earlier room in the Deep Docks.",
           parsingInfo: { type: "flag", internalId: "defeatedDockForemen" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478831",
+          mapLink: "478831",
         },
         {
           name: "The Unravelled",
@@ -128,7 +128,7 @@ export const bosses: TrackableCategory = {
           locationDetails:
             "The Unravelled is a hidden boss found in Whiteward at the bottom of a disposal pit unlocked by the Surgeon's Key.",
           parsingInfo: { type: "flag", internalId: "wardBossDefeated" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478926",
+          mapLink: "478926",
         },
         {
           name: "Disgraced Chef Lugoli",
@@ -136,7 +136,7 @@ export const bosses: TrackableCategory = {
           prereqs: ["Faydown Cloak"],
           locationDetails: "In the kitchen on the north-east of Sinner's Road.",
           parsingInfo: { type: "flag", internalId: "defeatedRoachkeeperChef" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478992",
+          mapLink: "478992",
         },
         {
           name: "Father of the Flame",
@@ -144,14 +144,14 @@ export const bosses: TrackableCategory = {
           prereqs: ["Faydown Cloak"],
           locationDetails: "Can be found in the west corner of Wisp Thicket.",
           parsingInfo: { type: "flag", internalId: "defeatedWispPyreEffigy" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479155",
+          mapLink: "479155",
         },
         {
           name: "Groal the Great",
           whichAct: 2,
           locationDetails: "Can be found in Bilehaven, at the top of Bilewater. ",
           parsingInfo: { type: "flag", internalId: "DefeatedSwampShaman" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478861",
+          mapLink: "478861",
         },
         {
           name: "Craggler",
@@ -159,21 +159,21 @@ export const bosses: TrackableCategory = {
           locationDetails:
             "Can be found across the pit from the Mosshome exit above Bone Bottom, right outside Wormways.",
           parsingInfo: { type: "flag", internalId: "roofCrabDefeated" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478088",
+          mapLink: "478088",
         },
         {
           name: "Voltvyrm",
           whichAct: 3,
           locationDetails: "Can be found in Voltnest within Sands of Karak.",
           parsingInfo: { type: "flag", internalId: "defeatedZapCoreEnemy" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479223",
+          mapLink: "479223",
         },
         {
           name: "Raging Conchfly",
           whichAct: 2,
           locationDetails: "Can be found in the north-west area of Sands of Karak.",
           parsingInfo: { type: "flag", internalId: "defeatedCoralDrillerSolo" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479227",
+          mapLink: "479227",
         },
         {
           name: "First Sinner",
@@ -181,14 +181,14 @@ export const bosses: TrackableCategory = {
           locationDetails:
             "Can be found in the lower area of The Slab, accessible after obtaining the Key of Apostate.",
           parsingInfo: { type: "flag", internalId: "defeatedFirstWeaver" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479023",
+          mapLink: "479023",
         },
         {
           name: "Broodmother",
           whichAct: 2,
           locationDetails: 'Can be found in a cave in The Slab after accepting the "Grand Hunt" wish in Songclave.',
           parsingInfo: { type: "flag", internalId: "defeatedBroodMother" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479255",
+          mapLink: "479255",
         },
         {
           name: "Second Sentinel",
@@ -196,7 +196,7 @@ export const bosses: TrackableCategory = {
           locationDetails:
             'Can only be fought after beginning the "Final Audience" wish, found in the south-east area of High Halls.',
           parsingInfo: { type: "flag", internalId: "defeatedSongChevalierBoss" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479253",
+          mapLink: "479253",
         },
         {
           name: "Shakra (Missable Entry)",
@@ -204,21 +204,21 @@ export const bosses: TrackableCategory = {
           locationDetails:
             'Only available in ACT 2. Towards the east of Bellhart after completing "Trail\'s End" wish; hit the ring that you find as you enter the Greymoor area, to summon Shakra for a friendly fight.',
           parsingInfo: { type: "journal", internalId: ["Shakra", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479822",
+          mapLink: "479822",
         },
         {
           name: "Grand Mother Silk",
           whichAct: 2,
           locationDetails: "Can be found above Cogwork Core in The Cradle.",
           parsingInfo: { type: "journal", internalId: ["Silk Boss", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479099",
+          mapLink: "479099",
         },
         {
           name: "Bell Eater",
           whichAct: 3,
           locationDetails: "Can be found in any Bellway Station after the beginning of ACT 3.",
           parsingInfo: { type: "flag", internalId: "bellCentipedeAppeared" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479264",
+          mapLink: "479264",
         },
         {
           name: "Lost Garmond",
@@ -226,21 +226,21 @@ export const bosses: TrackableCategory = {
           locationDetails:
             'Can be found in Blasted Steps, in a room to the west of the Bellway. He can only be fought during the "Hero\'s Call" wish.',
           parsingInfo: { type: "flag", internalId: "garmondBlackThreadDefeated" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479452",
+          mapLink: "479452",
         },
         {
           name: "Crawfather",
           whichAct: 3,
           locationDetails: "Can be found in Greymoor, in the basement of the large building in Craw Lake.",
           parsingInfo: { type: "flag", internalId: "defeatedCrowCourt" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480319",
+          mapLink: "480319",
         },
         {
           name: "Plasmified Zango",
           whichAct: 3,
           locationDetails: "Can be found in a secret room within western Wormways during ACT 3.",
           parsingInfo: { type: "journal", internalId: ["Blue Assistant", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479273",
+          mapLink: "479273",
         },
         {
           name: "Watcher at the Edge",
@@ -248,35 +248,35 @@ export const bosses: TrackableCategory = {
           prereqs: ["Silk Soar", "Needolin"],
           locationDetails: "Can be found at the west-center of Sands of Karak.",
           parsingInfo: { type: "flag", internalId: "defeatedGreyWarrior" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479494",
+          mapLink: "479494",
         },
         {
           name: "Palestag",
           whichAct: 3,
           locationDetails: "Can be found in Lost Verdania.",
           parsingInfo: { type: "flag", internalId: "defeatedWhiteCloverstag" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479408",
+          mapLink: "479408",
         },
         {
           name: "Clover Dancers",
           whichAct: 3,
           locationDetails: "Encountered at the very top of Lost Verdania, after collecting enough memory orbs.",
           parsingInfo: { type: "flag", internalId: "defeatedCloverDancers" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479427",
+          mapLink: "479427",
         },
         {
           name: "Gurr the Outcast",
           whichAct: 3,
           locationDetails: 'Can be found in Far Fields after accepting the "The Hidden Hunter" wish.',
           parsingInfo: { type: "flag", internalId: "defeatedAntTrapper" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479467",
+          mapLink: "479467",
         },
         {
           name: "Tormented Trobbio",
           whichAct: 3,
           locationDetails: "Encountered at The Stage, above the Grand Bellway station.",
           parsingInfo: { type: "flag", internalId: "defeatedTormentedTrobbio" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479377",
+          mapLink: "479377",
         },
         {
           name: "Pinstress",
@@ -284,7 +284,7 @@ export const bosses: TrackableCategory = {
           locationDetails:
             "Can be found in Mount Fay, in the same area as the bench that is at halfway up the mountain.",
           parsingInfo: { type: "flag", internalId: "PinstressPeakBattleAccepted" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479464",
+          mapLink: "479464",
         },
         {
           name: "Shrine Guardian Seth",
@@ -293,14 +293,14 @@ export const bosses: TrackableCategory = {
           locationDetails:
             "Can be fought in a hidden area in Shellwood, accessed through a breakable wall in the Grand Gate's lift shaft.",
           parsingInfo: { type: "flag", internalId: "defeatedSeth" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480352",
+          mapLink: "480352",
         },
         {
           name: "Nyleth",
           whichAct: 3,
           locationDetails: "Section behind a breakable wall on the left of the elevator shaft of the Grand Gate.",
           parsingInfo: { type: "flag", internalId: "defeatedFlowerQueen" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479404",
+          mapLink: "479404",
         },
         {
           name: "Skarrsinger Karmelita",
@@ -308,7 +308,7 @@ export const bosses: TrackableCategory = {
           prereqs: ["Elegy Of The Deep", "Silk Soar"],
           locationDetails: " Can be found in the north-east area of Far Fields.",
           parsingInfo: { type: "flag", internalId: "defeatedAntQueen" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479198",
+          mapLink: "479198",
         },
         {
           name: "Crust King Khann",
@@ -316,7 +316,7 @@ export const bosses: TrackableCategory = {
           prereqs: ["Elegy Of The Deep"],
           locationDetails: "Can be found in the Coral Tower, north-east in Sands of Karak.",
           parsingInfo: { type: "flag", internalId: "defeatedCoralKing" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479392",
+          mapLink: "479392",
         },
         {
           name: "Summoned Saviour",
@@ -324,7 +324,7 @@ export const bosses: TrackableCategory = {
           locationDetails:
             "Can be found at the extreme bottom-left of Bonegrave behind a breakable wall, a sub area of Moss Grotto.",
           parsingInfo: { type: "journal", internalId: ["Abyss Mass", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479740",
+          mapLink: "479740",
           onlyFoundInSteelSoulMode: true,
         },
         {
@@ -332,7 +332,7 @@ export const bosses: TrackableCategory = {
           whichAct: 3,
           locationDetails: "Located in The Abyss, under the vast void ocean that lies within.",
           parsingInfo: { type: "journal", internalId: ["Lost Lace", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479471",
+          mapLink: "479471",
         },
       ],
     },

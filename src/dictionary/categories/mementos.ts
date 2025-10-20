@@ -12,14 +12,14 @@ export const mementos: TrackableCategory = {
           whichAct: 3,
           locationDetails: "Sands of Karak: Defeat Watcher at the Edge.",
           parsingInfo: { type: "mementoDeposit", internalId: "Grey Memento" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479630",
+          mapLink: "479630",
         },
         {
           name: "Hero's Memento",
           whichAct: 3,
           locationDetails: "Blasted Steps: Defeat Lost Garmond.",
           parsingInfo: { type: "mementoDeposit", internalId: "Memento Garmond" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479632",
+          mapLink: "479632",
         },
         {
           name: "Surface Memento",
@@ -27,7 +27,7 @@ export const mementos: TrackableCategory = {
           locationDetails:
             "The Surface (atop The Cradle): Play the Needolin in the house on the far right side of the Nameless Town to make it drop from the ceiling.",
           parsingInfo: { type: "mementoDeposit", internalId: "Memento Surface" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479542",
+          mapLink: "479542",
         },
         {
           name: "Hunter's Memento",
@@ -35,7 +35,7 @@ export const mementos: TrackableCategory = {
           locationDetails:
             "Greymoor (Halfway Home): Complete the Hunter's Journal. The journal entries for Shakra, Garmond & Zaza, Palestag, Lost Garmond, Lost Lace, and Summoned Saviour are not required.",
           parsingInfo: { type: "mementoDeposit", internalId: "Hunter Memento" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479635",
+          mapLink: "479635",
         },
         {
           name: "Craw Memento",
@@ -43,7 +43,7 @@ export const mementos: TrackableCategory = {
           locationDetails:
             'Far Fields: Greymoor (Craw Lake): Defeat Crawfather. Unlocked at the same time as a "Crawbell" (also used to decorate the Bellhome), which generates Rosaries and Shell Shards over time.',
           parsingInfo: { type: "mementoDeposit", internalId: "Crowman Memento" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479580",
+          mapLink: "479580",
         },
         {
           name: "Sprintmaster Memento",
@@ -51,7 +51,7 @@ export const mementos: TrackableCategory = {
           locationDetails:
             "Complete a race with Sprintmaster Swift after you deliver three hearts to the Snail Shamans in ACT 3.",
           parsingInfo: { type: "mementoDeposit", internalId: "Sprintmaster Memento" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479634",
+          mapLink: "479634",
         },
         {
           name: "Seth Memento",
@@ -59,7 +59,7 @@ export const mementos: TrackableCategory = {
           locationDetails:
             "Putrified Ducts (Fleatopia): Talk to Seth after beating all of his scores in all the Flea Games.",
           parsingInfo: { type: "mementoDeposit", internalId: "Memento Seth" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479638",
+          mapLink: "479638",
         },
         {
           name: "Heart Memento",
@@ -72,7 +72,7 @@ export const mementos: TrackableCategory = {
             { type: "mementoDeposit", internalId: "Coral Heart" },
             { type: "mementoDeposit", internalId: "Clover Heart" },
           ],
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479631",
+          mapLink: "479631",
         },
       ],
     },

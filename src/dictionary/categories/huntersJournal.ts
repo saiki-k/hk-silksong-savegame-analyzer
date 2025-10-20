@@ -13,7 +13,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["MossBone Crawler", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479075",
+          mapLink: "479075",
         },
         {
           name: "Massive Mossgrub",
@@ -21,7 +21,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["MossBone Crawler Fat", 3] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480252",
+          mapLink: "480252",
         },
         {
           name: "Mossmir",
@@ -29,7 +29,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["MossBone Fly", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479076",
+          mapLink: "479076",
         },
         {
           name: "Moss Mother",
@@ -37,7 +37,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Mossbone Mother", 3] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480309",
+          mapLink: "480309",
         },
         {
           name: "Aknid",
@@ -45,7 +45,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Aspid Collector", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479579",
+          mapLink: "479579",
         },
         {
           name: "Skull Scuttler",
@@ -53,7 +53,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Goomba", 35] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479543",
+          mapLink: "479543",
         },
         {
           name: "Skullwing",
@@ -61,7 +61,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Goomba Bounce Fly", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479543",
+          mapLink: "479543",
         },
         {
           name: "Skull Brute",
@@ -69,7 +69,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Goomba Large", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479546",
+          mapLink: "479546",
         },
         {
           name: "Skull Tyrant",
@@ -77,7 +77,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Skull King", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480313",
+          mapLink: "480313",
         },
         {
           name: "Kilik",
@@ -85,7 +85,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Crawler", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479550",
+          mapLink: "479550",
         },
         {
           name: "Beastfly",
@@ -93,7 +93,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Flyer", 30] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479544",
+          mapLink: "479544",
         },
         {
           name: "Savage Beastfly",
@@ -101,7 +101,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Flyer Giant", 2] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480317",
+          mapLink: "480317",
         },
         {
           name: "Caranid",
@@ -109,7 +109,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Circler", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479547",
+          mapLink: "479547",
         },
         {
           name: "Vicious Caranid",
@@ -117,7 +117,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Circler Vicious", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479564",
+          mapLink: "479564",
         },
         {
           name: "Hardbone Hopper",
@@ -125,7 +125,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Hopper", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479555",
+          mapLink: "479555",
         },
         {
           name: "Hardbone Elder",
@@ -133,7 +133,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Hopper Giant", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480213",
+          mapLink: "480213",
         },
         {
           name: "Tarmite",
@@ -141,7 +141,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Spitter", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479058",
+          mapLink: "479058",
         },
         {
           name: "Mawling",
@@ -149,7 +149,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Roller", 30] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479077",
+          mapLink: "479077",
         },
         {
           name: "Marrowmaw",
@@ -157,7 +157,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Thumper", 8] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478224",
+          mapLink: "478224",
         },
         {
           name: "Hoker",
@@ -165,7 +165,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Spine Floater", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479570",
+          mapLink: "479570",
         },
         {
           name: "Flintbeetle",
@@ -173,7 +173,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Rock Roller", 3] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478248",
+          mapLink: "478248",
         },
         {
           name: "Rhinogrund",
@@ -181,7 +181,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Rhino", 2] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480179",
+          mapLink: "480179",
         },
         {
           name: "Gromling",
@@ -189,7 +189,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Crypt Worm", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479078",
+          mapLink: "479078",
         },
         {
           name: "Grom",
@@ -197,7 +197,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Worm", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479080",
+          mapLink: "479080",
         },
         {
           name: "Bell Beast",
@@ -205,7 +205,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Beast", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480312",
+          mapLink: "480312",
         },
         {
           name: "Pilgrim Groveller",
@@ -213,7 +213,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim 03", 35] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479571",
+          mapLink: "479571",
         },
         {
           name: "Pilgrim Pouncer",
@@ -221,7 +221,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim 01", 35] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479551",
+          mapLink: "479551",
         },
         {
           name: "Pilgrim Hornfly",
@@ -229,7 +229,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim 04", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479573",
+          mapLink: "479573",
         },
         {
           name: "Pilgrim Hulk",
@@ -237,7 +237,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim 02", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479574",
+          mapLink: "479574",
         },
         {
           name: "Pilgrim Bellbearer",
@@ -245,7 +245,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim Bell Thrower", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478044",
+          mapLink: "478044",
         },
         {
           name: "Winged Pilgrim",
@@ -253,7 +253,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim Fly", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479552",
+          mapLink: "479552",
         },
         {
           name: "Elder Pilgrim",
@@ -261,7 +261,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim 05", 5] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479755",
+          mapLink: "479755",
         },
         {
           name: "Winged Pilgrim Bellbearer",
@@ -269,7 +269,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim Bellthrower Fly", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478301",
+          mapLink: "478301",
         },
         {
           name: "Pilgrim Hiker",
@@ -277,7 +277,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim Hiker", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479738",
+          mapLink: "479738",
         },
         {
           name: "Pilgrim Guide",
@@ -285,7 +285,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim StaffWielder", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479683",
+          mapLink: "479683",
         },
         {
           name: "Overgrown Pilgrim",
@@ -293,7 +293,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim Moss Spitter", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479577",
+          mapLink: "479577",
         },
         {
           name: "Covetous Pilgrim",
@@ -301,7 +301,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Rosary Pilgrim", 2] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478300",
+          mapLink: "478300",
         },
         {
           name: "Snitchfly",
@@ -309,7 +309,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Rosary Thief", 4] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479000",
+          mapLink: "479000",
         },
         {
           name: "Lavalug",
@@ -317,7 +317,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Tar Slug", 12] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479565",
+          mapLink: "479565",
         },
         {
           name: "Lavalarga",
@@ -325,7 +325,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Tar Slug Huge", 8] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480236",
+          mapLink: "480236",
         },
         {
           name: "Smelt Shoveller",
@@ -333,7 +333,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Dock Worker", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479553",
+          mapLink: "479553",
         },
         {
           name: "Flintstone Flyer",
@@ -341,7 +341,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Dock Flyer", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479554",
+          mapLink: "479554",
         },
         {
           name: "Flintflame Flyer",
@@ -349,7 +349,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Dock Bomber", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479566",
+          mapLink: "479566",
         },
         {
           name: "Smokerock Sifter",
@@ -357,7 +357,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Shield Dock Worker", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479567",
+          mapLink: "479567",
         },
         {
           name: "Deep Diver",
@@ -365,7 +365,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Dock Charger", 5] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480237",
+          mapLink: "480237",
         },
         {
           name: "Forebrothers Signis & Gron",
@@ -373,7 +373,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Dock Guard Thrower", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480314",
+          mapLink: "480314",
         },
         {
           name: "Cragglite",
@@ -381,7 +381,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Small Crab", 3] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480145",
+          mapLink: "480145",
         },
         {
           name: "Craggler",
@@ -389,7 +389,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Roof Crab", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478088",
+          mapLink: "478088",
         },
         {
           name: "Brushflit",
@@ -397,7 +397,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Fields Flock Flyers", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479560",
+          mapLink: "479560",
         },
         {
           name: "Fertid",
@@ -405,7 +405,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Fields Goomba", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479561",
+          mapLink: "479561",
         },
         {
           name: "Flapping Fertid",
@@ -413,7 +413,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Fields Flyer", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479562",
+          mapLink: "479562",
         },
         {
           name: "Fourth Chorus",
@@ -421,7 +421,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Golem", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480315",
+          mapLink: "480315",
         },
         {
           name: "Skarrlid",
@@ -429,7 +429,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Hunter Tiny", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479558",
+          mapLink: "479558",
         },
         {
           name: "Skarrwing",
@@ -437,7 +437,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Hunter Buzzer", 30] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479557",
+          mapLink: "479557",
         },
         {
           name: "Skarr Scout",
@@ -445,7 +445,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Hunter Child", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479559",
+          mapLink: "479559",
         },
         {
           name: "Skarr Stalker",
@@ -453,7 +453,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Hunter", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479563",
+          mapLink: "479563",
         },
         {
           name: "Spear Skarr",
@@ -461,7 +461,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Hunter Fly", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479591",
+          mapLink: "479591",
         },
         {
           name: "Skarrgard",
@@ -469,7 +469,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Hunter Throw", 2] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477962",
+          mapLink: "477962",
         },
         {
           name: "Gurr the Outcast",
@@ -477,7 +477,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Hunter Trapper", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480316",
+          mapLink: "480316",
         },
         {
           name: "Last Claw",
@@ -485,7 +485,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Hunter Chief", 6] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480483",
+          mapLink: "480483",
         },
         {
           name: "Skarrsinger Karmelita",
@@ -493,7 +493,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Hunter Queen", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479198",
+          mapLink: "479198",
         },
         {
           name: "Mite",
@@ -501,7 +501,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Mite", 30] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479681",
+          mapLink: "479681",
         },
         {
           name: "Fluttermite",
@@ -509,7 +509,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Mitefly", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478974",
+          mapLink: "478974",
         },
         {
           name: "Mitemother",
@@ -517,7 +517,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Gnat Giant", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478975",
+          mapLink: "478975",
         },
         {
           name: "Dreg Catcher",
@@ -525,7 +525,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Farmer Catcher", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479685",
+          mapLink: "479685",
         },
         {
           name: "Silk Snipper",
@@ -533,7 +533,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Farmer Scissors", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478150",
+          mapLink: "478150",
         },
         {
           name: "Thread Raker",
@@ -541,7 +541,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Farmer Centipede", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478979",
+          mapLink: "478979",
         },
         {
           name: "Moorwing",
@@ -549,7 +549,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Vampire Gnat", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480340",
+          mapLink: "480340",
         },
         {
           name: "Wisp",
@@ -557,7 +557,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Wisp", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480438",
+          mapLink: "480438",
         },
         {
           name: "Burning Bug",
@@ -565,7 +565,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Farmer Wisp", 8] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480440",
+          mapLink: "480440",
         },
         {
           name: "Father of the Flame",
@@ -573,7 +573,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Wisp Pyre Effigy", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480349",
+          mapLink: "480349",
         },
         {
           name: "Craw",
@@ -581,7 +581,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Crow", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479679",
+          mapLink: "479679",
         },
         {
           name: "Tallcraw",
@@ -589,7 +589,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Crowman", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479680",
+          mapLink: "479680",
         },
         {
           name: "Squatcraw",
@@ -597,7 +597,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Crowman Dagger", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479682",
+          mapLink: "479682",
         },
         {
           name: "Craw Juror",
@@ -605,7 +605,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Crowman Juror Tiny", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480485",
+          mapLink: "480485",
         },
         {
           name: "Tallcraw Juror",
@@ -613,7 +613,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Crowman Juror", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480486",
+          mapLink: "480486",
         },
         {
           name: "Squatcraw Juror",
@@ -621,7 +621,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Crowman Dagger Juror", 8] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480487",
+          mapLink: "480487",
         },
         {
           name: "Crawfather",
@@ -629,7 +629,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Crawfather", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480319",
+          mapLink: "480319",
         },
         {
           name: "Muckmaggot",
@@ -637,7 +637,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Maggots", 80] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480190",
+          mapLink: "480190",
         },
         {
           name: "Slubberlug",
@@ -645,7 +645,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Dustroach Pollywog", 12] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478965",
+          mapLink: "478965",
         },
         {
           name: "Muckroach",
@@ -653,7 +653,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Dustroach", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478264",
+          mapLink: "478264",
         },
         {
           name: "Bloatroach",
@@ -661,7 +661,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bloat Roach", 12] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478737",
+          mapLink: "478737",
         },
         {
           name: "Roachcatcher",
@@ -669,7 +669,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Roachfeeder Short", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478261",
+          mapLink: "478261",
         },
         {
           name: "Roachfeeder",
@@ -677,7 +677,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Roachfeeder Tall", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478338",
+          mapLink: "478338",
         },
         {
           name: "Roachkeeper",
@@ -685,7 +685,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Roachkeeper", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478697",
+          mapLink: "478697",
         },
         {
           name: "Roachserver",
@@ -693,7 +693,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Roachkeeper Chef Tiny", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478991",
+          mapLink: "478991",
         },
         {
           name: "Disgraced Chef Lugoli",
@@ -701,7 +701,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Roachkeeper Chef", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480346",
+          mapLink: "480346",
         },
         {
           name: "Wraith",
@@ -709,7 +709,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Wraith", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478367",
+          mapLink: "478367",
         },
         {
           name: "Mothleaf Lagnia",
@@ -717,7 +717,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Swamp Drifter", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478738",
+          mapLink: "478738",
         },
         {
           name: "Miremite",
@@ -725,7 +725,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Swamp Goomba", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478966",
+          mapLink: "478966",
         },
         {
           name: "Swamp Squit",
@@ -733,7 +733,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Swamp Mosquito", 30] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478721",
+          mapLink: "478721",
         },
         {
           name: "Spit Squit",
@@ -741,7 +741,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Swamp Mosquito Skinny", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480261",
+          mapLink: "480261",
         },
         {
           name: "Stilkin",
@@ -749,7 +749,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Swamp Muckman", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480206",
+          mapLink: "480206",
         },
         {
           name: "Stilkin Trapper",
@@ -757,7 +757,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Swamp Muckman Tall", 12] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480238",
+          mapLink: "480238",
         },
         {
           name: "Groal the Great",
@@ -765,7 +765,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Swamp Shaman", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480345",
+          mapLink: "480345",
         },
         {
           name: "Barnak",
@@ -773,7 +773,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Swamp Barnacle", 8] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478962",
+          mapLink: "478962",
         },
         {
           name: "Ductsucker",
@@ -781,7 +781,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Swamp Ductsucker", 6] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480211",
+          mapLink: "480211",
         },
         {
           name: "Pond Skipper",
@@ -789,7 +789,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pond Skater", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478159",
+          mapLink: "478159",
         },
         {
           name: "Pondcatcher",
@@ -797,7 +797,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim Fisher", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478161",
+          mapLink: "478161",
         },
         {
           name: "Shellwood Gnat",
@@ -805,7 +805,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Shellwood Gnat", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478983",
+          mapLink: "478983",
         },
         {
           name: "Wood Wasp",
@@ -813,7 +813,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Shellwood Wasp", 12] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478160",
+          mapLink: "478160",
         },
         {
           name: "Splinter",
@@ -821,7 +821,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Stick Insect", 12] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478980",
+          mapLink: "478980",
         },
         {
           name: "Splinterhorn",
@@ -829,7 +829,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Stick Insect Charger", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478169",
+          mapLink: "478169",
         },
         {
           name: "Splinterbark",
@@ -837,7 +837,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Stick Insect Flyer", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478186",
+          mapLink: "478186",
         },
         {
           name: "Sister Splinter",
@@ -845,7 +845,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Splinter Queen", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480324",
+          mapLink: "480324",
         },
         {
           name: "Phacia",
@@ -853,7 +853,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Flower Drifter", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478168",
+          mapLink: "478168",
         },
         {
           name: "Pollenica",
@@ -861,7 +861,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bloom Shooter", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478175",
+          mapLink: "478175",
         },
         {
           name: "Gahlia",
@@ -869,7 +869,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bloom Puncher", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478181",
+          mapLink: "478181",
         },
         {
           name: "Shrine Guardian Seth",
@@ -877,7 +877,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Seth", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480352",
+          mapLink: "480352",
         },
         {
           name: "Nyleth",
@@ -885,7 +885,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Flower Queen", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480353",
+          mapLink: "480353",
         },
         {
           name: "Furm",
@@ -893,7 +893,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bell Goomba", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478194",
+          mapLink: "478194",
         },
         {
           name: "Winged Furm",
@@ -901,7 +901,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bell Fly", 12] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478195",
+          mapLink: "478195",
         },
         {
           name: "Pharlid",
@@ -909,7 +909,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Blade Spider", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479737",
+          mapLink: "479737",
         },
         {
           name: "Pharlid Diver",
@@ -917,7 +917,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Blade Spider Hang", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478232",
+          mapLink: "478232",
         },
         {
           name: "Shardillard",
@@ -925,7 +925,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Shell Fossil Mimic", 3] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480162",
+          mapLink: "480162",
         },
         {
           name: "Sandcarver",
@@ -933,7 +933,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Sand Centipede", 40] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480191",
+          mapLink: "480191",
         },
         {
           name: "Squirrm",
@@ -941,7 +941,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Judge Child", 4] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479862",
+          mapLink: "479862",
         },
         {
           name: "Judge",
@@ -949,7 +949,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Judge", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479736",
+          mapLink: "479736",
         },
         {
           name: "Last Judge",
@@ -957,7 +957,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Last Judge", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480351",
+          mapLink: "480351",
         },
         {
           name: "Coral Furm",
@@ -965,7 +965,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Spike Goomba", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480363",
+          mapLink: "480363",
         },
         {
           name: "Driznit",
@@ -973,7 +973,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Conch Shooter", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478306",
+          mapLink: "478306",
         },
         {
           name: "Driznarga",
@@ -981,7 +981,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Conch Shooter Heavy", 14] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480245",
+          mapLink: "480245",
         },
         {
           name: "Pokenabbin",
@@ -989,7 +989,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Conch Stabber", 16] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480366",
+          mapLink: "480366",
         },
         {
           name: "Conchfly",
@@ -997,7 +997,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Conch Driller", 8] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480369",
+          mapLink: "480369",
         },
         {
           name: "Great Conchfly",
@@ -1005,7 +1005,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Conch Driller Giant", 2] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480335",
+          mapLink: "480335",
         },
         {
           name: "Crustcrawler",
@@ -1013,7 +1013,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Goombas", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480227",
+          mapLink: "480227",
         },
         {
           name: "Crustcrag",
@@ -1021,7 +1021,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Goomba Large", 6] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480243",
+          mapLink: "480243",
         },
         {
           name: "Kai",
@@ -1029,7 +1029,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Swimmer Fat", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480231",
+          mapLink: "480231",
         },
         {
           name: "Spinebeak Kai",
@@ -1037,7 +1037,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Poke Swimmer", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480235",
+          mapLink: "480235",
         },
         {
           name: "Steelspine Kai",
@@ -1045,7 +1045,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Spike Swimmer", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480234",
+          mapLink: "480234",
         },
         {
           name: "Yuma",
@@ -1053,7 +1053,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Swimmer Small", 16] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480233",
+          mapLink: "480233",
         },
         {
           name: "Yumama",
@@ -1061,7 +1061,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Big Jellyfish", 3] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480232",
+          mapLink: "480232",
         },
         {
           name: "Karaka",
@@ -1069,7 +1069,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Warrior", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480229",
+          mapLink: "480229",
         },
         {
           name: "Kakri",
@@ -1077,7 +1077,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Flyer", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480230",
+          mapLink: "480230",
         },
         {
           name: "Yago",
@@ -1085,7 +1085,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Flyer Throw", 12] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480228",
+          mapLink: "480228",
         },
         {
           name: "Karak Gor",
@@ -1093,7 +1093,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Brawler", 8] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480225",
+          mapLink: "480225",
         },
         {
           name: "Alita",
@@ -1101,7 +1101,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Hunter", 6] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480226",
+          mapLink: "480226",
         },
         {
           name: "Corrcrust Karaka",
@@ -1109,7 +1109,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Bubble Brute", 6] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480224",
+          mapLink: "480224",
         },
         {
           name: "Crust King Khann",
@@ -1117,7 +1117,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral King", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480327",
+          mapLink: "480327",
         },
         {
           name: "Watcher at the Edge",
@@ -1125,7 +1125,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Coral Warrior Grey", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480326",
+          mapLink: "480326",
         },
         {
           name: "Voltvyrm",
@@ -1133,7 +1133,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Zap Core Enemy", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480336",
+          mapLink: "480336",
         },
         {
           name: "Drapefly",
@@ -1141,7 +1141,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Citadel Bat", 30] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479013",
+          mapLink: "479013",
         },
         {
           name: "Drapelord",
@@ -1149,7 +1149,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Citadel Bat Large", 4] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480263",
+          mapLink: "480263",
         },
         {
           name: "Drapemite",
@@ -1157,7 +1157,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Mite Heavy", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479004",
+          mapLink: "479004",
         },
         {
           name: "Giant Drapemite",
@@ -1165,7 +1165,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Understore Mite Giant", 6] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480005",
+          mapLink: "480005",
         },
         {
           name: "Underworker",
@@ -1173,7 +1173,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Understore Small", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479512",
+          mapLink: "479512",
         },
         {
           name: "Underscrub",
@@ -1181,7 +1181,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim 03 Understore", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479746",
+          mapLink: "479746",
         },
         {
           name: "Undersweep",
@@ -1189,7 +1189,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim Staff Understore", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479837",
+          mapLink: "479837",
         },
         {
           name: "Underpoke",
@@ -1197,7 +1197,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Understore Poker", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479510",
+          mapLink: "479510",
         },
         {
           name: "Underloft",
@@ -1205,7 +1205,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Understore Thrower", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479511",
+          mapLink: "479511",
         },
         {
           name: "Undercrank",
@@ -1213,7 +1213,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Understore Heavy", 4] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479836",
+          mapLink: "479836",
         },
         {
           name: "Envoy",
@@ -1221,7 +1221,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Pilgrim 01", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479897",
+          mapLink: "479897",
         },
         {
           name: "Choir Pouncer",
@@ -1229,7 +1229,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim 01 Song", 30] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479885",
+          mapLink: "479885",
         },
         {
           name: "Choir Hornhead",
@@ -1237,7 +1237,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim 02 Song", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479887",
+          mapLink: "479887",
         },
         {
           name: "Choir Bellbearer",
@@ -1245,7 +1245,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim 03 Song", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479882",
+          mapLink: "479882",
         },
         {
           name: "Choir Flyer",
@@ -1253,7 +1253,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim 04 Song", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479886",
+          mapLink: "479886",
         },
         {
           name: "Choir Elder",
@@ -1261,7 +1261,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pilgrim Stomper Song", 6] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479906",
+          mapLink: "479906",
         },
         {
           name: "Choristor",
@@ -1269,7 +1269,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Pilgrim 03", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479883",
+          mapLink: "479883",
         },
         {
           name: "Reed",
@@ -1277,7 +1277,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Reed", 30] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479880",
+          mapLink: "479880",
         },
         {
           name: "Grand Reed",
@@ -1285,7 +1285,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Reed Grand", 12] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479918",
+          mapLink: "479918",
         },
         {
           name: "Choir Clapper",
@@ -1293,7 +1293,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Heavy Sentry", 3] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480052",
+          mapLink: "480052",
         },
         {
           name: "Clawmaiden",
@@ -1301,7 +1301,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Handmaiden", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479899",
+          mapLink: "479899",
         },
         {
           name: "Memoria",
@@ -1309,7 +1309,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Arborium Keeper", 2] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480239",
+          mapLink: "480239",
         },
         {
           name: "Minister",
@@ -1317,7 +1317,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Administrator", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480050",
+          mapLink: "480050",
         },
         {
           name: "Maestro",
@@ -1325,7 +1325,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Pilgrim Maestro", 6] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480049",
+          mapLink: "480049",
         },
         {
           name: "Second Sentinel",
@@ -1333,7 +1333,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Knight", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480348",
+          mapLink: "480348",
         },
         {
           name: "Dreg Husk",
@@ -1341,7 +1341,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Threaded Husk", 8] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480036",
+          mapLink: "480036",
         },
         {
           name: "Dregwheel",
@@ -1349,7 +1349,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Threaded Husk Spin", 8] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480043",
+          mapLink: "480043",
         },
         {
           name: "Surgeon",
@@ -1357,7 +1357,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Pilgrim 02", 3] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480409",
+          mapLink: "480409",
         },
         {
           name: "Mortician",
@@ -1365,7 +1365,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Creeper", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480040",
+          mapLink: "480040",
         },
         {
           name: "The Unravelled",
@@ -1373,7 +1373,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Conductor Boss", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480354",
+          mapLink: "480354",
         },
         {
           name: "Cogwork Underfly",
@@ -1381,7 +1381,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Understore Automaton", 25] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480021",
+          mapLink: "480021",
         },
         {
           name: "Cogwork Hauler",
@@ -1389,7 +1389,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Understore Automaton EX", 12] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480022",
+          mapLink: "480022",
         },
         {
           name: "Cogwork Crawler",
@@ -1397,7 +1397,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Automaton Goomba", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479962",
+          mapLink: "479962",
         },
         {
           name: "Cogworker",
@@ -1405,7 +1405,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Automaton Fly", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479938",
+          mapLink: "479938",
         },
         {
           name: "Cogwork Spine",
@@ -1413,7 +1413,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Automaton Fly Spike", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479963",
+          mapLink: "479963",
         },
         {
           name: "Cogwork Choirbug",
@@ -1421,7 +1421,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Automaton 01", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479961",
+          mapLink: "479961",
         },
         {
           name: "Cogwork Cleanser",
@@ -1429,7 +1429,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Automaton 02", 12] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479968",
+          mapLink: "479968",
         },
         {
           name: "Cogwork Defender",
@@ -1437,7 +1437,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Automaton Shield", 8] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479982",
+          mapLink: "479982",
         },
         {
           name: "Cogwork Clapper",
@@ -1445,7 +1445,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Automaton Ball", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479971",
+          mapLink: "479971",
         },
         {
           name: "Cogwork Dancers",
@@ -1453,7 +1453,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Clockwork Dancer", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480347",
+          mapLink: "480347",
         },
         {
           name: "Vaultborn",
@@ -1461,7 +1461,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Song Scholar Acolyte", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480008",
+          mapLink: "480008",
         },
         {
           name: "Lampbearer",
@@ -1469,7 +1469,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Lightbearer", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479994",
+          mapLink: "479994",
         },
         {
           name: "Scrollreader",
@@ -1477,7 +1477,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Scrollkeeper", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479991",
+          mapLink: "479991",
         },
         {
           name: "Vaultkeeper",
@@ -1485,7 +1485,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Scholar", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479999",
+          mapLink: "479999",
         },
         {
           name: "Trobbio",
@@ -1493,7 +1493,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Trobbio", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480343",
+          mapLink: "480343",
         },
         {
           name: "Tormented Trobbio",
@@ -1501,7 +1501,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Tormented Trobbio", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480344",
+          mapLink: "480344",
         },
         {
           name: "Penitent",
@@ -1509,7 +1509,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Slab Prisoner Leaper New", 8] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479005",
+          mapLink: "479005",
         },
         {
           name: "Puny Penitent",
@@ -1517,7 +1517,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Slab Prisoner Fly New", 6] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479006",
+          mapLink: "479006",
         },
         {
           name: "Freshfly",
@@ -1525,7 +1525,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Slab Fly Small Fresh", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480479",
+          mapLink: "480479",
         },
         {
           name: "Scabfly",
@@ -1533,7 +1533,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Slab Fly Small", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479008",
+          mapLink: "479008",
         },
         {
           name: "Guardfly",
@@ -1541,7 +1541,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Slab Fly Mid", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479007",
+          mapLink: "479007",
         },
         {
           name: "Wardenfly",
@@ -1549,7 +1549,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Slab Fly Large", 8] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479011",
+          mapLink: "479011",
         },
         {
           name: "Broodmother",
@@ -1557,7 +1557,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Slab Fly Broodmother", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480338",
+          mapLink: "480338",
         },
         {
           name: "Driftlin",
@@ -1565,7 +1565,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Peaks Drifter", 20] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479036",
+          mapLink: "479036",
         },
         {
           name: "Mnemonid",
@@ -1573,7 +1573,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Crystal Drifter", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479043",
+          mapLink: "479043",
         },
         {
           name: "Mnemonord",
@@ -1581,7 +1581,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Crystal Drifter Giant", 3] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480198",
+          mapLink: "480198",
         },
         {
           name: "Servitor Ignim",
@@ -1589,7 +1589,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Weaver Servitor", 8] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478215",
+          mapLink: "478215",
         },
         {
           name: "Servitor Boran",
@@ -1597,7 +1597,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Weaver Servitor Large", 5] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479041",
+          mapLink: "479041",
         },
         {
           name: "Winged Lifeseed",
@@ -1605,7 +1605,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Lifeblood Fly", 8] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479858",
+          mapLink: "479858",
         },
         {
           name: "Plasmid",
@@ -1613,7 +1613,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Worm BlueBlood", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480146",
+          mapLink: "480146",
         },
         {
           name: "Plasmidas",
@@ -1621,7 +1621,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Bone Worm BlueTurret", 6] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480331",
+          mapLink: "480331",
         },
         {
           name: "Plasmified Zango",
@@ -1629,7 +1629,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Blue Assistant", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479273",
+          mapLink: "479273",
         },
         {
           name: "Leaf Glider",
@@ -1637,7 +1637,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Lilypad Fly", 12] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480218",
+          mapLink: "480218",
         },
         {
           name: "Leaf Roller",
@@ -1645,7 +1645,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Grass Goomba", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480217",
+          mapLink: "480217",
         },
         {
           name: "Pendra",
@@ -1653,7 +1653,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Hornet Dragonfly", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480223",
+          mapLink: "480223",
         },
         {
           name: "Pendragor",
@@ -1661,7 +1661,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Dragonfly Large", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480481",
+          mapLink: "480481",
         },
         {
           name: "Nuphar",
@@ -1669,7 +1669,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Lilypad Trap", 6] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480222",
+          mapLink: "480222",
         },
         {
           name: "Cloverstag",
@@ -1677,7 +1677,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Cloverstag", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480221",
+          mapLink: "480221",
         },
         {
           name: "Palestag",
@@ -1685,7 +1685,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Cloverstag White", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480321",
+          mapLink: "480321",
         },
         {
           name: "Kindanir",
@@ -1693,7 +1693,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Grasshopper Child", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480215",
+          mapLink: "480215",
         },
         {
           name: "Verdanir",
@@ -1701,7 +1701,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Grasshopper Slasher", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480219",
+          mapLink: "480219",
         },
         {
           name: "Escalion",
@@ -1709,7 +1709,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Grasshopper Fly", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480220",
+          mapLink: "480220",
         },
         {
           name: "Clover Dancers",
@@ -1717,7 +1717,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Clover Dancer", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480322",
+          mapLink: "480322",
         },
         {
           name: "Shadow Creeper",
@@ -1725,7 +1725,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Abyss Crawler", 16] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480134",
+          mapLink: "480134",
         },
         {
           name: "Shadow Charger",
@@ -1733,7 +1733,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Abyss Crawler Large", 6] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480135",
+          mapLink: "480135",
         },
         {
           name: "Gloomsac",
@@ -1741,7 +1741,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Gloomfly", 15] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480133",
+          mapLink: "480133",
         },
         {
           name: "Gargant Gloom",
@@ -1749,7 +1749,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Gloom Beast", 4] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480132",
+          mapLink: "480132",
         },
         {
           name: "Void Tendrils",
@@ -1757,7 +1757,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Void Tendrils", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479744",
+          mapLink: "479744",
         },
         {
           name: "Void Mass",
@@ -1765,7 +1765,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Black Thread Core", 8] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480418",
+          mapLink: "480418",
         },
         {
           name: "Summoned Saviour",
@@ -1773,7 +1773,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Abyss Mass", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480310",
+          mapLink: "480310",
           onlyFoundInSteelSoulMode: true,
         },
         {
@@ -1782,7 +1782,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["White Palace Fly", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480415",
+          mapLink: "480415",
         },
         {
           name: "Garpid",
@@ -1790,7 +1790,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Centipede Trap", 30] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479626",
+          mapLink: "479626",
         },
         {
           name: "Imoba",
@@ -1798,7 +1798,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Spike Lazy Flyer", 4] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479627",
+          mapLink: "479627",
         },
         {
           name: "Skrill",
@@ -1806,7 +1806,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Surface Scuttler", 10] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479628",
+          mapLink: "479628",
         },
         {
           name: "Bell Eater",
@@ -1814,7 +1814,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Giant Centipede", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480350",
+          mapLink: "480350",
         },
         {
           name: "Huge Flea",
@@ -1822,7 +1822,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Giant Flea", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479122",
+          mapLink: "479122",
         },
         {
           name: "Shakra (Missable Entry)",
@@ -1830,7 +1830,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Shakra", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479822",
+          mapLink: "479822",
         },
         {
           name: "Garmond & Zaza (Missable Entry)",
@@ -1838,7 +1838,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Garmond_Zaza", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479361",
+          mapLink: "479361",
         },
         {
           name: "Lost Garmond",
@@ -1846,7 +1846,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Garmond", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480325",
+          mapLink: "480325",
         },
         {
           name: "Pinstress",
@@ -1854,7 +1854,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Pinstress Boss", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480337",
+          mapLink: "480337",
         },
         {
           name: "Widow",
@@ -1862,7 +1862,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Spinner Boss", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480323",
+          mapLink: "480323",
         },
         {
           name: "First Sinner",
@@ -1870,7 +1870,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["First Weaver", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480339",
+          mapLink: "480339",
         },
         {
           name: "Phantom",
@@ -1878,7 +1878,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Phantom", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480356",
+          mapLink: "480356",
         },
         {
           name: "Lace",
@@ -1886,7 +1886,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Lace", 2] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480355",
+          mapLink: "480355",
         },
         {
           name: "Grand Mother Silk",
@@ -1894,7 +1894,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Silk Boss", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480342",
+          mapLink: "480342",
         },
         {
           name: "Lost Lace",
@@ -1902,7 +1902,7 @@ export const huntersJournal: TrackableCategory = {
           whichAct: 0,
           locationDetails: "",
           parsingInfo: { type: "journal", internalId: ["Lost Lace", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480341",
+          mapLink: "480341",
         },
       ],
     },

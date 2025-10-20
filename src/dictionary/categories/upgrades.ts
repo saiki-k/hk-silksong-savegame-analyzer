@@ -14,7 +14,7 @@ export const upgrades: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "Bellhart: Speak to Plinney after defeating Widow.",
           parsingInfo: { type: "flagInt", internalId: ["nailUpgrades", 1] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478210",
+          mapLink: "478210",
         },
         {
           name: "Needle Upgrade 2 (Shining Needle)",
@@ -22,7 +22,7 @@ export const upgrades: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "Bellhart: Speak to Plinney after acquiring 1 Pale Oil.",
           parsingInfo: { type: "flagInt", internalId: ["nailUpgrades", 2] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478211",
+          mapLink: "478211",
         },
         {
           name: "Needle Upgrade 3 (Hivesteel Needle)",
@@ -31,7 +31,7 @@ export const upgrades: TrackableCategory = {
           locationDetails:
             'Bellhart: Complete "Great Taste of Pharloom" wish. Speak to Plinney and give him 450 Rosaries, and 1 Pale Oil.',
           parsingInfo: { type: "flagInt", internalId: ["nailUpgrades", 3] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478889",
+          mapLink: "478889",
         },
         {
           name: "Needle Upgrade 4 (Pale Steel Needle)",
@@ -40,7 +40,7 @@ export const upgrades: TrackableCategory = {
           locationDetails:
             'Bellhart: Complete "Ecstasy of the End" wish (Appears on the Bellhart Wishwall in ACT 3 after finding every Lost Flea). Speak to Plinney and give him 680 Rosaries, and 1 Pale Oil.',
           parsingInfo: { type: "flagInt", internalId: ["nailUpgrades", 4] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479444",
+          mapLink: "479444",
         },
       ],
     },
@@ -55,7 +55,7 @@ export const upgrades: TrackableCategory = {
           locationDetails:
             "Far Fields (Pilgrim's Rest) / Blasted Steps: Sold by Mort for 220 Rosaries. If you don't purchase this from Mort, it is sold by Grindle in ACT 3 for 220 Rosaries.",
           parsingInfo: { type: "flag", internalId: "PurchasedPilgrimsRestToolPouch" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477946",
+          mapLink: "477946",
         },
         {
           name: "Tool Pouch Upgrade 2",
@@ -67,7 +67,7 @@ export const upgrades: TrackableCategory = {
             { type: "flagInt", internalId: ["pinGalleriesCompleted", 1] },
             { type: "sceneData", internalId: ["Bone_12", "Ladybug Craft Pickup"] },
           ],
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478252",
+          mapLink: "478252",
         },
         {
           name: "Tool Pouch Upgrade 3",
@@ -75,7 +75,7 @@ export const upgrades: TrackableCategory = {
           completionPercent: 1,
           locationDetails: 'Greymoor (Halfway Home): Complete "Bugs of Pharloom" wish.',
           parsingInfo: { type: "quest", internalId: "Journal" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479167",
+          mapLink: "479167",
         },
         {
           name: "Tool Pouch Upgrade 4",
@@ -83,7 +83,7 @@ export const upgrades: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "Putrified Ducts (Fleatopia): Find 20 Lost Fleas in Pharloom.",
           parsingInfo: { type: "sceneData", internalId: ["Aqueduct_05", "Caravan Troupe Leader Fleatopia NPC"] },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479436",
+          mapLink: "479436",
         },
       ],
     },
@@ -97,7 +97,7 @@ export const upgrades: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "Deep Docks: Sold by Forge Daughter for 180 Rosaries.",
           parsingInfo: { type: "flag", internalId: "PurchasedForgeToolKit" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477919",
+          mapLink: "477919",
         },
         {
           name: "Crafting Kit Upgrade 2",
@@ -105,7 +105,7 @@ export const upgrades: TrackableCategory = {
           completionPercent: 1,
           locationDetails: 'Bellhart: Complete "Crawbug Clearing" wish.',
           parsingInfo: { type: "quest", internalId: "Crow Feathers" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478348",
+          mapLink: "478348",
         },
         {
           name: "Crafting Kit Upgrade 3",
@@ -113,7 +113,7 @@ export const upgrades: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "Blasted Steps: Sold by Grindle for 700 Rosaries.",
           parsingInfo: { type: "flag", internalId: "purchasedGrindleToolKit" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478533",
+          mapLink: "478533",
         },
         {
           name: "Crafting Kit Upgrade 4",
@@ -121,7 +121,7 @@ export const upgrades: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "Underworks: Sold by Twelfth Architect for 450 Rosaries.",
           parsingInfo: { type: "flag", internalId: "PurchasedArchitectToolKit" },
-          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478728",
+          mapLink: "478728",
         },
       ],
     },
