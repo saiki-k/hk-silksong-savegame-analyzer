@@ -22,7 +22,12 @@ export function Header() {
       </h1>
       <h2 className="text-xs select-none text-base font-thin text-gray-500 uppercase tracking-[0.2em] opacity-80">
         Track Your{" "}
-        <span className="relative inline-block">
+        <a
+          href="https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative inline-block hover:opacity-90 transition-opacity"
+        >
           <span
             className="select-none font-semibold bg-gradient-to-b from-blue-100 via-white to-blue-200 bg-clip-text text-transparent"
             style={{
@@ -44,7 +49,7 @@ export function Header() {
               Hollow Knight: Silksong
             </span>
           </span>
-        </span>{" "}
+        </a>{" "}
         Progress
       </h2>
     </div>

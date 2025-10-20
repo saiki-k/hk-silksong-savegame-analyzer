@@ -51,7 +51,7 @@ function SpoilersButton({
 }) {
   return (
     <TextWithEmojiButton
-      text={showSpoilers ? "Spoilers are shown!" : "Spoilers are hidden"}
+      text={showSpoilers ? "Spoilers are shown!" : "Spoilers are blurred"}
       emoji={showSpoilers ? "😮" : "🤫"}
       emojiPosition="left"
       onClick={onClick}
