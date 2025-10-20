@@ -14,7 +14,7 @@ export const abilities: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "Moss Grotto (Mosshome)",
           parsingInfo: { type: "tool", internalId: ["Silk Spear"] },
-          mapLink: "477871",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477871",
         },
         {
           name: "Thread Storm",
@@ -22,7 +22,7 @@ export const abilities: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "Greymoor (Craw Lake): At the top.",
           parsingInfo: { type: "tool", internalId: ["Thread Sphere"] },
-          mapLink: "478061",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478061",
         },
         {
           name: "Cross Stitch",
@@ -30,7 +30,7 @@ export const abilities: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "Bilewater (Exhaust Organ): Defeat Phantom.",
           parsingInfo: { type: "tool", internalId: ["Parry"] },
-          mapLink: "478371",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478371",
         },
         {
           name: "Sharpdart",
@@ -38,7 +38,7 @@ export const abilities: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "Wormways (Weavernest)",
           parsingInfo: { type: "tool", internalId: ["Silk Charge"] },
-          mapLink: "479079",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479079",
         },
         {
           name: "Rune Rage",
@@ -46,7 +46,7 @@ export const abilities: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "The Slab: Defeat First Sinner.",
           parsingInfo: { type: "tool", internalId: ["Silk Bomb"] },
-          mapLink: "479025",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479025",
         },
         {
           name: "Pale Nails",
@@ -55,7 +55,7 @@ export const abilities: TrackableCategory = {
           prereqs: ["Silk Soar"],
           locationDetails: "The Cradle: At the top.",
           parsingInfo: { type: "tool", internalId: ["Silk Boss Needle"] },
-          mapLink: "479606",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479606",
         },
       ],
     },
@@ -70,7 +70,7 @@ export const abilities: TrackableCategory = {
           prereqs: ["Silkspear"],
           locationDetails: "The Marrow: Defeat Bell Beast.",
           parsingInfo: { type: "sceneVisited", internalId: "Memory_Silk_Heart_BellBeast" },
-          mapLink: "477879",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477879",
         },
         {
           name: "Silk Heart #2",
@@ -78,7 +78,7 @@ export const abilities: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "Whiteward: Defeat The Unravelled (beneath a locked trapdoor, requires Surgeon's Key).",
           parsingInfo: { type: "sceneVisited", internalId: "Memory_Silk_Heart_WardBoss" },
-          mapLink: "479082",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479082",
         },
         {
           name: "Silk Heart #3",
@@ -86,7 +86,7 @@ export const abilities: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "The Cradle: Defeat Lace.",
           parsingInfo: { type: "sceneVisited", internalId: "Memory_Silk_Heart_LaceTower" },
-          mapLink: "479089",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479089",
         },
       ],
     },
@@ -99,7 +99,7 @@ export const abilities: TrackableCategory = {
           whichAct: 1,
           locationDetails: 'Far Fields: Complete Seamstress\' "Flexile Spines" wish.',
           parsingInfo: { type: "flag", internalId: "hasBrolly" },
-          mapLink: "477971",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477971",
         },
         {
           name: "Faydown Cloak (Double Jump)",
@@ -107,7 +107,7 @@ export const abilities: TrackableCategory = {
           prereqs: ["Needolin", "Clawline"],
           locationDetails: "Mount Fay: At the summit.",
           parsingInfo: { type: "flag", internalId: "hasDoubleJump" },
-          mapLink: "479103",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479103",
         },
       ],
     },
@@ -121,7 +121,7 @@ export const abilities: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "Deep Docks",
           parsingInfo: { type: "flag", internalId: "hasDash" },
-          mapLink: "477915",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477915",
         },
         {
           name: "Clawline (Needle Harpoon)",
@@ -129,7 +129,7 @@ export const abilities: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "Underworks (The Cauldron)",
           parsingInfo: { type: "flag", internalId: "hasHarpoonDash" },
-          mapLink: "478714",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478714",
         },
         {
           name: "Cling Grip (Wall Jump)",
@@ -137,7 +137,7 @@ export const abilities: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "Shellwood",
           parsingInfo: { type: "flag", internalId: "hasWalljump" },
-          mapLink: "478189",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478189",
         },
         {
           name: "Needolin",
@@ -145,7 +145,7 @@ export const abilities: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "Bellhart: Deafeat Widow.",
           parsingInfo: { type: "flag", internalId: "hasNeedolin" },
-          mapLink: "478199",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478199",
         },
         {
           name: "Needle Strike",
@@ -153,7 +153,7 @@ export const abilities: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "Blasted Steps (Pinstress' Home)",
           parsingInfo: { type: "flag", internalId: "hasChargeSlash" },
-          mapLink: "478510",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478510",
         },
         {
           name: "Silk Soar (Super Jump)",
@@ -161,7 +161,7 @@ export const abilities: TrackableCategory = {
           completionPercent: 1,
           locationDetails: "The Abyss",
           parsingInfo: { type: "flag", internalId: "hasSuperJump" },
-          mapLink: "479288",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479288",
         },
       ],
     },
@@ -176,7 +176,7 @@ export const abilities: TrackableCategory = {
           locationDetails:
             "Weavnest Atla: Bind Eva after unlocking a total of 32 tool slots (excluding Hunter Crest slots) via Memory Lockets and acquiring new Crests.",
           parsingInfo: { type: "flag", internalId: "HasBoundCrestUpgrader" },
-          mapLink: "479654",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479654",
         },
         {
           name: "Everbloom",
@@ -184,7 +184,7 @@ export const abilities: TrackableCategory = {
           completionPercent: 1,
           locationDetails: 'Complete "The Old Hearts" wish.',
           parsingInfo: { type: "collectable", internalId: "White Flower" },
-          mapLink: "479387",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479387",
         },
       ],
     },

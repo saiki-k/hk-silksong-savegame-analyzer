@@ -11,7 +11,7 @@ export const fleas: TrackableCategory = {
           whichAct: 1,
           locationDetails: "The Marrow (Top): On a high-up ledge.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Bone_06" },
-          mapLink: "477890",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477890",
         },
         {
           name: "Lost Flea #2",
@@ -19,7 +19,7 @@ export const fleas: TrackableCategory = {
           locationDetails:
             "The Marrow: In a secret room towards the left of the Bellway. In the corner of an area filled with lavafalls.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Dock_16" },
-          mapLink: "477907",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477907",
         },
         {
           name: "Lost Flea #3",
@@ -27,42 +27,42 @@ export const fleas: TrackableCategory = {
           prereqs: ["Swift Step"],
           locationDetails: "Deep Docks (Top): Pull a lever down below, and Swift Step your way up towards it.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Bone_East_05" },
-          mapLink: "477916",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477916",
         },
         {
           name: "Lost Flea #4",
           whichAct: 1,
           locationDetails: "Far Fields: Watch out for the pressure plate trap!",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Bone_East_17b" },
-          mapLink: "477940",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477940",
         },
         {
           name: "Lost Flea #5",
           whichAct: 1,
           locationDetails: "Hunter's March: At the top of a long series of pea pods.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Ant_03" },
-          mapLink: "477999",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477999",
         },
         {
           name: "Lost Flea #6",
           whichAct: 1,
           locationDetails: "Greymoor: Above and to the right of Craw Lake.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Greymoor_15b" },
-          mapLink: "478145",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478145",
         },
         {
           name: "Lost Flea #7",
           whichAct: 1,
           locationDetails: "Greymoor: Reached through the top of the tower.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Greymoor_06" },
-          mapLink: "478287",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478287",
         },
         {
           name: "Lost Flea #8",
           whichAct: 1,
           locationDetails: "Shellwood: At the bottom of a pit filled with Pollenica (and a few Phacia) enemies.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Shellwood_03" },
-          mapLink: "478176",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478176",
         },
         {
           name: "Lost Flea #9",
@@ -70,7 +70,7 @@ export const fleas: TrackableCategory = {
           prereqs: ["Drifter's Cloak", "Cling Grip"],
           locationDetails: "Far Fields: Hidden parkour path to the right of the Bellway.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Bone_East_10_Church" },
-          mapLink: "478219",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478219",
         },
         {
           name: "Lost Flea #10",
@@ -78,7 +78,7 @@ export const fleas: TrackableCategory = {
           prereqs: ["Cling Grip"],
           locationDetails: "Blasted Steps (Top): Near the section (above the Bellway) that connects to Sands of Karak.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Coral_35" },
-          mapLink: "478386",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478386",
         },
         {
           name: "Lost Flea #11",
@@ -86,14 +86,14 @@ export const fleas: TrackableCategory = {
           locationDetails:
             "Sinner's Road: Jump over the first cage, then break the right side of the cage holding the flea.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Dust_12" },
-          mapLink: "478360",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478360",
         },
         {
           name: "Lost Flea #12",
           whichAct: 2,
           locationDetails: "Exhaust Organ (Inside): In a room with a silk-refill spindle. Go towards left from there.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Dust_09" },
-          mapLink: "478378",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478378",
         },
         {
           name: "Lost Flea #13",
@@ -101,14 +101,14 @@ export const fleas: TrackableCategory = {
           prereqs: ["Cling Grip"],
           locationDetails: "Bellhart (Top): Behind a breakable wall.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Belltown_04" },
-          mapLink: "478193",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478193",
         },
         {
           name: "Lost Flea #14",
           whichAct: 1,
           locationDetails: "Wormways: Behind a breakable wall, carried by an Aknid flying around the room.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Crawl_06" },
-          mapLink: "478450",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478450",
         },
         {
           name: "Lost Flea #15",
@@ -116,14 +116,14 @@ export const fleas: TrackableCategory = {
           prereqs: ["Key of Indolent"],
           locationDetails: "The Slab: In a small side-room at the edge of the area.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Slab_Cell" },
-          mapLink: "478393",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478393",
         },
         {
           name: "Lost Flea #16",
           whichAct: 2,
           locationDetails: "Bilewater: In a room behind a breakable wall. Defeat the two Snitchflies to rescue it.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Shadow_28" },
-          mapLink: "478443",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478443",
         },
         {
           name: "Lost Flea #17",
@@ -131,7 +131,7 @@ export const fleas: TrackableCategory = {
           prereqs: ["Clawline"],
           locationDetails: "Deep Docks: In a room that can only be reached after defeating a nearby arena battle.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Dock_03d" },
-          mapLink: "478437",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478437",
         },
         {
           name: "Lost Flea #18",
@@ -139,28 +139,28 @@ export const fleas: TrackableCategory = {
           locationDetails:
             "Underworks: Can only be accessed by passing through Wisp Thicket, and traversing a room full of saws.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Under_23" },
-          mapLink: "478419",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478419",
         },
         {
           name: "Lost Flea #19",
           whichAct: 2,
           locationDetails: "Bilewater: At the end of a trap-filled secret room.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Shadow_10" },
-          mapLink: "478408",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478408",
         },
         {
           name: "Lost Flea #20",
           whichAct: 2,
           locationDetails: "Choral Chambers: At the end of a platforming challenge.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Song_14" },
-          mapLink: "478398",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478398",
         },
         {
           name: "Lost Flea #21",
           whichAct: 2,
           locationDetails: "Sands of Karak: In a secret area, behind a breakable wall.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Coral_24" },
-          mapLink: "478385",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478385",
         },
         {
           name: "Lost Flea #22",
@@ -168,7 +168,7 @@ export const fleas: TrackableCategory = {
           prereqs: ["Cling Grip"],
           locationDetails: "Mount Fay: At the top of a room in the middle.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Peak_05c" },
-          mapLink: "478380",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478380",
         },
         {
           name: "Lost Flea #23",
@@ -176,7 +176,7 @@ export const fleas: TrackableCategory = {
           prereqs: ["Clawline"],
           locationDetails: "Songclave (Top-right): Parkour challange, accessible through Whispering Vaults.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Library_09" },
-          mapLink: "478404",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478404",
         },
         {
           name: "Lost Flea #24",
@@ -184,7 +184,7 @@ export const fleas: TrackableCategory = {
           locationDetails:
             "Choral Chambers: Inside a secret shaft. Go behind a breakable wall at the bottom of the shaft to turn on a fan, and ride the air current in the shaft to the top.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Song_11" },
-          mapLink: "478416",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478416",
         },
         {
           name: "Lost Flea #25",
@@ -193,14 +193,14 @@ export const fleas: TrackableCategory = {
           locationDetails:
             "Whispering Vaults: Move the box with a long track to its final position to reach this flea.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Library_01" },
-          mapLink: "478402",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478402",
         },
         {
           name: "Lost Flea #26",
           whichAct: 2,
           locationDetails: "Underworks: In the bottom-most room beneath the Ventrica Station.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Under_21" },
-          mapLink: "478420",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478420",
         },
         {
           name: "Lost Flea #27",
@@ -208,7 +208,7 @@ export const fleas: TrackableCategory = {
           prereqs: ["Faydown Cloak"],
           locationDetails: "The Slab: Right above the lower-most bench.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Slab_06" },
-          mapLink: "478392",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478392",
         },
         {
           name: "Lost Flea #28 (Giant Flea)",
@@ -216,7 +216,7 @@ export const fleas: TrackableCategory = {
           prereqs: ["Faydown Cloak"],
           locationDetails: "Memorium: The dome-like area at the very top.",
           parsingInfo: { type: "flag", internalId: "tamedGiantFlea" },
-          mapLink: "478413",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478413",
         },
         {
           name: "Lost Flea #29 (Kratt)",
@@ -224,7 +224,7 @@ export const fleas: TrackableCategory = {
           prereqs: ["Cling Grip"],
           locationDetails: "Greymoor: Behind a breakable wall that's towards the upper-right of Halfway Home.",
           parsingInfo: { type: "flag", internalId: "CaravanLechReturnedToCaravan" },
-          mapLink: "478271",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478271",
         },
         {
           name: "Lost Flea #30 (Vog)",
@@ -232,7 +232,7 @@ export const fleas: TrackableCategory = {
           prereqs: ["Faydown Cloak"],
           locationDetails: "Putrified Ducts: In a hidden passage towards the right of the Bellway.",
           parsingInfo: { type: "flag", internalId: "MetTroupeHunterWild" },
-          mapLink: "479138",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479138",
         },
       ],
     },
