@@ -3,10 +3,34 @@ import type { DragEvent } from "react";
 
 import { decodeSave, encodeSave, downloadFile } from "../services/decryptor";
 
+export interface SaveFileObj {
+  state: {
+    fileName: string;
+    isSavefileDecrypted: boolean;
+    jsonText: string;
+    parsedJson: unknown;
+    isValidJson: boolean;
+    errorMessage: string;
+  };
+  handlers: {
+    setJsonText: (text: string) => void;
+    handleFile: (file: File) => void;
+    handleDrop: (event: DragEvent<HTMLDivElement>) => void;
+    handleDragOver: (event: DragEvent<HTMLDivElement>) => void;
+    saveEncrypted: () => void;
+    savePlain: () => void;
+  };
+}
+
+export function isValidSaveData(parsedJson: object): boolean {
+  return "playerData" in parsedJson && "silk" in ((parsedJson.playerData ?? {}) as object);
+}
+
 export function useSaveFile() {
   const [fileName, setFileName] = useState("");
-  const [decrypted, setDecrypted] = useState(false);
+  const [isSavefileDecrypted, setIsSavefileDecrypted] = useState(false);
   const [jsonText, setJsonText] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const parsedJson = useMemo(() => {
     if (!jsonText) return null;
@@ -17,21 +41,46 @@ export function useSaveFile() {
     }
   }, [jsonText]);
 
+  const isValidJson = useMemo(() => {
+    if (!jsonText) return true; // Empty text is considered valid
+    try {
+      JSON.parse(jsonText);
+      setErrorMessage("");
+      return true;
+    } catch {
+      setErrorMessage("Invalid JSON format. Please check your syntax.");
+      return false;
+    }
+  }, [jsonText]);
+
   const handleFile = useCallback((file: File) => {
     setFileName(file.name);
+    setErrorMessage("");
     const reader = new FileReader();
     reader.onload = e => {
       if (!e.target?.result) return;
-      setDecrypted(false);
+      setIsSavefileDecrypted(false);
       setJsonText("");
       try {
         const data = new Uint8Array(e.target.result as ArrayBuffer);
         const json = decodeSave(data);
-        const pretty = JSON.stringify(JSON.parse(json), null, 2);
+        const parsedJson = JSON.parse(json);
+
+        if (!isValidSaveData(parsedJson)) {
+          throw new Error("This does not appear to be a Silksong savefile.");
+        }
+
+        const pretty = JSON.stringify(parsedJson, null, 2);
         setJsonText(pretty);
-        setDecrypted(true);
-      } catch (error) {
-        alert("Failed to decode file");
+        setIsSavefileDecrypted(true);
+        setErrorMessage("");
+      } catch (error: unknown) {
+        if (error instanceof Error && error.message.includes("Silksong")) {
+          setErrorMessage(error.message);
+          return;
+        }
+        const errorMsg = "This file is in an unsupported format.";
+        setErrorMessage(errorMsg);
         console.error(error);
       }
     };
@@ -62,15 +111,21 @@ export function useSaveFile() {
   }, [jsonText, fileName]);
 
   return {
-    fileName,
-    decrypted,
-    jsonText,
-    setJsonText,
-    parsedJson,
-    handleFile,
-    handleDrop,
-    handleDragOver,
-    saveEncrypted,
-    savePlain,
+    state: {
+      fileName,
+      isSavefileDecrypted,
+      jsonText,
+      parsedJson,
+      isValidJson,
+      errorMessage,
+    },
+    handlers: {
+      setJsonText,
+      handleFile,
+      handleDrop,
+      handleDragOver,
+      saveEncrypted,
+      savePlain,
+    },
   };
 }

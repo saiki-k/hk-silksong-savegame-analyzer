@@ -35,7 +35,7 @@ export type CategoryItem = {
   whichAct: 0 | 1 | 2 | 3;
   completionPercent?: number;
   prereqs?: string[];
-  location: string;
+  locationDetails: string;
   parsingInfo: ParsingInfo | ParsingInfoMulti;
   mapLink: string;
   killsRequired?: number;
@@ -46,7 +46,7 @@ export type CategoryItem = {
 export type CategorySection = {
   name?: string;
   description?: string;
-  descriptionMarkup?: ReactNode;
+  descriptionMarkup?: ReactNode | ((showSpoilers?: boolean) => ReactNode);
   items: CategoryItem[];
   hasGameModeSpecificItems?: boolean;
 };

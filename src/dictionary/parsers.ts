@@ -1,12 +1,15 @@
 import type { ParsingInfo, ParsingInfoMulti } from "./types";
 
+function isParsingInfoMulti(parsingInfo: ParsingInfo | ParsingInfoMulti): parsingInfo is ParsingInfoMulti {
+  return Array.isArray(parsingInfo);
+}
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export function isItemUnlockedInPlayerSave(
   itemParsingInfo: ParsingInfo | ParsingInfoMulti,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   saveData: any
 ): { unlocked: boolean; returnValue?: number } {
-  // Handle ParsingInfoMulti
-  if (Array.isArray(itemParsingInfo)) {
+  if (isParsingInfoMulti(itemParsingInfo)) {
     let unlocked = false;
     let returnValue: number | undefined;
 
@@ -22,7 +25,6 @@ export function isItemUnlockedInPlayerSave(
     return { unlocked, returnValue };
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const playerData = (saveData as any).playerData ?? {};
 
   const typeHandlers = {
@@ -34,7 +36,6 @@ export function isItemUnlockedInPlayerSave(
     flagMulti: (flagNames: string[]) => {
       let unlocked = false;
       for (const flagName of flagNames) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         if ((playerData as any)[flagName]) {
           unlocked = true;
           break;
@@ -54,11 +55,9 @@ export function isItemUnlockedInPlayerSave(
     },
 
     tool: (toolNames: string[]) => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const tools = (playerData as any)?.Tools?.savedData || [];
       let unlocked = false;
       for (const name of toolNames) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const foundTool = tools.find((t: any) => t?.Name === name);
         if (foundTool && !!foundTool?.Data?.IsUnlocked) {
           unlocked = true;
@@ -69,12 +68,10 @@ export function isItemUnlockedInPlayerSave(
     },
 
     journal: ([entryName]: [string, number]) => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const journal = (playerData as any)?.EnemyJournalKillData?.list || [];
       let unlocked = false;
       let killsAchieved = 0;
 
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const foundEntry = journal.find((t: any) => t?.Name === entryName);
       if (foundEntry) {
         killsAchieved = foundEntry.Record.Kills;
@@ -88,55 +85,41 @@ export function isItemUnlockedInPlayerSave(
     },
 
     crest: (crestName: string) => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const crest = (playerData as any)?.ToolEquips?.savedData || [];
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const foundCrest = crest.find((t: any) => t?.Name === crestName);
       return { unlocked: !!foundCrest?.Data?.IsUnlocked };
     },
 
     collectable: (itemName: string) => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const collectableEntry = (playerData as any).Collectables?.savedData?.find(
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (x: any) => x.Name === itemName
-      );
+      const collectableEntry = (playerData as any).Collectables?.savedData?.find((x: any) => x.Name === itemName);
       const amount = collectableEntry?.Data?.Amount ?? 0;
       return { unlocked: amount > 0 };
     },
 
     relict: (relicName: string) => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const relics = (playerData as any)?.Relics?.savedData || [];
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const foundRelict = relics.find((r: any) => r?.Name === relicName);
       return { unlocked: !!foundRelict?.Data?.IsCollected };
     },
 
     quest: (questName: string) => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const questEntry = (playerData as any).QuestCompletionData?.savedData?.find((x: any) => x.Name === questName);
       return { unlocked: questEntry?.Data?.IsCompleted ?? false };
     },
 
-    sceneData: ([sceneName, Id, inverse = false]: [string, string, boolean?]) => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    sceneData: ([sceneName, id, inverse = false]: [string, string, boolean?]) => {
       const sceneData = (saveData as any).sceneData || {};
       const allEntries = sceneData.persistentBools?.serializedList || [];
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const match = allEntries.find((x: any) => x.SceneName === sceneName && x.ID === Id);
+      const match = allEntries.find((x: any) => x.SceneName === sceneName && x.ID === id);
       return { unlocked: inverse ? match?.Value === false : match?.Value === true };
     },
 
     sceneVisited: (sceneName: string) => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       return { unlocked: !!(playerData as any)?.scenesVisited?.includes(sceneName) };
     },
 
     mementoDeposit: (mementoName: string) => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const mementos = (playerData as any)?.MementosDeposited?.savedData ?? [];
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const unlocked = mementos.some((entry: any) => entry.Name === mementoName && entry.Data?.IsDeposited);
       return { unlocked };
     },
@@ -145,13 +128,10 @@ export function isItemUnlockedInPlayerSave(
   return typeHandlers[itemParsingInfo.type](itemParsingInfo.internalId);
 }
 
-// Check if an item should be shown in the current game mode
 export function isItemInCurrentGameMode(
   item: { onlyFoundInClassicMode?: boolean; onlyFoundInSteelSoulMode?: boolean },
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   saveData: any
 ): boolean {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const playerData = (saveData as any).playerData ?? {};
   const isCurrentModeClassic = playerData.permadeathMode === 0;
 
@@ -160,3 +140,4 @@ export function isItemInCurrentGameMode(
 
   return !itemIsNotInCurrentGameMode;
 }
+/* eslint-enable @typescript-eslint/no-explicit-any */

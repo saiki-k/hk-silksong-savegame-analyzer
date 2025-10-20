@@ -4,3 +4,23 @@ html {
   scrollbar-gutter: stable both-edges;
   background-color: black;
 }
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    background-position: 200% 0;
+    opacity: 0;
+  }
+}
