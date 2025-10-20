@@ -1,4 +1,4 @@
-import type { ReactElement } from "react";
+import { useState, useRef, useEffect, type ReactElement } from "react";
 import Editor from "@monaco-editor/react";
 import { type TabContentProps } from "./types";
 import { CategoryHeader } from "./shared";
@@ -12,7 +12,7 @@ interface DownloadButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEleme
 }
 
 const downloadButtonStyles = {
-  base: "bg-gray-700/30 text-gray-400 border border-gray-600/30 hover:border-gray-500/50 hover:text-gray-300 font-semibold py-2 px-4 rounded transition-all duration-200 flex-1",
+  base: "bg-gray-700/30 text-gray-400 border border-gray-600/30 hover:border-gray-500/50 hover:text-gray-300 font-semibold py-2 px-4 rounded transition-all duration-200 flex-1 cursor-pointer",
 } as const;
 
 function DownloadButton({ children, onClick, className, ...props }: DownloadButtonProps) {
@@ -50,6 +50,49 @@ function SaveEditorStatusBar({ isValidJson }: { isValidJson: boolean }) {
 }
 
 export function SaveEditor({ saveFileObj }: TabContentProps): ReactElement {
+  const [editorHeight, setEditorHeight] = useState(400);
+  const [isDragging, setIsDragging] = useState(false);
+  const editorRef = useRef<HTMLDivElement>(null);
+  const startYRef = useRef<number>(0);
+  const startHeightRef = useRef<number>(0);
+
+  useEffect(() => {
+    if (!isDragging) return;
+    
+    document.body.style.cursor = "ns-resize";
+    document.body.style.userSelect = "none";
+
+    const handleMouseMove = (e: MouseEvent) => {
+      e.preventDefault();
+      const deltaY = e.clientY - startYRef.current;
+      const newHeight = Math.max(200, Math.min(1200, startHeightRef.current + deltaY));
+      setEditorHeight(newHeight);
+    };
+
+    const handleMouseUp = () => {
+      setIsDragging(false);
+      document.body.style.cursor = "";
+      document.body.style.userSelect = "";
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+      document.body.style.cursor = "";
+      document.body.style.userSelect = "";
+    };
+  }, [isDragging]);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+    startYRef.current = e.clientY;
+    startHeightRef.current = editorHeight;
+  };
+
   if (!saveFileObj) {
     return <div className="text-white">No savefile loaded.</div>;
   }
@@ -60,6 +103,11 @@ export function SaveEditor({ saveFileObj }: TabContentProps): ReactElement {
 
   return (
     <>
+      {/* Fullscreen overlay while dragging to maintain cursor */}
+      {isDragging && (
+        <div className="fixed inset-0 z-[9999] cursor-ns-resize" style={{ pointerEvents: "all" }} />
+      )}
+
       <CategoryHeader
         title="Save Editor"
         description={
@@ -75,9 +123,9 @@ export function SaveEditor({ saveFileObj }: TabContentProps): ReactElement {
 
       <SaveEditorStatusBar isValidJson={saveFileObj.state.isValidJson} />
 
-      <div className="bg-gray-900/50 border border-gray-600 rounded-b-lg border-t-0 overflow-hidden">
+      <div className="bg-gray-900/50 border border-gray-600 rounded-b-lg border-t-0 overflow-hidden relative" ref={editorRef}>
         <Editor
-          height="400px"
+          height={`${editorHeight}px`}
           defaultLanguage="json"
           value={saveFileObj.state.jsonText || ""}
           onChange={value => handleChange(value || "")}
@@ -114,6 +162,24 @@ export function SaveEditor({ saveFileObj }: TabContentProps): ReactElement {
               Download (encrypted) .dat
             </DownloadButton>
             <DownloadButton onClick={() => saveFileObj.handlers.savePlain()}>Download (plain) .json</DownloadButton>
+          </div>
+        </div>
+
+        <div
+          onMouseDown={handleMouseDown}
+          className={cn(
+            "group absolute bottom-0 left-0 right-0 h-3 transition-all duration-200 select-none cursor-ns-resize hover:bg-gray-700/50 z-10",
+            isDragging ? "bg-gray-700/50" : "bg-transparent"
+          )}
+        >
+          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-center pointer-events-none">
+            <div
+              className={cn(
+                "w-12 h-0.5 bg-gray-600/50 rounded-full transition-all duration-200",
+                "group-hover:w-16 group-hover:h-1 group-hover:bg-gray-400/70",
+                isDragging && "w-16 h-1 bg-gray-400"
+              )}
+            />
           </div>
         </div>
       </div>
