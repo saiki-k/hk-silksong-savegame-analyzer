@@ -1,5 +1,5 @@
 import { Button } from "../Button";
-import { cn, getBlurClassNames } from "../../../utils/classNames";
+import { cn } from "../../../utils/classNames";
 
 interface LocationButtonProps {
   url: string;
@@ -16,7 +16,11 @@ export function LocationButton({ url, children, showSpoilers = false, className 
   return (
     <Button
       onClick={() => window.open(url, "_blank")}
-      className={cn(locationButtonStyles.base, getBlurClassNames({ shouldBlur: !showSpoilers }), className)}
+      className={cn(
+        locationButtonStyles.base,
+        showSpoilers ? "" : "blur-sm hover:blur-none transition duration-100",
+        className
+      )}
       aria-label={`Open map location for ${children}`}
     >
       {children}
