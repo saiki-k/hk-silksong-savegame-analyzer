@@ -66,7 +66,7 @@ export function HuntersJournalContent({
       {visibleEntries.length > 0 && <StatusBar statusText={statusText} hasMultipleSections={false} />}
 
       {visibleEntries.length > 0 && (
-        <div className="bg-gray-900/50 border border-gray-600 rounded-b-lg border-t-0 overflow-hidden">
+        <div className="bg-gray-900/50 border-2 border-gray-600/30 rounded-b-lg border-t-0 overflow-hidden">
           <Table<FilteredItem>
             isFixedLayout={true}
             tableData={visibleEntries}

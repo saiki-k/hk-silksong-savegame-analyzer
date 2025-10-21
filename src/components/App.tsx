@@ -103,7 +103,7 @@ export default function App() {
 
       <Separator />
 
-      <TotalProgress saveFileObj={saveFileObj} />
+      <TotalProgress saveFileObj={saveFileObj} hasUploadedSaveFile={hasUploadedSaveFile} />
       <TabBar
         activeTab={activeTab}
         onSelect={handleTabSelect}

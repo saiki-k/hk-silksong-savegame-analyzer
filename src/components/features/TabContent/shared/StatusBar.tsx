@@ -7,7 +7,7 @@ export function StatusBar({ statusText, hasMultipleSections }: StatusBarProps) {
   return (
     <div className={hasMultipleSections ? "mb-8" : "mb-0"}>
       <div
-        className={`bg-gray-800/50 border border-gray-600 px-4 py-2.5 border-t-0 ${
+        className={`bg-gray-800/50 border-2 border-gray-600/30 px-4 py-2.5 border-t-0 ${
           hasMultipleSections ? "rounded-b-lg" : ""
         }`}
       >

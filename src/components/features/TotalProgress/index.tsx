@@ -7,9 +7,14 @@ const TOTAL_PERCENT_ACHIEVABLE = 100;
 
 interface TotalProgressProps {
   saveFileObj: SaveFileObj;
+  hasUploadedSaveFile: boolean;
 }
 
-export function TotalProgress({ saveFileObj }: TotalProgressProps) {
+export function TotalProgress({ saveFileObj, hasUploadedSaveFile }: TotalProgressProps) {
+  if (!hasUploadedSaveFile) {
+    return null;
+  }
+
   let percent = 0;
   if (saveFileObj.state.parsedJson) {
     const allItems = ALL_TRACKED_CATEGORIES.flatMap(category => {
@@ -32,14 +37,14 @@ export function TotalProgress({ saveFileObj }: TotalProgressProps) {
   }
 
   return (
-    <div className="w-full my-4">
-      <div className="flex justify-between text-sm text-blue-200 mb-1">
-        <span>Total Progress</span>
-        <span>{percent}%</span>
+    <div className="w-full my-6">
+      <div className="flex justify-between items-center text-xs text-gray-500 mb-1">
+        <span className="font-light uppercase tracking-wider">Total Progress</span>
+        <span className="font-semibold text-gray-400">{percent}%</span>
       </div>
-      <div className="w-full bg-[#24344d] rounded-full h-3">
+      <div className="w-full bg-gradient-to-br from-gray-800/40 to-gray-800/20 rounded-full h-2.5 overflow-hidden border border-gray-700/50">
         <div
-          className="bg-blue-600 h-3 rounded-full transition-all duration-500"
+          className="bg-gradient-to-br from-emerald-500/20 via-emerald-500/50 to-emerald-500/80 h-full rounded-full transition-all duration-500"
           style={{ width: `${(percent / TOTAL_PERCENT_ACHIEVABLE) * 100}%` }}
         />
       </div>

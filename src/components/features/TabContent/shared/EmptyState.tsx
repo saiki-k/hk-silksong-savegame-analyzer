@@ -1,6 +1,6 @@
 export function EmptyState() {
   return (
-    <div className="bg-gray-900/50 border border-gray-600 border-t-0 rounded-b-lg p-12 text-center">
+    <div className="bg-gray-900/50 border-2 border-gray-600/30 border-t-0 rounded-b-lg p-12 text-center">
       <div className="flex flex-col items-center gap-4 max-w-lg mx-auto">
         <div className="text-4xl text-yellow-400/80 mb-2">✨</div>
 

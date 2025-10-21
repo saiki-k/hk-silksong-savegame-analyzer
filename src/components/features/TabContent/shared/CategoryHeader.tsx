@@ -7,7 +7,7 @@ interface CategoryHeaderProps {
 
 export function CategoryHeader({ title, description }: CategoryHeaderProps) {
   return (
-    <div className="bg-gray-800/30 border border-gray-600 rounded-t-lg px-4 py-3 mb-0">
+    <div className="bg-gray-800/30 border-2 border-gray-600/30 rounded-t-lg px-4 py-3 mb-0">
       <h2 className="text-xl font-bold text-blue-200">{title}</h2>
       {description && description !== title && (
         <div className="text-sm text-gray-300 mt-1">

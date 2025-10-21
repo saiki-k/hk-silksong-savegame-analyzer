@@ -54,7 +54,7 @@ function GenericSectionTable({
 
       <div
         className={cn(
-          "bg-gray-900/50 border border-gray-600 overflow-hidden",
+          "bg-gray-900/50 border-2 border-gray-600/30 overflow-hidden",
           sectionsLength === 1 && "border-t-0 rounded-b-lg", // Single section - connect to status bar above
           section.name || section.description || section.descriptionMarkup
             ? sectionsLength > 1 && "rounded-b-lg" // Multi-section with header - connect to section header
