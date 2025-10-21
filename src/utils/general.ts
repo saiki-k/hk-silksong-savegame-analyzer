@@ -32,7 +32,7 @@ export function getCategoryDisplayStatusText({
     itemsText = itemTypeText === "entries" ? "incomplete entries" : "missing items";
   }
 
-  const spoilersText = showSpoilers ? "spoilers shown" : "spoilers hidden (until you hover over them)";
+  const spoilersText = showSpoilers ? "spoilers shown" : "spoilers blurred (until you hover over them)";
 
   let actText = "";
   if (!actFilter || actFilter.size === 0) {
