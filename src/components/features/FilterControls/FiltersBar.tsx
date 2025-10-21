@@ -60,8 +60,8 @@ function SpoilersButton({
   );
 }
 
-interface FilterBarProps {
-  hasRealSaveFile: boolean;
+interface FiltersBarProps {
+  hasUploadedSaveFile: boolean;
   showSpoilers: boolean;
   showUnlocked: boolean;
   inShowEverythingMode: boolean;
@@ -73,8 +73,8 @@ interface FilterBarProps {
   isExpanded: boolean;
 }
 
-export function FilterBar({
-  hasRealSaveFile,
+export function FiltersBar({
+  hasUploadedSaveFile,
   showSpoilers,
   showUnlocked,
   inShowEverythingMode,
@@ -84,14 +84,14 @@ export function FilterBar({
   onShowEverythingToggle,
   onActFilterChange,
   isExpanded,
-}: FilterBarProps) {
+}: FiltersBarProps) {
   const actOptions = [
     { value: 1 as const, label: "Act I" },
     { value: 2 as const, label: "Act II" },
     { value: 3 as const, label: "Act III" },
   ];
 
-  const filtersDisabled = !hasRealSaveFile && !inShowEverythingMode;
+  const filtersDisabled = !hasUploadedSaveFile && !inShowEverythingMode;
 
   const toggleAct = (act: 1 | 2 | 3) => {
     if (filtersDisabled) return;
@@ -114,7 +114,7 @@ export function FilterBar({
     >
       <div className="flex items-center justify-between gap-6 text-sm">
         <div className="w-[200px] flex justify-end">
-          {hasRealSaveFile ? (
+          {hasUploadedSaveFile ? (
             <ShowUnlockedButton
               showUnlocked={showUnlocked}
               onClick={() => onShowUnlockedChange(!showUnlocked)}

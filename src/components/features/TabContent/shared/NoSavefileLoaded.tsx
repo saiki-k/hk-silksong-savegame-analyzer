@@ -3,7 +3,7 @@ import Sherma from "../../../../assets/Sherma.png";
 import ShermaGif from "../../../../assets/Sherma.gif";
 import { cn } from "../../../../utils/classNames";
 
-export function NoSavefileLoaded() {
+export function NoSaveFileLoaded() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -22,7 +22,7 @@ export function NoSavefileLoaded() {
           !isHovered ? "-translate-y-12 -translate-x-56 w-24 h-24" : "-translate-y-17.25 -translate-x-60 w-32 h-32"
         )}
       />
-      <span>{!isHovered ? `No savefile loaded.` : `Manifesting the savefile...`}</span>
+      <span>{!isHovered ? `No save file loaded.` : `Manifesting the save file...`}</span>
     </div>
   );
 }

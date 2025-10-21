@@ -1,14 +1,14 @@
 import { Button } from "../../ui/Button";
 import { cn } from "../../../utils/classNames";
 
-interface FilterToggleBarProps {
+interface FiltersBarTogglerProps {
   isExpanded: boolean;
   onToggle: () => void;
-  hasRealSaveFile: boolean;
+  hasUploadedSaveFile: boolean;
 }
 
-export function FilterToggleBar({ isExpanded, onToggle, hasRealSaveFile }: FilterToggleBarProps) {
-  const displayText = hasRealSaveFile ? "Content Filters" : "No savefile? You can still see everything.";
+export function FiltersBarToggler({ isExpanded, onToggle, hasUploadedSaveFile }: FiltersBarTogglerProps) {
+  const displayText = hasUploadedSaveFile ? "Content Filters" : "No save file? You can still see everything.";
 
   return (
     <div

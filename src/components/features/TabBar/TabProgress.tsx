@@ -18,7 +18,7 @@ export function TabProgress({
 }: TabProgressProps): ReactNode {
   // Memoize progress calculations - only recalculate when save data changes
   const progressData = useMemo(() => {
-    if (!saveFileObj.state.isSavefileDecrypted || !saveFileObj.state.parsedJson) {
+    if (!saveFileObj.state.isSaveFileDecrypted || !saveFileObj.state.parsedJson) {
       return null;
     }
 
@@ -26,19 +26,25 @@ export function TabProgress({
     if (isHuntersJournal) {
       return getHuntersJournalProgress({
         parsedJson: saveFileObj.state.parsedJson,
-        isSavefileDecrypted: saveFileObj.state.isSavefileDecrypted,
+        isSaveFileDecrypted: saveFileObj.state.isSaveFileDecrypted,
         inShowEverythingMode,
       });
     }
 
     return getGenericProgress({
       parsedJson: saveFileObj.state.parsedJson,
-      isSavefileDecrypted: saveFileObj.state.isSavefileDecrypted,
+      isSaveFileDecrypted: saveFileObj.state.isSaveFileDecrypted,
       inShowEverythingMode,
       tabLabel,
       isPercentProgression,
     });
-  }, [inShowEverythingMode, saveFileObj.state.parsedJson, saveFileObj.state.isSavefileDecrypted, tabLabel, isPercentProgression]);
+  }, [
+    inShowEverythingMode,
+    saveFileObj.state.parsedJson,
+    saveFileObj.state.isSaveFileDecrypted,
+    tabLabel,
+    isPercentProgression,
+  ]);
 
   if (!progressData) {
     return null;

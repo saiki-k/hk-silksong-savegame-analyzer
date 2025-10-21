@@ -7,7 +7,7 @@ import { CategoryHeader } from "./shared";
 
 export function StatsContent({ saveFileObj }: TabContentProps): ReactElement {
   if (!saveFileObj) {
-    return <div className="text-white">No savefile loaded.</div>;
+    return <div className="text-white">No save file loaded.</div>;
   }
 
   const allItems = stats.sections.flatMap(section => section.items);

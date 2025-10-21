@@ -6,7 +6,7 @@ import { decodeSave, encodeSave, downloadFile } from "../services/decryptor";
 export interface SaveFileObj {
   state: {
     fileName: string;
-    isSavefileDecrypted: boolean;
+    isSaveFileDecrypted: boolean;
     jsonText: string;
     parsedJson: unknown;
     isValidJson: boolean;
@@ -28,7 +28,7 @@ export function isValidSaveData(parsedJson: object): boolean {
 
 export function useSaveFile() {
   const [fileName, setFileName] = useState("");
-  const [isSavefileDecrypted, setIsSavefileDecrypted] = useState(false);
+  const [isSaveFileDecrypted, setIsSaveFileDecrypted] = useState(false);
   const [jsonText, setJsonText] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -59,7 +59,7 @@ export function useSaveFile() {
     const reader = new FileReader();
     reader.onload = e => {
       if (!e.target?.result) return;
-      setIsSavefileDecrypted(false);
+      setIsSaveFileDecrypted(false);
       setJsonText("");
       try {
         const data = new Uint8Array(e.target.result as ArrayBuffer);
@@ -67,12 +67,12 @@ export function useSaveFile() {
         const parsedJson = JSON.parse(json);
 
         if (!isValidSaveData(parsedJson)) {
-          throw new Error("This does not appear to be a Silksong savefile.");
+          throw new Error("This does not appear to be a Silksong saveFile.");
         }
 
         const pretty = JSON.stringify(parsedJson, null, 2);
         setJsonText(pretty);
-        setIsSavefileDecrypted(true);
+        setIsSaveFileDecrypted(true);
         setErrorMessage("");
       } catch (error: unknown) {
         if (error instanceof Error && error.message.includes("Silksong")) {
@@ -113,7 +113,7 @@ export function useSaveFile() {
   return {
     state: {
       fileName,
-      isSavefileDecrypted,
+      isSaveFileDecrypted,
       jsonText,
       parsedJson,
       isValidJson,

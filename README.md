@@ -1,6 +1,7 @@
-# 🧵🎵 Hollow Knight: Silksong Savegame Analyzer
+# 🧵🎵 Silksong Completionist
+### Track your [Hollow Knight: Silksong](https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/) Progress
 
-For all the completionists out there, I created a tool that helps you track your in-game progress directly from your savefile.
+For all the completionists out there, I created a tool that helps you track your in-game progress directly from your save file.
 
 
 ## ⚙️ Usage
@@ -9,9 +10,9 @@ For all the completionists out there, I created a tool that helps you track your
 
 Using the analyzer is simple!
 
-Just drag and drop your savefile into the upload box on the site, or click the box to browse and upload it.
+Just drag and drop your save file into the upload box on the site, or click the box to browse and upload it.
 
-If you’re unsure where your savefile is located, the savefile paths for most platforms are conveniently listed right above the upload area.
+If you’re unsure where your save file is located, the save file paths for most platforms are conveniently listed right above the upload area.
 
 Once uploaded, the analyzer will automatically parse your data and display your progress towards 100% completion.
 
@@ -58,7 +59,7 @@ The analyzer comprehensively tracks everything that contributes to 100% completi
 - **Hunter's Journal**
 
 ### 🔧 Advanced Feature(s)
-- **Save Editor**: A feature-rich editor with advanced search and real-time (JSON) validation capabilities, for savefile modification
+- **Save Editor**: A feature-rich editor with advanced search and real-time (JSON) validation capabilities, for save file modification
 
 
 ## 🐞 Issues & Contributions

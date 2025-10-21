@@ -24,8 +24,8 @@ export function TabButton({
   saveFileObj,
   inShowEverythingMode,
 }: TabButtonProps): ReactElement {
-  const shouldShowProgress = tab.hasProgress && saveFileObj.state.isSavefileDecrypted && saveFileObj.state.parsedJson;
-  const isDisabled = !saveFileObj.state.isSavefileDecrypted;
+  const shouldShowProgress = tab.hasProgress && saveFileObj.state.isSaveFileDecrypted && saveFileObj.state.parsedJson;
+  const isDisabled = !saveFileObj.state.isSaveFileDecrypted;
 
   return (
     <Button
@@ -36,7 +36,7 @@ export function TabButton({
         isActive
           ? "bg-blue-500/20 text-blue-300 border-blue-400/40 shadow-sm shadow-blue-500/10"
           : "bg-gray-700/30 text-gray-400 border-gray-600/30 hover:border-gray-500/50 hover:text-gray-300",
-        isDisabled && "opacity-50 cursor-not-allowed"
+        isDisabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
       )}
       aria-pressed={isActive}
       aria-label={`Switch to ${tab.tabId} tab`}

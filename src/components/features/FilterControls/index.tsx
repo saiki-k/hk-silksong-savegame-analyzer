@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { FilterBar } from "./FilterBar";
-import { FilterToggleBar } from "./FilterToggleBar";
+import { FiltersBar } from "./FiltersBar";
+import { FiltersBarToggler } from "./FiltersBarToggler";
 
 export type ActFilter = Set<1 | 2 | 3>;
 
-interface DisplayControlsProps {
-  hasRealSaveFile: boolean;
+interface FilterControlsProps {
+  hasUploadedSaveFile: boolean;
   showSpoilers: boolean;
   showUnlocked: boolean;
   inShowEverythingMode: boolean;
@@ -16,8 +16,8 @@ interface DisplayControlsProps {
   onActFilterChange: (value: ActFilter) => void;
 }
 
-export function DisplayControls({
-  hasRealSaveFile,
+export function FilterControls({
+  hasUploadedSaveFile,
   showSpoilers,
   showUnlocked,
   inShowEverythingMode,
@@ -26,19 +26,19 @@ export function DisplayControls({
   onShowUnlockedChange,
   onShowEverythingToggle,
   onActFilterChange,
-}: DisplayControlsProps) {
+}: FilterControlsProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
-    if (hasRealSaveFile) {
+    if (hasUploadedSaveFile) {
       setIsExpanded(true);
     }
-  }, [hasRealSaveFile]);
+  }, [hasUploadedSaveFile]);
 
   return (
     <div className="-mt-1">
-      <FilterBar
-        hasRealSaveFile={hasRealSaveFile}
+      <FiltersBar
+        hasUploadedSaveFile={hasUploadedSaveFile}
         showSpoilers={showSpoilers}
         showUnlocked={showUnlocked}
         inShowEverythingMode={inShowEverythingMode}
@@ -46,7 +46,7 @@ export function DisplayControls({
         onShowSpoilersChange={onShowSpoilersChange}
         onShowUnlockedChange={onShowUnlockedChange}
         onShowEverythingToggle={() => {
-          if (inShowEverythingMode && !hasRealSaveFile) {
+          if (inShowEverythingMode && !hasUploadedSaveFile) {
             setIsExpanded(false);
           }
           onShowEverythingToggle();
@@ -54,10 +54,10 @@ export function DisplayControls({
         onActFilterChange={onActFilterChange}
         isExpanded={isExpanded}
       />
-      <FilterToggleBar
+      <FiltersBarToggler
         isExpanded={isExpanded}
         onToggle={() => setIsExpanded(!isExpanded)}
-        hasRealSaveFile={hasRealSaveFile}
+        hasUploadedSaveFile={hasUploadedSaveFile}
       />
     </div>
   );

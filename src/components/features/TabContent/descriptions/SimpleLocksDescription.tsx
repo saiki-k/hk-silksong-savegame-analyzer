@@ -1,13 +1,22 @@
 import { LocationButton } from "../../../ui/LocationButton";
 
 const simpleLockLocations = [
-  { name: "Wormways", mapGenieLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478090" },
-  { name: "Deep Docks", mapGenieLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=476922" },
+  {
+    name: "Wormways",
+    mapGenieLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478090",
+  },
+  {
+    name: "Deep Docks",
+    mapGenieLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=476922",
+  },
   {
     name: "Sinner's Road",
     mapGenieLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478342",
   },
-  { name: "High Halls", mapGenieLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478911" },
+  {
+    name: "High Halls",
+    mapGenieLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478911",
+  },
 ];
 
 interface SimpleLocksDescriptionProps {

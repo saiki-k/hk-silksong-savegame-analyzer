@@ -6,7 +6,7 @@ import { huntersJournal } from "../dictionary/categories/huntersJournal";
 
 interface GetGenericProgressParams {
   parsedJson: unknown;
-  isSavefileDecrypted: boolean;
+  isSaveFileDecrypted: boolean;
   inShowEverythingMode: boolean;
   tabLabel: string;
   isPercentProgression?: boolean;
@@ -20,12 +20,12 @@ interface ProgressData {
 
 export function getGenericProgress({
   parsedJson,
-  isSavefileDecrypted,
+  isSaveFileDecrypted,
   inShowEverythingMode,
   tabLabel,
   isPercentProgression = false,
 }: GetGenericProgressParams): ProgressData | null {
-  if (!isSavefileDecrypted || !parsedJson) {
+  if (!isSaveFileDecrypted || !parsedJson) {
     return null;
   }
 
@@ -85,7 +85,7 @@ export function getGenericProgress({
 
 interface GetHuntersJournalProgressParams {
   parsedJson: unknown;
-  isSavefileDecrypted: boolean;
+  isSaveFileDecrypted: boolean;
   inShowEverythingMode: boolean;
 }
 
@@ -98,10 +98,10 @@ interface HuntersJournalProgressData {
 
 export function getHuntersJournalProgress({
   parsedJson,
-  isSavefileDecrypted,
+  isSaveFileDecrypted,
   inShowEverythingMode,
 }: GetHuntersJournalProgressParams): HuntersJournalProgressData | null {
-  if (!isSavefileDecrypted || !parsedJson) {
+  if (!isSaveFileDecrypted || !parsedJson) {
     return null;
   }
 

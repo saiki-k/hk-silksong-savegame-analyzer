@@ -1,7 +1,12 @@
 import type { ReactElement } from "react";
 import { huntersJournal } from "../../../dictionary/categories/huntersJournal";
 import { type TabContentProps } from "./types";
-import { filterItems, getCategoryDisplayStatusText, getBlurClassNames, type FilteredItem } from "../../../utils";
+import {
+  filterItems,
+  getCategoryDisplayStatusText,
+  getTableRowBlurClassNames,
+  type FilteredItem,
+} from "../../../utils";
 
 import { CategoryHeader, StatusBar, EmptyState } from "./shared";
 import { Table, MapButton } from "../../ui";
@@ -30,7 +35,7 @@ export function HuntersJournalContent({
   actFilter,
 }: TabContentProps): ReactElement {
   if (!saveFileObj) {
-    return <div className="text-white">No savefile loaded.</div>;
+    return <div className="text-white">No save file loaded.</div>;
   }
 
   const allEntries = huntersJournal.sections.flatMap(section => section.items);
@@ -86,7 +91,7 @@ export function HuntersJournalContent({
                 width: "220px",
                 header: "Name",
                 cellClassName: (item: FilteredItem) =>
-                  `${getBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
+                  `${getTableRowBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
                 renderCell: (item: FilteredItem) => item.name,
               },
               {
@@ -94,7 +99,7 @@ export function HuntersJournalContent({
                 header: "Kills Achieved",
                 headerClassName: "px-2 py-3 text-center text-gray-300 font-medium",
                 cellClassName: (item: FilteredItem) =>
-                  `text-center ${getBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
+                  `text-center ${getTableRowBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
                 renderCell: (item: FilteredItem) => item.killsAchieved,
               },
               {
@@ -102,13 +107,13 @@ export function HuntersJournalContent({
                 header: "Kills Required",
                 headerClassName: "px-2 py-3 text-center text-gray-300 font-medium",
                 cellClassName: (item: FilteredItem) =>
-                  `text-center ${getBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
+                  `text-center ${getTableRowBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
                 renderCell: (item: FilteredItem) => item.killsRequired ?? "N/A",
               },
               {
                 width: "64px",
                 cellClassName: (item: FilteredItem) =>
-                  `text-center ${getBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
+                  `text-center ${getTableRowBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
                 renderCell: (item: FilteredItem) => <MapButton mapLink={item.mapLink} />,
               },
             ]}

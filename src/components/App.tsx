@@ -6,8 +6,10 @@ import type { TabId } from "./features/TabBar/tabs";
 import { AppContainer } from "./features/AppContainer";
 
 import { Header } from "./features/Header";
+import { SaveFileInfo } from "./features/SaveFileInfo";
 import { FileUpload } from "./features/FileUpload";
-import { DisplayControls, type ActFilter } from "./features/DisplayControls";
+import { SaveEditor } from "./features/SaveEditor";
+import { FilterControls, type ActFilter } from "./features/FilterControls";
 
 import { Separator } from "./ui/Separator";
 
@@ -19,34 +21,47 @@ import { Footer } from "./features/Footer";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<TabId>("Stats");
+  const [hasUploadedSaveFile, setHasUploadedSaveFile] = useState(false);
   const [showSpoilers, setShowSpoilers] = useState(false);
   const [showUnlocked, setShowUnlocked] = useState(false);
   const [inShowEverythingMode, setInShowEverythingMode] = useState(false);
   const [actFilter, setActFilter] = useState<ActFilter>(new Set([1, 2, 3]));
 
-  const saveFileObj = useSaveFile();
+  const saveFileObjFromHook = useSaveFile();
+  const [saveFileObj, setSaveFileObj] = useState(saveFileObjFromHook);
 
-  const hasRealSaveFile = Boolean(
-    saveFileObj.state.fileName && saveFileObj.state.isSavefileDecrypted && !saveFileObj.state.errorMessage
-  );
-
-  // Reset inShowEverythingMode when a save file is loaded
   useEffect(() => {
-    if (hasRealSaveFile) {
+    setSaveFileObj(saveFileObjFromHook);
+
+    const {
+      state: { fileName, isSaveFileDecrypted, errorMessage },
+    } = saveFileObjFromHook;
+    const hasUploadedSaveFile = Boolean(fileName && isSaveFileDecrypted && !errorMessage);
+    setHasUploadedSaveFile(hasUploadedSaveFile);
+  }, [saveFileObjFromHook.state.jsonText]);
+
+  useEffect(() => {
+    // Reset inShowEverythingMode when a save file is loaded
+    if (hasUploadedSaveFile) {
       setInShowEverythingMode(false);
     }
-  }, [hasRealSaveFile]);
 
-  let effectiveSaveFileObj = saveFileObj;
-  if (!hasRealSaveFile && inShowEverythingMode) {
     // When in "show everything" mode, provide empty parsedJson to display all content
-    const effectiveSaveFileState = {
-      ...saveFileObj.state,
-      isSavefileDecrypted: true,
-      parsedJson: {},
-    };
-    effectiveSaveFileObj = { ...saveFileObj, state: effectiveSaveFileState };
-  }
+    if (!hasUploadedSaveFile && inShowEverythingMode) {
+      setSaveFileObj(prevSaveFileObj => ({
+        ...prevSaveFileObj,
+        state: {
+          ...prevSaveFileObj.state,
+          isSaveFileDecrypted: true,
+          parsedJson: {},
+        },
+      }));
+    }
+
+    if (!hasUploadedSaveFile && !inShowEverythingMode) {
+      setSaveFileObj(saveFileObjFromHook);
+    }
+  }, [hasUploadedSaveFile, inShowEverythingMode]);
 
   const handleCopyPath = (path: string) => {
     navigator.clipboard.writeText(path);
@@ -71,9 +86,11 @@ export default function App() {
 
       <Separator />
 
-      <FileUpload saveFileObj={effectiveSaveFileObj} onCopyPath={handleCopyPath} />
-      <DisplayControls
-        hasRealSaveFile={hasRealSaveFile}
+      <SaveFileInfo onCopyPath={handleCopyPath} />
+      <SaveEditor saveFileObj={saveFileObj} hasUploadedSaveFile={hasUploadedSaveFile} />
+      <FileUpload saveFileObj={saveFileObj} />
+      <FilterControls
+        hasUploadedSaveFile={hasUploadedSaveFile}
         showSpoilers={showSpoilers}
         showUnlocked={showUnlocked}
         inShowEverythingMode={inShowEverythingMode}
@@ -86,11 +103,11 @@ export default function App() {
 
       <Separator />
 
-      <TotalProgress saveFileObj={effectiveSaveFileObj} />
+      <TotalProgress saveFileObj={saveFileObj} />
       <TabBar
         activeTab={activeTab}
         onSelect={handleTabSelect}
-        saveFileObj={effectiveSaveFileObj}
+        saveFileObj={saveFileObj}
         inShowEverythingMode={inShowEverythingMode}
       />
 
@@ -98,7 +115,8 @@ export default function App() {
 
       <TabContent
         activeTab={activeTab}
-        saveFileObj={effectiveSaveFileObj}
+        saveFileObj={saveFileObj}
+        hasUploadedSaveFile={hasUploadedSaveFile}
         showUnlocked={showUnlocked}
         showSpoilers={showSpoilers}
         inShowEverythingMode={inShowEverythingMode}

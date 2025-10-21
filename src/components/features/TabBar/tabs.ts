@@ -11,9 +11,9 @@ const PERCENT_PROGRESSION_CATEGORIES = [
   "Crests",
 ] as const;
 
-const TABS = [...TRACKED_CATEGORY_NAMES, "Save Editor"] as const;
+const TABS = [...TRACKED_CATEGORY_NAMES] as const;
 const PERCENT_PROGRESSION_TABS = PERCENT_PROGRESSION_CATEGORIES;
-const NO_PROGRESSION_TABS = ["Stats", "Save Editor"] as const;
+const NO_PROGRESSION_TABS = ["Stats"] as const;
 
 export type TabId = (typeof TABS)[number];
 

@@ -1,7 +1,13 @@
 import { TRACKED_CATEGORY_DICT } from "../../../dictionary";
 import type { TrackableCategory, CategorySection } from "../../../dictionary/types";
 import type { TabContentProps } from "./types";
-import { filterItems, getCategoryDisplayStatusText, getBlurClassNames, type FilteredItem, cn } from "../../../utils";
+import {
+  filterItems,
+  getCategoryDisplayStatusText,
+  getTableRowBlurClassNames,
+  type FilteredItem,
+  cn,
+} from "../../../utils";
 
 import { CategoryHeader, SectionHeader, StatusBar, EmptyState } from "./shared";
 import { Table, MapButton } from "../../ui";
@@ -85,27 +91,27 @@ function GenericSectionTable({
               width: "220px",
               header: "Name",
               cellClassName: (item: FilteredItem) =>
-                `${getBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
+                `${getTableRowBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
               renderCell: (item: FilteredItem) => item.name,
             },
             {
               width: "260px",
               header: "Details",
               cellClassName: (item: FilteredItem) =>
-                `relative min-w-[140px] max-w-[260px] ${getBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
+                `relative min-w-[140px] max-w-[260px] ${getTableRowBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
               renderCell: (item: FilteredItem) => item.locationDetails,
             },
             {
               width: "48px",
               header: "Act",
               cellClassName: (item: FilteredItem) =>
-                `w-[48px] text-center ${getBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
+                `w-[48px] text-center ${getTableRowBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
               renderCell: (item: FilteredItem) => item.whichAct,
             },
             {
               width: "64px",
               cellClassName: (item: FilteredItem) =>
-                `text-center ${getBlurClassNames({ shouldBlur: !item.unlocked && !(showSpoilers ?? false) })}`,
+                `text-center ${getTableRowBlurClassNames({ shouldBlur: !item.unlocked && !(showSpoilers ?? false) })}`,
               renderCell: (item: FilteredItem) => <MapButton mapLink={item.mapLink} />,
             },
           ]}
@@ -124,7 +130,7 @@ export function GenericContent({
   actFilter,
 }: TabContentProps) {
   if (!saveFileObj || !tabLabel) {
-    return <div className="text-white">No savefile loaded.</div>;
+    return <div className="text-white">No save file loaded.</div>;
   }
 
   const categoryData = TRACKED_CATEGORY_DICT[tabLabel] as TrackableCategory;

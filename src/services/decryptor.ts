@@ -55,13 +55,13 @@ export function decodeSave(fileBytes: Uint8Array): string {
 
   // AES-ECB decrypt
   const key = CryptoJS.enc.Utf8.parse(AES_KEY_STRING);
-  const isSavefileDecrypted = CryptoJS.AES.decrypt(cipherParams, key, {
+  const isSaveFileDecrypted = CryptoJS.AES.decrypt(cipherParams, key, {
     mode: CryptoJS.mode.ECB,
     padding: CryptoJS.pad.Pkcs7,
   });
 
   // Return JSON as string
-  return CryptoJS.enc.Utf8.stringify(isSavefileDecrypted);
+  return CryptoJS.enc.Utf8.stringify(isSaveFileDecrypted);
 }
 
 export function encodeSave(jsonString: string): Uint8Array {

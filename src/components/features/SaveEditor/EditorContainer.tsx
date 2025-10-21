@@ -1,41 +1,23 @@
 import { useState, useRef, useEffect, type ReactElement } from "react";
 import Editor from "@monaco-editor/react";
-import { type TabContentProps } from "./types";
-import { CategoryHeader } from "./shared";
-import { Button } from "../../ui/Button";
-import { cn } from "../../../utils/classNames";
-
-interface DownloadButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
-  onClick: () => void;
-  className?: string;
-}
-
-const downloadButtonStyles = {
-  base: "bg-gray-700/30 text-gray-400 border border-gray-600/30 hover:border-gray-500/50 hover:text-gray-300 font-semibold py-2 px-4 rounded transition-all duration-200 flex-1 cursor-pointer",
-} as const;
-
-function DownloadButton({ children, onClick, className, ...props }: DownloadButtonProps) {
-  return (
-    <Button onClick={onClick} className={cn(downloadButtonStyles.base, className)} {...props}>
-      {children}
-    </Button>
-  );
-}
-
-function KeyboardButton({ children }: { children: React.ReactNode }) {
-  return (
-    <kbd className="min-h-7.5 inline-flex justify-center items-center py-1 px-1.5 mx-0.5 bg-white border border-gray-200 font-mono text-sm text-gray-800 shadow-[0px_2px_0px_0px_rgba(0,0,0,0.08)] dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200 dark:shadow-[0px_2px_0px_0px_rgba(255,255,255,0.1)] rounded-md">
-      {children}
-    </kbd>
-  );
-}
+import type { SaveFileObj } from "../../../hooks/useSaveFile.ts";
+import { DownloadButton } from "../../ui/index.ts";
+import { cn } from "../../../utils/index.ts";
 
 function SaveEditorStatusBar({ isValidJson }: { isValidJson: boolean }) {
   return (
     <div className="mb-0">
-      <div className="bg-gray-800/50 border border-gray-600 px-2 py-2 border-t-0">
-        <div className="flex justify-end items-center">
+      <div className="bg-gradient-to-br from-gray-800/40 to-gray-800/20 border-2 border-gray-600/30 px-2 py-2 border-t-0">
+        <div className="flex justify-between items-center text-xs text-gray-300 ">
+          <p>
+            Use <span className="font-mono">Ctrl</span>
+            <span className="text-gray-400 mx-1">+</span>
+            <span className="font-mono">F</span>
+            <span className="text-gray-400 mx-1">or</span>
+            <span className="font-mono">⌘</span>
+            <span className="text-gray-400 mx-1">+</span>
+            <span className="font-mono">F</span> to search within the editor.
+          </p>
           <span
             className={`inline-flex items-center justify-center text-xs px-2 py-0.5 rounded-lg ${
               isValidJson ? "bg-green-600 text-white" : "bg-red-600 text-white"
@@ -49,7 +31,19 @@ function SaveEditorStatusBar({ isValidJson }: { isValidJson: boolean }) {
   );
 }
 
-export function SaveEditor({ saveFileObj }: TabContentProps): ReactElement {
+export function EditorContainer({
+  saveFileObj,
+  isExpanded,
+  hasUploadedSaveFile,
+}: {
+  saveFileObj: SaveFileObj;
+  isExpanded: boolean;
+  hasUploadedSaveFile: boolean;
+}): ReactElement {
+  if (!hasUploadedSaveFile) {
+    return <div className="text-white text-center">No save file loaded.</div>;
+  }
+
   const [editorHeight, setEditorHeight] = useState(400);
   const [isDragging, setIsDragging] = useState(false);
   const editorRef = useRef<HTMLDivElement>(null);
@@ -58,7 +52,7 @@ export function SaveEditor({ saveFileObj }: TabContentProps): ReactElement {
 
   useEffect(() => {
     if (!isDragging) return;
-    
+
     document.body.style.cursor = "ns-resize";
     document.body.style.userSelect = "none";
 
@@ -93,37 +87,26 @@ export function SaveEditor({ saveFileObj }: TabContentProps): ReactElement {
     startHeightRef.current = editorHeight;
   };
 
-  if (!saveFileObj) {
-    return <div className="text-white">No savefile loaded.</div>;
-  }
-
   const handleChange = (value: string) => {
     saveFileObj.handlers.setJsonText(value);
   };
 
   return (
-    <>
-      {/* Fullscreen overlay while dragging to maintain cursor */}
-      {isDragging && (
-        <div className="fixed inset-0 z-[9999] cursor-ns-resize" style={{ pointerEvents: "all" }} />
+    <div
+      className={cn(
+        "overflow-hidden transition-all duration-300 ease-in-out",
+        !isExpanded ? "max-h-0" : "max-h-[1200px]"
       )}
-
-      <CategoryHeader
-        title="Save Editor"
-        description={
-          <p>
-            View and edit your save file in JSON format. Use <KeyboardButton>Ctrl</KeyboardButton>
-            <span className="text-gray-400 mx-1">or</span>
-            <KeyboardButton>⌘</KeyboardButton>
-            <span className="text-gray-400 mx-1">+</span>
-            <KeyboardButton>F</KeyboardButton> to search within the editor.
-          </p>
-        }
-      />
+    >
+      {/* Fullscreen overlay while dragging to maintain cursor */}
+      {isDragging && <div className="fixed inset-0 z-[9999] cursor-ns-resize" style={{ pointerEvents: "all" }} />}
 
       <SaveEditorStatusBar isValidJson={saveFileObj.state.isValidJson} />
 
-      <div className="bg-gray-900/50 border border-gray-600 rounded-b-lg border-t-0 overflow-hidden relative" ref={editorRef}>
+      <div
+        className="bg-gradient-to-br from-gray-800/40 to-gray-800/20 border-2 border-gray-600/30 border-t-0 overflow-hidden relative"
+        ref={editorRef}
+      >
         <Editor
           height={`${editorHeight}px`}
           defaultLanguage="json"
@@ -156,7 +139,7 @@ export function SaveEditor({ saveFileObj }: TabContentProps): ReactElement {
           }}
         />
 
-        <div className="p-4 border-t border-gray-600">
+        <div className="p-4 border-t-2 border-gray-600/30">
           <div className="flex flex-col md:flex-row gap-2">
             <DownloadButton onClick={() => saveFileObj.handlers.saveEncrypted()}>
               Download (encrypted) .dat
@@ -183,6 +166,6 @@ export function SaveEditor({ saveFileObj }: TabContentProps): ReactElement {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

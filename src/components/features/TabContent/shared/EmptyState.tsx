@@ -12,7 +12,7 @@ export function EmptyState() {
         <div className="mt-4 pt-4 border-t border-gray-700/50 w-full">
           <p className="text-xs text-gray-500">
             Try adjusting the <span className="text-blue-300 font-medium">content filters</span> above to explore
-            different views
+            different views.
           </p>
         </div>
       </div>
