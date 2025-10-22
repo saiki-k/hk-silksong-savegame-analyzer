@@ -6,7 +6,7 @@ export function EmptyState() {
 
         <div className="space-y-2">
           <h3 className="mb-0 text-xl font-medium text-gray-200">Looks pretty complete!</h3>
-          <p className="text-sm text-gray-400">Could it be you've found everything here already?</p>
+          <p className="text-sm text-gray-400">Could it be you've achieved everything here already?</p>
         </div>
 
         <div className="mt-4 pt-4 border-t border-gray-700/50 w-full">
