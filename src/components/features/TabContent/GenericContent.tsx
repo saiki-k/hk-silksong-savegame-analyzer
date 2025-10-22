@@ -162,9 +162,9 @@ export function GenericContent({
     <>
       <CategoryHeader title={tabLabel || categoryData.name} description={categoryData.description} />
 
-      {!hasVisibleItems && <EmptyState />}
+      <StatusBar statusText={statusText} hasVisibleItems={hasVisibleItems} hasMultipleSections={categoryData.sections.length > 1} />
 
-      {hasVisibleItems && <StatusBar statusText={statusText} hasMultipleSections={categoryData.sections.length > 1} />}
+      {!hasVisibleItems && <EmptyState />}
 
       {hasVisibleItems &&
         categoryData.sections.map((section, sectionIndex) => (

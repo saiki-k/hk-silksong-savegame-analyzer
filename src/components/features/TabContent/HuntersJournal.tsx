@@ -58,15 +58,16 @@ export function HuntersJournalContent({
     itemTypeText: "entries",
   });
 
+  const hasVisibleItems = visibleEntries.length > 0;
   return (
     <>
       <CategoryHeader title={tabLabel || huntersJournal.name} description={huntersJournal.description} />
 
-      {visibleEntries.length === 0 && <EmptyState />}
+      <StatusBar statusText={statusText} hasVisibleItems={hasVisibleItems} hasMultipleSections={false} />
 
-      {visibleEntries.length > 0 && <StatusBar statusText={statusText} hasMultipleSections={false} />}
+      {!hasVisibleItems && <EmptyState />}
 
-      {visibleEntries.length > 0 && (
+      {hasVisibleItems && (
         <div className="bg-gray-900/50 border-2 border-gray-600/30 rounded-b-lg border-t-0 overflow-hidden">
           <Table<FilteredItem>
             isFixedLayout={true}

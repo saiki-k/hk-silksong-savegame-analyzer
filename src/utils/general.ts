@@ -36,9 +36,9 @@ export function getCategoryDisplayStatusText({
 
   let actText = "";
   if (!actFilter || actFilter.size === 0) {
-    actText = "";
+    actText = " from zero ⚠️ Acts";
   } else if (actFilter.size === 3) {
-    actText = " from all acts";
+    actText = " from all Acts";
   } else {
     const acts = Array.from(actFilter)
       .sort()

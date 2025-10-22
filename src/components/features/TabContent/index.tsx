@@ -47,7 +47,8 @@ export function TabContent(props: TabContentProps) {
       case "Stats":
         return <StatsContent {...tabContentProps} tabLabel="At a glance..." />;
       case "Hunter's Journal":
-        return <HuntersJournalContent {...tabContentProps} />;
+        // Since Hunter's Journal items are not divided by Acts, pass all Acts in actFilter
+        return <HuntersJournalContent {...tabContentProps} actFilter={new Set([1, 2, 3])} />;
       default:
         return <GenericContent {...tabContentProps} />;
     }
