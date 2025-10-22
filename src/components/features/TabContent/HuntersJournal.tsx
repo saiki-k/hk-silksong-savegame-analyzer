@@ -28,6 +28,7 @@ function getHuntersJournalStatusColor(
 }
 
 export function HuntersJournalContent({
+  tabLabel,
   saveFileObj,
   showUnlocked,
   showSpoilers,
@@ -59,7 +60,7 @@ export function HuntersJournalContent({
 
   return (
     <>
-      <CategoryHeader title={huntersJournal.name} description={huntersJournal.description} />
+      <CategoryHeader title={tabLabel || huntersJournal.name} description={huntersJournal.description} />
 
       {visibleEntries.length === 0 && <EmptyState />}
 

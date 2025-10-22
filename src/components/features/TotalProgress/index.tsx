@@ -34,7 +34,7 @@ export function TotalProgress({ saveFileObj, hasUploadedSaveFile }: TotalProgres
         unlockedPercent += item.completionPercent ?? 0;
       }
     }
-    console.log("Unlocked Percent:", unlockedPercent);
+
     return unlockedPercent;
   }, [saveFileObj.state.jsonText]);
 

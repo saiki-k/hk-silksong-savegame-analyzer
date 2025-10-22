@@ -5,7 +5,7 @@ import { formatSecondsToHMS } from "../../../utils";
 import type { TabContentProps } from "./types";
 import { CategoryHeader } from "./shared";
 
-export function StatsContent({ saveFileObj }: TabContentProps): ReactElement {
+export function StatsContent({ tabLabel, saveFileObj }: TabContentProps): ReactElement {
   if (!saveFileObj) {
     return <div className="text-white">No save file loaded.</div>;
   }
@@ -45,7 +45,7 @@ export function StatsContent({ saveFileObj }: TabContentProps): ReactElement {
 
   return (
     <>
-      <CategoryHeader title={stats.name} description={stats.description} />
+      <CategoryHeader title={tabLabel || stats.name} description={stats.description} />
 
       <div className="bg-gray-900/50 border border-gray-600 rounded-b-lg border-t-0 p-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

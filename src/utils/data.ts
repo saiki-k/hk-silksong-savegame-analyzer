@@ -6,7 +6,6 @@ import { huntersJournal } from "../dictionary/categories/huntersJournal";
 
 interface GetGenericProgressParams {
   parsedJson: unknown;
-  isSaveFileDecrypted: boolean;
   inShowEverythingMode: boolean;
   tabLabel: string;
   isPercentProgression?: boolean;
@@ -20,12 +19,11 @@ interface ProgressData {
 
 export function getGenericProgress({
   parsedJson,
-  isSaveFileDecrypted,
   inShowEverythingMode,
   tabLabel,
   isPercentProgression = false,
 }: GetGenericProgressParams): ProgressData | null {
-  if (!isSaveFileDecrypted || !parsedJson) {
+  if (!parsedJson) {
     return null;
   }
 
@@ -50,17 +48,17 @@ export function getGenericProgress({
     let currentPercent = 0;
     let maxPercent = 0;
 
-    if (!inShowEverythingMode) {
-      allItems.forEach(item => {
-        const percent = item.completionPercent ?? 0;
-        maxPercent += percent;
-
+    allItems.forEach(item => {
+      const percent = item.completionPercent ?? 0;
+      maxPercent += percent;
+      
+      if (!inShowEverythingMode) {
         const { unlocked } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
         if (unlocked) {
           currentPercent += percent;
         }
-      });
-    }
+      }
+    });
 
     return {
       progressType: "Percent Progression",
@@ -90,7 +88,6 @@ export function getGenericProgress({
 
 interface GetHuntersJournalProgressParams {
   parsedJson: unknown;
-  isSaveFileDecrypted: boolean;
   inShowEverythingMode: boolean;
 }
 
@@ -103,10 +100,9 @@ interface HuntersJournalProgressData {
 
 export function getHuntersJournalProgress({
   parsedJson,
-  isSaveFileDecrypted,
   inShowEverythingMode,
 }: GetHuntersJournalProgressParams): HuntersJournalProgressData | null {
-  if (!isSaveFileDecrypted || !parsedJson) {
+  if (!parsedJson) {
     return null;
   }
 
@@ -175,16 +171,27 @@ export function filterItems({
   const result: FilteredItem[] = [];
 
   for (const item of items) {
+    const processedItem: FilteredItem = { ...item, unlocked: false };
+
+    if (actFilter && actFilter.size >= 0 && actFilter.size < 3) {
+      // If whichAct is 0, item is not affected by actFilter
+      if (processedItem.whichAct !== 0 && !actFilter.has(processedItem.whichAct as 1 | 2 | 3)) {
+        continue;
+      }
+    }
+
+    if (inShowEverythingMode) {
+      result.push(processedItem);
+      continue;
+    }
+
     if (hasGameModeSpecificItems && !inShowEverythingMode && !isItemInCurrentGameMode(item, parsedJson)) {
       continue;
     }
 
     const { unlocked, returnValue: killsAchieved } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
-    const processedItem: FilteredItem = {
-      ...item,
-      unlocked,
-      killsAchieved: typeof killsAchieved === "number" ? killsAchieved : undefined,
-    };
+    processedItem.unlocked = unlocked;
+    processedItem.killsAchieved = typeof killsAchieved === "number" ? killsAchieved : undefined;
 
     let shouldInclude = false;
     if (showUnlocked) {
@@ -198,13 +205,6 @@ export function filterItems({
 
     if (!shouldInclude) {
       continue;
-    }
-
-    if (actFilter && actFilter.size >= 0 && actFilter.size < 3) {
-      // If whichAct is 0, item is not affected by actFilter
-      if (processedItem.whichAct !== 0 && !actFilter.has(processedItem.whichAct as 1 | 2 | 3)) {
-        continue;
-      }
     }
 
     result.push(processedItem);

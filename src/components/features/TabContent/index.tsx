@@ -14,7 +14,7 @@ export function TabContent(props: TabContentProps) {
     return null;
   }
 
-  if (!saveFileObj.state.isSaveFileDecrypted) {
+  if (!hasUploadedSaveFile && !inShowEverythingMode) {
     return <NoSaveFileLoaded />;
   }
 
@@ -45,7 +45,7 @@ export function TabContent(props: TabContentProps) {
   const getTabContent = (activeTab: TabId) => {
     switch (activeTab) {
       case "Stats":
-        return <StatsContent tabLabel="At a glance..." {...tabContentProps} />;
+        return <StatsContent {...tabContentProps} tabLabel="At a glance..." />;
       case "Hunter's Journal":
         return <HuntersJournalContent {...tabContentProps} />;
       default:

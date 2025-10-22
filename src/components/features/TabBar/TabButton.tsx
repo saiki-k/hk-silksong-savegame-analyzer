@@ -2,7 +2,6 @@ import type { ReactElement } from "react";
 import { useState } from "react";
 import type { TabId } from "./tabs";
 import { TabProgress } from "./TabProgress";
-import type { SaveFileObj } from "../../../hooks/useSaveFile";
 import type { TabProgressInfo } from "./index";
 import { Button } from "../../ui/Button";
 import { cn } from "../../../utils/classNames";
@@ -15,13 +14,21 @@ interface TabButtonProps {
   };
   isActive: boolean;
   onSelect: (tab: TabId) => void;
-  saveFileObj: SaveFileObj;
   progressInfo?: TabProgressInfo;
+  hasUploadedSaveFile: boolean;
+  inShowEverythingMode?: boolean;
 }
 
-export function TabButton({ tab, isActive, onSelect, saveFileObj, progressInfo }: TabButtonProps): ReactElement {
+export function TabButton({
+  tab,
+  isActive,
+  onSelect,
+  progressInfo,
+  hasUploadedSaveFile,
+  inShowEverythingMode,
+}: TabButtonProps): ReactElement {
   const [isHovered, setIsHovered] = useState(false);
-  const isDisabled = !saveFileObj.state.isSaveFileDecrypted;
+  const isDisabled = !hasUploadedSaveFile && !inShowEverythingMode;
 
   const handleMouseEnter = () => {
     if (!isDisabled) setIsHovered(true);

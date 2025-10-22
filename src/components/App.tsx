@@ -52,8 +52,8 @@ export default function App() {
         ...prevSaveFileObj,
         state: {
           ...prevSaveFileObj.state,
-          isSaveFileDecrypted: true,
           parsedJson: {},
+          jsonText: "{}",
         },
       }));
     }
@@ -109,6 +109,7 @@ export default function App() {
         onSelect={handleTabSelect}
         saveFileObj={saveFileObj}
         inShowEverythingMode={inShowEverythingMode}
+        hasUploadedSaveFile={hasUploadedSaveFile}
       />
 
       <Separator />

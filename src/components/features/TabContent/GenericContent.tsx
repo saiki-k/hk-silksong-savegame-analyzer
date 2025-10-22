@@ -160,7 +160,7 @@ export function GenericContent({
 
   return (
     <>
-      <CategoryHeader title={categoryData.name} description={categoryData.description} />
+      <CategoryHeader title={tabLabel || categoryData.name} description={categoryData.description} />
 
       {!hasVisibleItems && <EmptyState />}
 

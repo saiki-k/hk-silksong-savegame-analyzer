@@ -10,6 +10,7 @@ interface TabBarProps {
   onSelect: (tab: TabId) => void;
   saveFileObj: SaveFileObj;
   inShowEverythingMode?: boolean;
+  hasUploadedSaveFile: boolean;
 }
 
 export interface TabProgressInfo {
@@ -20,12 +21,12 @@ export interface TabProgressInfo {
   encounteredOnlyDisplayText?: string;
 }
 
-export function TabBar({ activeTab, onSelect, saveFileObj, inShowEverythingMode }: TabBarProps) {
-  const { parsedJson, isSaveFileDecrypted, jsonText } = saveFileObj.state;
+export function TabBar({ activeTab, onSelect, saveFileObj, inShowEverythingMode, hasUploadedSaveFile }: TabBarProps) {
+  const { jsonText, parsedJson } = saveFileObj.state;
 
   // Calculate progress for all tabs once at TabBar level
   const tabProgressMap = useMemo(() => {
-    if (!isSaveFileDecrypted || !parsedJson) return new Map<TabId, TabProgressInfo>();
+    if (!hasUploadedSaveFile && !inShowEverythingMode) return new Map<TabId, TabProgressInfo>();
 
     const progressMap = new Map<TabId, TabProgressInfo>();
 
@@ -36,12 +37,10 @@ export function TabBar({ activeTab, onSelect, saveFileObj, inShowEverythingMode 
       const progressData = isHuntersJournal
         ? getHuntersJournalProgress({
             parsedJson,
-            isSaveFileDecrypted,
             inShowEverythingMode: inShowEverythingMode ?? false,
           })
         : getGenericProgress({
             parsedJson,
-            isSaveFileDecrypted,
             inShowEverythingMode: inShowEverythingMode ?? false,
             tabLabel: tab.tabId,
             isPercentProgression: tab.isPercentProgression ?? false,
@@ -87,7 +86,7 @@ export function TabBar({ activeTab, onSelect, saveFileObj, inShowEverythingMode 
     });
 
     return progressMap;
-  }, [jsonText, isSaveFileDecrypted, inShowEverythingMode]);
+  }, [jsonText, hasUploadedSaveFile, inShowEverythingMode]);
 
   return (
     <div className="flex justify-between mt-4 mb-2 flex-wrap gap-2">
@@ -97,8 +96,9 @@ export function TabBar({ activeTab, onSelect, saveFileObj, inShowEverythingMode 
           tab={tab}
           isActive={tab.tabId === activeTab}
           onSelect={onSelect}
-          saveFileObj={saveFileObj}
           progressInfo={tabProgressMap.get(tab.tabId)}
+          hasUploadedSaveFile={hasUploadedSaveFile}
+          inShowEverythingMode={inShowEverythingMode}
         />
       ))}
     </div>
