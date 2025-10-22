@@ -50,14 +50,17 @@ export function getGenericProgress({
     let currentPercent = 0;
     let maxPercent = 0;
 
-    allItems.forEach(item => {
-      const percent = item.completionPercent ?? 0;
-      maxPercent += percent;
-      const { unlocked } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
-      if (unlocked) {
-        currentPercent += percent;
-      }
-    });
+    if (!inShowEverythingMode) {
+      allItems.forEach(item => {
+        const percent = item.completionPercent ?? 0;
+        maxPercent += percent;
+
+        const { unlocked } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
+        if (unlocked) {
+          currentPercent += percent;
+        }
+      });
+    }
 
     return {
       progressType: "Percent Progression",
@@ -69,12 +72,14 @@ export function getGenericProgress({
   // Count-based progression
   let unlockedCount = 0;
 
-  allItems.forEach(item => {
-    const { unlocked } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
-    if (unlocked) {
-      unlockedCount += 1;
-    }
-  });
+  if (!inShowEverythingMode) {
+    allItems.forEach(item => {
+      const { unlocked } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
+      if (unlocked) {
+        unlockedCount += 1;
+      }
+    });
+  }
 
   return {
     progressType: "Count Progression",
@@ -118,20 +123,22 @@ export function getHuntersJournalProgress({
   let completed = 0;
   let encountered = 0;
 
-  journalEntries.forEach(entry => {
-    const { returnValue: killsAchieved } = isItemUnlockedInPlayerSave(entry.parsingInfo, parsedJson);
-    if (
-      killsAchieved !== undefined &&
-      entry.killsRequired !== undefined &&
-      typeof killsAchieved === "number" &&
-      killsAchieved > 0
-    ) {
-      encountered += 1;
-      if (killsAchieved >= entry.killsRequired) {
-        completed += 1;
+  if (!inShowEverythingMode) {
+    journalEntries.forEach(entry => {
+      const { returnValue: killsAchieved } = isItemUnlockedInPlayerSave(entry.parsingInfo, parsedJson);
+      if (
+        killsAchieved !== undefined &&
+        entry.killsRequired !== undefined &&
+        typeof killsAchieved === "number" &&
+        killsAchieved > 0
+      ) {
+        encountered += 1;
+        if (killsAchieved >= entry.killsRequired) {
+          completed += 1;
+        }
       }
-    }
-  });
+    });
+  }
 
   return {
     progressType: "Hunter's Journal Progression",
