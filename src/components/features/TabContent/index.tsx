@@ -18,8 +18,8 @@ export function TabContent(props: TabContentProps) {
     return <NoSaveFileLoaded />;
   }
 
-  // Don't allow "Show Everything" mode for Stats and Save Editor
-  if (!hasUploadedSaveFile && inShowEverythingMode && (activeTab === "Stats" || activeTab === "Save Editor")) {
+  // Don't allow "Show Everything" mode for Stats tab
+  if (!hasUploadedSaveFile && inShowEverythingMode && activeTab === "Stats") {
     return <NoSaveFileLoaded />;
   }
 

@@ -1,96 +1,37 @@
-import type { ReactNode } from "react";
-import { useMemo } from "react";
-import { formatPercent, getGenericProgress, getHuntersJournalProgress } from "../../../utils";
-import type { SaveFileObj } from "../../../hooks/useSaveFile";
+import type { ReactElement } from "react";
+import { cn } from "../../../utils/classNames";
+import type { TabProgressInfo } from "./index";
 
 interface TabProgressProps {
-  saveFileObj: SaveFileObj;
-  tabLabel: string;
-  isPercentProgression?: boolean;
-  inShowEverythingMode?: boolean;
+  progressInfo: TabProgressInfo;
+  isHovered?: boolean;
+  isActive?: boolean;
 }
 
-export function TabProgress({
-  saveFileObj,
-  tabLabel,
-  isPercentProgression = false,
-  inShowEverythingMode = false,
-}: TabProgressProps): ReactNode {
-  // Memoize progress calculations - only recalculate when save data changes
-  const progressData = useMemo(() => {
-    if (!saveFileObj.state.isSaveFileDecrypted || !saveFileObj.state.parsedJson) {
-      return null;
-    }
+export function TabProgress({ progressInfo, isHovered = false, isActive = false }: TabProgressProps): ReactElement {
+  const { displayText, isComplete, completedCount, encounteredOnlyDisplayText } = progressInfo;
+  const shouldHighlightBorder = isHovered || isActive;
 
-    const isHuntersJournal = tabLabel === "Hunter's Journal";
-    if (isHuntersJournal) {
-      return getHuntersJournalProgress({
-        parsedJson: saveFileObj.state.parsedJson,
-        isSaveFileDecrypted: saveFileObj.state.isSaveFileDecrypted,
-        inShowEverythingMode,
-      });
-    }
+  const isZeroProgress = completedCount === 0;
 
-    return getGenericProgress({
-      parsedJson: saveFileObj.state.parsedJson,
-      isSaveFileDecrypted: saveFileObj.state.isSaveFileDecrypted,
-      inShowEverythingMode,
-      tabLabel,
-      isPercentProgression,
-    });
-  }, [
-    inShowEverythingMode,
-    saveFileObj.state.parsedJson,
-    saveFileObj.state.isSaveFileDecrypted,
-    tabLabel,
-    isPercentProgression,
-  ]);
+  const colorVariant = isZeroProgress ? "orange" : isComplete ? "emerald" : "yellow";
+  const bgColor = `bg-${colorVariant}-500/25`;
+  const textColor = `text-${colorVariant}-200`;
+  const borderColor = `border-${colorVariant}-400/${shouldHighlightBorder ? "50" : "30"}`;
 
-  if (!progressData) {
-    return null;
-  }
-
-  // In "Show Everything" mode, display only the totals
-  if (inShowEverythingMode) {
-    if (progressData.progressType === "Count Progression") {
-      return <div className="text-xs text-blue-200 mt-1 font-normal">{progressData.total}</div>;
-    }
-
-    if (progressData.progressType === "Percent Progression") {
-      return <div className="text-xs text-blue-200 mt-1 font-normal">{formatPercent(progressData.total)}</div>;
-    }
-
-    if (progressData.progressType === "Hunter's Journal Progression") {
-      return <div className="text-xs text-blue-200 mt-1 font-bold">{progressData.total}</div>;
-    }
-
-    return null;
-  }
-
-  // Normal mode - show current/total
-  if (progressData.progressType === "Count Progression") {
-    return (
-      <div className="text-xs text-blue-200 mt-1 font-normal">{`${progressData.current}/${progressData.total}`}</div>
-    );
-  }
-
-  if (progressData.progressType === "Percent Progression") {
-    return (
-      <div className="text-xs text-blue-200 mt-1 font-normal">
-        {`${formatPercent(progressData.current)} / ${formatPercent(progressData.total)}`}
+  return (
+    <div className={cn("w-full border rounded-b transition-all duration-300", bgColor, textColor, borderColor)}>
+      <div className="flex items-center justify-between">
+        <div className="flex-1" />
+        <div className="text-[10px] font-medium">{displayText}</div>
+        <div className="flex-1 flex justify-end">
+          {encounteredOnlyDisplayText && (
+            <div className="text-[8px] uppercase font-medium px-2 py-0.5 text-orange-200">
+              {encounteredOnlyDisplayText}
+            </div>
+          )}
+        </div>
       </div>
-    );
-  }
-
-  if (progressData.progressType === "Hunter's Journal Progression") {
-    return (
-      <div className="text-xs mt-1 font-normal">
-        <span className="text-green-400 font-bold">{`Completed ${progressData.completed} / ${progressData.total}`}</span>
-        <br />
-        <span className="text-yellow-400 font-bold">{`Encountered ${progressData.encountered} / ${progressData.total}`}</span>
-      </div>
-    );
-  }
-
-  return null;
+    </div>
+  );
 }

@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { ALL_TRACKED_CATEGORIES } from "../../../dictionary";
 import { isItemUnlockedInPlayerSave } from "../../../dictionary/parsers";
 import type { SaveFileObj } from "../../../hooks/useSaveFile";
@@ -15,8 +16,9 @@ export function TotalProgress({ saveFileObj, hasUploadedSaveFile }: TotalProgres
     return null;
   }
 
-  let percent = 0;
-  if (saveFileObj.state.parsedJson) {
+  const percent = useMemo(() => {
+    if (!saveFileObj.state.parsedJson) return 0;
+
     const allItems = ALL_TRACKED_CATEGORIES.flatMap(category => {
       return category.sections.flatMap(section => section.items);
     });
@@ -32,15 +34,15 @@ export function TotalProgress({ saveFileObj, hasUploadedSaveFile }: TotalProgres
         unlockedPercent += item.completionPercent ?? 0;
       }
     }
-
-    percent = unlockedPercent;
-  }
+    console.log("Unlocked Percent:", unlockedPercent);
+    return unlockedPercent;
+  }, [saveFileObj.state.jsonText]);
 
   return (
-    <div className="w-full my-6">
-      <div className="flex justify-between items-center text-xs text-gray-500 mb-1">
-        <span className="font-light uppercase tracking-wider">Total Progress</span>
-        <span className="font-semibold text-gray-400">{percent}%</span>
+    <div className="w-full my-8">
+      <div className="flex justify-between items-center text-xs mb-1">
+        <span className="text-blue-200/30 font-semibold uppercase tracking-wider">Total Progress</span>
+        <span className="font-semibold text-blue-200">{percent}%</span>
       </div>
       <div className="w-full bg-gradient-to-br from-gray-800/40 to-gray-800/20 rounded-full h-2.5 overflow-hidden border border-gray-700/50">
         <div
