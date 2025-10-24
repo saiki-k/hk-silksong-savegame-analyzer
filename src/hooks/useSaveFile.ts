@@ -42,10 +42,35 @@ export function useSaveFile() {
   }, [jsonText]);
 
   const isValidJson = useMemo(() => {
-    if (!jsonText) return true; // Empty text is considered valid
+    if (!jsonText) return true; // Empty text is considered valid JSON
     try {
-      JSON.parse(jsonText);
-      setErrorMessage("");
+      const parsedJson = JSON.parse(jsonText);
+
+      /*
+       ** This isValidSilksongSaveData check is, in part, to enable <SaveEditor /> to access
+       ** non-Silkshong, Silksong-like (think Hollow Knight), valid, decrypted .dat files (in JSON format),
+       ** while still preventing non-Silksong files from being treated as valid Silksong save data.
+       **
+       ** hasUploadedSaveFile for such files is true because of (fileName && isSaveFileDecrypted)
+       ** and <SaveEditor /> becomes usable once hasUploadedSaveFile is true.
+       **
+       ** However, in such cases, hasUploadedSaveData (hasUploadedSaveFile && !errorMessage) is aptly set to false
+       ** because of the errorMessage being set to a truthy value in handleFile: "This does not appear to be a Silksong save file."
+       ** This prevents the rest of the app from trying to read the save data, because it !hasUploadedSaveData :D
+       **
+       ** To keep the above behaviour intact, even if jsonText is valid, we only clear the
+       ** errorMessage here if parsedJson is valid Silksong save data too; only then hasUploadedSaveData
+       ** becomes true.
+       **
+       ** Otherwise, without this check, the app becomes usable with any non-Silksong/Silksong-like
+       ** save data, which is not desired.
+       **
+       ** We could have prevented all of the nonsense (and this check) by throwing an early error in
+       ** handleFile, before the truthy "success" setters (setIsSaveFileDecrypted, setJsonText calls),
+       ** but then we wouldn't have this nice thing, would we! :D
+       */
+      if (isValidSilksongSaveData(parsedJson)) setErrorMessage("");
+
       return true;
     } catch {
       setErrorMessage("Invalid JSON format. Please check your syntax.");
@@ -66,19 +91,16 @@ export function useSaveFile() {
         const json = decodeSave(data);
         const parsedJson = JSON.parse(json);
 
-        if (!isValidSilksongSaveData(parsedJson)) {
-          throw new Error("This does not appear to be a Silksong save file.");
-        }
-
         const pretty = JSON.stringify(parsedJson, null, 2);
         setJsonText(pretty);
         setIsSaveFileDecrypted(true);
-        setErrorMessage("");
-      } catch (error: unknown) {
-        if (error instanceof Error && error.message.includes("Silksong")) {
-          setErrorMessage(error.message);
-          return;
+
+        if (!isValidSilksongSaveData(parsedJson)) {
+          setErrorMessage("This does not appear to be a Silksong save file.");
+        } else {
+          setErrorMessage("");
         }
+      } catch (error: unknown) {
         const errorMsg = "This file is in an unsupported format.";
         setErrorMessage(errorMsg);
         console.error(error);
