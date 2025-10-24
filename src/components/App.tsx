@@ -47,14 +47,12 @@ export default function App() {
 
   useEffect(() => {
     // Reset filters when a (new) save file is loaded
-    if (hasUploadedSaveFile) {
-      setInShowEverythingMode(false);
-      setShowSpoilers(false);
-      setShowMissingOnly(true);
-      setActFilter(new Set([1, 2, 3]));
-      setActiveTab("Stats");
-    }
-  }, [hasUploadedSaveFile, saveFileObj.state.jsonText]);
+    setInShowEverythingMode(false);
+    setShowSpoilers(false);
+    setShowMissingOnly(true);
+    setActFilter(new Set([1, 2, 3]));
+    setActiveTab("Stats");
+  }, [saveFileObj]);
 
   const handleCopyPath = (path: string) => {
     navigator.clipboard.writeText(path);
