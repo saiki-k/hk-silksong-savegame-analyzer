@@ -7,7 +7,7 @@ import { cn } from "@/utils";
 function EditorStatusBar({ isValidJson }: { isValidJson: boolean }) {
   return (
     <div className="mb-0 z-100">
-      <div className="bg-gradient-to-tl from-gray-800/40 to-gray-800/20 border-2 border-gray-600/30 px-2 py-0.5 border-t-0">
+      <div className="bg-gradient-to-tl from-gray-800/40 to-gray-800/20 border-2 border-gray-600/30 px-4 py-2 border-t-0">
         <div className="flex justify-between items-center text-xs text-gray-300 ">
           <p className="-mb-2">
             Use <span className="font-mono">Ctrl</span>
