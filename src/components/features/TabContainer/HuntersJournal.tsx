@@ -99,14 +99,18 @@ export function HuntersJournalContent({
                   `${getHoverBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
                 renderCell: (item: NormalizedItem) => item.name,
               },
-              {
-                width: "130px",
-                header: "Kills Achieved",
-                headerClassName: "px-2 py-3 text-center text-gray-300 font-medium",
-                cellClassName: (item: NormalizedItem) =>
-                  `text-center ${getHoverBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
-                renderCell: (item: NormalizedItem) => item.killsAchieved ?? 0,
-              },
+              ...(!inShowEverythingMode
+                ? [
+                    {
+                      width: "130px",
+                      header: "Kills Achieved",
+                      headerClassName: "px-2 py-3 text-center text-gray-300 font-medium",
+                      cellClassName: (item: NormalizedItem) =>
+                        `text-center ${getHoverBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
+                      renderCell: (item: NormalizedItem) => item.killsAchieved ?? 0,
+                    },
+                  ]
+                : []),
               {
                 width: "130px",
                 header: "Kills Required",
