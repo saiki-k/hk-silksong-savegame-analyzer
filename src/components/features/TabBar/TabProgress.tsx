@@ -5,18 +5,13 @@ import { cn } from "@/utils";
 interface TabProgressProps {
   inShowEverythingMode: boolean;
   progressInfo: TabProgressInfo;
-  isHovered?: boolean;
-  isActive?: boolean;
 }
 
 export function TabProgress({
   inShowEverythingMode,
   progressInfo,
-  isHovered = false,
-  isActive = false,
 }: TabProgressProps): ReactElement {
   const { progressText, isProgressComplete, completedCount, encounteredProgressText } = progressInfo;
-  const shouldHighlightBorder = isHovered || isActive;
 
   const isZeroProgress = completedCount === 0;
 
@@ -32,17 +27,14 @@ export function TabProgress({
     emerald: "text-emerald-200",
     yellow: "text-yellow-200",
   };
-  const borderColorMap: Record<string, { active: string; inactive: string }> = {
-    orange: { active: "border-orange-400/50", inactive: "border-orange-400/30" },
-    emerald: { active: "border-emerald-400/50", inactive: "border-emerald-400/30" },
-    yellow: { active: "border-yellow-400/50", inactive: "border-yellow-400/30" },
+  const borderColorMap = {
+    orange: "border-orange-400/30 group-hover:border-orange-400/50 group-aria-[pressed=true]:border-orange-400/50",
+    emerald: "border-emerald-400/30 group-hover:border-emerald-400/50 group-aria-[pressed=true]:border-emerald-400/50",
+    yellow: "border-yellow-400/30 group-hover:border-yellow-400/50 group-aria-[pressed=true]:border-yellow-400/50",
   };
-
   const bgColor = bgColorMap[colorVariant];
   const textColor = textColorMap[colorVariant];
-  const borderColor = shouldHighlightBorder
-    ? borderColorMap[colorVariant].active
-    : borderColorMap[colorVariant].inactive;
+  const borderColor = borderColorMap[colorVariant];
 
   return (
     <div className={cn("w-full border rounded-b transition-all duration-300", bgColor, textColor, borderColor)}>

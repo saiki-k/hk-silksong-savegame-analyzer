@@ -18,6 +18,7 @@ export interface TabProgressInfo {
   encounteredCount?: number;
   completedCount?: number;
   encounteredProgressText?: string;
+  sectionNames?: string[];
 }
 
 export function TabBar({
@@ -79,10 +80,13 @@ export function TabBar({
         progressText = inShowEverythingMode ? `${categoryTotal}` : `${currentTotal} / ${categoryTotal}`;
       }
 
+      const sectionNames = Object.keys(category.sections);
+
       progressMap.set(tab.tabId, {
         isProgressComplete,
         progressText,
         completedCount: currentTotal,
+        sectionNames: sectionNames.length > 1 ? sectionNames : undefined,
       });
     });
 
