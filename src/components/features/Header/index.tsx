@@ -39,7 +39,7 @@ export function Header() {
               className="absolute font-semibold inset-0 bg-gradient-to-r from-transparent via-blue-50 to-transparent bg-clip-text text-transparent pointer-events-none"
               style={{
                 backgroundSize: "200% 100%",
-                animation: "shimmer 2.5s ease-in-out infinite",
+                animation: "shimmer 1.5s ease-in-out infinite",
                 WebkitBackgroundClip: "text",
                 backgroundClip: "text",
                 mixBlendMode: "screen",

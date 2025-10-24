@@ -11,8 +11,8 @@ export function formatSecondsToHMS(seconds: number): string {
 }
 
 interface getCategoryDisplayStatusTextParams {
-  inShowEverythingMode: boolean;
-  showUnlocked: boolean;
+  showMissingOnly: boolean;
+  inShowEverythingMode?: boolean;
   showSpoilers: boolean;
   actFilter?: Set<1 | 2 | 3>;
   itemTypeText?: "items" | "entries";
@@ -20,16 +20,14 @@ interface getCategoryDisplayStatusTextParams {
 
 export function getCategoryDisplayStatusText({
   inShowEverythingMode,
-  showUnlocked,
+  showMissingOnly,
   showSpoilers,
   actFilter,
   itemTypeText = "items",
 }: getCategoryDisplayStatusTextParams): string {
-  let itemsText = "";
-  if (inShowEverythingMode || showUnlocked) {
+  let itemsText = itemTypeText === "entries" ? "incomplete entries" : "missing items";
+  if (inShowEverythingMode || !showMissingOnly) {
     itemsText = `all ${itemTypeText}`;
-  } else {
-    itemsText = itemTypeText === "entries" ? "incomplete entries" : "missing items";
   }
 
   const spoilersText = showSpoilers ? "spoilers shown" : "spoilers blurred (until you hover over them)";

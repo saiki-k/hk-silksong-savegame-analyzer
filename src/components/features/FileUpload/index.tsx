@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import type { ChangeEvent } from "react";
-import type { SaveFileObj } from "../../../hooks/useSaveFile";
+import type { SaveFileObj } from "@/hooks";
 
 interface FileUploadProps {
   saveFileObj: SaveFileObj;
@@ -39,7 +39,7 @@ export function FileUpload({ saveFileObj }: FileUploadProps) {
         <div className="space-y-1.5">
           <div className="text-3xl opacity-50">⚠️</div>
           <p className="text-sm font-semibold text-red-400 mb-0">{fileName || "Error loading file"}</p>
-          <p className="text-xs text-red-300/80">{errorMessage} Click to select a different file.</p>
+          <p className="text-xs text-red-300/80">{errorMessage}</p>
         </div>
       );
     }

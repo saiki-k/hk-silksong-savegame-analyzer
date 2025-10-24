@@ -27,10 +27,10 @@ export function isItemUnlockedInPlayerSave(
 
   const playerData = (saveData as any).playerData ?? {};
 
-  const typeHandlers = {
+  const parsers = {
     flag: (flagName: string) => {
-      const val = !!playerData[flagName];
-      return { unlocked: val };
+      const unlocked = !!playerData[flagName];
+      return { unlocked };
     },
 
     flagMulti: (flagNames: string[]) => {
@@ -44,14 +44,15 @@ export function isItemUnlockedInPlayerSave(
       return { unlocked };
     },
 
-    flagInt: ([flagName, value]: [string, number]) => {
-      const actual = (playerData[flagName] as number) ?? 0;
-      return { unlocked: actual >= value };
+    flagMin: ([flagName, requiredValue]: [string, number]) => {
+      const actualValue = (playerData[flagName] as number) ?? 0;
+      return { unlocked: actualValue >= requiredValue };
     },
 
     flagReturn: (flagName: string) => {
-      const val = !!playerData[flagName];
-      return { unlocked: val, returnValue: playerData[flagName] };
+      const returnValue = playerData[flagName];
+      const unlocked = !!returnValue;
+      return { unlocked, returnValue };
     },
 
     tool: (toolNames: string[]) => {
@@ -92,14 +93,14 @@ export function isItemUnlockedInPlayerSave(
 
     collectable: (itemName: string) => {
       const collectableEntry = (playerData as any).Collectables?.savedData?.find((x: any) => x.Name === itemName);
-      const amount = collectableEntry?.Data?.Amount ?? 0;
-      return { unlocked: amount > 0 };
+      const foundAmount = collectableEntry?.Data?.Amount ?? 0;
+      return { unlocked: foundAmount > 0 };
     },
 
-    relict: (relicName: string) => {
+    relic: (relicName: string) => {
       const relics = (playerData as any)?.Relics?.savedData || [];
-      const foundRelict = relics.find((r: any) => r?.Name === relicName);
-      return { unlocked: !!foundRelict?.Data?.IsCollected };
+      const foundRelic = relics.find((r: any) => r?.Name === relicName);
+      return { unlocked: !!foundRelic?.Data?.IsCollected };
     },
 
     quest: (questName: string) => {
@@ -110,8 +111,8 @@ export function isItemUnlockedInPlayerSave(
     sceneData: ([sceneName, id, inverse = false]: [string, string, boolean?]) => {
       const sceneData = (saveData as any).sceneData || {};
       const allEntries = sceneData.persistentBools?.serializedList || [];
-      const match = allEntries.find((x: any) => x.SceneName === sceneName && x.ID === id);
-      return { unlocked: inverse ? match?.Value === false : match?.Value === true };
+      const foundEntry = allEntries.find((x: any) => x.SceneName === sceneName && x.ID === id);
+      return { unlocked: inverse ? foundEntry?.Value === false : foundEntry?.Value === true };
     },
 
     sceneVisited: (sceneName: string) => {
@@ -125,7 +126,7 @@ export function isItemUnlockedInPlayerSave(
     },
   };
   // @ts-expect-error - Dynamic function call based on parsing type
-  return typeHandlers[itemParsingInfo.type](itemParsingInfo.internalId);
+  return parsers[itemParsingInfo.type](itemParsingInfo.internalId);
 }
 
 export function isItemInCurrentGameMode(

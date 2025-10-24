@@ -2,7 +2,7 @@ import type { TrackableCategory } from "../types";
 
 export const quests: TrackableCategory = {
   name: "Quests",
-  description: "Quests",
+  description: "Objectives and Wishes undertaken by Hornet throughout her journey across Pharloom.",
   sections: [
     {
       name: "Objectives",
@@ -616,7 +616,6 @@ export const quests: TrackableCategory = {
     {
       name: "Wishes · Steel",
       description: "Unique wish given by a seer.",
-      hasGameModeSpecificItems: true,
       items: [
         {
           name: "A Vassal Lost",

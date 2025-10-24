@@ -1,5 +1,5 @@
-import { Button } from "../Button";
-import { cn } from "../../../utils/classNames";
+import { Button } from "@/components/ui";
+import { cn } from "@/utils";
 
 interface MapButtonProps {
   mapLink?: string;

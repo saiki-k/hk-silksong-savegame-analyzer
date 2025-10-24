@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { EditorContainer } from "./EditorContainer.tsx";
 import { EditorToggler } from "./EditorToggler.tsx";
-import type { SaveFileObj } from "../../../hooks/useSaveFile.ts";
+import type { SaveFileObj } from "@/hooks";
 
 interface SaveEditorProps {
   saveFileObj: SaveFileObj;
@@ -24,9 +24,7 @@ export function SaveEditor({ saveFileObj, hasUploadedSaveFile }: SaveEditorProps
         isExpanded={isExpanded}
         onToggle={() => setIsExpanded(!isExpanded)}
       />
-      {hasUploadedSaveFile ? (
-        <EditorContainer saveFileObj={saveFileObj} isExpanded={isExpanded} hasUploadedSaveFile={hasUploadedSaveFile} />
-      ) : null}
+      {hasUploadedSaveFile ? <EditorContainer saveFileObj={saveFileObj} isExpanded={isExpanded} /> : null}
     </div>
   );
 }

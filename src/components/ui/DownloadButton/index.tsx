@@ -1,5 +1,5 @@
-import { Button } from "../../ui/Button";
-import { cn } from "../../../utils/classNames";
+import { Button } from "@/components/ui";
+import { cn } from "@/utils";
 
 interface DownloadButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;

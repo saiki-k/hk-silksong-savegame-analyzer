@@ -8,7 +8,6 @@ export const silkeaters: TrackableCategory = {
     {
       name: "Main",
       description: "",
-      hasGameModeSpecificItems: true,
       items: [
         {
           name: "Silkeater · Deep Docks",
@@ -28,7 +27,8 @@ export const silkeaters: TrackableCategory = {
         {
           name: "Silkeater · Blasted Steps",
           whichAct: 1,
-          locationDetails: "Blasted Steps: In the eastern area, east of where Shakra appears.",
+          locationDetails:
+            "Blasted Steps: In the eastern area, east of where Shakra appears. This Silkeater is not available in Steel Soul Mode.",
           parsingInfo: { type: "sceneData", internalId: ["Coral_37", "Silk Grub Large Cocoon"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478505",
           onlyFoundInClassicMode: true,

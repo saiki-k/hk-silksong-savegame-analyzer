@@ -1,5 +1,10 @@
-﻿import { useState, useEffect } from "react";
-import { useSaveFile } from "../hooks/useSaveFile";
+﻿import { useState, useEffect, useMemo } from "react";
+
+import { useSaveFile } from "@/hooks";
+
+import { NORMALISED_DICT_MAP, type DictMapWithSaveData } from "@/dictionary";
+
+import { computeDictMapWithSaveData } from "@/utils";
 
 import type { TabId } from "./features/TabBar/tabs";
 
@@ -15,60 +20,48 @@ import { Separator } from "./ui/Separator";
 
 import { TotalProgress } from "./features/TotalProgress";
 import { TabBar } from "./features/TabBar";
-import { TabContent } from "./features/TabContent";
+import { TabContainer } from "./features/TabContainer";
 
 import { Footer } from "./features/Footer";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<TabId>("Stats");
-  const [hasUploadedSaveFile, setHasUploadedSaveFile] = useState(false);
   const [showSpoilers, setShowSpoilers] = useState(false);
-  const [showUnlocked, setShowUnlocked] = useState(false);
+  const [showMissingOnly, setShowMissingOnly] = useState(true);
   const [inShowEverythingMode, setInShowEverythingMode] = useState(false);
   const [actFilter, setActFilter] = useState<ActFilter>(new Set([1, 2, 3]));
 
-  const saveFileObjFromHook = useSaveFile();
-  const [saveFileObj, setSaveFileObj] = useState(saveFileObjFromHook);
+  const saveFileObj = useSaveFile();
+
+  const hasUploadedSaveFile = Boolean(saveFileObj.state.fileName && saveFileObj.state.isSaveFileDecrypted);
+  const hasUploadedSaveData = Boolean(hasUploadedSaveFile && !saveFileObj.state.errorMessage);
+
+  const dictMapWithSaveData = useMemo((): DictMapWithSaveData | null => {
+    if (!hasUploadedSaveData && !inShowEverythingMode) {
+      return null;
+    }
+
+    const parsedJson = !inShowEverythingMode && (saveFileObj.state.parsedJson ?? {});
+    return computeDictMapWithSaveData(NORMALISED_DICT_MAP, parsedJson, inShowEverythingMode);
+  }, [saveFileObj.state.parsedJson, hasUploadedSaveData, inShowEverythingMode]);
 
   useEffect(() => {
-    setSaveFileObj(saveFileObjFromHook);
-
-    const {
-      state: { fileName, isSaveFileDecrypted, errorMessage },
-    } = saveFileObjFromHook;
-    const hasUploadedSaveFile = Boolean(fileName && isSaveFileDecrypted && !errorMessage);
-    setHasUploadedSaveFile(hasUploadedSaveFile);
-  }, [saveFileObjFromHook.state.jsonText]);
-
-  useEffect(() => {
-    // Reset inShowEverythingMode when a save file is loaded
+    // Reset filters when a (new) save file is loaded
     if (hasUploadedSaveFile) {
       setInShowEverythingMode(false);
+      setShowSpoilers(false);
+      setShowMissingOnly(true);
+      setActFilter(new Set([1, 2, 3]));
+      setActiveTab("Stats");
     }
-
-    // When in "show everything" mode, provide empty parsedJson to display all content
-    if (!hasUploadedSaveFile && inShowEverythingMode) {
-      setSaveFileObj(prevSaveFileObj => ({
-        ...prevSaveFileObj,
-        state: {
-          ...prevSaveFileObj.state,
-          parsedJson: {},
-          jsonText: "{}",
-        },
-      }));
-    }
-
-    if (!hasUploadedSaveFile && !inShowEverythingMode) {
-      setSaveFileObj(saveFileObjFromHook);
-    }
-  }, [hasUploadedSaveFile, inShowEverythingMode]);
+  }, [hasUploadedSaveFile, saveFileObj.state.jsonText]);
 
   const handleCopyPath = (path: string) => {
     navigator.clipboard.writeText(path);
   };
 
   const handleTabSelect = (tab: TabId) => {
-    // Toggle: If the active tab is clicked, deactivate it and return to Stats
+    // If the active tab is clicked, deactivate it and return to Stats
     if (tab === activeTab) {
       setActiveTab("Stats");
     } else {
@@ -91,36 +84,38 @@ export default function App() {
       <FileUpload saveFileObj={saveFileObj} />
       <FilterControls
         hasUploadedSaveFile={hasUploadedSaveFile}
+        hasUploadedSaveData={hasUploadedSaveData}
         showSpoilers={showSpoilers}
-        showUnlocked={showUnlocked}
+        showMissingOnly={showMissingOnly}
         inShowEverythingMode={inShowEverythingMode}
         actFilter={actFilter}
         onShowSpoilersChange={setShowSpoilers}
-        onShowUnlockedChange={setShowUnlocked}
+        onShowMissingOnlyChange={setShowMissingOnly}
         onShowEverythingToggle={handleShowEverythingToggle}
         onActFilterChange={setActFilter}
       />
 
       <Separator />
 
-      <TotalProgress saveFileObj={saveFileObj} hasUploadedSaveFile={hasUploadedSaveFile} />
+      <TotalProgress dictMapWithSaveData={dictMapWithSaveData} inShowEverythingMode={inShowEverythingMode} />
       <TabBar
         activeTab={activeTab}
         onSelect={handleTabSelect}
-        saveFileObj={saveFileObj}
+        dictMapWithSaveData={dictMapWithSaveData}
         inShowEverythingMode={inShowEverythingMode}
-        hasUploadedSaveFile={hasUploadedSaveFile}
+        hasUploadedSaveData={hasUploadedSaveData}
       />
 
       <Separator />
 
-      <TabContent
+      <TabContainer
         activeTab={activeTab}
-        saveFileObj={saveFileObj}
+        dictMapWithSaveData={dictMapWithSaveData}
         hasUploadedSaveFile={hasUploadedSaveFile}
-        showUnlocked={showUnlocked}
-        showSpoilers={showSpoilers}
+        hasUploadedSaveData={hasUploadedSaveData}
+        showMissingOnly={showMissingOnly}
         inShowEverythingMode={inShowEverythingMode}
+        showSpoilers={showSpoilers}
         actFilter={actFilter}
       />
 

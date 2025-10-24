@@ -1,7 +1,6 @@
 import { useState } from "react";
 import type { MouseEvent } from "react";
-import { Button } from "../../ui/Button";
-import { Modal } from "../../ui/Modal";
+import { Button, Modal } from "@/components/ui";
 import { PlatformInfo } from "./PlatformInfo";
 
 interface SaveFileInfoProps {

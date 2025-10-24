@@ -1,15 +1,15 @@
 import { useState, useRef, useEffect, type ReactElement } from "react";
 import Editor from "@monaco-editor/react";
-import type { SaveFileObj } from "../../../hooks/useSaveFile.ts";
-import { DownloadButton } from "../../ui/index.ts";
-import { cn } from "../../../utils/index.ts";
+import type { SaveFileObj } from "@/hooks";
+import { DownloadButton } from "@/components/ui";
+import { cn } from "@/utils";
 
-function SaveEditorStatusBar({ isValidJson }: { isValidJson: boolean }) {
+function EditorStatusBar({ isValidJson }: { isValidJson: boolean }) {
   return (
-    <div className="mb-0">
-      <div className="bg-gradient-to-br from-gray-800/40 to-gray-800/20 border-2 border-gray-600/30 px-2 py-2 border-t-0">
+    <div className="mb-0 z-100">
+      <div className="bg-gradient-to-tl from-gray-800/40 to-gray-800/20 border-2 border-gray-600/30 px-2 py-0.5 border-t-0">
         <div className="flex justify-between items-center text-xs text-gray-300 ">
-          <p>
+          <p className="-mb-2">
             Use <span className="font-mono">Ctrl</span>
             <span className="text-gray-400 mx-1">+</span>
             <span className="font-mono">F</span>
@@ -19,8 +19,8 @@ function SaveEditorStatusBar({ isValidJson }: { isValidJson: boolean }) {
             <span className="font-mono">F</span> to search within the editor.
           </p>
           <span
-            className={`inline-flex items-center justify-center text-xs px-2 py-0.5 rounded-lg ${
-              isValidJson ? "bg-green-600 text-white" : "bg-red-600 text-white"
+            className={`inline-flex items-center justify-center font-semibold text-[10px] text-white border-2 px-2 py-1 rounded-lg ${
+              isValidJson ? "border-emerald-500 bg-emerald-600" : "border-orange-500 bg-orange-600"
             }`}
           >
             {isValidJson ? "✓ Valid JSON" : "✗ Invalid JSON"}
@@ -34,16 +34,10 @@ function SaveEditorStatusBar({ isValidJson }: { isValidJson: boolean }) {
 export function EditorContainer({
   saveFileObj,
   isExpanded,
-  hasUploadedSaveFile,
 }: {
   saveFileObj: SaveFileObj;
   isExpanded: boolean;
-  hasUploadedSaveFile: boolean;
 }): ReactElement {
-  if (!hasUploadedSaveFile) {
-    return <div className="text-white text-center">No save file loaded.</div>;
-  }
-
   const [editorHeight, setEditorHeight] = useState(400);
   const [isDragging, setIsDragging] = useState(false);
   const editorRef = useRef<HTMLDivElement>(null);
@@ -101,7 +95,7 @@ export function EditorContainer({
       {/* Fullscreen overlay while dragging to maintain cursor */}
       {isDragging && <div className="fixed inset-0 z-[9999] cursor-ns-resize" style={{ pointerEvents: "all" }} />}
 
-      <SaveEditorStatusBar isValidJson={saveFileObj.state.isValidJson} />
+      <EditorStatusBar isValidJson={saveFileObj.state.isValidJson} />
 
       <div
         className="bg-gradient-to-br from-gray-800/40 to-gray-800/20 border-2 border-gray-600/30 border-t-0 overflow-hidden relative"

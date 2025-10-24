@@ -1,4 +1,4 @@
-import FooterImage from "../../../assets/Hornet.png";
+import FooterImage from "@/assets/Hornet.png";
 import { footerConfig } from "./config";
 
 export function Footer() {

@@ -22,7 +22,7 @@ export interface SaveFileObj {
   };
 }
 
-export function isValidSaveData(parsedJson: object): boolean {
+function isValidSilksongSaveData(parsedJson: object): boolean {
   return "playerData" in parsedJson && "silk" in ((parsedJson.playerData ?? {}) as object);
 }
 
@@ -66,8 +66,8 @@ export function useSaveFile() {
         const json = decodeSave(data);
         const parsedJson = JSON.parse(json);
 
-        if (!isValidSaveData(parsedJson)) {
-          throw new Error("This does not appear to be a Silksong saveFile.");
+        if (!isValidSilksongSaveData(parsedJson)) {
+          throw new Error("This does not appear to be a Silksong save file.");
         }
 
         const pretty = JSON.stringify(parsedJson, null, 2);
@@ -110,22 +110,37 @@ export function useSaveFile() {
     downloadFile(jsonText, `${nameWithoutExtension || "save"}.json`);
   }, [jsonText, fileName]);
 
-  return {
-    state: {
+  return useMemo(
+    () => ({
+      state: {
+        fileName,
+        isSaveFileDecrypted,
+        jsonText,
+        parsedJson,
+        isValidJson,
+        errorMessage,
+      },
+      handlers: {
+        setJsonText,
+        handleFile,
+        handleDrop,
+        handleDragOver,
+        saveEncrypted,
+        savePlain,
+      },
+    }),
+    [
       fileName,
       isSaveFileDecrypted,
       jsonText,
       parsedJson,
       isValidJson,
       errorMessage,
-    },
-    handlers: {
-      setJsonText,
       handleFile,
       handleDrop,
       handleDragOver,
       saveEncrypted,
       savePlain,
-    },
-  };
+    ]
+  );
 }

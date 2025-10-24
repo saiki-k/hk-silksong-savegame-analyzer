@@ -6,24 +6,26 @@ export type ActFilter = Set<1 | 2 | 3>;
 
 interface FilterControlsProps {
   hasUploadedSaveFile: boolean;
+  hasUploadedSaveData: boolean;
   showSpoilers: boolean;
-  showUnlocked: boolean;
+  showMissingOnly: boolean;
   inShowEverythingMode: boolean;
   actFilter: ActFilter;
   onShowSpoilersChange: (value: boolean) => void;
-  onShowUnlockedChange: (value: boolean) => void;
+  onShowMissingOnlyChange: (value: boolean) => void;
   onShowEverythingToggle: () => void;
   onActFilterChange: (value: ActFilter) => void;
 }
 
 export function FilterControls({
   hasUploadedSaveFile,
+  hasUploadedSaveData,
   showSpoilers,
-  showUnlocked,
+  showMissingOnly,
   inShowEverythingMode,
   actFilter,
   onShowSpoilersChange,
-  onShowUnlockedChange,
+  onShowMissingOnlyChange,
   onShowEverythingToggle,
   onActFilterChange,
 }: FilterControlsProps) {
@@ -39,14 +41,15 @@ export function FilterControls({
     <div className="-mt-1">
       <FiltersBar
         hasUploadedSaveFile={hasUploadedSaveFile}
+        hasUploadedSaveData={hasUploadedSaveData}
         showSpoilers={showSpoilers}
-        showUnlocked={showUnlocked}
+        showMissingOnly={showMissingOnly}
         inShowEverythingMode={inShowEverythingMode}
         actFilter={actFilter}
         onShowSpoilersChange={onShowSpoilersChange}
-        onShowUnlockedChange={onShowUnlockedChange}
+        onShowMissingOnlyChange={onShowMissingOnlyChange}
         onShowEverythingToggle={() => {
-          if (inShowEverythingMode && !hasUploadedSaveFile) {
+          if (inShowEverythingMode && !hasUploadedSaveData) {
             setIsExpanded(false);
           }
           onShowEverythingToggle();

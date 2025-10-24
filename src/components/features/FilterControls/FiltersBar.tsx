@@ -1,6 +1,5 @@
-import { TextWithEmojiButton, PillButton } from "../../ui/ToggleButton";
-import { Separator } from "../../ui/Separator";
-import { cn } from "../../../utils/classNames";
+import { TextWithEmojiButton, PillButton, Separator } from "@/components/ui";
+import { cn } from "@/utils";
 import type { ActFilter } from "./index";
 
 function ShowEverythingButton({
@@ -20,19 +19,19 @@ function ShowEverythingButton({
   );
 }
 
-function ShowUnlockedButton({
-  showUnlocked,
+function ShowMissingOnlyButton({
+  showMissingOnly,
   onClick,
   disabled = false,
 }: {
-  showUnlocked: boolean;
+  showMissingOnly: boolean;
   onClick: () => void;
   disabled?: boolean;
 }) {
   return (
     <TextWithEmojiButton
-      text={showUnlocked ? "Showing all items!" : "Showing missing items"}
-      emoji={showUnlocked ? "🔓" : "🔒"}
+      text={showMissingOnly ? "Showing missing items" : "Showing all items!"}
+      emoji={showMissingOnly ? "🔒" : "🔓"}
       emojiClassName="-mt-0.5"
       onClick={onClick}
       disabled={disabled}
@@ -62,12 +61,13 @@ function SpoilersButton({
 
 interface FiltersBarProps {
   hasUploadedSaveFile: boolean;
+  hasUploadedSaveData: boolean;
   showSpoilers: boolean;
-  showUnlocked: boolean;
+  showMissingOnly: boolean;
   inShowEverythingMode: boolean;
   actFilter: ActFilter;
   onShowSpoilersChange: (value: boolean) => void;
-  onShowUnlockedChange: (value: boolean) => void;
+  onShowMissingOnlyChange: (value: boolean) => void;
   onShowEverythingToggle: () => void;
   onActFilterChange: (value: ActFilter) => void;
   isExpanded: boolean;
@@ -75,12 +75,13 @@ interface FiltersBarProps {
 
 export function FiltersBar({
   hasUploadedSaveFile,
+  hasUploadedSaveData,
   showSpoilers,
-  showUnlocked,
+  showMissingOnly,
   inShowEverythingMode,
   actFilter,
   onShowSpoilersChange,
-  onShowUnlockedChange,
+  onShowMissingOnlyChange,
   onShowEverythingToggle,
   onActFilterChange,
   isExpanded,
@@ -91,10 +92,14 @@ export function FiltersBar({
     { value: 3 as const, label: "Act III" },
   ];
 
-  const filtersDisabled = !hasUploadedSaveFile && !inShowEverythingMode;
+  const filtersDisabled = (!hasUploadedSaveFile || !hasUploadedSaveData) && !inShowEverythingMode;
 
   const toggleAct = (act: 1 | 2 | 3) => {
-    if (filtersDisabled) return;
+    // Prevent toggling an act when it's the only one selected
+    const shouldNotToggleAct = actFilter.size === 1 && actFilter.has(act);
+
+    if (filtersDisabled || shouldNotToggleAct) return;
+
     const newFilter = new Set(actFilter);
     if (newFilter.has(act)) {
       newFilter.delete(act);
@@ -115,9 +120,9 @@ export function FiltersBar({
       <div className="flex items-center justify-between gap-6 text-sm">
         <div className="w-[200px] flex justify-end">
           {hasUploadedSaveFile ? (
-            <ShowUnlockedButton
-              showUnlocked={showUnlocked}
-              onClick={() => onShowUnlockedChange(!showUnlocked)}
+            <ShowMissingOnlyButton
+              showMissingOnly={showMissingOnly}
+              onClick={() => onShowMissingOnlyChange(!showMissingOnly)}
               disabled={filtersDisabled}
             />
           ) : (
@@ -133,7 +138,7 @@ export function FiltersBar({
               const isSelected = actFilter.has(option.value);
               return (
                 <PillButton
-                  key={option.value}
+                  key={option.label}
                   onClick={() => toggleAct(option.value)}
                   disabled={filtersDisabled}
                   selected={isSelected}

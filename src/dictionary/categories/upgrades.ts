@@ -13,7 +13,7 @@ export const upgrades: TrackableCategory = {
           whichAct: 1,
           completionPercent: 1,
           locationDetails: "Bellhart: Speak to Plinney after defeating Widow.",
-          parsingInfo: { type: "flagInt", internalId: ["nailUpgrades", 1] },
+          parsingInfo: { type: "flagMin", internalId: ["nailUpgrades", 1] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478210",
         },
         {
@@ -21,7 +21,7 @@ export const upgrades: TrackableCategory = {
           whichAct: 2,
           completionPercent: 1,
           locationDetails: "Bellhart: Speak to Plinney after acquiring 1 Pale Oil.",
-          parsingInfo: { type: "flagInt", internalId: ["nailUpgrades", 2] },
+          parsingInfo: { type: "flagMin", internalId: ["nailUpgrades", 2] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478211",
         },
         {
@@ -30,7 +30,7 @@ export const upgrades: TrackableCategory = {
           completionPercent: 1,
           locationDetails:
             'Bellhart: Complete "Great Taste of Pharloom" wish. Speak to Plinney and give him 450 Rosaries, and 1 Pale Oil.',
-          parsingInfo: { type: "flagInt", internalId: ["nailUpgrades", 3] },
+          parsingInfo: { type: "flagMin", internalId: ["nailUpgrades", 3] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478889",
         },
         {
@@ -39,7 +39,7 @@ export const upgrades: TrackableCategory = {
           completionPercent: 1,
           locationDetails:
             'Bellhart: Complete "Ecstasy of the End" wish (Appears on the Bellhart Wishwall in ACT 3 after finding every Lost Flea). Speak to Plinney and give him 680 Rosaries, and 1 Pale Oil.',
-          parsingInfo: { type: "flagInt", internalId: ["nailUpgrades", 4] },
+          parsingInfo: { type: "flagMin", internalId: ["nailUpgrades", 4] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479444",
         },
       ],
@@ -64,7 +64,7 @@ export const upgrades: TrackableCategory = {
           locationDetails:
             "The Marrow: Complete Loddie's first pin challenge by hitting the target 15 times, or pick it up from this location in ACT 3.",
           parsingInfo: [
-            { type: "flagInt", internalId: ["pinGalleriesCompleted", 1] },
+            { type: "flagMin", internalId: ["pinGalleriesCompleted", 1] },
             { type: "sceneData", internalId: ["Bone_12", "Ladybug Craft Pickup"] },
           ],
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478252",

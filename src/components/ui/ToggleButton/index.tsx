@@ -1,6 +1,6 @@
-import { Button } from "../Button";
+import { Button } from "@/components/ui";
+import { cn } from "@/utils";
 import { toggleButtonStyles } from "./styles";
-import { cn } from "../../../utils/classNames";
 
 interface ToggleButtonProps {
   onClick: () => void;

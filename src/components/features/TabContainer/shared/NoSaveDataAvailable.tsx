@@ -1,10 +1,28 @@
 import { useState } from "react";
-import Sherma from "../../../../assets/Sherma.png";
-import ShermaGif from "../../../../assets/Sherma.gif";
-import { cn } from "../../../../utils/classNames";
+import Sherma from "@/assets/Sherma.png";
+import ShermaGif from "@/assets/Sherma.gif";
+import { cn } from "@/utils";
 
-export function NoSaveFileLoaded() {
+type NoValidSaveVariant = "NO_SAVE_FILE" | "CORRUPTED_SAVE_DATA";
+
+interface NoValidSaveProps {
+  variant?: NoValidSaveVariant;
+}
+
+const VARIANT_CONFIG = {
+  NO_SAVE_FILE: {
+    defaultMessage: "No save file loaded.",
+    hoverMessage: "🎵✨ Manifesting the save file...",
+  },
+  CORRUPTED_SAVE_DATA: {
+    defaultMessage: "Corrupted save data.",
+    hoverMessage: "🎵✨ Using the power of song...",
+  },
+} as const;
+
+export function NoSaveDataAvailable({ variant = "NO_SAVE_FILE" }: NoValidSaveProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const config = VARIANT_CONFIG[variant];
 
   return (
     <div className="text-white text-center text-lg relative">
@@ -22,7 +40,7 @@ export function NoSaveFileLoaded() {
           !isHovered ? "-translate-y-12 -translate-x-56 w-24 h-24" : "-translate-y-17.25 -translate-x-60 w-32 h-32"
         )}
       />
-      <span>{!isHovered ? `No save file loaded.` : `Manifesting the save file...`}</span>
+      <span>{!isHovered ? config.defaultMessage : config.hoverMessage}</span>
     </div>
   );
 }

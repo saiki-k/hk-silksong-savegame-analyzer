@@ -1,0 +1,1 @@
+export { SimpleLocksDescription } from "./SimpleLocksDescription.tsx";

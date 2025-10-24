@@ -3,8 +3,8 @@ import { useState } from "react";
 import type { TabId } from "./tabs";
 import { TabProgress } from "./TabProgress";
 import type { TabProgressInfo } from "./index";
-import { Button } from "../../ui/Button";
-import { cn } from "../../../utils/classNames";
+import { Button } from "@/components/ui/Button";
+import { cn } from "@/utils";
 
 interface TabButtonProps {
   tab: {
@@ -15,8 +15,8 @@ interface TabButtonProps {
   isActive: boolean;
   onSelect: (tab: TabId) => void;
   progressInfo?: TabProgressInfo;
-  hasUploadedSaveFile: boolean;
-  inShowEverythingMode?: boolean;
+  hasUploadedSaveData: boolean;
+  inShowEverythingMode: boolean;
 }
 
 export function TabButton({
@@ -24,11 +24,11 @@ export function TabButton({
   isActive,
   onSelect,
   progressInfo,
-  hasUploadedSaveFile,
+  hasUploadedSaveData,
   inShowEverythingMode,
 }: TabButtonProps): ReactElement {
   const [isHovered, setIsHovered] = useState(false);
-  const isDisabled = !hasUploadedSaveFile && !inShowEverythingMode;
+  const isDisabled = !hasUploadedSaveData && !inShowEverythingMode;
 
   const handleMouseEnter = () => {
     if (!isDisabled) setIsHovered(true);
@@ -85,7 +85,14 @@ export function TabButton({
       >
         {tab.tabId}
       </Button>
-      {progressInfo && <TabProgress progressInfo={progressInfo} isHovered={isHovered} isActive={isActive} />}
+      {progressInfo && (
+        <TabProgress
+          inShowEverythingMode={inShowEverythingMode}
+          progressInfo={progressInfo}
+          isHovered={isHovered}
+          isActive={isActive}
+        />
+      )}
     </div>
   );
 }

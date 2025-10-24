@@ -5,7 +5,6 @@ export const huntersJournal: TrackableCategory = {
   description: "Bugs and creatures encountered across various areas of Pharloom.",
   sections: [
     {
-      hasGameModeSpecificItems: true,
       items: [
         {
           name: "Mossgrub",

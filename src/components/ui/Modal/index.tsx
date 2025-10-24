@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import type { ReactNode } from "react";
-import { Button } from "../Button";
+import { Button } from "@/components/ui";
 
 interface ModalProps {
   isOpen: boolean;
@@ -42,7 +42,7 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
       >
         <Button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 text-gray-400 hover:text-white transition-colors text-2xl leading-none w-8 h-8 flex items-center justify-center rounded hover:bg-gray-800/50"
+          className="absolute top-4 right-4 z-10 text-gray-400 hover:text-white transition-colors text-2xl leading-none w-8 h-8 flex items-center justify-center rounded hover:bg-gray-800/50 cursor-pointer"
           aria-label="Close modal"
         >
           ×

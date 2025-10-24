@@ -1,92 +1,93 @@
 import { useMemo } from "react";
-import type { TabId } from "./tabs";
-import { TAB_CONFIG } from "./tabs";
+import { type TabId, TAB_CONFIG } from "./tabs";
 import { TabButton } from "./TabButton";
-import type { SaveFileObj } from "../../../hooks/useSaveFile";
-import { formatPercent, getGenericProgress, getHuntersJournalProgress } from "../../../utils";
+import { formatPercent } from "@/utils";
+import { type DictMapWithSaveData } from "@/dictionary";
 
 interface TabBarProps {
   activeTab: TabId;
   onSelect: (tab: TabId) => void;
-  saveFileObj: SaveFileObj;
-  inShowEverythingMode?: boolean;
-  hasUploadedSaveFile: boolean;
+  dictMapWithSaveData: DictMapWithSaveData | null;
+  inShowEverythingMode: boolean;
+  hasUploadedSaveData: boolean;
 }
 
 export interface TabProgressInfo {
-  isComplete: boolean;
-  displayText: string;
+  isProgressComplete: boolean;
+  progressText: string;
   encounteredCount?: number;
   completedCount?: number;
-  encounteredOnlyDisplayText?: string;
+  encounteredProgressText?: string;
 }
 
-export function TabBar({ activeTab, onSelect, saveFileObj, inShowEverythingMode, hasUploadedSaveFile }: TabBarProps) {
-  const { jsonText, parsedJson } = saveFileObj.state;
-
+export function TabBar({
+  activeTab,
+  onSelect,
+  dictMapWithSaveData,
+  inShowEverythingMode,
+  hasUploadedSaveData,
+}: TabBarProps) {
   // Calculate progress for all tabs once at TabBar level
   const tabProgressMap = useMemo(() => {
-    if (!hasUploadedSaveFile && !inShowEverythingMode) return new Map<TabId, TabProgressInfo>();
+    if (!inShowEverythingMode && !dictMapWithSaveData) return new Map<TabId, TabProgressInfo>();
 
     const progressMap = new Map<TabId, TabProgressInfo>();
 
     TAB_CONFIG.forEach(tab => {
       if (!tab.hasProgress) return;
 
-      const isHuntersJournal = tab.tabId === "Hunter's Journal";
-      const progressData = isHuntersJournal
-        ? getHuntersJournalProgress({
-            parsedJson,
-            inShowEverythingMode: inShowEverythingMode ?? false,
-          })
-        : getGenericProgress({
-            parsedJson,
-            inShowEverythingMode: inShowEverythingMode ?? false,
-            tabLabel: tab.tabId,
-            isPercentProgression: tab.isPercentProgression ?? false,
-          });
+      const category = dictMapWithSaveData?.allItems[tab.tabId];
+      if (!category) return;
 
-      if (!progressData) return;
+      // Special handling for Hunter's Journal
+      if (tab.tabId === "Hunter's Journal" && category.journalMeta) {
+        const { encountered, completed } = category.journalMeta;
+        const categoryTotal = category.totalCount;
+        const isProgressComplete = completed === categoryTotal;
+        const progressText = inShowEverythingMode ? `${categoryTotal}` : `${completed} / ${categoryTotal}`;
+        const encounteredProgressText =
+          !inShowEverythingMode && encountered !== completed ? `+${encountered - completed} Encountered` : undefined;
 
-      const { progressType } = progressData;
-      let isComplete = false;
-      let displayText = "";
-      let encounteredCount: number | undefined;
-      let completedCount: number | undefined;
-      let encounteredOnlyDisplayText = "";
+        progressMap.set(tab.tabId, {
+          isProgressComplete,
+          progressText,
+          completedCount: completed,
+          encounteredCount: encountered,
+          encounteredProgressText,
+        });
 
-      if (progressType === "Count Progression") {
-        const { current, total } = progressData;
-        isComplete = current === total;
-        displayText = inShowEverythingMode ? `${total}` : `${current} / ${total}`;
-        completedCount = current;
-      } else if (progressType === "Percent Progression") {
-        const { current, total } = progressData;
-        isComplete = current === total;
-        displayText = inShowEverythingMode
-          ? formatPercent(total)
-          : `${formatPercent(current)} / ${formatPercent(total)}`;
-        completedCount = current;
-      } else if (progressType === "Hunter's Journal Progression") {
-        const { completed, total, encountered } = progressData;
-        isComplete = completed === total;
-        displayText = inShowEverythingMode ? `${total}` : `${completed} / ${total}`;
-        encounteredCount = encountered;
-        completedCount = completed;
-        encounteredOnlyDisplayText = encountered - completed ? `+${encountered - completed} Encountered` : "";
+        return;
+      }
+
+      // Default handling for other tabs
+      const hasPercentProgression = tab.hasPercentProgression && category.totalPercent > 0;
+      const categoryTotal = hasPercentProgression ? category.totalPercent : category.totalCount;
+
+      let currentTotal = categoryTotal;
+      if (!inShowEverythingMode) {
+        currentTotal = hasPercentProgression ? (category.completedPercent ?? 0) : (category.completedCount ?? 0);
+      }
+
+      const isProgressComplete = currentTotal === categoryTotal;
+
+      let progressText = "";
+      if (hasPercentProgression) {
+        progressText = inShowEverythingMode
+          ? formatPercent(categoryTotal)
+          : `${formatPercent(currentTotal)} / ${formatPercent(categoryTotal)}`;
+      } else {
+        progressText = inShowEverythingMode ? `${categoryTotal}` : `${currentTotal} / ${categoryTotal}`;
       }
 
       progressMap.set(tab.tabId, {
-        isComplete,
-        displayText,
-        encounteredCount,
-        completedCount,
-        encounteredOnlyDisplayText,
+        isProgressComplete,
+        progressText,
+        completedCount: currentTotal,
       });
     });
 
     return progressMap;
-  }, [jsonText, hasUploadedSaveFile, inShowEverythingMode]);
+  }, [dictMapWithSaveData, inShowEverythingMode]);
 
   return (
     <div className="flex justify-between mt-4 mb-2 flex-wrap gap-2">
@@ -97,7 +98,7 @@ export function TabBar({ activeTab, onSelect, saveFileObj, inShowEverythingMode,
           isActive={tab.tabId === activeTab}
           onSelect={onSelect}
           progressInfo={tabProgressMap.get(tab.tabId)}
-          hasUploadedSaveFile={hasUploadedSaveFile}
+          hasUploadedSaveData={hasUploadedSaveData}
           inShowEverythingMode={inShowEverythingMode}
         />
       ))}

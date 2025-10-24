@@ -1,4 +1,4 @@
-import { ALL_TRACKED_CATEGORIES } from "../../../dictionary";
+import { ALL_TRACKED_CATEGORIES } from "@/dictionary";
 
 const TRACKED_CATEGORY_NAMES = ALL_TRACKED_CATEGORIES.map(category => category.name);
 
@@ -20,7 +20,7 @@ export type TabId = (typeof TABS)[number];
 interface TabConfig {
   tabId: TabId;
   hasProgress?: boolean;
-  isPercentProgression?: boolean;
+  hasPercentProgression?: boolean;
   hideButton?: boolean;
 }
 
@@ -28,7 +28,7 @@ export const TAB_CONFIG: TabConfig[] = TABS.map(tabId => {
   return {
     tabId,
     hasProgress: !NO_PROGRESSION_TABS.includes(tabId as (typeof NO_PROGRESSION_TABS)[number]),
-    isPercentProgression: PERCENT_PROGRESSION_TABS.includes(tabId as (typeof PERCENT_PROGRESSION_TABS)[number]),
+    hasPercentProgression: PERCENT_PROGRESSION_TABS.includes(tabId as (typeof PERCENT_PROGRESSION_TABS)[number]),
     hideButton: tabId === "Stats",
   };
 });

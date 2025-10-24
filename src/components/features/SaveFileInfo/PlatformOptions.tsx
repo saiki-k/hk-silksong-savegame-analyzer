@@ -56,7 +56,7 @@ export const PLATFORM_OPTIONS: PlatformOption[] = [
     label: "Game Pass (Windows)",
     icon: "💻",
     saveFilePath: "%LOCALAPPDATA%/Packages/TeamCherry.Silksong_y4jvztpgccj42/SystemAppData/wgs/",
-    note: "Savegame file has a really long name and doesn't have a file extension.",
+    note: "Save file has a really long name and doesn't have a file extension.",
   },
   {
     id: "SteamDeck",

@@ -65,7 +65,7 @@ export const spoolFragments: TrackableCategory = {
           whichAct: 2,
           completionPercent: 0.5,
           locationDetails: "Greymoor: Fleamaster reward in Greymoor, after rescuing 14 Fleas.",
-          parsingInfo: { type: "flagInt", internalId: ["CaravanTroupeLocation", 2] },
+          parsingInfo: { type: "flagMin", internalId: ["CaravanTroupeLocation", 2] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478820",
         },
         {

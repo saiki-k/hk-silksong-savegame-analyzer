@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Button } from "../../ui/Button";
-import { cn } from "../../../utils/classNames";
+import { Button } from "@/components/ui";
+import { cn } from "@/utils";
 
 import { PLATFORM_OPTIONS, type PlatformId } from "./PlatformOptions";
 
@@ -50,7 +50,7 @@ export function PlatformInfo({ onCopyPath }: PlatformInfoProps) {
               type="button"
               onClick={() => setActivePlatformId(platform.id)}
               className={cn(
-                "flex items-center gap-1.5 px-2 py-1.5 rounded-md border font-medium text-xs transition-colors duration-200",
+                "flex items-center gap-1.5 px-2 py-1.5 rounded-md border font-medium text-xs transition-colors duration-200 cursor-pointer",
                 isActive
                   ? "bg-blue-500/20 text-white border-blue-500/50"
                   : "bg-gray-800/40 text-gray-400 border-gray-700/50 hover:text-gray-300 hover:bg-gray-700/40"

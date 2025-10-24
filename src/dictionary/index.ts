@@ -1,4 +1,5 @@
 import type { TrackableCategory } from "./types";
+import { normalizeDictionary } from "./normalizer";
 
 import { stats } from "./categories/stats";
 import { maskShards } from "./categories/maskShards";
@@ -46,6 +47,6 @@ export const ALL_TRACKED_CATEGORIES = [
   huntersJournal,
 ] as TrackableCategory[];
 
-export const TRACKED_CATEGORY_DICT: Record<TrackableCategory["name"], TrackableCategory> = Object.fromEntries(
-  ALL_TRACKED_CATEGORIES.map(category => [category.name, category])
-);
+export const NORMALISED_DICT_MAP = normalizeDictionary(ALL_TRACKED_CATEGORIES);
+
+export type { DictMapWithSaveData, NormalizedItem, NormalizedCategory, NormalizedSection, ItemPath } from "./types";

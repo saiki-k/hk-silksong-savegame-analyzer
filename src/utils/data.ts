@@ -1,214 +1,126 @@
-import { TRACKED_CATEGORY_DICT } from "../dictionary";
-import { isItemUnlockedInPlayerSave, isItemInCurrentGameMode } from "../dictionary/parsers";
-import type { TrackableCategory, CategoryItem } from "../dictionary/types";
+import { isItemUnlockedInPlayerSave, isItemInCurrentGameMode } from "@/dictionary/parsers";
+import type {
+  NormalisedDictMap,
+  NormalizedCategory,
+  NormalizedSection,
+  DictMapWithSaveData,
+  ItemPath,
+} from "@/dictionary/types";
 
-import { huntersJournal } from "../dictionary/categories/huntersJournal";
-
-interface GetGenericProgressParams {
-  parsedJson: unknown;
-  inShowEverythingMode: boolean;
-  tabLabel: string;
-  isPercentProgression?: boolean;
-}
-
-interface ProgressData {
-  progressType: "Count Progression" | "Percent Progression";
-  current: number;
-  total: number;
-}
-
-export function getGenericProgress({
-  parsedJson,
-  inShowEverythingMode,
-  tabLabel,
-  isPercentProgression = false,
-}: GetGenericProgressParams): ProgressData | null {
-  if (!parsedJson) {
-    return null;
-  }
-
-  const categoryData = TRACKED_CATEGORY_DICT[tabLabel] as TrackableCategory;
-  if (!categoryData) {
-    return null;
-  }
-
-  const allItems = categoryData.sections.flatMap(section => {
-    const items =
-      section.hasGameModeSpecificItems && !inShowEverythingMode
-        ? section.items.filter(item => isItemInCurrentGameMode(item, parsedJson))
-        : section.items;
-    return items;
-  });
-
-  if (allItems.length === 0) {
-    return null;
-  }
-
-  if (isPercentProgression) {
-    let currentPercent = 0;
-    let maxPercent = 0;
-
-    allItems.forEach(item => {
-      const percent = item.completionPercent ?? 0;
-      maxPercent += percent;
-      
-      if (!inShowEverythingMode) {
-        const { unlocked } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
-        if (unlocked) {
-          currentPercent += percent;
-        }
-      }
-    });
-
+export function computeDictMapWithSaveData(
+  normalisedDict: NormalisedDictMap,
+  parsedJson: unknown,
+  inShowEverythingMode: boolean
+): DictMapWithSaveData {
+  if (inShowEverythingMode) {
     return {
-      progressType: "Percent Progression",
-      current: currentPercent,
-      total: maxPercent,
+      totalCompletedPercent: 0,
+      allItems: normalisedDict,
+      missingItemPaths: [] as ItemPath[],
+      completedItemPaths: [] as ItemPath[],
     };
   }
 
-  // Count-based progression
-  let unlockedCount = 0;
+  // Filter by given save file's current game mode first, then track missing/completed items
+  let totalCompletedPercent = 0;
+  const allItemsFilteredByGameMode: NormalisedDictMap = {};
+  const missingItemPaths: ItemPath[] = [];
+  const completedItemPaths: ItemPath[] = [];
 
-  if (!inShowEverythingMode) {
-    allItems.forEach(item => {
-      const { unlocked } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
-      if (unlocked) {
-        unlockedCount += 1;
-      }
-    });
-  }
+  for (const [categoryName, category] of Object.entries(normalisedDict)) {
+    const categoryFilteredByGameMode: NormalizedCategory = {
+      name: category.name,
+      description: category.description,
+      totalPercent: 0,
+      totalCount: 0,
+      sections: {},
+    };
 
-  return {
-    progressType: "Count Progression",
-    current: unlockedCount,
-    total: allItems.length,
-  };
-}
+    // Variables for tracking Hunter's Journal category's metadata
+    let journalEncountered = 0;
+    let journalCompleted = 0;
+    const isJournalCategory = categoryName === "Hunter's Journal";
 
-interface GetHuntersJournalProgressParams {
-  parsedJson: unknown;
-  inShowEverythingMode: boolean;
-}
+    let categoryCompletedPercent = 0;
+    let categoryCompletedCount = 0;
 
-interface HuntersJournalProgressData {
-  progressType: "Hunter's Journal Progression";
-  completed: number;
-  encountered: number;
-  total: number;
-}
+    for (const [sectionName, section] of Object.entries(category.sections)) {
+      const sectionFilteredByGameMode: NormalizedSection = {
+        name: section.name,
+        description: section.description,
+        descriptionMarkup: section.descriptionMarkup,
+        totalPercent: 0,
+        totalCount: 0,
+        act_0: {},
+        act_1: {},
+        act_2: {},
+        act_3: {},
+      };
 
-export function getHuntersJournalProgress({
-  parsedJson,
-  inShowEverythingMode,
-}: GetHuntersJournalProgressParams): HuntersJournalProgressData | null {
-  if (!parsedJson) {
-    return null;
-  }
+      for (const actKey of ["act_0", "act_1", "act_2", "act_3"] as const) {
+        for (const [itemName, item] of Object.entries(section[actKey])) {
+          if (!isItemInCurrentGameMode(item, parsedJson)) {
+            continue; // Skip items not in current game mode
+          }
 
-  const journalEntries = huntersJournal.sections.flatMap(section => {
-    return section.hasGameModeSpecificItems && !inShowEverythingMode
-      ? section.items.filter(item => isItemInCurrentGameMode(item, parsedJson))
-      : section.items;
-  });
+          const { unlocked, returnValue } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
+          const killsAchieved = typeof returnValue === "number" ? returnValue : undefined;
 
-  if (journalEntries.length === 0) {
-    return null;
-  }
+          const itemWithSaveData = { ...item, unlocked, killsAchieved, value: returnValue };
+          sectionFilteredByGameMode[actKey][itemName] = itemWithSaveData;
+          sectionFilteredByGameMode.totalCount++;
+          sectionFilteredByGameMode.totalPercent += item.completionPercent ?? 0;
 
-  let completed = 0;
-  let encountered = 0;
+          const itemPath: ItemPath = `${categoryName}.${sectionName}.${actKey}.${itemName}`;
 
-  if (!inShowEverythingMode) {
-    journalEntries.forEach(entry => {
-      const { returnValue: killsAchieved } = isItemUnlockedInPlayerSave(entry.parsingInfo, parsedJson);
-      if (
-        killsAchieved !== undefined &&
-        entry.killsRequired !== undefined &&
-        typeof killsAchieved === "number" &&
-        killsAchieved > 0
-      ) {
-        encountered += 1;
-        if (killsAchieved >= entry.killsRequired) {
-          completed += 1;
+          // Update Hunter's Journal category's metadata variables
+          if (isJournalCategory && killsAchieved !== undefined) {
+            if (killsAchieved > 0 && item.killsRequired !== undefined) {
+              journalEncountered++;
+              if (killsAchieved >= item.killsRequired) {
+                journalCompleted++;
+              }
+            }
+          }
+
+          if (!unlocked) {
+            missingItemPaths.push(itemPath);
+          } else {
+            completedItemPaths.push(itemPath);
+            categoryCompletedCount++;
+            categoryCompletedPercent += item.completionPercent ?? 0;
+          }
         }
       }
-    });
-  }
 
-  return {
-    progressType: "Hunter's Journal Progression",
-    completed,
-    encountered,
-    total: journalEntries.length,
-  };
-}
-
-export interface FilteredItem extends CategoryItem {
-  unlocked: boolean;
-  killsAchieved?: number;
-}
-
-interface FilterItemsParams {
-  items: CategoryItem[];
-  parsedJson: unknown;
-  inShowEverythingMode: boolean;
-  showUnlocked: boolean;
-  actFilter?: Set<1 | 2 | 3>;
-  hasGameModeSpecificItems?: boolean;
-  isJournalCategory?: boolean;
-}
-
-export function filterItems({
-  items,
-  parsedJson,
-  inShowEverythingMode,
-  showUnlocked,
-  actFilter,
-  hasGameModeSpecificItems = false,
-  isJournalCategory = false,
-}: FilterItemsParams): FilteredItem[] {
-  const result: FilteredItem[] = [];
-
-  for (const item of items) {
-    const processedItem: FilteredItem = { ...item, unlocked: false };
-
-    if (actFilter && actFilter.size >= 0 && actFilter.size < 3) {
-      // If whichAct is 0, item is not affected by actFilter
-      if (processedItem.whichAct !== 0 && !actFilter.has(processedItem.whichAct as 1 | 2 | 3)) {
-        continue;
+      if (sectionFilteredByGameMode.totalCount > 0) {
+        categoryFilteredByGameMode.sections[sectionName] = sectionFilteredByGameMode;
+        categoryFilteredByGameMode.totalCount += sectionFilteredByGameMode.totalCount;
+        categoryFilteredByGameMode.totalPercent += sectionFilteredByGameMode.totalPercent;
       }
     }
 
-    if (inShowEverythingMode) {
-      result.push(processedItem);
-      continue;
+    if (categoryFilteredByGameMode.totalCount > 0) {
+      if (isJournalCategory) {
+        categoryFilteredByGameMode.journalMeta = {
+          encountered: journalEncountered,
+          completed: journalCompleted,
+        };
+      }
+
+      categoryFilteredByGameMode.completedCount = categoryCompletedCount;
+      categoryFilteredByGameMode.completedPercent = categoryCompletedPercent;
+
+      allItemsFilteredByGameMode[categoryName] = categoryFilteredByGameMode;
+
+      totalCompletedPercent += categoryCompletedPercent;
     }
-
-    if (hasGameModeSpecificItems && !inShowEverythingMode && !isItemInCurrentGameMode(item, parsedJson)) {
-      continue;
-    }
-
-    const { unlocked, returnValue: killsAchieved } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
-    processedItem.unlocked = unlocked;
-    processedItem.killsAchieved = typeof killsAchieved === "number" ? killsAchieved : undefined;
-
-    let shouldInclude = false;
-    if (showUnlocked) {
-      shouldInclude = true;
-    } else if (isJournalCategory) {
-      shouldInclude =
-        !processedItem.unlocked || (processedItem.killsAchieved ?? 0) < (processedItem.killsRequired ?? 0);
-    } else {
-      shouldInclude = !processedItem.unlocked;
-    }
-
-    if (!shouldInclude) {
-      continue;
-    }
-
-    result.push(processedItem);
   }
 
-  return result;
+  return {
+    totalCompletedPercent,
+    allItems: allItemsFilteredByGameMode,
+    missingItemPaths,
+    completedItemPaths,
+  };
 }

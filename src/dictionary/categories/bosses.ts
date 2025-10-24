@@ -5,7 +5,6 @@ export const bosses: TrackableCategory = {
   description: "🎶Epic battle music...🎶",
   sections: [
     {
-      hasGameModeSpecificItems: true,
       items: [
         {
           name: "Moss Mother",
@@ -322,7 +321,7 @@ export const bosses: TrackableCategory = {
           name: "Summoned Saviour",
           whichAct: 3,
           locationDetails:
-            "Can be found at the extreme bottom-left of Bonegrave behind a breakable wall, a sub area of Moss Grotto.",
+            "Can only be found in Steel Soul Mode, at the extreme bottom-left of Bonegrave behind a breakable wall, a sub area of Moss Grotto.",
           parsingInfo: { type: "journal", internalId: ["Abyss Mass", 1] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479740",
           onlyFoundInSteelSoulMode: true,
