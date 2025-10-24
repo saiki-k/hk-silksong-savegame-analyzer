@@ -117,6 +117,9 @@ export default function App() {
         inShowEverythingMode={inShowEverythingMode}
         showSpoilers={showSpoilers}
         actFilter={actFilter}
+        onShowMissingOnlyChange={() => setShowMissingOnly(!showMissingOnly)}
+        onShowSpoilersChange={() => setShowSpoilers(!showSpoilers)}
+        onActFilterChange={setActFilter}
       />
 
       <Separator />

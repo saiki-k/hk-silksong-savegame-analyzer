@@ -29,6 +29,9 @@ export interface TabContainerProps {
   showMissingOnly: boolean;
   showSpoilers: boolean;
   actFilter: ActFilter;
+  onShowMissingOnlyChange: () => void;
+  onShowSpoilersChange: () => void;
+  onActFilterChange: (filter: ActFilter) => void;
 }
 
 export interface TabContentProps {
@@ -38,4 +41,7 @@ export interface TabContentProps {
   inShowEverythingMode: boolean;
   actFilter: ActFilter;
   computedData?: ComputedTabData;
+  onShowMissingOnlyChange: () => void;
+  onShowSpoilersChange: () => void;
+  onActFilterChange: (filter: ActFilter) => void;
 }

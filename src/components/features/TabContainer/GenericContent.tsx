@@ -1,6 +1,6 @@
 import type { TabContentProps } from "./types";
 import type { NormalizedSection, NormalizedItem } from "@/dictionary";
-import { getHoverBlurClassNames, cn, getCategoryDisplayStatusText } from "@/utils";
+import { getHoverBlurClassNames, cn } from "@/utils";
 
 import { CategoryHeader, SectionHeader, StatusBar, EmptyState } from "./shared";
 import { Table, MapButton } from "@/components/ui";
@@ -12,20 +12,15 @@ export function GenericContent({
   inShowEverythingMode,
   actFilter,
   computedData,
+  onShowMissingOnlyChange,
+  onShowSpoilersChange,
+  onActFilterChange,
 }: TabContentProps) {
   if (!tabLabel || !computedData) {
     return <div className="text-white text-center">No "{tabLabel}" data available.</div>;
   }
 
   const { category, hasVisibleItems, sectionEntries, sectionsLength } = computedData;
-
-  const statusText = getCategoryDisplayStatusText({
-    inShowEverythingMode,
-    showMissingOnly,
-    showSpoilers,
-    actFilter,
-    itemTypeText: "items",
-  });
 
   if (!category) {
     return <div className="text-white text-center">Category "{tabLabel}" not found.</div>;
@@ -36,9 +31,16 @@ export function GenericContent({
       <CategoryHeader title={tabLabel || category.name} description={category.description} />
 
       <StatusBar
-        statusText={statusText ?? ""}
+        inShowEverythingMode={inShowEverythingMode}
+        tabLabel={tabLabel}
         hasVisibleItems={hasVisibleItems}
         hasMultipleSections={sectionsLength > 1}
+        showMissingOnly={showMissingOnly}
+        showSpoilers={showSpoilers}
+        actFilter={actFilter}
+        onShowMissingOnlyChange={onShowMissingOnlyChange}
+        onShowSpoilersChange={onShowSpoilersChange}
+        onActFilterChange={onActFilterChange}
       />
 
       {!hasVisibleItems && <EmptyState />}

@@ -1,4 +1,4 @@
-export { formatPercent, formatSecondsToHMS, getCategoryDisplayStatusText } from "./general";
+export { formatPercent, formatSecondsToHMS, getActFilterText, toggleActInFilter } from "./general";
 
 export { getHoverBlurClassNames, cn } from "./classNames";
 

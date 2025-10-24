@@ -1,7 +1,7 @@
 import type { ReactElement } from "react";
 import { type TabContentProps } from "./types";
 import type { NormalizedItem } from "@/dictionary";
-import { getHoverBlurClassNames, getCategoryDisplayStatusText } from "@/utils";
+import { getHoverBlurClassNames } from "@/utils";
 
 import { CategoryHeader, StatusBar, EmptyState } from "./shared";
 import { Table, MapButton } from "@/components/ui";
@@ -29,20 +29,15 @@ export function HuntersJournalContent({
   inShowEverythingMode,
   actFilter,
   computedData,
+  onShowMissingOnlyChange,
+  onShowSpoilersChange,
+  onActFilterChange,
 }: TabContentProps): ReactElement {
   if (!computedData) {
     return <div className="text-white text-center">No "Journal" data available.</div>;
   }
 
   const { category, hasVisibleItems, sectionEntries } = computedData;
-
-  const statusText = getCategoryDisplayStatusText({
-    inShowEverythingMode,
-    showMissingOnly,
-    showSpoilers,
-    actFilter,
-    itemTypeText: "entries",
-  });
 
   if (!category) {
     return <div className="text-white text-center">Category "Hunter's Journal" not found.</div>;
@@ -54,7 +49,18 @@ export function HuntersJournalContent({
     <>
       <CategoryHeader title={tabLabel || category.name} description={category.description} />
 
-      <StatusBar statusText={statusText ?? ""} hasVisibleItems={hasVisibleItems} hasMultipleSections={false} />
+      <StatusBar
+        inShowEverythingMode={inShowEverythingMode}
+        tabLabel={tabLabel}
+        hasVisibleItems={hasVisibleItems}
+        hasMultipleSections={false}
+        showMissingOnly={showMissingOnly}
+        showSpoilers={showSpoilers}
+        actFilter={actFilter}
+        onShowMissingOnlyChange={onShowMissingOnlyChange}
+        onShowSpoilersChange={onShowSpoilersChange}
+        onActFilterChange={onActFilterChange}
+      />
 
       {!hasVisibleItems && <EmptyState />}
 

@@ -10,39 +10,31 @@ export function formatSecondsToHMS(seconds: number): string {
   return [h, m, s].map(unit => String(unit).padStart(2, "0")).join(":");
 }
 
-interface getCategoryDisplayStatusTextParams {
-  showMissingOnly: boolean;
-  inShowEverythingMode?: boolean;
-  showSpoilers: boolean;
-  actFilter?: Set<1 | 2 | 3>;
-  itemTypeText?: "items" | "entries";
-}
+export function getActFilterText(actFilter?: Set<1 | 2 | 3>, { returnEmpty = false }: { returnEmpty?: boolean } = {}): string {
+  if (returnEmpty) return "";
 
-export function getCategoryDisplayStatusText({
-  inShowEverythingMode,
-  showMissingOnly,
-  showSpoilers,
-  actFilter,
-  itemTypeText = "items",
-}: getCategoryDisplayStatusTextParams): string {
-  let itemsText = itemTypeText === "entries" ? "incomplete entries" : "missing items";
-  if (inShowEverythingMode || !showMissingOnly) {
-    itemsText = `all ${itemTypeText}`;
-  }
-
-  const spoilersText = showSpoilers ? "spoilers shown" : "spoilers blurred (until you hover over them)";
-
-  let actText = "";
   if (!actFilter || actFilter.size === 0) {
-    actText = " from zero ⚠️ Acts";
+    return "from zero ⚠️ Acts";
   } else if (actFilter.size === 3) {
-    actText = " from all Acts";
+    return "from all Acts";
   } else {
     const acts = Array.from(actFilter)
       .sort()
       .map(act => `Act ${["I", "II", "III"][act - 1]}`);
-    actText = ` from ${acts.join(", ")}`;
+    return `from ${acts.join(", ")}`;
   }
+}
 
-  return `Showing ${itemsText}${actText}, with ${spoilersText}.`;
+export function toggleActInFilter(actFilter: Set<1 | 2 | 3>, act: 1 | 2 | 3): Set<1 | 2 | 3> {
+  // Prevent toggling an act if it's the only one selected
+  const shouldNotToggleAct = actFilter.size === 1 && actFilter.has(act);
+  if (shouldNotToggleAct) return actFilter;
+
+  const newFilter = new Set(actFilter);
+  if (newFilter.has(act)) {
+    newFilter.delete(act);
+  } else {
+    newFilter.add(act);
+  }
+  return newFilter;
 }

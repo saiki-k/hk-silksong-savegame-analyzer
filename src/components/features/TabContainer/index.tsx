@@ -133,6 +133,9 @@ export function TabContainer(props: TabContainerProps) {
     showSpoilers,
     actFilter,
     inShowEverythingMode,
+    onShowMissingOnlyChange,
+    onShowSpoilersChange,
+    onActFilterChange,
   } = props;
 
   // Persistent cache across renders (only clears when dictMapWithSaveData changes)
@@ -194,6 +197,9 @@ export function TabContainer(props: TabContainerProps) {
     inShowEverythingMode,
     actFilter,
     computedData,
+    onShowMissingOnlyChange,
+    onShowSpoilersChange,
+    onActFilterChange,
   };
 
   const getTabContent = (activeTab: TabId) => {

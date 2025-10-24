@@ -1,5 +1,5 @@
 import { TextWithEmojiButton, PillButton, Separator } from "@/components/ui";
-import { cn } from "@/utils";
+import { cn, toggleActInFilter } from "@/utils";
 import type { ActFilter } from "./index";
 
 function ShowEverythingButton({
@@ -95,17 +95,8 @@ export function FiltersBar({
   const filtersDisabled = (!hasUploadedSaveFile || !hasUploadedSaveData) && !inShowEverythingMode;
 
   const toggleAct = (act: 1 | 2 | 3) => {
-    // Prevent toggling an act when it's the only one selected
-    const shouldNotToggleAct = actFilter.size === 1 && actFilter.has(act);
-
-    if (filtersDisabled || shouldNotToggleAct) return;
-
-    const newFilter = new Set(actFilter);
-    if (newFilter.has(act)) {
-      newFilter.delete(act);
-    } else {
-      newFilter.add(act);
-    }
+    if (filtersDisabled) return;
+    const newFilter = toggleActInFilter(actFilter, act);
     onActFilterChange(newFilter);
   };
 
