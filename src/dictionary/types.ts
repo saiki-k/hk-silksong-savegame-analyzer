@@ -35,7 +35,7 @@ export type CategoryItem = {
   whichAct: 0 | 1 | 2 | 3;
   completionPercent?: number;
   prereqs?: string[];
-  locationDetails: string;
+  completionDetails: string;
   parsingInfo: ParsingInfo | ParsingInfoMulti;
   mapLink: string;
   killsRequired?: number;

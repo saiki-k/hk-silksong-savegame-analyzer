@@ -9,21 +9,21 @@ export const crests: TrackableCategory = {
         {
           name: "Hunter Crest",
           whichAct: 1,
-          locationDetails: "Default Crest, already equipped at the beginning.",
+          completionDetails: "Default Crest, already equipped at the beginning.",
           parsingInfo: { type: "crest", internalId: "Hunter" },
           mapLink: "",
         },
         {
           name: "Hunter Crest Upgrade #1",
           whichAct: 1,
-          locationDetails: "Weavnest Atla: Talk to Eva.",
+          completionDetails: "Weavnest Atla: Talk to Eva.",
           parsingInfo: { type: "crest", internalId: "Hunter_v2" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478228",
         },
         {
           name: "Hunter Crest Upgrade #2",
           whichAct: 2,
-          locationDetails:
+          completionDetails:
             "Weavnest Atla: Talk to Eva after unlocking a total of 27 tool slots (excluding Hunter Crest slots) via Memory Lockets and acquiring new Crests.",
           parsingInfo: { type: "crest", internalId: "Hunter_v3" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479653",
@@ -31,7 +31,7 @@ export const crests: TrackableCategory = {
         {
           name: "Vesticrest #1 (Extra Yellow Slot)",
           whichAct: 1,
-          locationDetails:
+          completionDetails:
             "Weavnest Atla: Talk to Eva after unlocking a total of 12 tool slots (excluding Hunter Crest slots) via Memory Lockets and acquiring new Crests. Unlocks a permanent Yellow (Exploration) Tool Slot.",
           parsingInfo: { type: "flag", internalId: "UnlockedExtraYellowSlot" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479145",
@@ -39,7 +39,7 @@ export const crests: TrackableCategory = {
         {
           name: "Vesticrest #2 (Extra Blue Slot)",
           whichAct: 1,
-          locationDetails:
+          completionDetails:
             "Weavnest Atla: Talk to Eva after unlocking a total of 20 tool slots (excluding Hunter Crest slots) via Memory Lockets and acquiring new Crests. Unlocks a permanent Blue (Defense) Tool Slot.",
           parsingInfo: { type: "flag", internalId: "UnlockedExtraBlueSlot" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479434",
@@ -48,7 +48,7 @@ export const crests: TrackableCategory = {
           name: "Reaper Crest",
           whichAct: 1,
           completionPercent: 1,
-          locationDetails: "Greymoor:  Chapel of the Reaper.",
+          completionDetails: "Greymoor:  Chapel of the Reaper.",
           parsingInfo: { type: "crest", internalId: "Reaper" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478156",
         },
@@ -56,7 +56,7 @@ export const crests: TrackableCategory = {
           name: "Wanderer Crest",
           whichAct: 1,
           completionPercent: 1,
-          locationDetails: "Moss Grotto (Bonegrave): Chapel of the Wanderer.",
+          completionDetails: "Moss Grotto (Bonegrave): Chapel of the Wanderer.",
           parsingInfo: { type: "crest", internalId: "Wanderer" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478240",
         },
@@ -64,7 +64,7 @@ export const crests: TrackableCategory = {
           name: "Beast Crest",
           whichAct: 1,
           completionPercent: 1,
-          locationDetails: "Hunter's March: Chapel of the Beast.",
+          completionDetails: "Hunter's March: Chapel of the Beast.",
           parsingInfo: { type: "crest", internalId: "Warrior" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478020",
         },
@@ -72,7 +72,7 @@ export const crests: TrackableCategory = {
           name: "Witch Crest",
           whichAct: 2,
           completionPercent: 1,
-          locationDetails:
+          completionDetails:
             'Bellhart: Take Twisted Bud to Greyroot, Complete "Rite of Rebirth" wish, Complete "Infestation Operation" wish.',
           parsingInfo: { type: "crest", internalId: "Witch" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478815",
@@ -81,7 +81,7 @@ export const crests: TrackableCategory = {
           name: "Architect Crest",
           whichAct: 2,
           completionPercent: 1,
-          locationDetails: "Underworks: Chapel of the Architect.",
+          completionDetails: "Underworks: Chapel of the Architect.",
           parsingInfo: { type: "crest", internalId: "Toolmaster" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478745",
         },
@@ -89,7 +89,7 @@ export const crests: TrackableCategory = {
           name: "Shaman Crest",
           whichAct: 3,
           completionPercent: 1,
-          locationDetails: "Moss Grotto (Ruined Chapel): In a tunnel above the first lore tablet, requires Silk Soar.",
+          completionDetails: "Moss Grotto (Ruined Chapel): In a tunnel above the first lore tablet, requires Silk Soar.",
           parsingInfo: { type: "crest", internalId: "Spell" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479384",
         },

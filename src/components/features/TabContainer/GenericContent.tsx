@@ -130,7 +130,7 @@ function GenericSectionTable({
               header: "Details",
               cellClassName: (item: NormalizedItem) =>
                 `relative min-w-[140px] max-w-[260px] ${getHoverBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
-              renderCell: (item: NormalizedItem) => item.locationDetails,
+              renderCell: (item: NormalizedItem) => item.completionDetails,
             },
             {
               width: "48px",
