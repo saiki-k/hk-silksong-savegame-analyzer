@@ -1,8 +1,9 @@
-import { useState, useRef, useEffect, type ReactElement } from "react";
-import Editor from "@monaco-editor/react";
+import { useState, useRef, useEffect, lazy, Suspense, type ReactElement } from "react";
 import type { SaveFileObj } from "@/hooks";
 import { DownloadButton } from "@/components/ui";
 import { cn } from "@/utils";
+
+const Editor = lazy(() => import("@monaco-editor/react"));
 
 function EditorStatusBar({ isValidJson }: { isValidJson: boolean }) {
   return (
@@ -101,37 +102,48 @@ export function EditorContainer({
         className="bg-gradient-to-br from-gray-800/40 to-gray-800/20 border-2 border-gray-600/30 border-t-0 overflow-hidden relative"
         ref={editorRef}
       >
-        <Editor
-          height={`${editorHeight}px`}
-          defaultLanguage="json"
-          value={saveFileObj.state.jsonText || ""}
-          onChange={value => handleChange(value || "")}
-          theme="vs-dark"
-          options={{
-            minimap: { enabled: false },
-            scrollBeyondLastLine: false,
-            fontSize: 14,
-            lineNumbers: "on",
-            renderWhitespace: "selection",
-            automaticLayout: true,
-            formatOnPaste: true,
-            formatOnType: false,
-            wordWrap: "on",
-            tabSize: 2,
-            insertSpaces: true,
-            bracketPairColorization: { enabled: true },
-            folding: true,
-            foldingHighlight: true,
-            showFoldingControls: "mouseover",
-            matchBrackets: "always",
-            contextmenu: true,
-            find: {
-              addExtraSpaceOnTop: false,
-              autoFindInSelection: "never",
-              seedSearchStringFromSelection: "always",
-            },
-          }}
-        />
+        <Suspense
+          fallback={
+            <div
+              style={{ height: `${editorHeight}px` }}
+              className="flex items-center justify-center bg-gray-900/50 text-gray-400 text-center"
+            >
+              Loading editor...
+            </div>
+          }
+        >
+          <Editor
+            height={`${editorHeight}px`}
+            defaultLanguage="json"
+            value={saveFileObj.state.jsonText || ""}
+            onChange={value => handleChange(value || "")}
+            theme="vs-dark"
+            options={{
+              minimap: { enabled: false },
+              scrollBeyondLastLine: false,
+              fontSize: 14,
+              lineNumbers: "on",
+              renderWhitespace: "selection",
+              automaticLayout: true,
+              formatOnPaste: true,
+              formatOnType: false,
+              wordWrap: "on",
+              tabSize: 2,
+              insertSpaces: true,
+              bracketPairColorization: { enabled: true },
+              folding: true,
+              foldingHighlight: true,
+              showFoldingControls: "mouseover",
+              matchBrackets: "always",
+              contextmenu: true,
+              find: {
+                addExtraSpaceOnTop: false,
+                autoFindInSelection: "never",
+                seedSearchStringFromSelection: "always",
+              },
+            }}
+          />
+        </Suspense>
 
         <div className="p-4 border-t-2 border-gray-600/30">
           <div className="flex flex-col md:flex-row gap-2">
