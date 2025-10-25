@@ -16,7 +16,7 @@ const mapButtonStyles = {
 export function MapButton({ mapLink, disabled }: MapButtonProps) {
   const handleClick = () => {
     if (mapLink) {
-      window.open(mapLink, "_blank", "noopener");
+      window.open(mapLink, "_blank", "noopener,noreferrer");
     }
   };
 

@@ -20,7 +20,7 @@ const genericNote = (
         href="https://store.steampowered.com/account/remotestorageapp/?appid=1030300"
         className="text-blue-400 hover:text-blue-300 underline"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
       >
         Steam Cloud
       </a>{" "}
@@ -76,7 +76,7 @@ export const PLATFORM_OPTIONS: PlatformOption[] = [
         <a
           className="text-blue-400 hover:text-blue-300 underline"
           href="https://www.reddit.com/r/HollowKnight/comments/1dacmy1/gamesave_from_switch_to_steam/"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Reddit guide
