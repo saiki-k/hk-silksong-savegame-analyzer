@@ -1,5 +1,5 @@
-import type { TrackableCategory } from "../types";
-import SimpleLocksDescriptionWithSpoilers from "../components/SimpleLocksDescriptionWithSpoilers.tsx";
+import type { TrackableCategory } from "@/dictionary/types";
+import { SimpleLocksDescription } from "@/components/features/TabContainer/descriptions";
 
 export const keys: TrackableCategory = {
   name: "Keys",
@@ -7,38 +7,39 @@ export const keys: TrackableCategory = {
   sections: [
     {
       name: "Simple Keys",
-      // NOTE: We can probably use the savefile to track (specific scenes/bools) if these locks are unlocked. Not today!
-      descriptionMarkup: <SimpleLocksDescriptionWithSpoilers />,
+      // NOTE: We can probably use the save file to track (specific scenes/bools) if these locks are unlocked. Not today!
+      descriptionMarkup: (showSpoilers?: boolean) => <SimpleLocksDescription showSpoilers={showSpoilers} />,
       items: [
         // TODO: Grindle sells this item later, if it is not purchased until ACT 3. The internalId would probably not change, because we see Grindle's mates looting this location. However, adding a note here to verify this later...
         {
           name: "Simple Key 1",
           whichAct: 1,
-          location:
+          completionDetails:
             "Bone Bottom / Blasted Steps: Sold by Pebb for 500 Rosaries. If you don't purchase this from Pebb, it is sold by Grindle in ACT 3 for 600 Rosaries.",
           parsingInfo: { type: "flag", internalId: "PurchasedBonebottomFaithToken" },
-          mapLink: "477839",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477839",
         },
         {
           name: "Simple Key 2",
           whichAct: 1,
-          location: "Sinner's Road (Top-right): Dropped by a (defeated) Roachkeeper.",
+          completionDetails: "Sinner's Road (Top-right): Dropped by a (defeated) Roachkeeper.",
           parsingInfo: { type: "flag", internalId: "CollectedDustCageKey" },
-          mapLink: "478280",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478280",
         },
         {
           name: "Simple Key 3",
           whichAct: 2,
-          location: 'Songclave: Sold by Jubilana for 650 Rosaries, after completing "The Wandering Merchant" wish.',
+          completionDetails:
+            'Songclave: Sold by Jubilana for 650 Rosaries, after completing "The Wandering Merchant" wish.',
           parsingInfo: { type: "flag", internalId: "MerchantEnclaveSimpleKey" },
-          mapLink: "478880",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478880",
         },
         {
           name: "Simple Key 4",
           whichAct: 2,
-          location: "Sands of Karak (Far-right): Held by a corpse sitting on the right-most bench.",
+          completionDetails: "Sands of Karak (Far-right): Held by a corpse sitting on the right-most bench.",
           parsingInfo: { type: "sceneData", internalId: ["Bellshrine_Coral", "Collectable Item Pickup"] },
-          mapLink: "479215",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479215",
         },
       ],
     },
@@ -49,23 +50,23 @@ export const keys: TrackableCategory = {
         {
           name: "Key of Indolent",
           whichAct: 1,
-          location: "The Slab: At the edge of a room entered from above.",
+          completionDetails: "The Slab: At the edge of a room entered from above.",
           parsingInfo: { type: "flag", internalId: "HasSlabKeyA" },
-          mapLink: "478467",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478467",
         },
         {
           name: "Key of Heretic",
           whichAct: 1,
-          location: "The Slab: Dropped by the final enemy in a room entered from above.",
+          completionDetails: "The Slab: Dropped by the final enemy in a room entered from above.",
           parsingInfo: { type: "flag", internalId: "HasSlabKeyB" },
-          mapLink: "478474",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478474",
         },
         {
           name: "Key of Apostate",
           whichAct: 2,
-          location: "Putrified Ducts (Bottom-left): Inside a cage, hit it a few times to get the key out.",
+          completionDetails: "Putrified Ducts (Bottom-left): Inside a cage, hit it a few times to get the key out.",
           parsingInfo: { type: "flag", internalId: "HasSlabKeyC" },
-          mapLink: "478963",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478963",
         },
       ],
     },
@@ -77,34 +78,34 @@ export const keys: TrackableCategory = {
           name: "Architect's Key",
           whichAct: 2,
           prereqs: ["Aquire 25 Tools"],
-          location:
+          completionDetails:
             "Underworks: Sold by Twelfth Architect for 110 Rosaries, after acquiring 25 Tools. Unlocks the Chapel of the Architect.",
           parsingInfo: { type: "flag", internalId: "PurchasedArchitectKey" },
-          mapLink: "478729",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478729",
         },
         {
           name: "White Key",
           whichAct: 2,
-          location:
+          completionDetails:
             'Songclave: On a corpse at the edge of the area. Sold by Jubilana for 220 Rosaries, if you don\'t pick it up before completing "The Wandering Merchant" wish. Unlocks the elevator in Whiteward.',
           parsingInfo: { type: "flagMulti", internalId: ["collectedWardKey", "MerchantEnclaveWardKey"] },
-          mapLink: "478599",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478599",
         },
         {
           name: "Surgeon's Key",
           whichAct: 2,
           prereqs: ["Clawline"],
-          location:
+          completionDetails:
             "Whiteward (Top-right): Dangle from a metal ring for a few seconds, and a corpse will eventually fall holding this key. Unlocks the trapdoor in Whiteward.",
           parsingInfo: { type: "flag", internalId: "collectedWardBossKey" },
-          mapLink: "478923",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478923",
         },
         {
           name: "Diving Bell Key",
           whichAct: 3,
-          location: "Deep Docks",
+          completionDetails: "Deep Docks",
           parsingInfo: { type: "flag", internalId: "BallowGivenKey" },
-          mapLink: "479279",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479279",
         },
       ],
     },

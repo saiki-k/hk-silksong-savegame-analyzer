@@ -2,35 +2,35 @@ import type { TrackableCategory } from "../types";
 
 export const stats: TrackableCategory = {
   name: "Stats",
-  description: "Statistics tracked in the game.",
+  description: "How long you've been exploring, your treasure hoard, and the kind of soul you carry!",
   sections: [
     {
       items: [
         {
           name: "Playtime",
           whichAct: 0,
-          location: "",
+          completionDetails: "",
           parsingInfo: { type: "flagReturn", internalId: "playTime" },
           mapLink: "",
         },
         {
           name: "Rosaries",
           whichAct: 0,
-          location: "",
+          completionDetails: "",
           parsingInfo: { type: "flagReturn", internalId: "geo" },
           mapLink: "",
         },
         {
           name: "Shell Shards",
           whichAct: 0,
-          location: "",
+          completionDetails: "",
           parsingInfo: { type: "flagReturn", internalId: "ShellShards" },
           mapLink: "",
         },
         {
           name: "Game Mode",
           whichAct: 0,
-          location: "",
+          completionDetails: "",
           parsingInfo: { type: "flagReturn", internalId: "permadeathMode" },
           mapLink: "",
         },

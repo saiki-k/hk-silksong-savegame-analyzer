@@ -1,4 +1,3 @@
-//services/decryptor.ts
 import CryptoJS from "crypto-js";
 
 const CSHARP_HEADER = new Uint8Array([0, 1, 0, 0, 0, 255, 255, 255, 255, 1, 0, 0, 0, 0, 0, 0, 0, 6, 1, 0, 0, 0]);
@@ -56,13 +55,13 @@ export function decodeSave(fileBytes: Uint8Array): string {
 
   // AES-ECB decrypt
   const key = CryptoJS.enc.Utf8.parse(AES_KEY_STRING);
-  const decrypted = CryptoJS.AES.decrypt(cipherParams, key, {
+  const isSaveFileDecrypted = CryptoJS.AES.decrypt(cipherParams, key, {
     mode: CryptoJS.mode.ECB,
     padding: CryptoJS.pad.Pkcs7,
   });
 
   // Return JSON as string
-  return CryptoJS.enc.Utf8.stringify(decrypted);
+  return CryptoJS.enc.Utf8.stringify(isSaveFileDecrypted);
 }
 
 export function encodeSave(jsonString: string): Uint8Array {
