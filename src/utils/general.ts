@@ -10,7 +10,10 @@ export function formatSecondsToHMS(seconds: number): string {
   return [h, m, s].map(unit => String(unit).padStart(2, "0")).join(":");
 }
 
-export function getActFilterText(actFilter?: Set<1 | 2 | 3>, { returnEmpty = false }: { returnEmpty?: boolean } = {}): string {
+export function getActFilterText(
+  actFilter?: Set<1 | 2 | 3>,
+  { returnEmpty = false }: { returnEmpty?: boolean } = {}
+): string {
   if (returnEmpty) return "";
 
   if (!actFilter || actFilter.size === 0) {

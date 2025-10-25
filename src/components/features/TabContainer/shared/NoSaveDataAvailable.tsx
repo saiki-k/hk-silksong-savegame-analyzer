@@ -12,11 +12,11 @@ interface NoValidSaveProps {
 const VARIANT_CONFIG = {
   NO_SAVE_FILE: {
     defaultMessage: "No save file loaded.",
-    hoverMessage: "🎵✨ Manifesting the save file...",
+    hoverMessage: "🎵✨ Using the power of song...",
   },
   CORRUPTED_SAVE_DATA: {
-    defaultMessage: "Corrupted save data.",
-    hoverMessage: "🎵✨ Using the power of song...",
+    defaultMessage: "Corrupted / Invalid save data.",
+    hoverMessage: "🎵✨ Manifesting a fix...",
   },
 } as const;
 
@@ -28,9 +28,10 @@ export function NoSaveDataAvailable({ variant = "NO_SAVE_FILE" }: NoValidSavePro
     <div className="text-white text-center text-lg relative">
       {/* Invisible hover area */}
       <div
-        className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-full h-32 pointer-events-auto"
+        className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-full h-32 pointer-events-auto cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        aria-hidden="true"
       />
       <img
         src={isHovered ? ShermaGif : Sherma}
