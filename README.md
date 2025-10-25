@@ -1,8 +1,9 @@
 # 🧵🎵 Silksong Completionist
 ### Track your [Hollow Knight: Silksong](https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/) Progress
 
-For all the completionists out there, this tool helps you track your in-game progress using your save file.
+For all the completionists out there, this app helps you track your in-game progress using your save file.
 
+![Bellways tracked on Silksong Completionist](./screenshots/bellways.png)
 
 ## ⚙️ Usage
 
