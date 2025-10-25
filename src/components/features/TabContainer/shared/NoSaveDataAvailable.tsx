@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Sherma from "@/assets/Sherma.png";
 import ShermaGif from "@/assets/Sherma.gif";
-import { cn } from "@/utils";
+import { cn, shuffleArray } from "@/utils";
 
 type NoValidSaveVariant = "NO_SAVE_FILE" | "CORRUPTED_SAVE_DATA";
 
@@ -33,9 +33,20 @@ const VARIANT_CONFIG = {
 export function NoSaveDataAvailable({ variant = "NO_SAVE_FILE" }: NoValidSaveProps) {
   const [isHovered, setIsHovered] = useState(false);
   const config = VARIANT_CONFIG[variant];
+  const state = useRef({ "📻": [] as string[], "🎶": 0 });
+
+  useEffect(() => {
+    state.current["📻"] = shuffleArray(config["🐣"]);
+    state.current["🎶"] = 0;
+  }, [variant]);
 
   const handleClick = () => {
-    window.open(config["🐣"][Math.floor(Math.random() * config["🐣"].length)], "_blank", "noopener,noreferrer");
+    if (state.current["🎶"] >= state.current["📻"].length) {
+      state.current["📻"] = shuffleArray(config["🐣"]);
+      state.current["🎶"] = 0;
+    }
+    window.open(state.current["📻"][state.current["🎶"]], "_blank", "noopener,noreferrer");
+    state.current["🎶"]++;
   };
 
   return (
