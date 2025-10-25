@@ -89,7 +89,8 @@ export const crests: TrackableCategory = {
           name: "Shaman Crest",
           whichAct: 3,
           completionPercent: 1,
-          completionDetails: "Moss Grotto (Ruined Chapel): In a tunnel above the first lore tablet, requires Silk Soar.",
+          completionDetails:
+            "Moss Grotto (Ruined Chapel): In a tunnel above the first lore tablet, requires Silk Soar.",
           parsingInfo: { type: "crest", internalId: "Spell" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479384",
         },

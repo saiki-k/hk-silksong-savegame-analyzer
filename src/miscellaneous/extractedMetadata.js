@@ -2545,4 +2545,3 @@ const manuallyExtractedEnemyMetadata = {
 const enemyMetadata = { ...extractedEnemyMetadata, ...manuallyExtractedEnemyMetadata };
 
 export const metadata = { enemyMetadata, completionVariantsMetadata };
-

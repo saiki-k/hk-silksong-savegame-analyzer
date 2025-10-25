@@ -76,7 +76,8 @@ export const fleas: TrackableCategory = {
           name: "Lost Flea #10",
           whichAct: 1,
           prereqs: ["Cling Grip"],
-          completionDetails: "Blasted Steps (Top): Near the section (above the Bellway) that connects to Sands of Karak.",
+          completionDetails:
+            "Blasted Steps (Top): Near the section (above the Bellway) that connects to Sands of Karak.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Coral_35" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478386",
         },
@@ -91,7 +92,8 @@ export const fleas: TrackableCategory = {
         {
           name: "Lost Flea #12",
           whichAct: 2,
-          completionDetails: "Exhaust Organ (Inside): In a room with a silk-refill spindle. Go towards left from there.",
+          completionDetails:
+            "Exhaust Organ (Inside): In a room with a silk-refill spindle. Go towards left from there.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Dust_09" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478378",
         },

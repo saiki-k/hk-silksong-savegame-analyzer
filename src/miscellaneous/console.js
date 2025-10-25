@@ -114,11 +114,14 @@ function extractGroupedEnemyDataFromMultipleSelectors(selectors) {
         .slice(1)
         .map(td => parseFloat(td.textContent.trim()) || 0);
 
-      const entry = variantName === "Main" ? { hp, damageModifiers } : {
-        modifierName: variantName,
-        hp,
-        damageModifiers,
-      };
+      const entry =
+        variantName === "Main"
+          ? { hp, damageModifiers }
+          : {
+              modifierName: variantName,
+              hp,
+              damageModifiers,
+            };
 
       if (!groupedData[baseName]) {
         groupedData[baseName] = {

@@ -12,7 +12,8 @@ export const relics: TrackableCategory = {
         {
           name: "Bone Scroll #1",
           whichAct: 1,
-          completionDetails: "Greymoor: Held by a corpse found after swimming all the way to the right in a secret room.",
+          completionDetails:
+            "Greymoor: Held by a corpse found after swimming all the way to the right in a secret room.",
           parsingInfo: { type: "relic", internalId: "Bone Record Greymoor_flooded_corridor" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478142",
         },
@@ -92,7 +93,8 @@ export const relics: TrackableCategory = {
         {
           name: "Choral Commandment #3",
           whichAct: 2,
-          completionDetails: "Whiteward: At the end of a room above the hidden passage, easiest to reach via Silk Soar.",
+          completionDetails:
+            "Whiteward: At the end of a room above the hidden passage, easiest to reach via Silk Soar.",
           parsingInfo: { type: "relic", internalId: "Seal Chit Silk Siphon" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478919",
         },
