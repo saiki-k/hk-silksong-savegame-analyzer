@@ -7,10 +7,7 @@ interface TabProgressProps {
   progressInfo: TabProgressInfo;
 }
 
-export function TabProgress({
-  inShowEverythingMode,
-  progressInfo,
-}: TabProgressProps): ReactElement {
+export function TabProgress({ inShowEverythingMode, progressInfo }: TabProgressProps): ReactElement {
   const { progressText, isProgressComplete, completedCount, encounteredProgressText } = progressInfo;
 
   const isZeroProgress = completedCount === 0;

@@ -75,9 +75,7 @@ export function StatusBar({
                 onClick={onShowMissingOnlyChange}
               />
             ) : (
-              <span className="">
-                {allText}
-              </span>
+              <span className="">{allText}</span>
             )}
             <span className={`${isJournalCategory ? "-ml-1" : ""}`}>{actText}, with</span>
             <TextWithEmojiButton
@@ -92,7 +90,7 @@ export function StatusBar({
               {showSpoilers ? "!" : "(until you hover over them)."}
             </span>
           </div>
-          
+
           {tabLabel !== "Hunter's Journal" && actFilterButtons}
         </div>
       </div>
