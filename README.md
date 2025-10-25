@@ -1,34 +1,31 @@
 # 🧵🎵 Silksong Completionist
 ### Track your [Hollow Knight: Silksong](https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/) Progress
 
-For all the completionists out there, I created a tool that helps you track your in-game progress directly from your save file.
+For all the completionists out there, this tool helps you track your in-game progress using your save file.
 
 
 ## ⚙️ Usage
 
 🔗 **Try it here:** [silksong-completionist.com](https://silksong-completionist.com/)
 
-Using the analyzer is simple!
+Simply drag and drop your save file into the upload box, or click to browse and upload it.
 
-Just drag and drop your save file into the upload box on the site, or click the box to browse and upload it.
+If you're unsure where your save file is located, click "Where can I find my save file?" above the upload area for platform-specific paths.
 
-If you’re unsure where your save file is located, the save file paths for most platforms are conveniently listed right above the upload area.
-
-Once uploaded, the analyzer will automatically parse your data and display your progress towards 100% completion.
+Once uploaded, you'll see your completion progress and detailed breakdowns of collected and missing items.
 
 
 ## 📊 What It Tracks
 
-The analyzer comprehensively tracks everything that contributes to 100% completion in Hollow Knight: Silksong, as well as many additional collectibles and features.
+Comprehensively tracks everything that contributes to 100% completion in Hollow Knight: Silksong, as well as many additional collectibles and features.
 
 ### 🧩 Core Progress Items (that count towards **100% completion**)
-- **Masks & Spools**
-  - Mask Shards
-  - Spool Fragments
+- **Mask Shards**
+- **Spool Fragments**
 - **Abilities**
   - Silk Skills
   - Silk Hearts
-  - Cloak Abilities *(these don't contribute any % towards 100% completion)*
+  - Cloak Abilities *(these don't contribute to 100% completion)*
   - Ancestral Arts
   - Other (Unique) Abilities: <details><summary>Spoiler</summary>Sylphsong</details><details><summary>Spoiler</summary>Everbloom</details>
 - **Upgrades**
@@ -58,8 +55,9 @@ The analyzer comprehensively tracks everything that contributes to 100% completi
 - **Bosses**
 - **Hunter's Journal**
 
-### 🔧 Advanced Feature(s)
-- **Save Editor**: A feature-rich editor with advanced search and real-time (JSON) validation capabilities, for save file modification
+### 🔧 Advanced Features
+- **Save Editor**: A feature-rich editor with advanced search and real-time JSON validation for modifying save files
+- **Flexible Filters**: Customize your view with completion status toggles (missing/all items), Act-specific (Act I, Act II, Act III) filters, and spoiler blur toggles
 
 
 ## 🐞 Issues & Contributions
@@ -72,7 +70,7 @@ If you spot an error or missing data:
 
 ## 💖 Credits
 
-A huge thank-you to everyone who helped make this possible!
+Huge thanks to everyone who helped make this possible!
 
 - 💡 *Inspired* by the legendary [Hollow Knight Completion Check](https://reznormichael.github.io/hollow-knight-completion-check/) *(RIP)*  
 - 🔍 *Savegame decipher code* from [martinshift/silksaver](https://martinshift.github.io/silksaver/)  
