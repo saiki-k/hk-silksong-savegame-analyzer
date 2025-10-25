@@ -38,7 +38,7 @@ export function NoSaveDataAvailable({ variant = "NO_SAVE_FILE" }: NoValidSavePro
   useEffect(() => {
     state.current["📻"] = shuffleArray(config["🐣"]);
     state.current["🎶"] = 0;
-  }, [variant]);
+  }, [config, variant]);
 
   const handleClick = () => {
     if (state.current["🎶"] >= state.current["📻"].length) {
