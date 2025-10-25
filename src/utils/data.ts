@@ -71,25 +71,24 @@ export function computeDictMapWithSaveData(
           sectionFilteredByGameMode.totalCount++;
           sectionFilteredByGameMode.totalPercent += item.completionPercent ?? 0;
 
+          // Hunter's Journal metadata
+          const isJournalEntry = isJournalCategory && killsAchieved !== undefined && item.killsRequired !== undefined;
+          const isJournalEntryComplete = isJournalEntry && killsAchieved >= (item.killsRequired ?? 0);
+          if (isJournalEntry) {
+            if (killsAchieved > 0) journalEncountered++;
+            if (isJournalEntryComplete) journalCompleted++;
+          }
+
           const itemPath: ItemPath = `${categoryName}.${sectionName}.${actKey}.${itemName}`;
 
-          // Update Hunter's Journal category's metadata variables
-          if (isJournalCategory && killsAchieved !== undefined) {
-            if (killsAchieved > 0 && item.killsRequired !== undefined) {
-              journalEncountered++;
-              if (killsAchieved >= item.killsRequired) {
-                journalCompleted++;
-              }
-            }
+          if (!unlocked || !isJournalEntryComplete) {
+            missingItemPaths.push(itemPath);
+            continue;
           }
 
-          if (!unlocked) {
-            missingItemPaths.push(itemPath);
-          } else {
-            completedItemPaths.push(itemPath);
-            categoryCompletedCount++;
-            categoryCompletedPercent += item.completionPercent ?? 0;
-          }
+          completedItemPaths.push(itemPath);
+          categoryCompletedCount++;
+          categoryCompletedPercent += item.completionPercent ?? 0;
         }
       }
 
