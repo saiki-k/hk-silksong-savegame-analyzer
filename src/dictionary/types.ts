@@ -40,6 +40,14 @@ export type CategoryItem = {
   mapLink: string;
   additionalMeta?: {
     killsRequired?: number;
+    imageAsset?: string;
+    hpAndDamageInfo?: Array<{
+      hp: string; // Of the form "50 / 100", where 50 is normal HP and 100 is black-threaded HP
+      damageModifiers: number[];
+      variantName?: string;
+    }>;
+    completesEntries?: string[];
+    completedByEntry?: string;
   };
   onlyFoundInClassicMode?: boolean;
   onlyFoundInSteelSoulMode?: boolean;

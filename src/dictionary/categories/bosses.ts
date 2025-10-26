@@ -110,7 +110,8 @@ export const bosses: TrackableCategory = {
         {
           name: "Garmond and Zaza",
           whichAct: 2,
-          completionDetails: "This is a missable entry that can only be attained in ACT 2. South-east part of Songclave.",
+          completionDetails:
+            "This is a missable entry that can only be attained in ACT 2. South-east part of Songclave.",
           parsingInfo: { type: "journal", internalId: "Garmond_Zaza" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479361",
         },
