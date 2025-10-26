@@ -71,8 +71,12 @@ export type NormalizedItem = CategoryItem & {
   isSteelSoulModeItem: boolean;
   saveMeta?: {
     unlocked?: boolean;
-    killsAchieved?: number;
     value?: unknown;
+    journalMeta?: {
+      killsAchieved?: number;
+      hasBeenEncountered?: boolean;
+      hasBeenCompleted?: boolean;
+    };
   };
 };
 

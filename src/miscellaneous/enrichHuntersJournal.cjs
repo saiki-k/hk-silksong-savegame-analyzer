@@ -8,8 +8,13 @@ const { enemyMetadata, completionVariantsMetadata } = metadata;
 const journalModule = require('../dictionary/categories/huntersJournal.ts');
 const huntersJournal = journalModule.huntersJournal;
 
+const bossesModule = require('../dictionary/categories/bosses.ts');
+const bosses = bossesModule.bosses;
+
 const OUTPUT_FILENAME = 'huntersJournalEnriched.ts';
 const OUTPUT_PATH = path.join(__dirname, '../dictionary/categories', OUTPUT_FILENAME);
+const BOSSES_OUTPUT_FILENAME = 'bossesEnriched.ts';
+const BOSSES_OUTPUT_PATH = path.join(__dirname, '../dictionary/categories', BOSSES_OUTPUT_FILENAME);
 const JOURNAL_ASSETS_DIR = path.join(__dirname, '../assets/journal');
 
 function downloadFile(url, filepath) {
@@ -200,7 +205,34 @@ function addImageAssets(enrichedHuntersJournal, enemyMetadata) {
         if (!item.additionalMeta) {
           item.additionalMeta = {};
         }
-        item.additionalMeta.imageAsset = filename;
+        item.additionalMeta.imageAsset = `journal/${filename}`;
+        count++;
+      }
+    });
+  });
+  
+  return count;
+}
+
+function addImageAssetsToBosses(enrichedBosses, enemyMetadata) {
+  let count = 0;
+  const nameMapping = {
+    'Raging Conchfly': 'Great Conchfly',
+    'Great Conchflies': 'Great Conchfly',
+  };
+  
+  enrichedBosses.sections.forEach(section => {
+    section.items.forEach(item => {
+      const lookupName = nameMapping[item.name] || item.name;
+      const meta = enemyMetadata[lookupName];
+      
+      if (meta && meta.imageUrl) {
+        const filename = lookupName.replace(/\s+/g, '_') + '.png';
+        
+        if (!item.additionalMeta) {
+          item.additionalMeta = {};
+        }
+        item.additionalMeta.imageAsset = `journal/${filename}`;
         count++;
       }
     });
@@ -222,6 +254,24 @@ function writeEnrichedJournal(enrichedHuntersJournal, outputPath) {
   
   let outputContent = 'import type { TrackableCategory } from "../types";\n\n';
   outputContent += `export const huntersJournal: TrackableCategory = ${singleLineParsingInfo};\n`;
+
+  fs.writeFileSync(outputPath, outputContent, 'utf-8');
+  return outputPath;
+}
+
+function writeEnrichedBosses(enrichedBosses, outputPath) {
+  const jsonString = JSON.stringify(enrichedBosses, null, 2);
+
+  const singleLineParsingInfo = jsonString.replace(
+    /"parsingInfo":\s*\{[^}]*\}/gs,
+    (match) => {
+      const obj = match.match(/"parsingInfo":\s*(\{[^}]*\})/s)[1];
+      return `"parsingInfo": ${obj.replace(/\s+/g, ' ')}`;
+    }
+  );
+  
+  let outputContent = 'import type { TrackableCategory } from "../types";\n\n';
+  outputContent += `export const bosses: TrackableCategory = ${singleLineParsingInfo};\n`;
 
   fs.writeFileSync(outputPath, outputContent, 'utf-8');
   return outputPath;
@@ -259,8 +309,52 @@ function runAnalysis(huntersJournal, enemyMetadata, completionVariantsMetadata) 
   return { hpAnalysis, completionVariantsAnalysis };
 }
 
+function addHpDamageInfoToBosses(enrichedBosses, enemyMetadata) {
+  let count = 0;
+  const nameMapping = {
+    'Raging Conchfly': 'Great Conchfly',
+    'Great Conchflies': 'Great Conchfly',
+  };
+  
+  enrichedBosses.sections.forEach(section => {
+    section.items.forEach(item => {
+      const lookupName = nameMapping[item.name] || item.name;
+      const meta = enemyMetadata[lookupName];
+      
+      if (meta && meta.values) {
+        if (!item.additionalMeta) {
+          item.additionalMeta = {};
+        }
+        
+        // For bosses with variants, pick the correct one
+        if (item.name === 'Raging Conchfly' && meta.values.length > 1) {
+          const ragingVariant = meta.values.find(v => v.variantName === 'Raging Conchfly');
+          if (ragingVariant) {
+            item.additionalMeta.hpAndDamageInfo = [ragingVariant];
+          } else {
+            item.additionalMeta.hpAndDamageInfo = meta.values;
+          }
+        } else if (item.name === 'Great Conchflies' && meta.values.length > 1) {
+          // Use the base variant (without variantName)
+          const baseVariant = meta.values.find(v => !v.variantName);
+          if (baseVariant) {
+            item.additionalMeta.hpAndDamageInfo = [baseVariant];
+          } else {
+            item.additionalMeta.hpAndDamageInfo = meta.values;
+          }
+        } else {
+          item.additionalMeta.hpAndDamageInfo = meta.values;
+        }
+        count++;
+      }
+    });
+  });
+  
+  return count;
+}
+
 function runTransformation(huntersJournal, enemyMetadata, completionVariantsAnalysis, outputPath = OUTPUT_PATH) {
-  console.log('=== STARTING TRANSFORMATION ===\n');
+  console.log('=== STARTING HUNTERS JOURNAL TRANSFORMATION ===\n');
 
   const enrichedHuntersJournal = JSON.parse(JSON.stringify(huntersJournal));
 
@@ -283,17 +377,43 @@ function runTransformation(huntersJournal, enemyMetadata, completionVariantsAnal
 
   writeEnrichedJournal(enrichedHuntersJournal, outputPath);
 
-  console.log('=== TRANSFORMATION COMPLETE ===');
-  console.log(`New file created: ${outputPath}`);
+  console.log('=== HUNTERS JOURNAL TRANSFORMATION COMPLETE ===');
+  console.log(`New file created: ${outputPath}\n`);
+}
+
+function runBossesTransformation(bosses, enemyMetadata, outputPath = BOSSES_OUTPUT_PATH) {
+  console.log('=== STARTING BOSSES TRANSFORMATION ===\n');
+
+  const enrichedBosses = JSON.parse(JSON.stringify(bosses));
+
+  console.log('Step 1: Adding image assets to bosses...');
+  const imageCount = addImageAssetsToBosses(enrichedBosses, enemyMetadata);
+  console.log(`✓ Added to ${imageCount} entries\n`);
+
+  console.log('Step 2: Adding HP and damage info to bosses...');
+  const hpCount = addHpDamageInfoToBosses(enrichedBosses, enemyMetadata);
+  console.log(`✓ Added to ${hpCount} entries\n`);
+
+  writeEnrichedBosses(enrichedBosses, outputPath);
+
+  console.log('=== BOSSES TRANSFORMATION COMPLETE ===');
+  console.log(`New file created: ${outputPath}\n`);
 }
 
 async function run() {
-  console.log('=== HUNTERS JOURNAL METADATA ENRICHMENT ===\n');
+  console.log('=== METADATA ENRICHMENT SCRIPT ===\n');
+  
+  console.log('--- HUNTERS JOURNAL ---\n');
   const { completionVariantsAnalysis } = runAnalysis(huntersJournal, enemyMetadata, completionVariantsMetadata);
   
   await downloadJournalImages(huntersJournal, enemyMetadata);
   
   runTransformation(huntersJournal, enemyMetadata, completionVariantsAnalysis);
+  
+  console.log('--- BOSSES ---\n');
+  runBossesTransformation(bosses, enemyMetadata);
+  
+  console.log('=== ALL ENRICHMENT COMPLETE ===');
 }
 
 run();

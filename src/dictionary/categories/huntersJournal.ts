@@ -14,7 +14,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479075",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Mossgrub.png",
+            imageAsset: "journal/Mossgrub.png",
             hpAndDamageInfo: [
               {
                 hp: "10 / 20",
@@ -31,7 +31,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480252",
           additionalMeta: {
             killsRequired: 3,
-            imageAsset: "Massive_Mossgrub.png",
+            imageAsset: "journal/Massive_Mossgrub.png",
             hpAndDamageInfo: [
               {
                 hp: "80",
@@ -48,7 +48,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479076",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Mossmir.png",
+            imageAsset: "journal/Mossmir.png",
             hpAndDamageInfo: [
               {
                 hp: "12 / 24",
@@ -65,7 +65,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480309",
           additionalMeta: {
             killsRequired: 3,
-            imageAsset: "Moss_Mother.png",
+            imageAsset: "journal/Moss_Mother.png",
             hpAndDamageInfo: [
               {
                 variantName: "Ruined Chapel",
@@ -93,7 +93,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479579",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Aknid.png",
+            imageAsset: "journal/Aknid.png",
             hpAndDamageInfo: [
               {
                 hp: "15 / 60",
@@ -110,7 +110,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479543",
           additionalMeta: {
             killsRequired: 35,
-            imageAsset: "Skull_Scuttler.png",
+            imageAsset: "journal/Skull_Scuttler.png",
             hpAndDamageInfo: [
               {
                 hp: "15 / 60",
@@ -127,7 +127,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479543",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Skullwing.png",
+            imageAsset: "journal/Skullwing.png",
             hpAndDamageInfo: [
               {
                 hp: "15",
@@ -144,7 +144,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479546",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Skull_Brute.png",
+            imageAsset: "journal/Skull_Brute.png",
             hpAndDamageInfo: [
               {
                 hp: "30 / 60",
@@ -161,7 +161,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480313",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Skull_Tyrant.png",
+            imageAsset: "journal/Skull_Tyrant.png",
             hpAndDamageInfo: [
               {
                 hp: "450 / 900",
@@ -178,7 +178,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479550",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Kilik.png",
+            imageAsset: "journal/Kilik.png",
             hpAndDamageInfo: [
               {
                 hp: "20 / 80",
@@ -195,7 +195,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479544",
           additionalMeta: {
             killsRequired: 30,
-            imageAsset: "Beastfly.png",
+            imageAsset: "journal/Beastfly.png",
             hpAndDamageInfo: [
               {
                 hp: "15 / 60",
@@ -217,7 +217,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480317",
           additionalMeta: {
             killsRequired: 2,
-            imageAsset: "Savage_Beastfly.png",
+            imageAsset: "journal/Savage_Beastfly.png",
             hpAndDamageInfo: [
               {
                 variantName: "Chapel of the Beast",
@@ -240,7 +240,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479547",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Caranid.png",
+            imageAsset: "journal/Caranid.png",
             hpAndDamageInfo: [
               {
                 hp: "14 / 56",
@@ -257,7 +257,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479564",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Vicious_Caranid.png",
+            imageAsset: "journal/Vicious_Caranid.png",
             hpAndDamageInfo: [
               {
                 hp: "27 / 108",
@@ -279,7 +279,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479555",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Hardbone_Hopper.png",
+            imageAsset: "journal/Hardbone_Hopper.png",
             hpAndDamageInfo: [
               {
                 hp: "20 / 80",
@@ -296,7 +296,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480213",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Hardbone_Elder.png",
+            imageAsset: "journal/Hardbone_Elder.png",
             hpAndDamageInfo: [
               {
                 hp: "110 / 220",
@@ -318,7 +318,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479058",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Tarmite.png",
+            imageAsset: "journal/Tarmite.png",
             hpAndDamageInfo: [
               {
                 hp: "25 / 50",
@@ -340,7 +340,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479077",
           additionalMeta: {
             killsRequired: 30,
-            imageAsset: "Mawling.png",
+            imageAsset: "journal/Mawling.png",
             hpAndDamageInfo: [
               {
                 hp: "15 / 30",
@@ -357,7 +357,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478224",
           additionalMeta: {
             killsRequired: 8,
-            imageAsset: "Marrowmaw.png",
+            imageAsset: "journal/Marrowmaw.png",
             hpAndDamageInfo: [
               {
                 hp: "50 / 100",
@@ -379,7 +379,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479570",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Hoker.png",
+            imageAsset: "journal/Hoker.png",
             hpAndDamageInfo: [
               {
                 hp: "15",
@@ -396,7 +396,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478248",
           additionalMeta: {
             killsRequired: 3,
-            imageAsset: "Flintbeetle.png",
+            imageAsset: "journal/Flintbeetle.png",
             hpAndDamageInfo: [
               {
                 hp: "95",
@@ -413,7 +413,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480179",
           additionalMeta: {
             killsRequired: 2,
-            imageAsset: "Rhinogrund.png",
+            imageAsset: "journal/Rhinogrund.png",
             hpAndDamageInfo: [
               {
                 hp: "150 / 300",
@@ -430,7 +430,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479078",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Gromling.png",
+            imageAsset: "journal/Gromling.png",
             hpAndDamageInfo: [
               {
                 hp: "30",
@@ -447,7 +447,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479080",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Grom.png",
+            imageAsset: "journal/Grom.png",
             hpAndDamageInfo: [
               {
                 hp: "30",
@@ -464,7 +464,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480312",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Bell_Beast.png",
+            imageAsset: "journal/Bell_Beast.png",
             hpAndDamageInfo: [
               {
                 hp: "150",
@@ -481,7 +481,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479571",
           additionalMeta: {
             killsRequired: 35,
-            imageAsset: "Pilgrim_Groveller.png",
+            imageAsset: "journal/Pilgrim_Groveller.png",
             hpAndDamageInfo: [
               {
                 hp: "20 / 80",
@@ -498,7 +498,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479551",
           additionalMeta: {
             killsRequired: 35,
-            imageAsset: "Pilgrim_Pouncer.png",
+            imageAsset: "journal/Pilgrim_Pouncer.png",
             hpAndDamageInfo: [
               {
                 hp: "20 / 80",
@@ -515,7 +515,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479573",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Pilgrim_Hornfly.png",
+            imageAsset: "journal/Pilgrim_Hornfly.png",
             hpAndDamageInfo: [
               {
                 hp: "20 / 80",
@@ -532,7 +532,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479574",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Pilgrim_Hulk.png",
+            imageAsset: "journal/Pilgrim_Hulk.png",
             hpAndDamageInfo: [
               {
                 hp: "30 / 120",
@@ -549,7 +549,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478044",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Pilgrim_Bellbearer.png",
+            imageAsset: "journal/Pilgrim_Bellbearer.png",
             hpAndDamageInfo: [
               {
                 hp: "20 / 80",
@@ -566,7 +566,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479552",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Winged_Pilgrim.png",
+            imageAsset: "journal/Winged_Pilgrim.png",
             hpAndDamageInfo: [
               {
                 hp: "20 / 80",
@@ -583,7 +583,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479755",
           additionalMeta: {
             killsRequired: 5,
-            imageAsset: "Elder_Pilgrim.png",
+            imageAsset: "journal/Elder_Pilgrim.png",
             hpAndDamageInfo: [
               {
                 hp: "30 / 120",
@@ -600,7 +600,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478301",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Winged_Pilgrim_Bellbearer.png",
+            imageAsset: "journal/Winged_Pilgrim_Bellbearer.png",
             hpAndDamageInfo: [
               {
                 hp: "25 / 50",
@@ -617,7 +617,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479738",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Pilgrim_Hiker.png",
+            imageAsset: "journal/Pilgrim_Hiker.png",
             hpAndDamageInfo: [
               {
                 hp: "30 / 90",
@@ -634,7 +634,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479683",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Pilgrim_Guide.png",
+            imageAsset: "journal/Pilgrim_Guide.png",
             hpAndDamageInfo: [
               {
                 hp: "24 / 96",
@@ -651,7 +651,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479577",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Overgrown_Pilgrim.png",
+            imageAsset: "journal/Overgrown_Pilgrim.png",
             hpAndDamageInfo: [
               {
                 hp: "23 / 92",
@@ -668,7 +668,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478300",
           additionalMeta: {
             killsRequired: 2,
-            imageAsset: "Covetous_Pilgrim.png",
+            imageAsset: "journal/Covetous_Pilgrim.png",
             hpAndDamageInfo: [
               {
                 hp: "85",
@@ -690,7 +690,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479000",
           additionalMeta: {
             killsRequired: 4,
-            imageAsset: "Snitchfly.png",
+            imageAsset: "journal/Snitchfly.png",
             hpAndDamageInfo: [
               {
                 hp: "35",
@@ -707,7 +707,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479565",
           additionalMeta: {
             killsRequired: 12,
-            imageAsset: "Lavalug.png",
+            imageAsset: "journal/Lavalug.png",
             hpAndDamageInfo: [
               {
                 hp: "15 / 30",
@@ -724,7 +724,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480236",
           additionalMeta: {
             killsRequired: 8,
-            imageAsset: "Lavalarga.png",
+            imageAsset: "journal/Lavalarga.png",
             hpAndDamageInfo: [
               {
                 hp: "85 / 170",
@@ -741,7 +741,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479553",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Smelt_Shoveller.png",
+            imageAsset: "journal/Smelt_Shoveller.png",
             hpAndDamageInfo: [
               {
                 hp: "30 / 120",
@@ -763,7 +763,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479554",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Flintstone_Flyer.png",
+            imageAsset: "journal/Flintstone_Flyer.png",
             hpAndDamageInfo: [
               {
                 hp: "30 / 120",
@@ -785,7 +785,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479566",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Flintflame_Flyer.png",
+            imageAsset: "journal/Flintflame_Flyer.png",
             hpAndDamageInfo: [
               {
                 hp: "60 / 120",
@@ -802,7 +802,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479567",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Smokerock_Sifter.png",
+            imageAsset: "journal/Smokerock_Sifter.png",
             hpAndDamageInfo: [
               {
                 hp: "40 / 160",
@@ -819,7 +819,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480237",
           additionalMeta: {
             killsRequired: 5,
-            imageAsset: "Deep_Diver.png",
+            imageAsset: "journal/Deep_Diver.png",
             hpAndDamageInfo: [
               {
                 hp: "90 / 180",
@@ -836,7 +836,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480314",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Forebrothers_Signis_&_Gron.png",
+            imageAsset: "journal/Forebrothers_Signis_&_Gron.png",
             hpAndDamageInfo: [
               {
                 hp: "720 + 520",
@@ -853,7 +853,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480145",
           additionalMeta: {
             killsRequired: 3,
-            imageAsset: "Cragglite.png",
+            imageAsset: "journal/Cragglite.png",
             hpAndDamageInfo: [
               {
                 hp: "20 / 40",
@@ -870,7 +870,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478088",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Craggler.png",
+            imageAsset: "journal/Craggler.png",
             hpAndDamageInfo: [
               {
                 hp: "200 / 400",
@@ -887,7 +887,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479560",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Brushflit.png",
+            imageAsset: "journal/Brushflit.png",
             hpAndDamageInfo: [
               {
                 hp: "1",
@@ -904,7 +904,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479561",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Fertid.png",
+            imageAsset: "journal/Fertid.png",
             hpAndDamageInfo: [
               {
                 hp: "15 / 30",
@@ -921,7 +921,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479562",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Flapping_Fertid.png",
+            imageAsset: "journal/Flapping_Fertid.png",
             hpAndDamageInfo: [
               {
                 hp: "15 / 30",
@@ -938,7 +938,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480315",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Fourth_Chorus.png",
+            imageAsset: "journal/Fourth_Chorus.png",
             hpAndDamageInfo: [
               {
                 hp: "500",
@@ -955,7 +955,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479558",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Skarrlid.png",
+            imageAsset: "journal/Skarrlid.png",
             hpAndDamageInfo: [
               {
                 hp: "20",
@@ -972,7 +972,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479557",
           additionalMeta: {
             killsRequired: 30,
-            imageAsset: "Skarrwing.png",
+            imageAsset: "journal/Skarrwing.png",
             hpAndDamageInfo: [
               {
                 hp: "20",
@@ -989,7 +989,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479559",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Skarr_Scout.png",
+            imageAsset: "journal/Skarr_Scout.png",
             hpAndDamageInfo: [
               {
                 hp: "30 / 90",
@@ -1007,7 +1007,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479563",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Skarr_Stalker.png",
+            imageAsset: "journal/Skarr_Stalker.png",
             hpAndDamageInfo: [
               {
                 hp: "75 / 150",
@@ -1025,7 +1025,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479591",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Spear_Skarr.png",
+            imageAsset: "journal/Spear_Skarr.png",
             hpAndDamageInfo: [
               {
                 hp: "75 / 150",
@@ -1043,7 +1043,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477962",
           additionalMeta: {
             killsRequired: 2,
-            imageAsset: "Skarrgard.png",
+            imageAsset: "journal/Skarrgard.png",
             hpAndDamageInfo: [
               {
                 hp: "150 / 300",
@@ -1060,7 +1060,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480316",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Gurr_the_Outcast.png",
+            imageAsset: "journal/Gurr_the_Outcast.png",
             hpAndDamageInfo: [
               {
                 hp: "1000",
@@ -1077,7 +1077,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480483",
           additionalMeta: {
             killsRequired: 6,
-            imageAsset: "Last_Claw.png",
+            imageAsset: "journal/Last_Claw.png",
             hpAndDamageInfo: [
               {
                 hp: "130",
@@ -1095,7 +1095,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479198",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Skarrsinger_Karmelita.png",
+            imageAsset: "journal/Skarrsinger_Karmelita.png",
             hpAndDamageInfo: [
               {
                 hp: "1500",
@@ -1113,7 +1113,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479681",
           additionalMeta: {
             killsRequired: 30,
-            imageAsset: "Mite.png",
+            imageAsset: "journal/Mite.png",
             hpAndDamageInfo: [
               {
                 hp: "15 / 30",
@@ -1130,7 +1130,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478974",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Fluttermite.png",
+            imageAsset: "journal/Fluttermite.png",
             hpAndDamageInfo: [
               {
                 hp: "15 / 30",
@@ -1147,7 +1147,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478975",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Mitemother.png",
+            imageAsset: "journal/Mitemother.png",
             hpAndDamageInfo: [
               {
                 hp: "60 / 120",
@@ -1164,7 +1164,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479685",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Dreg_Catcher.png",
+            imageAsset: "journal/Dreg_Catcher.png",
             hpAndDamageInfo: [
               {
                 hp: "21 / 42",
@@ -1186,7 +1186,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478150",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Silk_Snipper.png",
+            imageAsset: "journal/Silk_Snipper.png",
             hpAndDamageInfo: [
               {
                 hp: "29 / 58",
@@ -1203,7 +1203,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478979",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Thread_Raker.png",
+            imageAsset: "journal/Thread_Raker.png",
             hpAndDamageInfo: [
               {
                 hp: "50 / 100",
@@ -1225,7 +1225,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480340",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Moorwing.png",
+            imageAsset: "journal/Moorwing.png",
             hpAndDamageInfo: [
               {
                 hp: "600 / 1200",
@@ -1242,7 +1242,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480438",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Wisp.png",
+            imageAsset: "journal/Wisp.png",
             hpAndDamageInfo: [
               {
                 hp: "Cannot be damaged",
@@ -1260,7 +1260,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480440",
           additionalMeta: {
             killsRequired: 8,
-            imageAsset: "Burning_Bug.png",
+            imageAsset: "journal/Burning_Bug.png",
             hpAndDamageInfo: [
               {
                 hp: "90",
@@ -1278,7 +1278,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480349",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Father_of_the_Flame.png",
+            imageAsset: "journal/Father_of_the_Flame.png",
             hpAndDamageInfo: [
               {
                 hp: "100 * 4 + 240",
@@ -1296,7 +1296,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479679",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Craw.png",
+            imageAsset: "journal/Craw.png",
             hpAndDamageInfo: [
               {
                 hp: "20 / 40",
@@ -1313,7 +1313,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479680",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Tallcraw.png",
+            imageAsset: "journal/Tallcraw.png",
             hpAndDamageInfo: [
               {
                 hp: "50 / 100",
@@ -1330,7 +1330,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479682",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Squatcraw.png",
+            imageAsset: "journal/Squatcraw.png",
             hpAndDamageInfo: [
               {
                 hp: "50 / 100",
@@ -1347,7 +1347,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480485",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Craw_Juror.png",
+            imageAsset: "journal/Craw_Juror.png",
             hpAndDamageInfo: [
               {
                 hp: "50",
@@ -1365,7 +1365,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480486",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Tallcraw_Juror.png",
+            imageAsset: "journal/Tallcraw_Juror.png",
             hpAndDamageInfo: [
               {
                 hp: "60",
@@ -1383,7 +1383,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480487",
           additionalMeta: {
             killsRequired: 8,
-            imageAsset: "Squatcraw_Juror.png",
+            imageAsset: "journal/Squatcraw_Juror.png",
             hpAndDamageInfo: [
               {
                 hp: "60",
@@ -1401,7 +1401,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480319",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Crawfather.png",
+            imageAsset: "journal/Crawfather.png",
             hpAndDamageInfo: [
               {
                 hp: "1300",
@@ -1419,7 +1419,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480190",
           additionalMeta: {
             killsRequired: 80,
-            imageAsset: "Muckmaggot.png",
+            imageAsset: "journal/Muckmaggot.png",
             hpAndDamageInfo: [
               {
                 hp: "None",
@@ -1436,7 +1436,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478965",
           additionalMeta: {
             killsRequired: 12,
-            imageAsset: "Slubberlug.png",
+            imageAsset: "journal/Slubberlug.png",
             hpAndDamageInfo: [
               {
                 hp: "22",
@@ -1453,7 +1453,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478264",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Muckroach.png",
+            imageAsset: "journal/Muckroach.png",
             hpAndDamageInfo: [
               {
                 hp: "50 / 100",
@@ -1475,7 +1475,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478737",
           additionalMeta: {
             killsRequired: 12,
-            imageAsset: "Bloatroach.png",
+            imageAsset: "journal/Bloatroach.png",
             hpAndDamageInfo: [
               {
                 hp: "80 / 160",
@@ -1492,7 +1492,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478261",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Roachcatcher.png",
+            imageAsset: "journal/Roachcatcher.png",
             hpAndDamageInfo: [
               {
                 hp: "40 / 80",
@@ -1514,7 +1514,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478338",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Roachfeeder.png",
+            imageAsset: "journal/Roachfeeder.png",
             hpAndDamageInfo: [
               {
                 hp: "45 / 90",
@@ -1531,7 +1531,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478697",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Roachkeeper.png",
+            imageAsset: "journal/Roachkeeper.png",
             hpAndDamageInfo: [
               {
                 hp: "100 / 200",
@@ -1548,7 +1548,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478991",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Roachserver.png",
+            imageAsset: "journal/Roachserver.png",
             hpAndDamageInfo: [
               {
                 hp: "60",
@@ -1566,7 +1566,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480346",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Disgraced_Chef_Lugoli.png",
+            imageAsset: "journal/Disgraced_Chef_Lugoli.png",
             hpAndDamageInfo: [
               {
                 hp: "600 / 1200",
@@ -1584,7 +1584,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478367",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Wraith.png",
+            imageAsset: "journal/Wraith.png",
             hpAndDamageInfo: [
               {
                 hp: "45",
@@ -1602,7 +1602,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478738",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Mothleaf_Lagnia.png",
+            imageAsset: "journal/Mothleaf_Lagnia.png",
             hpAndDamageInfo: [
               {
                 hp: "1",
@@ -1619,7 +1619,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478966",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Miremite.png",
+            imageAsset: "journal/Miremite.png",
             hpAndDamageInfo: [
               {
                 hp: "30",
@@ -1636,7 +1636,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478721",
           additionalMeta: {
             killsRequired: 30,
-            imageAsset: "Swamp_Squit.png",
+            imageAsset: "journal/Swamp_Squit.png",
             hpAndDamageInfo: [
               {
                 hp: "35",
@@ -1653,7 +1653,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480261",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Spit_Squit.png",
+            imageAsset: "journal/Spit_Squit.png",
             hpAndDamageInfo: [
               {
                 hp: "55 / 110",
@@ -1670,7 +1670,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480206",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Stilkin.png",
+            imageAsset: "journal/Stilkin.png",
             hpAndDamageInfo: [
               {
                 hp: "45",
@@ -1687,7 +1687,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480238",
           additionalMeta: {
             killsRequired: 12,
-            imageAsset: "Stilkin_Trapper.png",
+            imageAsset: "journal/Stilkin_Trapper.png",
             hpAndDamageInfo: [
               {
                 hp: "45",
@@ -1704,7 +1704,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480345",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Groal_the_Great.png",
+            imageAsset: "journal/Groal_the_Great.png",
             hpAndDamageInfo: [
               {
                 hp: "650",
@@ -1721,7 +1721,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478962",
           additionalMeta: {
             killsRequired: 8,
-            imageAsset: "Barnak.png",
+            imageAsset: "journal/Barnak.png",
             hpAndDamageInfo: [
               {
                 hp: "35",
@@ -1738,7 +1738,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480211",
           additionalMeta: {
             killsRequired: 6,
-            imageAsset: "Ductsucker.png",
+            imageAsset: "journal/Ductsucker.png",
             hpAndDamageInfo: [
               {
                 hp: "100",
@@ -1755,7 +1755,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478159",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Pond_Skipper.png",
+            imageAsset: "journal/Pond_Skipper.png",
             hpAndDamageInfo: [
               {
                 hp: "15 / 30",
@@ -1772,7 +1772,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478161",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Pondcatcher.png",
+            imageAsset: "journal/Pondcatcher.png",
             hpAndDamageInfo: [
               {
                 hp: "25 / 100",
@@ -1789,7 +1789,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478983",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Shellwood_Gnat.png",
+            imageAsset: "journal/Shellwood_Gnat.png",
             hpAndDamageInfo: [
               {
                 hp: "15 / 30",
@@ -1806,7 +1806,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478160",
           additionalMeta: {
             killsRequired: 12,
-            imageAsset: "Wood_Wasp.png",
+            imageAsset: "journal/Wood_Wasp.png",
             hpAndDamageInfo: [
               {
                 hp: "15 / 30",
@@ -1823,7 +1823,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478980",
           additionalMeta: {
             killsRequired: 12,
-            imageAsset: "Splinter.png",
+            imageAsset: "journal/Splinter.png",
             hpAndDamageInfo: [
               {
                 hp: "25 / 100",
@@ -1840,7 +1840,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478169",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Splinterhorn.png",
+            imageAsset: "journal/Splinterhorn.png",
             hpAndDamageInfo: [
               {
                 hp: "25 / 100",
@@ -1857,7 +1857,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478186",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Splinterbark.png",
+            imageAsset: "journal/Splinterbark.png",
             hpAndDamageInfo: [
               {
                 hp: "15 / 30",
@@ -1874,7 +1874,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480324",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Sister_Splinter.png",
+            imageAsset: "journal/Sister_Splinter.png",
             hpAndDamageInfo: [
               {
                 hp: "310",
@@ -1891,7 +1891,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478168",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Phacia.png",
+            imageAsset: "journal/Phacia.png",
             hpAndDamageInfo: [
               {
                 hp: "15 / 30",
@@ -1908,7 +1908,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478175",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Pollenica.png",
+            imageAsset: "journal/Pollenica.png",
             hpAndDamageInfo: [
               {
                 hp: "20 / 40",
@@ -1925,7 +1925,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478181",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Gahlia.png",
+            imageAsset: "journal/Gahlia.png",
             hpAndDamageInfo: [
               {
                 hp: "20 / 40",
@@ -1942,7 +1942,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480352",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Shrine_Guardian_Seth.png",
+            imageAsset: "journal/Shrine_Guardian_Seth.png",
             hpAndDamageInfo: [
               {
                 hp: "1185",
@@ -1959,7 +1959,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480353",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Nyleth.png",
+            imageAsset: "journal/Nyleth.png",
             hpAndDamageInfo: [
               {
                 hp: "1250",
@@ -1976,7 +1976,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478194",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Furm.png",
+            imageAsset: "journal/Furm.png",
             hpAndDamageInfo: [
               {
                 hp: "20 / 40",
@@ -1993,7 +1993,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478195",
           additionalMeta: {
             killsRequired: 12,
-            imageAsset: "Winged_Furm.png",
+            imageAsset: "journal/Winged_Furm.png",
             hpAndDamageInfo: [
               {
                 hp: "30 / 60",
@@ -2010,7 +2010,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479737",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Pharlid.png",
+            imageAsset: "journal/Pharlid.png",
             hpAndDamageInfo: [
               {
                 hp: "25 / 50",
@@ -2027,7 +2027,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478232",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Pharlid_Diver.png",
+            imageAsset: "journal/Pharlid_Diver.png",
             hpAndDamageInfo: [
               {
                 hp: "25",
@@ -2044,7 +2044,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480162",
           additionalMeta: {
             killsRequired: 3,
-            imageAsset: "Shardillard.png",
+            imageAsset: "journal/Shardillard.png",
             hpAndDamageInfo: [
               {
                 hp: "50",
@@ -2061,7 +2061,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480191",
           additionalMeta: {
             killsRequired: 40,
-            imageAsset: "Sandcarver.png",
+            imageAsset: "journal/Sandcarver.png",
             hpAndDamageInfo: [
               {
                 hp: "None",
@@ -2078,7 +2078,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479862",
           additionalMeta: {
             killsRequired: 4,
-            imageAsset: "Squirrm.png",
+            imageAsset: "journal/Squirrm.png",
             hpAndDamageInfo: [
               {
                 hp: "12",
@@ -2095,7 +2095,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479736",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Judge.png",
+            imageAsset: "journal/Judge.png",
             hpAndDamageInfo: [
               {
                 hp: "75 / 150",
@@ -2112,7 +2112,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480351",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Last_Judge.png",
+            imageAsset: "journal/Last_Judge.png",
             hpAndDamageInfo: [
               {
                 hp: "720[Note 1]",
@@ -2129,7 +2129,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480363",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Coral_Furm.png",
+            imageAsset: "journal/Coral_Furm.png",
             hpAndDamageInfo: [
               {
                 hp: "45",
@@ -2146,7 +2146,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478306",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Driznit.png",
+            imageAsset: "journal/Driznit.png",
             hpAndDamageInfo: [
               {
                 hp: "29",
@@ -2163,7 +2163,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480245",
           additionalMeta: {
             killsRequired: 14,
-            imageAsset: "Driznarga.png",
+            imageAsset: "journal/Driznarga.png",
             hpAndDamageInfo: [
               {
                 hp: "55 / 110",
@@ -2180,7 +2180,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480366",
           additionalMeta: {
             killsRequired: 16,
-            imageAsset: "Pokenabbin.png",
+            imageAsset: "journal/Pokenabbin.png",
             hpAndDamageInfo: [
               {
                 hp: "45 / 90",
@@ -2197,7 +2197,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480369",
           additionalMeta: {
             killsRequired: 8,
-            imageAsset: "Conchfly.png",
+            imageAsset: "journal/Conchfly.png",
             hpAndDamageInfo: [
               {
                 hp: "45",
@@ -2219,7 +2219,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480335",
           additionalMeta: {
             killsRequired: 2,
-            imageAsset: "Great_Conchfly.png",
+            imageAsset: "journal/Great_Conchfly.png",
             hpAndDamageInfo: [
               {
                 hp: "400",
@@ -2241,7 +2241,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480227",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Crustcrawler.png",
+            imageAsset: "journal/Crustcrawler.png",
             hpAndDamageInfo: [
               {
                 hp: "25",
@@ -2259,7 +2259,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480243",
           additionalMeta: {
             killsRequired: 6,
-            imageAsset: "Crustcrag.png",
+            imageAsset: "journal/Crustcrag.png",
             hpAndDamageInfo: [
               {
                 hp: "80",
@@ -2276,7 +2276,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480231",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Kai.png",
+            imageAsset: "journal/Kai.png",
             hpAndDamageInfo: [
               {
                 hp: "5",
@@ -2294,7 +2294,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480235",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Spinebeak_Kai.png",
+            imageAsset: "journal/Spinebeak_Kai.png",
             hpAndDamageInfo: [
               {
                 hp: "5",
@@ -2312,7 +2312,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480234",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Steelspine_Kai.png",
+            imageAsset: "journal/Steelspine_Kai.png",
             hpAndDamageInfo: [
               {
                 hp: "5",
@@ -2330,7 +2330,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480233",
           additionalMeta: {
             killsRequired: 16,
-            imageAsset: "Yuma.png",
+            imageAsset: "journal/Yuma.png",
             hpAndDamageInfo: [
               {
                 hp: "5",
@@ -2348,7 +2348,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480232",
           additionalMeta: {
             killsRequired: 3,
-            imageAsset: "Yumama.png",
+            imageAsset: "journal/Yumama.png",
             hpAndDamageInfo: [
               {
                 hp: "75",
@@ -2366,7 +2366,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480229",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Karaka.png",
+            imageAsset: "journal/Karaka.png",
             hpAndDamageInfo: [
               {
                 hp: "90",
@@ -2384,7 +2384,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480230",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Kakri.png",
+            imageAsset: "journal/Kakri.png",
             hpAndDamageInfo: [
               {
                 hp: "60",
@@ -2402,7 +2402,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480228",
           additionalMeta: {
             killsRequired: 12,
-            imageAsset: "Yago.png",
+            imageAsset: "journal/Yago.png",
             hpAndDamageInfo: [
               {
                 hp: "60",
@@ -2420,7 +2420,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480225",
           additionalMeta: {
             killsRequired: 8,
-            imageAsset: "Karak_Gor.png",
+            imageAsset: "journal/Karak_Gor.png",
             hpAndDamageInfo: [
               {
                 hp: "140",
@@ -2438,7 +2438,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480226",
           additionalMeta: {
             killsRequired: 6,
-            imageAsset: "Alita.png",
+            imageAsset: "journal/Alita.png",
             hpAndDamageInfo: [
               {
                 hp: "80",
@@ -2456,7 +2456,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480224",
           additionalMeta: {
             killsRequired: 6,
-            imageAsset: "Corrcrust_Karaka.png",
+            imageAsset: "journal/Corrcrust_Karaka.png",
             hpAndDamageInfo: [
               {
                 hp: "105",
@@ -2474,7 +2474,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480327",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Crust_King_Khann.png",
+            imageAsset: "journal/Crust_King_Khann.png",
             hpAndDamageInfo: [
               {
                 hp: "1650",
@@ -2505,7 +2505,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480326",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Watcher_at_the_Edge.png",
+            imageAsset: "journal/Watcher_at_the_Edge.png",
             hpAndDamageInfo: [
               {
                 hp: "900",
@@ -2522,7 +2522,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480336",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Voltvyrm.png",
+            imageAsset: "journal/Voltvyrm.png",
             hpAndDamageInfo: [
               {
                 hp: "550",
@@ -2539,7 +2539,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479013",
           additionalMeta: {
             killsRequired: 30,
-            imageAsset: "Drapefly.png",
+            imageAsset: "journal/Drapefly.png",
             hpAndDamageInfo: [
               {
                 hp: "25 / 50",
@@ -2556,7 +2556,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480263",
           additionalMeta: {
             killsRequired: 4,
-            imageAsset: "Drapelord.png",
+            imageAsset: "journal/Drapelord.png",
             hpAndDamageInfo: [
               {
                 hp: "50 / 100",
@@ -2573,7 +2573,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479004",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Drapemite.png",
+            imageAsset: "journal/Drapemite.png",
             hpAndDamageInfo: [
               {
                 hp: "25 / 50",
@@ -2590,7 +2590,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480005",
           additionalMeta: {
             killsRequired: 6,
-            imageAsset: "Giant_Drapemite.png",
+            imageAsset: "journal/Giant_Drapemite.png",
             hpAndDamageInfo: [
               {
                 hp: "100 / 200",
@@ -2607,7 +2607,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479512",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Underworker.png",
+            imageAsset: "journal/Underworker.png",
             hpAndDamageInfo: [
               {
                 hp: "30 / 60",
@@ -2624,7 +2624,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479746",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Underscrub.png",
+            imageAsset: "journal/Underscrub.png",
             hpAndDamageInfo: [
               {
                 hp: "27 / 54",
@@ -2641,7 +2641,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479837",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Undersweep.png",
+            imageAsset: "journal/Undersweep.png",
             hpAndDamageInfo: [
               {
                 hp: "35 / 70",
@@ -2658,7 +2658,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479510",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Underpoke.png",
+            imageAsset: "journal/Underpoke.png",
             hpAndDamageInfo: [
               {
                 hp: "40 / 80",
@@ -2675,7 +2675,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479511",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Underloft.png",
+            imageAsset: "journal/Underloft.png",
             hpAndDamageInfo: [
               {
                 hp: "40 / 80",
@@ -2692,7 +2692,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479836",
           additionalMeta: {
             killsRequired: 4,
-            imageAsset: "Undercrank.png",
+            imageAsset: "journal/Undercrank.png",
             hpAndDamageInfo: [
               {
                 hp: "70 / 140",
@@ -2709,7 +2709,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479897",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Envoy.png",
+            imageAsset: "journal/Envoy.png",
             hpAndDamageInfo: [
               {
                 hp: "38 / 76",
@@ -2731,7 +2731,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479885",
           additionalMeta: {
             killsRequired: 30,
-            imageAsset: "Choir_Pouncer.png",
+            imageAsset: "journal/Choir_Pouncer.png",
             hpAndDamageInfo: [
               {
                 hp: "30 / 60",
@@ -2748,7 +2748,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479887",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Choir_Hornhead.png",
+            imageAsset: "journal/Choir_Hornhead.png",
             hpAndDamageInfo: [
               {
                 hp: "45 / 90",
@@ -2770,7 +2770,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479882",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Choir_Bellbearer.png",
+            imageAsset: "journal/Choir_Bellbearer.png",
             hpAndDamageInfo: [
               {
                 hp: "35 / 70",
@@ -2787,7 +2787,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479886",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Choir_Flyer.png",
+            imageAsset: "journal/Choir_Flyer.png",
             hpAndDamageInfo: [
               {
                 hp: "30 / 60",
@@ -2809,7 +2809,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479906",
           additionalMeta: {
             killsRequired: 6,
-            imageAsset: "Choir_Elder.png",
+            imageAsset: "journal/Choir_Elder.png",
             hpAndDamageInfo: [
               {
                 hp: "45 / 90",
@@ -2826,7 +2826,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479883",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Choristor.png",
+            imageAsset: "journal/Choristor.png",
             hpAndDamageInfo: [
               {
                 hp: "55 / 110",
@@ -2848,7 +2848,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479880",
           additionalMeta: {
             killsRequired: 30,
-            imageAsset: "Reed.png",
+            imageAsset: "journal/Reed.png",
             hpAndDamageInfo: [
               {
                 hp: "55 / 110",
@@ -2865,7 +2865,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479918",
           additionalMeta: {
             killsRequired: 12,
-            imageAsset: "Grand_Reed.png",
+            imageAsset: "journal/Grand_Reed.png",
             hpAndDamageInfo: [
               {
                 hp: "130 / 260",
@@ -2882,7 +2882,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480052",
           additionalMeta: {
             killsRequired: 3,
-            imageAsset: "Choir_Clapper.png",
+            imageAsset: "journal/Choir_Clapper.png",
             hpAndDamageInfo: [
               {
                 hp: "230 / 460",
@@ -2899,7 +2899,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479899",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Clawmaiden.png",
+            imageAsset: "journal/Clawmaiden.png",
             hpAndDamageInfo: [
               {
                 hp: "48",
@@ -2916,7 +2916,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480239",
           additionalMeta: {
             killsRequired: 2,
-            imageAsset: "Memoria.png",
+            imageAsset: "journal/Memoria.png",
             hpAndDamageInfo: [
               {
                 hp: "70 / 140",
@@ -2933,7 +2933,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480050",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Minister.png",
+            imageAsset: "journal/Minister.png",
             hpAndDamageInfo: [
               {
                 hp: "60 / 120",
@@ -2950,7 +2950,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480049",
           additionalMeta: {
             killsRequired: 6,
-            imageAsset: "Maestro.png",
+            imageAsset: "journal/Maestro.png",
             hpAndDamageInfo: [
               {
                 hp: "65 / 130",
@@ -2967,7 +2967,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480348",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Second_Sentinel.png",
+            imageAsset: "journal/Second_Sentinel.png",
             hpAndDamageInfo: [
               {
                 hp: "800",
@@ -2984,7 +2984,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480036",
           additionalMeta: {
             killsRequired: 8,
-            imageAsset: "Dreg_Husk.png",
+            imageAsset: "journal/Dreg_Husk.png",
             hpAndDamageInfo: [
               {
                 hp: "50",
@@ -3007,7 +3007,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480043",
           additionalMeta: {
             killsRequired: 8,
-            imageAsset: "Dregwheel.png",
+            imageAsset: "journal/Dregwheel.png",
             hpAndDamageInfo: [
               {
                 hp: "50",
@@ -3025,7 +3025,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480409",
           additionalMeta: {
             killsRequired: 3,
-            imageAsset: "Surgeon.png",
+            imageAsset: "journal/Surgeon.png",
             hpAndDamageInfo: [
               {
                 hp: "75",
@@ -3042,7 +3042,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480040",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Mortician.png",
+            imageAsset: "journal/Mortician.png",
             hpAndDamageInfo: [
               {
                 hp: "95 / 190",
@@ -3059,7 +3059,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480354",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "The_Unravelled.png",
+            imageAsset: "journal/The_Unravelled.png",
             hpAndDamageInfo: [
               {
                 hp: "1000",
@@ -3077,7 +3077,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480021",
           additionalMeta: {
             killsRequired: 25,
-            imageAsset: "Cogwork_Underfly.png",
+            imageAsset: "journal/Cogwork_Underfly.png",
             hpAndDamageInfo: [
               {
                 hp: "4",
@@ -3094,7 +3094,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480022",
           additionalMeta: {
             killsRequired: 12,
-            imageAsset: "Cogwork_Hauler.png",
+            imageAsset: "journal/Cogwork_Hauler.png",
             hpAndDamageInfo: [
               {
                 hp: "20",
@@ -3111,7 +3111,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479962",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Cogwork_Crawler.png",
+            imageAsset: "journal/Cogwork_Crawler.png",
             hpAndDamageInfo: [
               {
                 hp: "35 / 70",
@@ -3128,7 +3128,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479938",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Cogworker.png",
+            imageAsset: "journal/Cogworker.png",
             hpAndDamageInfo: [
               {
                 hp: "28",
@@ -3145,7 +3145,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479963",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Cogwork_Spine.png",
+            imageAsset: "journal/Cogwork_Spine.png",
             hpAndDamageInfo: [
               {
                 hp: "21 / 42",
@@ -3162,7 +3162,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479961",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Cogwork_Choirbug.png",
+            imageAsset: "journal/Cogwork_Choirbug.png",
             hpAndDamageInfo: [
               {
                 hp: "35 / 70",
@@ -3179,7 +3179,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479968",
           additionalMeta: {
             killsRequired: 12,
-            imageAsset: "Cogwork_Cleanser.png",
+            imageAsset: "journal/Cogwork_Cleanser.png",
             hpAndDamageInfo: [
               {
                 hp: "40 / 80",
@@ -3196,7 +3196,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479982",
           additionalMeta: {
             killsRequired: 8,
-            imageAsset: "Cogwork_Defender.png",
+            imageAsset: "journal/Cogwork_Defender.png",
             hpAndDamageInfo: [
               {
                 hp: "55 / 110",
@@ -3213,7 +3213,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479971",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Cogwork_Clapper.png",
+            imageAsset: "journal/Cogwork_Clapper.png",
             hpAndDamageInfo: [
               {
                 hp: "145",
@@ -3235,7 +3235,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480347",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Cogwork_Dancers.png",
+            imageAsset: "journal/Cogwork_Dancers.png",
             hpAndDamageInfo: [
               {
                 hp: "810",
@@ -3252,7 +3252,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480008",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Vaultborn.png",
+            imageAsset: "journal/Vaultborn.png",
             hpAndDamageInfo: [
               {
                 hp: "40 / 80",
@@ -3269,7 +3269,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479994",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Lampbearer.png",
+            imageAsset: "journal/Lampbearer.png",
             hpAndDamageInfo: [
               {
                 hp: "50 / 100",
@@ -3286,7 +3286,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479991",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Scrollreader.png",
+            imageAsset: "journal/Scrollreader.png",
             hpAndDamageInfo: [
               {
                 hp: "100 / 200",
@@ -3303,7 +3303,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479999",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Vaultkeeper.png",
+            imageAsset: "journal/Vaultkeeper.png",
             hpAndDamageInfo: [
               {
                 hp: "70 / 140",
@@ -3320,7 +3320,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480343",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Trobbio.png",
+            imageAsset: "journal/Trobbio.png",
             hpAndDamageInfo: [
               {
                 hp: "700",
@@ -3338,7 +3338,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480344",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Tormented_Trobbio.png",
+            imageAsset: "journal/Tormented_Trobbio.png",
             hpAndDamageInfo: [
               {
                 hp: "950",
@@ -3356,7 +3356,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479005",
           additionalMeta: {
             killsRequired: 8,
-            imageAsset: "Penitent.png",
+            imageAsset: "journal/Penitent.png",
             hpAndDamageInfo: [
               {
                 hp: "50",
@@ -3373,7 +3373,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479006",
           additionalMeta: {
             killsRequired: 6,
-            imageAsset: "Puny_Penitent.png",
+            imageAsset: "journal/Puny_Penitent.png",
             hpAndDamageInfo: [
               {
                 hp: "40",
@@ -3390,7 +3390,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480479",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Freshfly.png",
+            imageAsset: "journal/Freshfly.png",
             hpAndDamageInfo: [
               {
                 hp: "5",
@@ -3408,7 +3408,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479008",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Scabfly.png",
+            imageAsset: "journal/Scabfly.png",
             hpAndDamageInfo: [
               {
                 hp: "20 / 40",
@@ -3425,7 +3425,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479007",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Guardfly.png",
+            imageAsset: "journal/Guardfly.png",
             hpAndDamageInfo: [
               {
                 hp: "45 / 90",
@@ -3442,7 +3442,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479011",
           additionalMeta: {
             killsRequired: 8,
-            imageAsset: "Wardenfly.png",
+            imageAsset: "journal/Wardenfly.png",
             hpAndDamageInfo: [
               {
                 hp: "70 / 140",
@@ -3464,7 +3464,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480338",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Broodmother.png",
+            imageAsset: "journal/Broodmother.png",
             hpAndDamageInfo: [
               {
                 hp: "700",
@@ -3482,7 +3482,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479036",
           additionalMeta: {
             killsRequired: 20,
-            imageAsset: "Driftlin.png",
+            imageAsset: "journal/Driftlin.png",
             hpAndDamageInfo: [
               {
                 hp: "4 / 8",
@@ -3499,7 +3499,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479043",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Mnemonid.png",
+            imageAsset: "journal/Mnemonid.png",
             hpAndDamageInfo: [
               {
                 hp: "50",
@@ -3516,7 +3516,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480198",
           additionalMeta: {
             killsRequired: 3,
-            imageAsset: "Mnemonord.png",
+            imageAsset: "journal/Mnemonord.png",
             hpAndDamageInfo: [
               {
                 hp: "50",
@@ -3533,7 +3533,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478215",
           additionalMeta: {
             killsRequired: 8,
-            imageAsset: "Servitor_Ignim.png",
+            imageAsset: "journal/Servitor_Ignim.png",
             hpAndDamageInfo: [
               {
                 hp: "1",
@@ -3550,7 +3550,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479041",
           additionalMeta: {
             killsRequired: 5,
-            imageAsset: "Servitor_Boran.png",
+            imageAsset: "journal/Servitor_Boran.png",
             hpAndDamageInfo: [
               {
                 hp: "70",
@@ -3567,7 +3567,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479858",
           additionalMeta: {
             killsRequired: 8,
-            imageAsset: "Winged_Lifeseed.png",
+            imageAsset: "journal/Winged_Lifeseed.png",
             hpAndDamageInfo: [
               {
                 hp: "1",
@@ -3584,7 +3584,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480146",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Plasmid.png",
+            imageAsset: "journal/Plasmid.png",
             hpAndDamageInfo: [
               {
                 hp: "60",
@@ -3601,7 +3601,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480331",
           additionalMeta: {
             killsRequired: 6,
-            imageAsset: "Plasmidas.png",
+            imageAsset: "journal/Plasmidas.png",
             hpAndDamageInfo: [
               {
                 hp: "80",
@@ -3618,7 +3618,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479273",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Plasmified_Zango.png",
+            imageAsset: "journal/Plasmified_Zango.png",
             hpAndDamageInfo: [
               {
                 hp: "1000",
@@ -3635,7 +3635,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480218",
           additionalMeta: {
             killsRequired: 12,
-            imageAsset: "Leaf_Glider.png",
+            imageAsset: "journal/Leaf_Glider.png",
             hpAndDamageInfo: [
               {
                 hp: "1",
@@ -3653,7 +3653,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480217",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Leaf_Roller.png",
+            imageAsset: "journal/Leaf_Roller.png",
             hpAndDamageInfo: [
               {
                 hp: "42",
@@ -3671,7 +3671,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480223",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Pendra.png",
+            imageAsset: "journal/Pendra.png",
             hpAndDamageInfo: [
               {
                 hp: "22",
@@ -3694,7 +3694,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480481",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Pendragor.png",
+            imageAsset: "journal/Pendragor.png",
             hpAndDamageInfo: [
               {
                 hp: "70",
@@ -3712,7 +3712,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480222",
           additionalMeta: {
             killsRequired: 6,
-            imageAsset: "Nuphar.png",
+            imageAsset: "journal/Nuphar.png",
             hpAndDamageInfo: [
               {
                 hp: "70",
@@ -3730,7 +3730,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480221",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Cloverstag.png",
+            imageAsset: "journal/Cloverstag.png",
             hpAndDamageInfo: [
               {
                 hp: "62",
@@ -3748,7 +3748,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480321",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Palestag.png",
+            imageAsset: "journal/Palestag.png",
             hpAndDamageInfo: [
               {
                 hp: "480",
@@ -3765,7 +3765,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480215",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Kindanir.png",
+            imageAsset: "journal/Kindanir.png",
             hpAndDamageInfo: [
               {
                 hp: "55",
@@ -3783,7 +3783,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480219",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Verdanir.png",
+            imageAsset: "journal/Verdanir.png",
             hpAndDamageInfo: [
               {
                 hp: "100",
@@ -3801,7 +3801,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480220",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Escalion.png",
+            imageAsset: "journal/Escalion.png",
             hpAndDamageInfo: [
               {
                 hp: "100",
@@ -3819,7 +3819,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480322",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Clover_Dancers.png",
+            imageAsset: "journal/Clover_Dancers.png",
             hpAndDamageInfo: [
               {
                 hp: "1160",
@@ -3847,7 +3847,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480134",
           additionalMeta: {
             killsRequired: 16,
-            imageAsset: "Shadow_Creeper.png",
+            imageAsset: "journal/Shadow_Creeper.png",
             hpAndDamageInfo: [
               {
                 hp: "40",
@@ -3864,7 +3864,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480135",
           additionalMeta: {
             killsRequired: 6,
-            imageAsset: "Shadow_Charger.png",
+            imageAsset: "journal/Shadow_Charger.png",
             hpAndDamageInfo: [
               {
                 hp: "80",
@@ -3881,7 +3881,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480133",
           additionalMeta: {
             killsRequired: 15,
-            imageAsset: "Gloomsac.png",
+            imageAsset: "journal/Gloomsac.png",
             hpAndDamageInfo: [
               {
                 hp: "50",
@@ -3898,7 +3898,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480132",
           additionalMeta: {
             killsRequired: 4,
-            imageAsset: "Gargant_Gloom.png",
+            imageAsset: "journal/Gargant_Gloom.png",
             hpAndDamageInfo: [
               {
                 hp: "200",
@@ -3915,7 +3915,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479744",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Void_Tendrils.png",
+            imageAsset: "journal/Void_Tendrils.png",
             hpAndDamageInfo: [
               {
                 hp: "-",
@@ -3932,7 +3932,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480418",
           additionalMeta: {
             killsRequired: 8,
-            imageAsset: "Void_Mass.png",
+            imageAsset: "journal/Void_Mass.png",
             hpAndDamageInfo: [
               {
                 hp: "190",
@@ -3949,7 +3949,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480310",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Summoned_Saviour.png",
+            imageAsset: "journal/Summoned_Saviour.png",
             hpAndDamageInfo: [
               {
                 hp: "500",
@@ -3967,7 +3967,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480415",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Wingmould.png",
+            imageAsset: "journal/Wingmould.png",
             hpAndDamageInfo: [
               {
                 hp: "1",
@@ -3984,7 +3984,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479626",
           additionalMeta: {
             killsRequired: 30,
-            imageAsset: "Garpid.png",
+            imageAsset: "journal/Garpid.png",
             hpAndDamageInfo: [
               {
                 hp: "999999 (1)",
@@ -4001,7 +4001,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479627",
           additionalMeta: {
             killsRequired: 4,
-            imageAsset: "Imoba.png",
+            imageAsset: "journal/Imoba.png",
             hpAndDamageInfo: [
               {
                 hp: "50",
@@ -4018,7 +4018,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479628",
           additionalMeta: {
             killsRequired: 10,
-            imageAsset: "Skrill.png",
+            imageAsset: "journal/Skrill.png",
             hpAndDamageInfo: [
               {
                 hp: "17",
@@ -4035,7 +4035,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480350",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Bell_Eater.png",
+            imageAsset: "journal/Bell_Eater.png",
             hpAndDamageInfo: [
               {
                 hp: "800",
@@ -4052,7 +4052,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479122",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Huge_Flea.png",
+            imageAsset: "journal/Huge_Flea.png",
             hpAndDamageInfo: [
               {
                 hp: "200",
@@ -4069,7 +4069,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479822",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Shakra.png",
+            imageAsset: "journal/Shakra.png",
             hpAndDamageInfo: [
               {
                 hp: "600",
@@ -4086,7 +4086,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479361",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Garmond_&_Zaza.png",
+            imageAsset: "journal/Garmond_&_Zaza.png",
             hpAndDamageInfo: [
               {
                 hp: "460",
@@ -4103,7 +4103,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480325",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Lost_Garmond.png",
+            imageAsset: "journal/Lost_Garmond.png",
             hpAndDamageInfo: [
               {
                 hp: "900",
@@ -4120,7 +4120,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480337",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Pinstress.png",
+            imageAsset: "journal/Pinstress.png",
             hpAndDamageInfo: [
               {
                 hp: "910",
@@ -4137,7 +4137,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480323",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Widow.png",
+            imageAsset: "journal/Widow.png",
             hpAndDamageInfo: [
               {
                 hp: "360",
@@ -4154,7 +4154,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480339",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "First_Sinner.png",
+            imageAsset: "journal/First_Sinner.png",
             hpAndDamageInfo: [
               {
                 hp: "1300",
@@ -4171,7 +4171,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480356",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Phantom.png",
+            imageAsset: "journal/Phantom.png",
             hpAndDamageInfo: [
               {
                 hp: "650",
@@ -4189,7 +4189,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480355",
           additionalMeta: {
             killsRequired: 2,
-            imageAsset: "Lace.png",
+            imageAsset: "journal/Lace.png",
             hpAndDamageInfo: [
               {
                 hp: "250",
@@ -4211,7 +4211,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480342",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Grand_Mother_Silk.png",
+            imageAsset: "journal/Grand_Mother_Silk.png",
             hpAndDamageInfo: [
               {
                 hp: "1204",
@@ -4228,7 +4228,7 @@ export const huntersJournal: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480341",
           additionalMeta: {
             killsRequired: 1,
-            imageAsset: "Lost_Lace.png",
+            imageAsset: "journal/Lost_Lace.png",
             hpAndDamageInfo: [
               {
                 hp: "1800",

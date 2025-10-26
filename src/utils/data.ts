@@ -66,21 +66,52 @@ export function computeDictMapWithSaveData(
           const { unlocked, returnValue } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
           const killsAchieved = typeof returnValue === "number" ? returnValue : undefined;
 
-          const itemWithSaveData = {
-            ...item,
-            saveMeta: { unlocked, ...(killsAchieved ? { killsAchieved } : {}), value: returnValue },
-          };
-          sectionFilteredByGameMode[actKey][itemName] = itemWithSaveData;
-          sectionFilteredByGameMode.totalCount++;
-          sectionFilteredByGameMode.totalPercent += item.completionPercent ?? 0;
-
           const isJournalEntry =
             isJournalCategory && killsAchieved !== undefined && item.additionalMeta?.killsRequired !== undefined;
-          const isJournalEntryComplete = isJournalEntry && killsAchieved >= (item.additionalMeta?.killsRequired ?? 0);
+
+          // Check if this entry is completed by defeating a boss
+          let isCompletedByBoss = false;
+          if (isJournalEntry && item.additionalMeta?.completedByEntry) {
+            const bossResult = isItemUnlockedInPlayerSave(
+              { type: "journal", internalId: item.additionalMeta.completedByEntry },
+              parsedJson
+            );
+            /*
+             ** Assumption: Boss entries almost always have killsRequired = 1,
+             ** so we can use bossResult.unlocked directly here to determine completion,
+             ** which means the boss has been encountered/killed at least once.
+             */
+            isCompletedByBoss = bossResult.unlocked;
+          }
+
+          const isJournalEntryComplete =
+            isJournalEntry && (killsAchieved >= (item.additionalMeta?.killsRequired ?? 0) || isCompletedByBoss);
+
           if (isJournalEntry) {
             if (killsAchieved > 0) journalEncountered++;
             if (isJournalEntryComplete) journalCompleted++;
           }
+
+          const itemWithSaveData = {
+            ...item,
+            saveMeta: {
+              unlocked,
+              value: returnValue,
+              ...(isJournalEntry
+                ? {
+                    journalMeta: {
+                      killsAchieved,
+                      hasBeenEncountered: isJournalEntry ? killsAchieved > 0 : undefined,
+                      hasBeenCompleted: isJournalEntry ? isJournalEntryComplete : undefined,
+                    },
+                  }
+                : {}),
+            },
+          };
+
+          sectionFilteredByGameMode[actKey][itemName] = itemWithSaveData;
+          sectionFilteredByGameMode.totalCount++;
+          sectionFilteredByGameMode.totalPercent += item.completionPercent ?? 0;
 
           const itemPath: ItemPath = `${categoryName}.${sectionName}.${actKey}.${itemName}`;
 
