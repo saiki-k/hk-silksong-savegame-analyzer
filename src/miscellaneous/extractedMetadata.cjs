@@ -2516,7 +2516,7 @@ const manuallyExtractedEnemyMetadata = {
     ],
   },
   Muckmaggot: {
-    imageUrl: "//cdn.wikimg.net/en/hkwiki/images/e/e5/HJ_Muckmaggot.png",
+    imageUrl: "https://cdn.wikimg.net/en/hkwiki/images/e/e5/HJ_Muckmaggot.png",
     name: "Muckmaggot",
     values: [
       {
