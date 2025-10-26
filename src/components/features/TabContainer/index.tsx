@@ -80,7 +80,7 @@ function computeTabData(
     const rawStatsItems = Object.values(statsCategory.sections["default"]["act_0"]);
 
     statsItems = rawStatsItems.map(item => {
-      const rawValue = item.value as string | number | boolean | undefined;
+      const rawValue = item.saveMeta?.value as string | number | boolean | undefined;
       let displayValue = "";
       let detailedValue: string | undefined;
 

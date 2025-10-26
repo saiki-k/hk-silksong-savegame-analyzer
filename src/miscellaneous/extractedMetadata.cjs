@@ -74,7 +74,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1, 0.8, 0.8, 0.8, 0.8],
       },
       {
-        modifierName: "Fighting Savage Beastfly",
+        variantName: "Fighting Savage Beastfly",
         hp: "15",
         damageModifiers: [1, 1, 1, 1, 1],
       },
@@ -149,7 +149,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1.5, 1, 1, 0.8, 0.8],
       },
       {
-        modifierName: "Fighting with Second Sentinel",
+        variantName: "Fighting with Second Sentinel",
         hp: "40 / 80",
         damageModifiers: [1.5, 1, 1, 0.8, 0.8],
       },
@@ -164,7 +164,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1.5, 1, 1, 0.8, 0.8],
       },
       {
-        modifierName: "Fighting with Second Sentinel",
+        variantName: "Fighting with Second Sentinel",
         hp: "55 / 110",
         damageModifiers: [1.5, 1, 1, 0.8, 0.8],
       },
@@ -189,7 +189,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1, 1, 0.8, 0.8, 0.8],
       },
       {
-        modifierName: "Fighting with Garmond",
+        variantName: "Fighting with Garmond",
         hp: "5",
         damageModifiers: [1, 1, 1, 1, 1],
       },
@@ -304,7 +304,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1.5, 1.2, 1.1, 1, 1],
       },
       {
-        modifierName: "Coral Tower",
+        variantName: "Coral Tower",
         hp: "55",
         damageModifiers: [1.5, 1.2, 1.1, 1, 1],
       },
@@ -419,7 +419,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1, 1, 0.75, 0.75, 0.75],
       },
       {
-        modifierName: "Greymoor Arena",
+        variantName: "Greymoor Arena",
         hp: "21 / 74",
         damageModifiers: [1, 1, 0.75, 0.75, 0.75],
       },
@@ -434,7 +434,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1.2, 1, 0.85, 0.85, 0.85],
       },
       {
-        modifierName: "The Unravelled",
+        variantName: "The Unravelled",
         hp: "65",
         damageModifiers: [1, 1, 1, 1, 1],
       },
@@ -509,7 +509,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1, 1, 0.9, 0.9, 0.9],
       },
       {
-        modifierName: "Fighting with Second Sentinel",
+        variantName: "Fighting with Second Sentinel",
         hp: "48 / 96",
         damageModifiers: [1, 1, 0.9, 0.9, 0.9],
       },
@@ -564,7 +564,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1.5, 1, 1, 0.85, 0.85],
       },
       {
-        modifierName: "Cutscene",
+        variantName: "Cutscene",
         hp: "20",
         damageModifiers: [1, 1, 1, 1, 1],
       },
@@ -689,7 +689,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1.75, 1.4, 1.1, 1, 1],
       },
       {
-        modifierName: "First Room",
+        variantName: "First Room",
         hp: "90",
         damageModifiers: [1.75, 1.4, 1.1, 1, 1],
       },
@@ -854,7 +854,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1, 0.9, 0.75, 0.65, 0.6],
       },
       {
-        modifierName: "Moss Grotto",
+        variantName: "Moss Grotto",
         hp: "45 / 90",
         damageModifiers: [1, 0.9, 0.75, 0.65, 0.6],
       },
@@ -999,7 +999,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1.25, 1, 0.9, 0.9, 0.9],
       },
       {
-        modifierName: "In Cage",
+        variantName: "In Cage",
         hp: "50",
         damageModifiers: [1, 1, 1, 1, 1],
       },
@@ -1034,7 +1034,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1, 1, 1, 1, 1],
       },
       {
-        modifierName: "First Room",
+        variantName: "First Room",
         hp: "35",
         damageModifiers: [1, 1, 1, 1, 1],
       },
@@ -1249,7 +1249,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1.25, 1, 0.9, 0.9, 0.9],
       },
       {
-        modifierName: "Greymoor Arena",
+        variantName: "Greymoor Arena",
         hp: "40 / 140",
         damageModifiers: [1.25, 1, 0.9, 0.9, 0.9],
       },
@@ -1474,7 +1474,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1.5, 1, 1, 0.85, 0.85],
       },
       {
-        modifierName: "Cutscene",
+        variantName: "Cutscene",
         hp: "20",
         damageModifiers: [1, 1, 1, 1, 1],
       },
@@ -1669,7 +1669,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1, 0.9, 0.9, 0.73, 0.73],
       },
       {
-        modifierName: "Fighting Savage Beastfly",
+        variantName: "Fighting Savage Beastfly",
         hp: "30",
         damageModifiers: [1, 0.9, 0.9, 0.73, 0.73],
       },
@@ -1684,7 +1684,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1, 0.75, 0.6, 0.55, 0.55],
       },
       {
-        modifierName: "Greymoor Arena",
+        variantName: "Greymoor Arena",
         hp: "50 / 150",
         damageModifiers: [1, 0.75, 0.6, 0.55, 0.55],
       },
@@ -1789,7 +1789,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1, 0.9, 0.6, 0.6, 0.5],
       },
       {
-        modifierName: "Fighting Savage Beastfly",
+        variantName: "Fighting Savage Beastfly",
         hp: "25",
         damageModifiers: [1, 0.9, 0.6, 0.6, 0.5],
       },
@@ -1814,7 +1814,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1.6, 1.1, 0.8, 0.8, 0.8],
       },
       {
-        modifierName: "With Cage",
+        variantName: "With Cage",
         hp: "64",
         damageModifiers: [1.3, 1, 1, 1, 1],
       },
@@ -1969,7 +1969,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1.5, 1, 0.9, 0.8, 0.8],
       },
       {
-        modifierName: "Pair",
+        variantName: "Pair",
         hp: "190",
         damageModifiers: [1.5, 1, 0.9, 0.8, 0.8],
       },
@@ -1994,7 +1994,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1, 0.8, 0.7, 0.6, 0.6],
       },
       {
-        modifierName: "Bilewater",
+        variantName: "Bilewater",
         hp: "130",
         damageModifiers: [1, 0.8, 0.7, 0.6, 0.6],
       },
@@ -2119,7 +2119,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1.3, 1, 0.825, 0.7, 0.6],
       },
       {
-        modifierName: "Raging Conchfly",
+        variantName: "Raging Conchfly",
         hp: "820",
         damageModifiers: [1.5, 1.2, 1.05, 0.85, 0.75],
       },
@@ -2174,7 +2174,7 @@ const extractedEnemyMetadata = {
         damageModifiers: [1, 1, 1, 1, 1],
       },
       {
-        modifierName: "Lace 2",
+        variantName: "Lace 2",
         hp: "800",
         damageModifiers: [1.75, 1.2, 1, 0.85, 0.85],
       },
@@ -2235,17 +2235,17 @@ const extractedEnemyMetadata = {
     name: "Moss Mother",
     values: [
       {
-        modifierName: "Ruined Chapel",
+        variantName: "Ruined Chapel",
         hp: "120",
         damageModifiers: [1, 1, 1, 1, 1],
       },
       {
-        modifierName: "Act 3 Moss Grotto",
+        variantName: "Act 3 Moss Grotto",
         hp: "350 / 700",
         damageModifiers: [1.25, 1, 1, 1, 1],
       },
       {
-        modifierName: "Weavenest Atla",
+        variantName: "Weavenest Atla",
         hp: "350 / 700",
         damageModifiers: [1.2, 1, 0.9, 0.85, 0.8],
       },
@@ -2316,12 +2316,12 @@ const extractedEnemyMetadata = {
     name: "Savage Beastfly",
     values: [
       {
-        modifierName: "Chapel of the Beast",
+        variantName: "Chapel of the Beast",
         hp: "550 / 1100",
         damageModifiers: [1.7, 1.2, 1, 0.9, 0.8],
       },
       {
-        modifierName: "Far Fields",
+        variantName: "Far Fields",
         hp: "650 / 1300",
         damageModifiers: [1.7, 1.2, 1, 0.9, 0.8],
       },
@@ -2544,4 +2544,6 @@ const manuallyExtractedEnemyMetadata = {
 
 const enemyMetadata = { ...extractedEnemyMetadata, ...manuallyExtractedEnemyMetadata };
 
-export const metadata = { enemyMetadata, completionVariantsMetadata };
+const metadata = { enemyMetadata, completionVariantsMetadata };
+
+module.exports = metadata;

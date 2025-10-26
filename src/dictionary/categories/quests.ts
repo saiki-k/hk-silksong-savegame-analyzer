@@ -157,7 +157,7 @@ export const quests: TrackableCategory = {
           name: "Last Dive",
           whichAct: 3,
           completionDetails: "The Abyss: The final ending(?).",
-          parsingInfo: { type: "journal", internalId: ["Lost Lace", 1] },
+          parsingInfo: { type: "journal", internalId: "Lost Lace" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479431",
         },
       ],

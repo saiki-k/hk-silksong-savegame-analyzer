@@ -77,12 +77,15 @@ export function HuntersJournalContent({
                 renderCell: (item: NormalizedItem) => (
                   <span
                     className={getHuntersJournalStatusColor(
-                      item.unlocked ?? false,
-                      item.killsAchieved,
-                      item.killsRequired
+                      item.saveMeta?.unlocked ?? false,
+                      item.saveMeta?.killsAchieved,
+                      item.additionalMeta?.killsRequired
                     )}
                   >
-                    {item.unlocked && (item.killsAchieved ?? 0) >= (item.killsRequired ?? 0) ? "[x]" : "[ ]"}
+                    {item.saveMeta?.unlocked &&
+                    (item.saveMeta?.killsAchieved ?? 0) >= (item.additionalMeta?.killsRequired ?? 0)
+                      ? "[x]"
+                      : "[ ]"}
                   </span>
                 ),
               },
@@ -96,7 +99,7 @@ export function HuntersJournalContent({
                 width: "220px",
                 header: "Name",
                 cellClassName: (item: NormalizedItem) =>
-                  `${getHoverBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
+                  `${getHoverBlurClassNames({ shouldBlur: !item.saveMeta?.unlocked && !showSpoilers })}`,
                 renderCell: (item: NormalizedItem) => item.name,
               },
               ...(!inShowEverythingMode
@@ -106,8 +109,8 @@ export function HuntersJournalContent({
                       header: "Kills Achieved",
                       headerClassName: "px-2 py-3 text-center text-gray-300 font-medium",
                       cellClassName: (item: NormalizedItem) =>
-                        `text-center ${getHoverBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
-                      renderCell: (item: NormalizedItem) => item.killsAchieved ?? 0,
+                        `text-center ${getHoverBlurClassNames({ shouldBlur: !item.saveMeta?.unlocked && !showSpoilers })}`,
+                      renderCell: (item: NormalizedItem) => item.saveMeta?.killsAchieved ?? 0,
                     },
                   ]
                 : []),
@@ -116,13 +119,13 @@ export function HuntersJournalContent({
                 header: "Kills Required",
                 headerClassName: "px-2 py-3 text-center text-gray-300 font-medium",
                 cellClassName: (item: NormalizedItem) =>
-                  `text-center ${getHoverBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
-                renderCell: (item: NormalizedItem) => item.killsRequired ?? "N/A",
+                  `text-center ${getHoverBlurClassNames({ shouldBlur: !item.saveMeta?.unlocked && !showSpoilers })}`,
+                renderCell: (item: NormalizedItem) => item.additionalMeta?.killsRequired ?? "N/A",
               },
               {
                 width: "64px",
                 cellClassName: (item: NormalizedItem) =>
-                  `text-center ${getHoverBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
+                  `text-center ${getHoverBlurClassNames({ shouldBlur: !item.saveMeta?.unlocked && !showSpoilers })}`,
                 renderCell: (item: NormalizedItem) => <MapButton mapLink={item.mapLink} />,
               },
             ]}

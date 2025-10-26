@@ -66,14 +66,17 @@ export function computeDictMapWithSaveData(
           const { unlocked, returnValue } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
           const killsAchieved = typeof returnValue === "number" ? returnValue : undefined;
 
-          const itemWithSaveData = { ...item, unlocked, killsAchieved, value: returnValue };
+          const itemWithSaveData = {
+            ...item,
+            saveMeta: { unlocked, ...(killsAchieved ? { killsAchieved } : {}), value: returnValue },
+          };
           sectionFilteredByGameMode[actKey][itemName] = itemWithSaveData;
           sectionFilteredByGameMode.totalCount++;
           sectionFilteredByGameMode.totalPercent += item.completionPercent ?? 0;
 
-          // Hunter's Journal metadata
-          const isJournalEntry = isJournalCategory && killsAchieved !== undefined && item.killsRequired !== undefined;
-          const isJournalEntryComplete = isJournalEntry && killsAchieved >= (item.killsRequired ?? 0);
+          const isJournalEntry =
+            isJournalCategory && killsAchieved !== undefined && item.additionalMeta?.killsRequired !== undefined;
+          const isJournalEntryComplete = isJournalEntry && killsAchieved >= (item.additionalMeta?.killsRequired ?? 0);
           if (isJournalEntry) {
             if (killsAchieved > 0) journalEncountered++;
             if (isJournalEntryComplete) journalCompleted++;
@@ -100,15 +103,17 @@ export function computeDictMapWithSaveData(
     }
 
     if (categoryFilteredByGameMode.totalCount > 0) {
+      categoryFilteredByGameMode.saveMeta = {
+        completedCount: categoryCompletedCount,
+        completedPercent: categoryCompletedPercent,
+      };
+
       if (isJournalCategory) {
-        categoryFilteredByGameMode.journalMeta = {
+        categoryFilteredByGameMode.saveMeta.journalMeta = {
           encountered: journalEncountered,
           completed: journalCompleted,
         };
       }
-
-      categoryFilteredByGameMode.completedCount = categoryCompletedCount;
-      categoryFilteredByGameMode.completedPercent = categoryCompletedPercent;
 
       allItemsFilteredByGameMode[categoryName] = categoryFilteredByGameMode;
 

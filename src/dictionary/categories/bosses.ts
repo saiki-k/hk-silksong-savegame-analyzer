@@ -108,10 +108,10 @@ export const bosses: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480343",
         },
         {
-          name: "Garmond and Zaza (Missable Entry)",
+          name: "Garmond and Zaza",
           whichAct: 2,
-          completionDetails: "Only available in ACT 2. South-east part of Songclave.",
-          parsingInfo: { type: "journal", internalId: ["Garmond_Zaza", 1] },
+          completionDetails: "This is a missable entry that can only be attained in ACT 2. South-east part of Songclave.",
+          parsingInfo: { type: "journal", internalId: "Garmond_Zaza" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479361",
         },
         {
@@ -198,18 +198,18 @@ export const bosses: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479253",
         },
         {
-          name: "Shakra (Missable Entry)",
+          name: "Shakra",
           whichAct: 2,
           completionDetails:
-            'Only available in ACT 2. Towards the east of Bellhart after completing "Trail\'s End" wish; hit the ring that you find as you enter the Greymoor area, to summon Shakra for a friendly fight.',
-          parsingInfo: { type: "journal", internalId: ["Shakra", 1] },
+            'This is a missable entry that can only be attained in ACT 2. Towards the east of Bellhart after completing "Trail\'s End" wish; hit the ring that you find as you enter the Greymoor area, to summon Shakra for a friendly fight.',
+          parsingInfo: { type: "journal", internalId: "Shakra" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479822",
         },
         {
           name: "Grand Mother Silk",
           whichAct: 2,
           completionDetails: "Can be found above Cogwork Core in The Cradle.",
-          parsingInfo: { type: "journal", internalId: ["Silk Boss", 1] },
+          parsingInfo: { type: "journal", internalId: "Silk Boss" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479099",
         },
         {
@@ -238,7 +238,7 @@ export const bosses: TrackableCategory = {
           name: "Plasmified Zango",
           whichAct: 3,
           completionDetails: "Can be found in a secret room within western Wormways during ACT 3.",
-          parsingInfo: { type: "journal", internalId: ["Blue Assistant", 1] },
+          parsingInfo: { type: "journal", internalId: "Blue Assistant" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479273",
         },
         {
@@ -322,7 +322,7 @@ export const bosses: TrackableCategory = {
           whichAct: 3,
           completionDetails:
             "Can only be found in Steel Soul Mode, at the extreme bottom-left of Bonegrave behind a breakable wall, a sub area of Moss Grotto.",
-          parsingInfo: { type: "journal", internalId: ["Abyss Mass", 1] },
+          parsingInfo: { type: "journal", internalId: "Abyss Mass" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479740",
           onlyFoundInSteelSoulMode: true,
         },
@@ -330,7 +330,7 @@ export const bosses: TrackableCategory = {
           name: "Lost Lace",
           whichAct: 3,
           completionDetails: "Located in The Abyss, under the vast void ocean that lies within.",
-          parsingInfo: { type: "journal", internalId: ["Lost Lace", 1] },
+          parsingInfo: { type: "journal", internalId: "Lost Lace" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479471",
         },
       ],
