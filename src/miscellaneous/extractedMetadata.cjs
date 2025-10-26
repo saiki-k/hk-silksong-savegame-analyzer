@@ -2476,7 +2476,32 @@ const manuallyExtractedEnemyMetadata = {
     values: [
       {
         hp: "100 * 4 + 240",
-        damageModifiers: [], // Unknown information
+        /* 
+        ** The Father of the Flame has four flame orbs that each have 100 HP,
+        ** plus his main flame cage of a body which has 240 HP, totaling 640 HP.
+
+        ** No of hits required to defeat at different weapon levels:
+        ** Info from: https://raiderking.com/hollow-knight-silksong-all-enemy-health-values-skill-and-needle-upgrade-damage-values/
+        ** - Weapon Level 0: 128 hits | Damage HP/Hit: 640/128 ≈ 5     | Damage HP/Hit at Weapon Level 0 (without any modifiers):  5 HP
+        ** - Weapon Level 1:  72 hits | Damage HP/Hit: 640/72  ≈ 8.89  | Damage HP/Hit at Weapon Level 1 (without any modifiers):  9 HP
+        ** - Weapon Level 2:  50 hits | Damage HP/Hit: 640/50  ≈ 12.8  | Damage HP/Hit at Weapon Level 2 (without any modifiers): 13 HP
+        ** - Weapon Level 3:  38 hits | Damage HP/Hit: 640/38  ≈ 16.84 | Damage HP/Hit at Weapon Level 3 (without any modifiers): 17 HP
+        ** - Weapon Level 4:  31 hits | Damage HP/Hit: 640/31  ≈ 20.65 | Damage HP/Hit at Weapon Level 4 (without any modifiers): 21 HP
+        **
+        ** total_damage = weapon_damage[weapon_level] * enemy_modifiers[weapon_level] * player_modifier
+        ** Info from: https://hollowknight.wiki/w/Damage_Values_and_Enemy_Health_(Silksong)
+        ** - player_modifier is assumed to be 1 (no tool/weapon buffs)
+        ** - Rearranging (and rewriting this in a slightly different way) gives:
+        **   enemy_modifiers at Weapon Level X = (Damage HP/Hit of the enemy at Weapon Level X) / (Damage HP/Hit at Weapon Level X, without any modifiers)
+        **
+        ** Calculated enemy modifiers at different weapon levels:
+        ** - Weapon Level 0: enemy_modifier = 5 / 5      = 1
+        ** - Weapon Level 1: enemy_modifier = 8.89 / 9   ≈ 0.98
+        ** - Weapon Level 2: enemy_modifier = 12.8 / 13  ≈ 0.98
+        ** - Weapon Level 3: enemy_modifier = 16.84 / 17 ≈ 0.99
+        ** - Weapon Level 4: enemy_modifier = 20.65 / 21 ≈ 0.98
+        */
+        damageModifiers: [1, 1, 1, 1, 1], 
       },
     ],
   },
@@ -2486,7 +2511,7 @@ const manuallyExtractedEnemyMetadata = {
     values: [
       {
         hp: "50",
-        damageModifiers: [], // Unknown information or N.A.
+        damageModifiers: [1, 1, 1, 1, 1], // Assumed...
       },
     ],
   },
@@ -2526,7 +2551,7 @@ const manuallyExtractedEnemyMetadata = {
     values: [
       {
         hp: "1",
-        damageModifiers: [], // N.A.
+        damageModifiers: [1, 1, 1, 1, 1], // Assumed...
       },
     ],
   },
