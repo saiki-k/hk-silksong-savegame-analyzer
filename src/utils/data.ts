@@ -81,7 +81,7 @@ export function computeDictMapWithSaveData(
 
           const itemPath: ItemPath = `${categoryName}.${sectionName}.${actKey}.${itemName}`;
 
-          if (!unlocked || !isJournalEntryComplete) {
+          if (!unlocked || (isJournalEntry && !isJournalEntryComplete)) {
             missingItemPaths.push(itemPath);
             continue;
           }
