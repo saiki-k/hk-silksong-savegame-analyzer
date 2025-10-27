@@ -106,7 +106,7 @@ export const memoryLockets: TrackableCategory = {
         },
         {
           name: "Memory Locket #14",
-          whichAct: 2,
+          whichAct: 1,
           completionDetails:
             "Bilewater: At the far-left edge of a secret room. Bounce over the infested waters and wall-jump up the vertical space to reach it.",
           parsingInfo: { type: "sceneData", internalId: ["Shadow_20", "Collectable Item Pickup"] },

@@ -11,7 +11,7 @@ export const silkeaters: TrackableCategory = {
       items: [
         {
           name: "Silkeater · Deep Docks",
-          whichAct: 1,
+          whichAct: 2,
           completionDetails:
             "Deep Docks: Partially hidden by a shelf at the eastern end of the room that's towards the south-east of the sauna bench.",
           parsingInfo: { type: "sceneData", internalId: ["Dock_14", "Silk Grub Large Cocoon"] },

@@ -156,14 +156,14 @@ export const maps: TrackableCategory = {
         },
         {
           name: "Mount Fay",
-          whichAct: 1,
+          whichAct: 2,
           completionDetails: "Sold by Shakra for 40 Rosaries.",
           parsingInfo: { type: "flag", internalId: "HasPeakMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479525",
         },
         {
           name: "Bilewater",
-          whichAct: 1,
+          whichAct: 2,
           completionDetails: "Sold by Shakra for 90 Rosaries.",
           parsingInfo: { type: "flag", internalId: "HasSwampMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479528",

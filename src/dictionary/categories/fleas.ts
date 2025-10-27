@@ -122,14 +122,14 @@ export const fleas: TrackableCategory = {
         },
         {
           name: "Lost Flea #16",
-          whichAct: 2,
+          whichAct: 1,
           completionDetails: "Bilewater: In a room behind a breakable wall. Defeat the two Snitchflies to rescue it.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Shadow_28" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478443",
         },
         {
           name: "Lost Flea #17",
-          whichAct: 1,
+          whichAct: 2,
           prereqs: ["Clawline"],
           completionDetails: "Deep Docks: In a room that can only be reached after defeating a nearby arena battle.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Dock_03d" },
@@ -166,7 +166,7 @@ export const fleas: TrackableCategory = {
         },
         {
           name: "Lost Flea #22",
-          whichAct: 1,
+          whichAct: 2,
           prereqs: ["Cling Grip"],
           completionDetails: "Mount Fay: At the top of a room in the middle.",
           parsingInfo: { type: "flag", internalId: "SavedFlea_Peak_05c" },

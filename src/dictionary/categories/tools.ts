@@ -61,7 +61,7 @@ export const tools: TrackableCategory = {
         },
         {
           name: "Throwing Ring",
-          whichAct: 1,
+          whichAct: 2,
           completionPercent: 1,
           completionDetails: 'Bilewater: Complete "Trail\'s End" wish.',
           parsingInfo: { type: "tool", internalId: ["Shakra Ring"] },
@@ -456,7 +456,7 @@ export const tools: TrackableCategory = {
         },
         {
           name: "Thief's Mark",
-          whichAct: 1,
+          whichAct: 2,
           completionPercent: 1,
           completionDetails: "Blasted Steps: Sold by Grindle for 350 Rosaries.",
           parsingInfo: { type: "tool", internalId: ["Thief Charm"] },

@@ -143,7 +143,7 @@ export const relics: TrackableCategory = {
       items: [
         {
           name: "Psalm Cylinder (Grindle)",
-          whichAct: 1,
+          whichAct: 2,
           completionDetails: "Blasted Steps: Sold by Grindle for 240 Rosaries.",
           parsingInfo: { type: "relic", internalId: "Psalm Cylinder Grindle" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478530",
