@@ -69,6 +69,7 @@ export type TrackableCategory = {
 export type NormalizedItem = CategoryItem & {
   isClassicModeItem: boolean;
   isSteelSoulModeItem: boolean;
+  // Dynamic properties added during the "computeDictMapWithSaveData" run
   saveMeta?: {
     unlocked?: boolean;
     value?: unknown;

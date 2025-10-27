@@ -267,10 +267,10 @@ export const bosses: TrackableCategory = {
             hpAndDamageInfo: [
               {
                 hp: "460",
-                damageModifiers: [1, 1, 1, 1, 1]
-              }
-            ]
-          }
+                damageModifiers: [1, 1, 1, 1, 1],
+              },
+            ],
+          },
         },
         {
           name: "Forebrothers Signis & Gron",

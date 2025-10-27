@@ -69,23 +69,7 @@ export function computeDictMapWithSaveData(
           const isJournalEntry =
             isJournalCategory && killsAchieved !== undefined && item.additionalMeta?.killsRequired !== undefined;
 
-          // Check if this entry is completed by defeating a boss
-          let isCompletedByBoss = false;
-          if (isJournalEntry && item.additionalMeta?.completedByEntry) {
-            const bossResult = isItemUnlockedInPlayerSave(
-              { type: "journal", internalId: item.additionalMeta.completedByEntry },
-              parsedJson
-            );
-            /*
-             ** Assumption: Boss entries almost always have killsRequired = 1,
-             ** so we can use bossResult.unlocked directly here to determine completion,
-             ** which means the boss has been encountered/killed at least once.
-             */
-            isCompletedByBoss = bossResult.unlocked;
-          }
-
-          const isJournalEntryComplete =
-            isJournalEntry && (killsAchieved >= (item.additionalMeta?.killsRequired ?? 0) || isCompletedByBoss);
+          const isJournalEntryComplete = isJournalEntry && killsAchieved >= (item.additionalMeta?.killsRequired ?? 0);
 
           if (isJournalEntry) {
             if (killsAchieved > 0) journalEncountered++;
