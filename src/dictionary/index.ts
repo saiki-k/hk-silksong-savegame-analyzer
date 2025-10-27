@@ -13,8 +13,8 @@ import { relics } from "./categories/relics";
 import { memoryLockets } from "./categories/memoryLockets";
 import { craftmetals } from "./categories/craftmetals";
 import { mossberries } from "./categories/mossberries";
-import { silkeaters } from "./categories/silkeaters";
 import { keys } from "./categories/keys";
+import { silkeaters } from "./categories/silkeaters";
 import { mementos } from "./categories/mementos";
 import { maps } from "./categories/maps";
 import { bellways } from "./categories/bellways";
@@ -36,8 +36,8 @@ export const ALL_TRACKED_CATEGORIES = [
   memoryLockets,
   craftmetals,
   mossberries,
-  silkeaters,
   keys,
+  silkeaters,
   mementos,
   maps,
   bellways,

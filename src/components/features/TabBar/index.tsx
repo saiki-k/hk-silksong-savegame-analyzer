@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { type TabId, TAB_CONFIG } from "./tabs";
+import { type TabId, TAB_GROUPS, type TabGroup } from "./tabs";
 import { TabButton } from "./TabButton";
 import { formatPercent } from "@/utils";
 import { type DictMapWithSaveData } from "@/dictionary";
@@ -34,7 +34,8 @@ export function TabBar({
 
     const progressMap = new Map<TabId, TabProgressInfo>();
 
-    TAB_CONFIG.forEach(tab => {
+    // Iterate through all groups and their tabs
+    (Object.values(TAB_GROUPS) as (typeof TAB_GROUPS)[TabGroup][]).flat().forEach(tab => {
       if (!tab.hasProgress) return;
 
       const category = dictMapWithSaveData?.allItems[tab.tabId];
@@ -95,19 +96,41 @@ export function TabBar({
     return progressMap;
   }, [dictMapWithSaveData, inShowEverythingMode]);
 
+  const groupedTabs = useMemo(() => {
+    return new Map(Object.entries(TAB_GROUPS) as [TabGroup, (typeof TAB_GROUPS)[TabGroup]][]);
+  }, []);
+
   return (
-    <div className="flex justify-between mt-4 mb-2 flex-wrap gap-2">
-      {TAB_CONFIG.filter(tab => !tab.hideButton).map(tab => (
-        <TabButton
-          key={tab.tabId}
-          tab={tab}
-          isActive={tab.tabId === activeTab}
-          onSelect={onSelect}
-          progressInfo={tabProgressMap.get(tab.tabId)}
-          hasUploadedSaveData={hasUploadedSaveData}
-          inShowEverythingMode={inShowEverythingMode}
-        />
-      ))}
+    <div className="mt-4 mb-2 space-y-3">
+      {Array.from(groupedTabs.entries()).map(([group, tabs], groupIndex) => {
+        const isFullWidthGroup = group === "exploration" || group === "progression";
+        const gridClass = isFullWidthGroup
+          ? "grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-2"
+          : "grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-2";
+
+        return (
+          <div key={group}>
+            <div className={gridClass}>
+              {tabs.map(tab => (
+                <TabButton
+                  key={tab.tabId}
+                  tab={tab}
+                  isActive={tab.tabId === activeTab}
+                  onSelect={onSelect}
+                  progressInfo={tabProgressMap.get(tab.tabId)}
+                  hasUploadedSaveData={hasUploadedSaveData}
+                  inShowEverythingMode={inShowEverythingMode}
+                  fullWidth={true}
+                />
+              ))}
+            </div>
+            {/* Subtle horizontal divider between groups, but not after the last group */}
+            {groupIndex < groupedTabs.size - 1 && (
+              <div className="h-px w-full bg-gradient-to-r from-transparent via-gray-600/20 to-transparent mt-3" />
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }

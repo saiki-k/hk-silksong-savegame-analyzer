@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import type { ChangeEvent } from "react";
 import type { SaveFileObj } from "@/hooks";
+import { PillButton } from "@/components/ui";
 
 interface FileUploadProps {
   saveFileObj: SaveFileObj;
@@ -85,6 +86,24 @@ export function FileUpload({ saveFileObj }: FileUploadProps) {
     >
       {/* Animated gradient overlay on hover */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500" />
+
+      {/* Remove file button */}
+      {(hasSuccess || hasError) && (
+        <PillButton
+          onClick={(e) => {
+            e.stopPropagation();
+            saveFileObj.handlers.clearFile();
+            if (inputRef.current) {
+              inputRef.current.value = "";
+            }
+          }}
+          className="absolute top-2 right-2 z-20 px-2 py-0.5 bg-red-500/20 hover:bg-red-500/30 border-red-500/40 hover:border-red-400/60 text-red-300 hover:text-red-200 flex items-center gap-1 text-[8px] uppercase"
+          aria-label="Remove file"
+          title="Remove file"
+        >
+          <span>Clear</span>
+        </PillButton>
+      )}
 
       <div className="relative z-10 min-h-[60px] flex flex-col items-center justify-center">{renderContent()}</div>
 

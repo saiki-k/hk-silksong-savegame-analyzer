@@ -17,7 +17,20 @@ export function GenericContent({
   onActFilterChange,
 }: TabContentProps) {
   if (!tabLabel || !computedData) {
-    return <div className="text-white text-center">No "{tabLabel}" data available.</div>;
+    return (
+      <div className="text-white text-center">
+        🚧 The "{tabLabel}" category hasn't been implemented yet.{" "}
+        <a
+          href="https://github.com/Br3zzly/silksong-completionist"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 hover:text-blue-300 underline"
+        >
+          Can you help?
+        </a>{" "}
+        🚧
+      </div>
+    );
   }
 
   const { category, hasVisibleItems, sectionEntries, sectionsLength } = computedData;
@@ -52,6 +65,7 @@ export function GenericContent({
             section={section}
             sectionsLength={sectionsLength}
             showSpoilers={showSpoilers ?? false}
+            categoryName={tabLabel || category.name}
           />
         ))}
     </>
@@ -62,10 +76,12 @@ function GenericSectionTable({
   section,
   sectionsLength,
   showSpoilers,
+  categoryName,
 }: {
   section: NormalizedSection & { items: NormalizedItem[] };
   sectionsLength: number;
   showSpoilers: boolean;
+  categoryName: string;
 }) {
   const { items } = section;
 
@@ -143,7 +159,15 @@ function GenericSectionTable({
               width: "64px",
               cellClassName: (item: NormalizedItem) =>
                 `text-center ${getHoverBlurClassNames({ shouldBlur: !item.saveMeta?.unlocked && !showSpoilers })}`,
-              renderCell: (item: NormalizedItem) => <MapButton mapLink={item.mapLink} />,
+              renderCell: (item: NormalizedItem) => {
+                const parts = [categoryName];
+                if (sectionsLength > 1 && section.name) {
+                  parts.push(section.name);
+                }
+                parts.push(item.name);
+                const fullName = parts.join(" · ");
+                return <MapButton mapLink={item.mapLink} titleName={fullName} />;
+              },
             },
           ]}
         />

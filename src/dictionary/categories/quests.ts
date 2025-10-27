@@ -5,7 +5,7 @@ export const quests: TrackableCategory = {
   description: "Objectives and Wishes undertaken by Hornet throughout her journey across Pharloom.",
   sections: [
     {
-      name: "Objectives",
+      name: "Main Objectives",
       description: "Main story objectives that Hornet must complete to progress through the game.",
       items: [
         {

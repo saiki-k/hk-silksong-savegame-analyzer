@@ -12,7 +12,7 @@ export const footerConfig = {
   links: [
     {
       label: "GitHub",
-      url: "https://github.com/Br3zzly/hk-silksong-savegame-analyzer",
+      url: "https://github.com/Br3zzly/silksong-completionist",
       icon: "🔗",
     },
     {

@@ -1,4 +1,5 @@
-import type { ReactElement } from "react";
+import { useState, type ReactElement, type MouseEvent } from "react";
+import { createPortal } from "react-dom";
 import type { TabId } from "./tabs";
 import { TabProgress } from "./TabProgress";
 import type { TabProgressInfo } from "./index";
@@ -16,6 +17,7 @@ interface TabButtonProps {
   progressInfo?: TabProgressInfo;
   hasUploadedSaveData: boolean;
   inShowEverythingMode: boolean;
+  fullWidth?: boolean;
 }
 
 export function TabButton({
@@ -25,12 +27,35 @@ export function TabButton({
   progressInfo,
   hasUploadedSaveData,
   inShowEverythingMode,
+  fullWidth = false,
 }: TabButtonProps): ReactElement {
+  const [mousePos, setMousePos] = useState<{ x: number; y: number } | null>(null);
+  const [isHovering, setIsHovering] = useState(false);
+
   const isDisabled = !hasUploadedSaveData && !inShowEverythingMode;
+  const shouldShowProgress = Boolean(progressInfo || inShowEverythingMode || (!progressInfo && hasUploadedSaveData));
+  const underConstructionProgressInfo: TabProgressInfo = {
+    completedCount: 0,
+    progressText: "🚧",
+    isProgressComplete: false,
+  };
+
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    setMousePos({
+      x: e.clientX,
+      y: e.clientY,
+    });
+  };
+
+  const handleMouseEnter = () => setIsHovering(true);
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+    setMousePos(null);
+  };
 
   const tabButtonStyles = cn(
     "w-full py-2 font-semibold border transition-all duration-300",
-    progressInfo ? "rounded-t rounded-b-none border-b-0" : "rounded",
+    shouldShowProgress ? "rounded-t rounded-b-none border-b-0" : "rounded",
     isDisabled && "bg-gray-700/30 text-gray-400 border-gray-600/30 opacity-50 cursor-not-allowed",
     isActive &&
       !isDisabled &&
@@ -41,7 +66,12 @@ export function TabButton({
   );
 
   return (
-    <div className="flex-1 min-w-[120px] flex flex-col group relative">
+    <div
+      className={cn("flex flex-col relative", fullWidth ? "flex-1 min-w-[120px]" : "min-w-[120px]")}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <Button
         onClick={() => onSelect(tab.tabId)}
         disabled={isDisabled}
@@ -51,21 +81,36 @@ export function TabButton({
       >
         {tab.tabId}
       </Button>
-      {progressInfo && <TabProgress inShowEverythingMode={inShowEverythingMode} progressInfo={progressInfo} />}
-      {progressInfo?.sectionNames && (
-        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 animate-in fade-in slide-in-from-top-2">
-          <div className="bg-gray-900/60 backdrop-blur-sm border border-gray-600 rounded shadow-xl px-3 py-2 w-max min-w-[140px]">
-            <ul className="text-xs text-gray-300 space-y-1">
-              {progressInfo.sectionNames.map(name => (
-                <li key={name} className="flex items-center gap-1.5 whitespace-nowrap">
-                  <span className="text-blue-400">•</span>
-                  <span>{name}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+      {shouldShowProgress && (
+        <TabProgress
+          inShowEverythingMode={inShowEverythingMode}
+          progressInfo={progressInfo || underConstructionProgressInfo}
+        />
       )}
+      {progressInfo?.sectionNames &&
+        isHovering &&
+        mousePos &&
+        createPortal(
+          <div
+            className="fixed z-50 pointer-events-none"
+            style={{
+              left: `${mousePos.x - 0.5}px`,
+              top: `${mousePos.y + 17.5}px`,
+            }}
+          >
+            <div className="bg-gray-900/95 backdrop-blur-sm border border-gray-600 rounded shadow-xl px-3 py-2 w-max min-w-[140px] max-w-[250px]">
+              <ul className="text-xs text-gray-300 space-y-1">
+                {progressInfo.sectionNames.map(name => (
+                  <li key={name} className="flex items-center gap-1.5 whitespace-nowrap">
+                    <span className="text-blue-400">•</span>
+                    <span>{name}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>,
+          document.body
+        )}
     </div>
   );
 }

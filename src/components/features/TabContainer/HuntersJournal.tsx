@@ -130,7 +130,10 @@ export function HuntersJournalContent({
                 width: "64px",
                 cellClassName: (item: NormalizedItem) =>
                   `text-center ${getHoverBlurClassNames({ shouldBlur: !item.saveMeta?.unlocked && !showSpoilers })}`,
-                renderCell: (item: NormalizedItem) => <MapButton mapLink={item.mapLink} />,
+                renderCell: (item: NormalizedItem) => {
+                  const fullName = `${tabLabel || category.name} · ${item.name}`;
+                  return <MapButton mapLink={item.mapLink} titleName={fullName} />;
+                },
               },
             ]}
           />
