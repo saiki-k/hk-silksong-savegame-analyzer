@@ -16,6 +16,7 @@ interface TabButtonProps {
   progressInfo?: TabProgressInfo;
   hasUploadedSaveData: boolean;
   inShowEverythingMode: boolean;
+  fullWidth?: boolean;
 }
 
 export function TabButton({
@@ -25,6 +26,7 @@ export function TabButton({
   progressInfo,
   hasUploadedSaveData,
   inShowEverythingMode,
+  fullWidth = false,
 }: TabButtonProps): ReactElement {
   const isDisabled = !hasUploadedSaveData && !inShowEverythingMode;
 
@@ -41,7 +43,7 @@ export function TabButton({
   );
 
   return (
-    <div className="flex-1 min-w-[120px] flex flex-col group relative">
+    <div className={cn("flex flex-col group relative", fullWidth ? "flex-1 min-w-[120px]" : "min-w-[120px]")}>
       <Button
         onClick={() => onSelect(tab.tabId)}
         disabled={isDisabled}
