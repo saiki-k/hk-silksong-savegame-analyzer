@@ -41,7 +41,7 @@ export const silkeaters: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479657",
         },
         {
-          name: "Silkeater · Choral Chambers (Near Grand Bellway)",
+          name: "Silkeater · Choral Chambers",
           whichAct: 2,
           completionDetails:
             "Choral Chambers: At the bottom of a spiky pit, guarded by two Snitchflies, found towards the west of Grand Bellway.",
@@ -49,7 +49,7 @@ export const silkeaters: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478595",
         },
         {
-          name: "Silkeater · Choral Chambers (Near the Kitchen)",
+          name: "Silkeater · Choral Chambers (#2)",
           whichAct: 2,
           completionDetails:
             "Choral Chambers: In a secret room, reached by walking through the wall at the eastern edge of the dining room and climbing up through a few tunnels.",
