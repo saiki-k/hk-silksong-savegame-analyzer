@@ -33,7 +33,7 @@ export function FilterControls({
 
   useEffect(() => {
     if (hasUploadedSaveFile) {
-      setIsExpanded(true);
+      setIsExpanded(false);
     }
   }, [hasUploadedSaveFile]);
 

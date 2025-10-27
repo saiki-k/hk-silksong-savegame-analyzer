@@ -34,7 +34,7 @@ export const abilities: TrackableCategory = {
         },
         {
           name: "Sharpdart",
-          whichAct: 1,
+          whichAct: 2,
           completionPercent: 1,
           completionDetails: "Wormways (Weavernest)",
           parsingInfo: { type: "tool", internalId: ["Silk Charge"] },
@@ -42,7 +42,7 @@ export const abilities: TrackableCategory = {
         },
         {
           name: "Rune Rage",
-          whichAct: 1,
+          whichAct: 2,
           completionPercent: 1,
           completionDetails: "The Slab: Defeat First Sinner.",
           parsingInfo: { type: "tool", internalId: ["Silk Bomb"] },

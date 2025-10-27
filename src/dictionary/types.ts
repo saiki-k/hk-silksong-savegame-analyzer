@@ -5,7 +5,7 @@ export type FlagMultiParsingInfo = { type: "flagMulti"; internalId: string[] };
 export type FlagMinParsingInfo = { type: "flagMin"; internalId: [string, number] }; // [flag name, required min. value]
 export type FlagReturnParsingInfo = { type: "flagReturn"; internalId: string };
 export type ToolParsingInfo = { type: "tool"; internalId: string[] };
-export type JournalParsingInfo = { type: "journal"; internalId: [string, number] }; // [creature name, no. of required kills]
+export type JournalParsingInfo = { type: "journal"; internalId: string };
 export type CrestParsingInfo = { type: "crest"; internalId: string };
 export type CollectableParsingInfo = { type: "collectable"; internalId: string };
 export type RelicParsingInfo = { type: "relic"; internalId: string };
@@ -38,7 +38,17 @@ export type CategoryItem = {
   completionDetails: string;
   parsingInfo: ParsingInfo | ParsingInfoMulti;
   mapLink: string;
-  killsRequired?: number;
+  additionalMeta?: {
+    killsRequired?: number;
+    imageAsset?: string;
+    hpAndDamageInfo?: Array<{
+      hp: string; // Of the form "50 / 100", where 50 is normal HP and 100 is black-threaded HP
+      damageModifiers: number[];
+      variantName?: string;
+    }>;
+    completesEntries?: string[];
+    completedByEntry?: string;
+  };
   onlyFoundInClassicMode?: boolean;
   onlyFoundInSteelSoulMode?: boolean;
 };
@@ -60,9 +70,15 @@ export type NormalizedItem = CategoryItem & {
   isClassicModeItem: boolean;
   isSteelSoulModeItem: boolean;
   // Dynamic properties added during the "computeDictMapWithSaveData" run
-  unlocked?: boolean;
-  killsAchieved?: number;
-  value?: unknown;
+  saveMeta?: {
+    unlocked?: boolean;
+    value?: unknown;
+    journalMeta?: {
+      killsAchieved?: number;
+      hasBeenEncountered?: boolean;
+      hasBeenCompleted?: boolean;
+    };
+  };
 };
 
 export type NormalizedSection = {
@@ -84,11 +100,13 @@ export type NormalizedCategory = {
   totalCount: number;
   sections: Record<NormalizedSection["name"], NormalizedSection>;
   // Dynamic properties added during the "computeDictMapWithSaveData" run
-  completedPercent?: number;
-  completedCount?: number;
-  journalMeta?: {
-    encountered: number;
-    completed: number;
+  saveMeta?: {
+    completedPercent?: number;
+    completedCount?: number;
+    journalMeta?: {
+      encountered: number;
+      completed: number;
+    };
   };
 };
 

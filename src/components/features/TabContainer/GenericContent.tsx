@@ -103,8 +103,8 @@ function GenericSectionTable({
               width: "56px",
               cellClassName: "text-center align-middle",
               renderCell: (item: NormalizedItem) => (
-                <span className={item.unlocked ? "text-green-400" : "text-red-400"}>
-                  {item.unlocked ? "[x]" : "[ ]"}
+                <span className={item.saveMeta?.unlocked ? "text-green-400" : "text-red-400"}>
+                  {item.saveMeta?.unlocked ? "[x]" : "[ ]"}
                 </span>
               ),
             },
@@ -122,27 +122,27 @@ function GenericSectionTable({
               width: "220px",
               header: "Name",
               cellClassName: (item: NormalizedItem) =>
-                `${getHoverBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
+                `${getHoverBlurClassNames({ shouldBlur: !item.saveMeta?.unlocked && !showSpoilers })}`,
               renderCell: (item: NormalizedItem) => item.name,
             },
             {
               width: "260px",
               header: "Details",
               cellClassName: (item: NormalizedItem) =>
-                `relative min-w-[140px] max-w-[260px] ${getHoverBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
+                `relative min-w-[140px] max-w-[260px] ${getHoverBlurClassNames({ shouldBlur: !item.saveMeta?.unlocked && !showSpoilers })}`,
               renderCell: (item: NormalizedItem) => item.completionDetails,
             },
             {
               width: "48px",
               header: "Act",
               cellClassName: (item: NormalizedItem) =>
-                `w-[48px] text-center ${getHoverBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
+                `w-[48px] text-center ${getHoverBlurClassNames({ shouldBlur: !item.saveMeta?.unlocked && !showSpoilers })}`,
               renderCell: (item: NormalizedItem) => item.whichAct,
             },
             {
               width: "64px",
               cellClassName: (item: NormalizedItem) =>
-                `text-center ${getHoverBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
+                `text-center ${getHoverBlurClassNames({ shouldBlur: !item.saveMeta?.unlocked && !showSpoilers })}`,
               renderCell: (item: NormalizedItem) => <MapButton mapLink={item.mapLink} />,
             },
           ]}

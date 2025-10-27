@@ -6,22 +6,6 @@ import { getHoverBlurClassNames } from "@/utils";
 import { CategoryHeader, StatusBar, EmptyState } from "./shared";
 import { Table, MapButton } from "@/components/ui";
 
-function getHuntersJournalStatusColor(
-  unlocked: boolean,
-  killsAchieved: number | undefined,
-  killsRequired: number | undefined
-): string {
-  if (!unlocked) {
-    return "text-red-400";
-  }
-
-  if (killsAchieved !== undefined && killsRequired !== undefined) {
-    return killsAchieved >= killsRequired ? "text-green-400" : "text-yellow-400";
-  }
-
-  return "";
-}
-
 export function HuntersJournalContent({
   tabLabel,
   showSpoilers,
@@ -70,33 +54,56 @@ export function HuntersJournalContent({
             isFixedLayout={true}
             tableData={items}
             rowClassName="border-b border-gray-700 last:border-none group bg-gray-800/30 hover:bg-gray-700/40 transition-colors"
+            rowTitle={(item: NormalizedItem) => {
+              if (item.additionalMeta?.completesEntries && item.additionalMeta.completesEntries.length > 0) {
+                return `This entry also completes: ${item.additionalMeta.completesEntries.join(", ")}`;
+              } else if (item.additionalMeta?.completedByEntry) {
+                return `This entry is also completed by completing ${item.additionalMeta.completedByEntry}`;
+              }
+              return undefined;
+            }}
             columns={[
               {
-                width: "56px",
-                cellClassName: "text-center align-middle",
-                renderCell: (item: NormalizedItem) => (
-                  <span
-                    className={getHuntersJournalStatusColor(
-                      item.unlocked ?? false,
-                      item.killsAchieved,
-                      item.killsRequired
-                    )}
-                  >
-                    {item.unlocked && (item.killsAchieved ?? 0) >= (item.killsRequired ?? 0) ? "[x]" : "[ ]"}
-                  </span>
-                ),
-              },
-              {
-                width: "56px",
-                headerClassName: "px-2 py-3 text-center text-gray-300 font-medium",
-                cellClassName: "text-center align-middle",
-                renderCell: () => <span className="text-xs text-blue-200 mt-1 font-normal" />,
+                width: "128px",
+                cellClassName: "text-center align-middle ml-4",
+                renderCell: (item: NormalizedItem) => {
+                  if (!item.additionalMeta?.imageAsset) return null;
+                  const killsAchieved = item.saveMeta?.journalMeta?.killsAchieved ?? 0;
+                  const killsRequired = item.additionalMeta?.killsRequired ?? 0;
+                  const isCompleted = item.saveMeta?.journalMeta?.hasBeenCompleted ?? false;
+                  const isInProgress = item.saveMeta?.journalMeta?.hasBeenEncountered && !isCompleted;
+                  const shouldBlur = !item.saveMeta?.unlocked && !showSpoilers;
+
+                  return (
+                    <div
+                      className={`relative w-12 h-12 mx-auto ${getHoverBlurClassNames({ shouldBlur, onGroupHover: true })}`}
+                    >
+                      <img
+                        src={`/src/assets/${item.additionalMeta.imageAsset}`}
+                        alt={item.name}
+                        className="w-full h-full object-contain"
+                      />
+                      {isCompleted && (
+                        <img
+                          src="/src/assets/journal/Completed_Entry_Border.png"
+                          alt="Completed Entry Ring"
+                          className="absolute inset-0 w-full h-full object-contain pointer-events-none"
+                        />
+                      )}
+                      {isInProgress && (
+                        <span className="absolute bottom-0 right-0 bg-yellow-500 text-gray-800 border-yellow-400/30 text-[8px] font-bold px-1 rounded-tl rounded-br leading-tight">
+                          {killsAchieved} / {killsRequired}
+                        </span>
+                      )}
+                    </div>
+                  );
+                },
               },
               {
                 width: "220px",
                 header: "Name",
                 cellClassName: (item: NormalizedItem) =>
-                  `${getHoverBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
+                  `${getHoverBlurClassNames({ shouldBlur: !item.saveMeta?.unlocked && !showSpoilers })}`,
                 renderCell: (item: NormalizedItem) => item.name,
               },
               ...(!inShowEverythingMode
@@ -106,8 +113,8 @@ export function HuntersJournalContent({
                       header: "Kills Achieved",
                       headerClassName: "px-2 py-3 text-center text-gray-300 font-medium",
                       cellClassName: (item: NormalizedItem) =>
-                        `text-center ${getHoverBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
-                      renderCell: (item: NormalizedItem) => item.killsAchieved ?? 0,
+                        `text-center ${getHoverBlurClassNames({ shouldBlur: !item.saveMeta?.unlocked && !showSpoilers })}`,
+                      renderCell: (item: NormalizedItem) => item.saveMeta?.journalMeta?.killsAchieved ?? 0,
                     },
                   ]
                 : []),
@@ -116,13 +123,13 @@ export function HuntersJournalContent({
                 header: "Kills Required",
                 headerClassName: "px-2 py-3 text-center text-gray-300 font-medium",
                 cellClassName: (item: NormalizedItem) =>
-                  `text-center ${getHoverBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
-                renderCell: (item: NormalizedItem) => item.killsRequired ?? "N/A",
+                  `text-center ${getHoverBlurClassNames({ shouldBlur: !item.saveMeta?.unlocked && !showSpoilers })}`,
+                renderCell: (item: NormalizedItem) => item.additionalMeta?.killsRequired ?? "N/A",
               },
               {
                 width: "64px",
                 cellClassName: (item: NormalizedItem) =>
-                  `text-center ${getHoverBlurClassNames({ shouldBlur: !item.unlocked && !showSpoilers })}`,
+                  `text-center ${getHoverBlurClassNames({ shouldBlur: !item.saveMeta?.unlocked && !showSpoilers })}`,
                 renderCell: (item: NormalizedItem) => <MapButton mapLink={item.mapLink} />,
               },
             ]}

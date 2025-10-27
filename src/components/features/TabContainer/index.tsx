@@ -3,6 +3,7 @@ import type { TabContainerProps, TabContentProps, ComputedTabData } from "./type
 import { GenericContent } from "./GenericContent";
 import { StatsContent } from "./Stats";
 import { HuntersJournalContent } from "./HuntersJournal";
+import { BossesContent } from "./Bosses";
 import type { TabId } from "@/components/features/TabBar/tabs";
 import type { ActFilter } from "@/components/features/FilterControls";
 import type { DictMapWithSaveData, NormalizedCategory, NormalizedItem, ItemPath } from "@/dictionary";
@@ -80,7 +81,7 @@ function computeTabData(
     const rawStatsItems = Object.values(statsCategory.sections["default"]["act_0"]);
 
     statsItems = rawStatsItems.map(item => {
-      const rawValue = item.value as string | number | boolean | undefined;
+      const rawValue = item.saveMeta?.value as string | number | boolean | undefined;
       let displayValue = "";
       let detailedValue: string | undefined;
 
@@ -208,6 +209,8 @@ export function TabContainer(props: TabContainerProps) {
         return <StatsContent {...tabContentProps} tabLabel="At a glance..." />;
       case "Hunter's Journal":
         return <HuntersJournalContent {...tabContentProps} />;
+      case "Bosses":
+        return <BossesContent {...tabContentProps} />;
       default:
         return <GenericContent {...tabContentProps} />;
     }

@@ -10,6 +10,6 @@ export function getHoverBlurClassNames({
   onGroupHover?: boolean;
 }): string {
   return shouldBlur
-    ? `blur-sm ${onGroupHover ? "group-hover:blur-none group-hover:delay-500 group-hover:duration-800" : "hover:blur-none hover:delay-500 hover:duration-500"} transition-all duration-100 ease-in delay-0`
+    ? `blur-sm ${onGroupHover ? "group-hover:blur-none group-hover:delay-350 group-hover:duration-350" : "hover:blur-none hover:delay-350 hover:duration-350"} transition-all duration-100 ease-in delay-0`
     : "";
 }

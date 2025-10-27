@@ -8,7 +8,7 @@ export const memoryLockets: TrackableCategory = {
       items: [
         // TODO: Grindle sells this item later, if it is not purchased until ACT 3. The internalId would probably not change, because we see Grindle's mates looting this location. However, adding a note here to verify this later...
         {
-          name: "Memory Locket #1",
+          name: "Memory Locket · Far Fields",
           whichAct: 1,
           completionDetails:
             "Far Fields (Pilgrim's Rest) / Blasted Steps: Sold by Mort for 150 Rosaries. If you don't purchase this from Mort, it is sold by Grindle in ACT 3 for 250 Rosaries.",
@@ -16,7 +16,7 @@ export const memoryLockets: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477953",
         },
         {
-          name: "Memory Locket #2",
+          name: "Memory Locket · Hunter's March",
           whichAct: 1,
           completionDetails:
             "Hunter's March (Far-right): In a cage at the end of the spiky corridor. Break the cage to pick it up.",
@@ -24,14 +24,14 @@ export const memoryLockets: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478017",
         },
         {
-          name: "Memory Locket #3",
+          name: "Memory Locket · Greymoor",
           whichAct: 1,
           completionDetails: "Greymoor: On a ledge above a Mitemother.",
           parsingInfo: { type: "sceneData", internalId: ["Greymoor_16", "Collectable Item Pickup"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478035",
         },
         {
-          name: "Memory Locket #4",
+          name: "Memory Locket · Greymoor (#2)",
           whichAct: 2,
           prereqs: ["Faydown Cloak"],
           completionDetails: "Greymoor: Inside Halfway Home.",
@@ -39,14 +39,14 @@ export const memoryLockets: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478039",
         },
         {
-          name: "Memory Locket #5",
+          name: "Memory Locket · Bellhart",
           whichAct: 1,
           completionDetails: "Bellhart: Sold by Frey for 330 Rosaries.",
           parsingInfo: { type: "flag", internalId: "PurchasedBelltownMemoryLocket" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478204",
         },
         {
-          name: "Memory Locket #6",
+          name: "Memory Locket · Bellhart (#2)",
           whichAct: 3,
           prereqs: ["Silk Soar"],
           completionDetails: "Bellhart: Silk Soar into the roof.",
@@ -54,14 +54,14 @@ export const memoryLockets: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478212",
         },
         {
-          name: "Memory Locket #7",
+          name: "Memory Locket · Bone Bottom",
           whichAct: 1,
           completionDetails: 'Bone Bottom: Complete "Volatile Flintbeetles" wish.',
           parsingInfo: { type: "quest", internalId: "Rock Rollers" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478222",
         },
         {
-          name: "Memory Locket #8",
+          name: "Memory Locket · The Marrow",
           whichAct: 1,
           prereqs: ["Cling Grip"],
           completionDetails: "The Marrow (Top)",
@@ -69,7 +69,7 @@ export const memoryLockets: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478246",
         },
         {
-          name: "Memory Locket #9",
+          name: "Memory Locket · Choral Chambers",
           whichAct: 2,
           completionDetails:
             'Choral Chambers (Grand Bellway): Behind a breakable wall above the Bellway, accessible through the "Exhaust Organ - Underworks" path.',
@@ -77,43 +77,43 @@ export const memoryLockets: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478372",
         },
         {
-          name: "Memory Locket #10",
+          name: "Memory Locket · Wormways",
           whichAct: 1,
           completionDetails: "Wormways (Bottom-right): Held by a corpse.",
           parsingInfo: { type: "sceneData", internalId: ["Crawl_09", "Collectable Item Pickup"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478493",
         },
         {
-          name: "Memory Locket #11",
+          name: "Memory Locket · Blasted Steps",
           whichAct: 1,
           completionDetails: "Blasted Steps: On a narrow platform above the sands.",
           parsingInfo: { type: "sceneData", internalId: ["Coral_02", "Collectable Item Pickup (1)"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478502",
         },
         {
-          name: "Memory Locket #12",
+          name: "Memory Locket · Underworks",
           whichAct: 2,
           completionDetails: "Underworks: In a hidden area towards the left of the confession booth.",
           parsingInfo: { type: "sceneData", internalId: ["Under_08", "Collectable Item Pickup"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478571",
         },
         {
-          name: "Memory Locket #13",
+          name: "Memory Locket · Whispering Vaults",
           whichAct: 2,
           completionDetails: "Whispering Vaults: At the top of a tunnel.",
           parsingInfo: { type: "sceneData", internalId: ["Library_08", "Collectable Item Pickup"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478676",
         },
         {
-          name: "Memory Locket #14",
-          whichAct: 2,
+          name: "Memory Locket · Bilewater",
+          whichAct: 1,
           completionDetails:
             "Bilewater: At the far-left edge of a secret room. Bounce over the infested waters and wall-jump up the vertical space to reach it.",
           parsingInfo: { type: "sceneData", internalId: ["Shadow_20", "Collectable Item Pickup"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478787",
         },
         {
-          name: "Memory Locket #15",
+          name: "Memory Locket · Deep Docks",
           whichAct: 2,
           completionDetails:
             "Deep Docks: Held by a corpse at the bottom of a magma-filled area found behind a breakable wall.",
@@ -121,14 +121,14 @@ export const memoryLockets: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478836",
         },
         {
-          name: "Memory Locket #16",
+          name: "Memory Locket · Bilewater (#2)",
           whichAct: 2,
           completionDetails: "Bilewater: Held by a corpse in a breakable cocoon dangling from the ceiling.",
           parsingInfo: { type: "sceneData", internalId: ["Shadow_27", "Sack Corpse Pickup"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478851",
         },
         {
-          name: "Memory Locket #17",
+          name: "Memory Locket · The Slab",
           whichAct: 2,
           completionDetails:
             "The Slab: Inside the shortcut cave. Look out for a breakable wall as you climb a vertical space.",
@@ -136,14 +136,14 @@ export const memoryLockets: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479017",
         },
         {
-          name: "Memory Locket #18",
+          name: "Memory Locket · Memorium",
           whichAct: 2,
           completionDetails: "Memorium: After a platforming section.",
           parsingInfo: { type: "sceneData", internalId: ["Arborium_05", "Collectable Item Pickup"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479110",
         },
         {
-          name: "Memory Locket #19",
+          name: "Memory Locket · Far Fields (#2)",
           whichAct: 3,
           completionDetails:
             "Far Fields: In a secret area towards the right of the Karmelita cave. Guarded by a void-powered Skarrgard.",
@@ -151,7 +151,7 @@ export const memoryLockets: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479196",
         },
         {
-          name: "Memory Locket #20",
+          name: "Memory Locket · Sands of Karak",
           whichAct: 2,
           completionDetails: "Sands of Karak: Held by a corpse at the top of the area.",
           parsingInfo: { type: "sceneData", internalId: ["Coral_23", "Collectable Item Pickup"] },

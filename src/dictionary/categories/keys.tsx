@@ -12,7 +12,7 @@ export const keys: TrackableCategory = {
       items: [
         // TODO: Grindle sells this item later, if it is not purchased until ACT 3. The internalId would probably not change, because we see Grindle's mates looting this location. However, adding a note here to verify this later...
         {
-          name: "Simple Key 1",
+          name: "Simple Key #1",
           whichAct: 1,
           completionDetails:
             "Bone Bottom / Blasted Steps: Sold by Pebb for 500 Rosaries. If you don't purchase this from Pebb, it is sold by Grindle in ACT 3 for 600 Rosaries.",
@@ -20,14 +20,14 @@ export const keys: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477839",
         },
         {
-          name: "Simple Key 2",
+          name: "Simple Key #2",
           whichAct: 1,
           completionDetails: "Sinner's Road (Top-right): Dropped by a (defeated) Roachkeeper.",
           parsingInfo: { type: "flag", internalId: "CollectedDustCageKey" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478280",
         },
         {
-          name: "Simple Key 3",
+          name: "Simple Key #3",
           whichAct: 2,
           completionDetails:
             'Songclave: Sold by Jubilana for 650 Rosaries, after completing "The Wandering Merchant" wish.',
@@ -35,7 +35,7 @@ export const keys: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478880",
         },
         {
-          name: "Simple Key 4",
+          name: "Simple Key #4",
           whichAct: 2,
           completionDetails: "Sands of Karak (Far-right): Held by a corpse sitting on the right-most bench.",
           parsingInfo: { type: "sceneData", internalId: ["Bellshrine_Coral", "Collectable Item Pickup"] },

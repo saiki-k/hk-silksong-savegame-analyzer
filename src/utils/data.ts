@@ -66,30 +66,47 @@ export function computeDictMapWithSaveData(
           const { unlocked, returnValue } = isItemUnlockedInPlayerSave(item.parsingInfo, parsedJson);
           const killsAchieved = typeof returnValue === "number" ? returnValue : undefined;
 
-          const itemWithSaveData = { ...item, unlocked, killsAchieved, value: returnValue };
+          const isJournalEntry =
+            isJournalCategory && killsAchieved !== undefined && item.additionalMeta?.killsRequired !== undefined;
+
+          const isJournalEntryComplete = isJournalEntry && killsAchieved >= (item.additionalMeta?.killsRequired ?? 0);
+
+          if (isJournalEntry) {
+            if (killsAchieved > 0) journalEncountered++;
+            if (isJournalEntryComplete) journalCompleted++;
+          }
+
+          const itemWithSaveData = {
+            ...item,
+            saveMeta: {
+              unlocked,
+              value: returnValue,
+              ...(isJournalEntry
+                ? {
+                    journalMeta: {
+                      killsAchieved,
+                      hasBeenEncountered: isJournalEntry ? killsAchieved > 0 : undefined,
+                      hasBeenCompleted: isJournalEntry ? isJournalEntryComplete : undefined,
+                    },
+                  }
+                : {}),
+            },
+          };
+
           sectionFilteredByGameMode[actKey][itemName] = itemWithSaveData;
           sectionFilteredByGameMode.totalCount++;
           sectionFilteredByGameMode.totalPercent += item.completionPercent ?? 0;
 
           const itemPath: ItemPath = `${categoryName}.${sectionName}.${actKey}.${itemName}`;
 
-          // Update Hunter's Journal category's metadata variables
-          if (isJournalCategory && killsAchieved !== undefined) {
-            if (killsAchieved > 0 && item.killsRequired !== undefined) {
-              journalEncountered++;
-              if (killsAchieved >= item.killsRequired) {
-                journalCompleted++;
-              }
-            }
+          if (!unlocked || (isJournalEntry && !isJournalEntryComplete)) {
+            missingItemPaths.push(itemPath);
+            continue;
           }
 
-          if (!unlocked) {
-            missingItemPaths.push(itemPath);
-          } else {
-            completedItemPaths.push(itemPath);
-            categoryCompletedCount++;
-            categoryCompletedPercent += item.completionPercent ?? 0;
-          }
+          completedItemPaths.push(itemPath);
+          categoryCompletedCount++;
+          categoryCompletedPercent += item.completionPercent ?? 0;
         }
       }
 
@@ -101,15 +118,17 @@ export function computeDictMapWithSaveData(
     }
 
     if (categoryFilteredByGameMode.totalCount > 0) {
+      categoryFilteredByGameMode.saveMeta = {
+        completedCount: categoryCompletedCount,
+        completedPercent: categoryCompletedPercent,
+      };
+
       if (isJournalCategory) {
-        categoryFilteredByGameMode.journalMeta = {
+        categoryFilteredByGameMode.saveMeta.journalMeta = {
           encountered: journalEncountered,
           completed: journalCompleted,
         };
       }
-
-      categoryFilteredByGameMode.completedCount = categoryCompletedCount;
-      categoryFilteredByGameMode.completedPercent = categoryCompletedPercent;
 
       allItemsFilteredByGameMode[categoryName] = categoryFilteredByGameMode;
 

@@ -68,7 +68,7 @@ export function isItemUnlockedInPlayerSave(
       return { unlocked };
     },
 
-    journal: ([entryName]: [string, number]) => {
+    journal: (entryName: string) => {
       const journal = (playerData as any)?.EnemyJournalKillData?.list || [];
       let unlocked = false;
       let killsAchieved = 0;

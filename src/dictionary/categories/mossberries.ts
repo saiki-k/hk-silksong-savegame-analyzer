@@ -52,7 +52,7 @@ export const mossberries: TrackableCategory = {
         },
         {
           name: "Mossberry #7",
-          whichAct: 1,
+          whichAct: 2,
           completionDetails: "Memorium",
           parsingInfo: { type: "sceneData", internalId: ["Arborium_04", "moss_berry_fruit"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479108",

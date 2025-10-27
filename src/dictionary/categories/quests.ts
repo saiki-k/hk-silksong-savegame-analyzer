@@ -97,7 +97,8 @@ export const quests: TrackableCategory = {
         {
           name: "Awaiting the End",
           whichAct: 3,
-          completionDetails: "Songclave: Confront the Caretaker and his family in the Ruined Chapel beside Bone Bottom.",
+          completionDetails:
+            "Songclave: Confront the Caretaker and his family in the Ruined Chapel beside Bone Bottom.",
           parsingInfo: { type: "quest", internalId: "Black Thread Pt1 Shamans" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479262",
         },
@@ -156,7 +157,7 @@ export const quests: TrackableCategory = {
           name: "Last Dive",
           whichAct: 3,
           completionDetails: "The Abyss: The final ending(?).",
-          parsingInfo: { type: "journal", internalId: ["Lost Lace", 1] },
+          parsingInfo: { type: "journal", internalId: "Lost Lace" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479431",
         },
       ],

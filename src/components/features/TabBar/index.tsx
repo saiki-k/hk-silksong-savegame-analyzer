@@ -41,8 +41,8 @@ export function TabBar({
       if (!category) return;
 
       // Special handling for Hunter's Journal
-      if (tab.tabId === "Hunter's Journal" && category.journalMeta) {
-        const { encountered, completed } = category.journalMeta;
+      if (tab.tabId === "Hunter's Journal" && category.saveMeta?.journalMeta) {
+        const { encountered, completed } = category.saveMeta.journalMeta;
         const categoryTotal = category.totalCount;
         const isProgressComplete = completed === categoryTotal;
         const progressText = inShowEverythingMode ? `${categoryTotal}` : `${completed} / ${categoryTotal}`;
@@ -66,7 +66,9 @@ export function TabBar({
 
       let currentTotal = categoryTotal;
       if (!inShowEverythingMode) {
-        currentTotal = hasPercentProgression ? (category.completedPercent ?? 0) : (category.completedCount ?? 0);
+        currentTotal = hasPercentProgression
+          ? (category.saveMeta?.completedPercent ?? 0)
+          : (category.saveMeta?.completedCount ?? 0);
       }
 
       const isProgressComplete = currentTotal === categoryTotal;

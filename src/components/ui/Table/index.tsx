@@ -13,6 +13,7 @@ interface TableProps<T = unknown> {
   columns: TableCell<T>[];
   tableData?: T[];
   rowClassName?: string | ((item: T, rowIndex: number) => string);
+  rowTitle?: string | ((item: T, rowIndex: number) => string | undefined);
   children?: ReactNode;
   isFixedLayout?: boolean;
 }
@@ -21,6 +22,7 @@ export function Table<T = unknown>({
   columns,
   tableData,
   rowClassName,
+  rowTitle,
   children,
   isFixedLayout = false,
 }: TableProps<T>) {
@@ -32,6 +34,7 @@ export function Table<T = unknown>({
       <tr
         key={rowIndex}
         className={typeof rowClassName === "function" ? rowClassName(rowItem, rowIndex) : rowClassName || ""}
+        title={typeof rowTitle === "function" ? rowTitle(rowItem, rowIndex) : rowTitle}
       >
         {columns.map((column, colIndex) => {
           let cellClass = "px-2 py-1 truncate group-hover:whitespace-normal group-hover:break-words";

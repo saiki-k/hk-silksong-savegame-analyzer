@@ -61,7 +61,7 @@ export const tools: TrackableCategory = {
         },
         {
           name: "Throwing Ring",
-          whichAct: 1,
+          whichAct: 2,
           completionPercent: 1,
           completionDetails: 'Bilewater: Complete "Trail\'s End" wish.',
           parsingInfo: { type: "tool", internalId: ["Shakra Ring"] },
@@ -114,7 +114,8 @@ export const tools: TrackableCategory = {
           name: "Cogfly",
           whichAct: 2,
           completionPercent: 1,
-          completionDetails: "High Halls: Crafted at a table in a room behind a breakable grill. Requires a Craftmetal.",
+          completionDetails:
+            "High Halls: Crafted at a table in a room behind a breakable grill. Requires a Craftmetal.",
           parsingInfo: { type: "tool", internalId: ["Cogwork Flier"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478903",
         },
@@ -455,7 +456,7 @@ export const tools: TrackableCategory = {
         },
         {
           name: "Thief's Mark",
-          whichAct: 1,
+          whichAct: 2,
           completionPercent: 1,
           completionDetails: "Blasted Steps: Sold by Grindle for 350 Rosaries.",
           parsingInfo: { type: "tool", internalId: ["Thief Charm"] },

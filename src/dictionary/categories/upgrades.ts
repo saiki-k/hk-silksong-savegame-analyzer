@@ -9,7 +9,7 @@ export const upgrades: TrackableCategory = {
       description: "Each of these upgrades count 1% towards completion.",
       items: [
         {
-          name: "Needle Upgrade 1 (Sharpened Needle)",
+          name: "Sharpened Needle",
           whichAct: 1,
           completionPercent: 1,
           completionDetails: "Bellhart: Speak to Plinney after defeating Widow.",
@@ -17,7 +17,7 @@ export const upgrades: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478210",
         },
         {
-          name: "Needle Upgrade 2 (Shining Needle)",
+          name: "Shining Needle",
           whichAct: 2,
           completionPercent: 1,
           completionDetails: "Bellhart: Speak to Plinney after acquiring 1 Pale Oil.",
@@ -25,7 +25,7 @@ export const upgrades: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478211",
         },
         {
-          name: "Needle Upgrade 3 (Hivesteel Needle)",
+          name: "Hivesteel Needle",
           whichAct: 2,
           completionPercent: 1,
           completionDetails:
@@ -34,7 +34,7 @@ export const upgrades: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478889",
         },
         {
-          name: "Needle Upgrade 4 (Pale Steel Needle)",
+          name: "Pale Steel Needle",
           whichAct: 3,
           completionPercent: 1,
           completionDetails:
@@ -49,7 +49,7 @@ export const upgrades: TrackableCategory = {
       description: "Each of these upgrades count 1% towards completion.",
       items: [
         {
-          name: "Tool Pouch Upgrade 1",
+          name: "Tool Pouch Upgrade #1",
           whichAct: 1,
           completionPercent: 1,
           completionDetails:
@@ -58,7 +58,7 @@ export const upgrades: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477946",
         },
         {
-          name: "Tool Pouch Upgrade 2",
+          name: "Tool Pouch Upgrade #2",
           whichAct: 1,
           completionPercent: 1,
           completionDetails:
@@ -70,7 +70,7 @@ export const upgrades: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478252",
         },
         {
-          name: "Tool Pouch Upgrade 3",
+          name: "Tool Pouch Upgrade #3",
           whichAct: 2,
           completionPercent: 1,
           completionDetails: 'Greymoor (Halfway Home): Complete "Bugs of Pharloom" wish.',
@@ -78,7 +78,7 @@ export const upgrades: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479167",
         },
         {
-          name: "Tool Pouch Upgrade 4",
+          name: "Tool Pouch Upgrade #4",
           whichAct: 2,
           completionPercent: 1,
           completionDetails: "Putrified Ducts (Fleatopia): Find 20 Lost Fleas in Pharloom.",
@@ -92,7 +92,7 @@ export const upgrades: TrackableCategory = {
       description: "Each of these upgrades count 1% towards completion.",
       items: [
         {
-          name: "Crafting Kit Upgrade 1",
+          name: "Crafting Kit Upgrade #1",
           whichAct: 1,
           completionPercent: 1,
           completionDetails: "Deep Docks: Sold by Forge Daughter for 180 Rosaries.",
@@ -100,7 +100,7 @@ export const upgrades: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477919",
         },
         {
-          name: "Crafting Kit Upgrade 2",
+          name: "Crafting Kit Upgrade #2",
           whichAct: 1,
           completionPercent: 1,
           completionDetails: 'Bellhart: Complete "Crawbug Clearing" wish.',
@@ -108,7 +108,7 @@ export const upgrades: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478348",
         },
         {
-          name: "Crafting Kit Upgrade 3",
+          name: "Crafting Kit Upgrade #3",
           whichAct: 2,
           completionPercent: 1,
           completionDetails: "Blasted Steps: Sold by Grindle for 700 Rosaries.",
@@ -116,7 +116,7 @@ export const upgrades: TrackableCategory = {
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478533",
         },
         {
-          name: "Crafting Kit Upgrade 4",
+          name: "Crafting Kit Upgrade #4",
           whichAct: 2,
           completionPercent: 1,
           completionDetails: "Underworks: Sold by Twelfth Architect for 450 Rosaries.",
