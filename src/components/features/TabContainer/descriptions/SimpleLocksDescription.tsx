@@ -1,4 +1,4 @@
-import { LocationButton } from "@/components/ui";
+import { MapButton } from "@/components/ui";
 import { getHoverBlurClassNames } from "@/utils";
 
 const simpleLockLocations = [
@@ -32,9 +32,9 @@ export const SimpleLocksDescription = ({ showSpoilers = false }: SimpleLocksDesc
       <span className={blurClassNames}>Four</span> Simple Locks can be found throughout Pharloom; in{" "}
       {simpleLockLocations.map((location, index) => (
         <span key={location.name}>
-          <LocationButton url={location.mapLink} className={blurClassNames}>
+          <MapButton mapLink={location.mapLink} titleName={`Simple Lock · ${location.name}`} className={blurClassNames}>
             {location.name}
-          </LocationButton>
+          </MapButton>
           {index < simpleLockLocations.length - 1 && (index === simpleLockLocations.length - 2 ? ", and " : ", ")}
         </span>
       ))}

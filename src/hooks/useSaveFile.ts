@@ -19,6 +19,7 @@ export interface SaveFileObj {
     handleDragOver: (event: DragEvent<HTMLDivElement>) => void;
     saveEncrypted: () => void;
     savePlain: () => void;
+    clearFile: () => void;
   };
 }
 
@@ -132,6 +133,13 @@ export function useSaveFile() {
     downloadFile(jsonText, `${nameWithoutExtension || "save"}.json`);
   }, [jsonText, fileName]);
 
+  const clearFile = useCallback(() => {
+    setFileName("");
+    setIsSaveFileDecrypted(false);
+    setJsonText("");
+    setErrorMessage("");
+  }, []);
+
   return useMemo(
     () => ({
       state: {
@@ -149,6 +157,7 @@ export function useSaveFile() {
         handleDragOver,
         saveEncrypted,
         savePlain,
+        clearFile,
       },
     }),
     [
@@ -163,6 +172,7 @@ export function useSaveFile() {
       handleDragOver,
       saveEncrypted,
       savePlain,
+      clearFile,
     ]
   );
 }

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { type TabId, TAB_CONFIG, type TabGroup } from "./tabs";
+import { type TabId, TAB_GROUPS, type TabGroup } from "./tabs";
 import { TabButton } from "./TabButton";
 import { formatPercent } from "@/utils";
 import { type DictMapWithSaveData } from "@/dictionary";
@@ -34,7 +34,8 @@ export function TabBar({
 
     const progressMap = new Map<TabId, TabProgressInfo>();
 
-    TAB_CONFIG.forEach(tab => {
+    // Iterate through all groups and their tabs
+    (Object.values(TAB_GROUPS) as (typeof TAB_GROUPS)[TabGroup][]).flat().forEach(tab => {
       if (!tab.hasProgress) return;
 
       const category = dictMapWithSaveData?.allItems[tab.tabId];
@@ -96,17 +97,7 @@ export function TabBar({
   }, [dictMapWithSaveData, inShowEverythingMode]);
 
   const groupedTabs = useMemo(() => {
-    const groups = new Map<TabGroup | undefined, typeof TAB_CONFIG>();
-    
-    TAB_CONFIG.filter(tab => !tab.hideButton).forEach(tab => {
-      const group = tab.group;
-      if (!groups.has(group)) {
-        groups.set(group, []);
-      }
-      groups.get(group)!.push(tab);
-    });
-
-    return groups;
+    return new Map(Object.entries(TAB_GROUPS) as [TabGroup, (typeof TAB_GROUPS)[TabGroup]][]);
   }, []);
 
   return (
@@ -116,9 +107,9 @@ export function TabBar({
         const gridClass = isFullWidthGroup
           ? "grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-2"
           : "grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-2";
-        
+
         return (
-          <div key={group || "ungrouped"}>
+          <div key={group}>
             <div className={gridClass}>
               {tabs.map(tab => (
                 <TabButton
