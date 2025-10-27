@@ -21,7 +21,7 @@ export function GenericContent({
       <div className="text-white text-center">
         🚧 The "{tabLabel}" category hasn't been implemented yet.{" "}
         <a
-          href="https://github.com/Br3zzly/hk-silksong-savegame-analyzer"
+          href="https://github.com/Br3zzly/silksong-completionist"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-400 hover:text-blue-300 underline"
