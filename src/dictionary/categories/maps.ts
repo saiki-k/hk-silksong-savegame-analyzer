@@ -88,7 +88,7 @@ export const maps: TrackableCategory = {
           name: "Sinner's Road",
           whichAct: 1,
           completionDetails: "Sold by Shakra for 90 Rosaries.",
-          parsingInfo: { type: "flag", internalId: "HasHangMap" },
+          parsingInfo: { type: "flag", internalId: "HasDustpensMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479526",
         },
         {
@@ -109,7 +109,7 @@ export const maps: TrackableCategory = {
           name: "Choral Chambers",
           whichAct: 2,
           completionDetails: "Purchased for 70 Rosaries from a machine displaying a model of the Citadel.",
-          parsingInfo: { type: "flag", internalId: "HasCoralMap" },
+          parsingInfo: { type: "flag", internalId: "HasHallsMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479733",
         },
         {
@@ -144,7 +144,7 @@ export const maps: TrackableCategory = {
           name: "High Halls",
           whichAct: 2,
           completionDetails: "Purchased for 70 Rosaries from a machine displaying a model of the Citadel.",
-          parsingInfo: { type: "flag", internalId: "HasHallsMap" },
+          parsingInfo: { type: "flag", internalId: "HasHangMap" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478907",
         },
         {
