@@ -5,10 +5,11 @@ interface FiltersBarTogglerProps {
   isExpanded: boolean;
   onToggle: () => void;
   hasUploadedSaveFile: boolean;
+  inShowEverythingMode?: boolean;
 }
 
-export function FiltersBarToggler({ isExpanded, onToggle, hasUploadedSaveFile }: FiltersBarTogglerProps) {
-  const displayText = hasUploadedSaveFile ? "Global Filters" : "No save file? You can still see everything.";
+export function FiltersBarToggler({ isExpanded, onToggle, hasUploadedSaveFile, inShowEverythingMode }: FiltersBarTogglerProps) {
+  const displayText = hasUploadedSaveFile || inShowEverythingMode ? "Global Filters" : "No save file? You can still see everything.";
 
   return (
     <div

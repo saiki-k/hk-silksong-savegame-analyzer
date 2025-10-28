@@ -79,7 +79,15 @@ export default function App() {
 
   const handleGlobalFilterChange = (filterType: string, value: any) => {
     setGlobalFilters(prev => ({...prev, [filterType]: value}));
-    setTabFilterMap(new Map()); // Clear tab specific filters when global filters change
+
+    // Update the specific filterType across all existing tab configurations
+    setTabFilterMap(prev => {
+      const newMap = new Map(prev);
+      for (const [tabId, tabFilters] of newMap) {
+        newMap.set(tabId, {...tabFilters, [filterType]: value});
+      }
+      return newMap;
+    });
   };
 
   const handleTabFilterChange = (filterType: string, value: any) => {

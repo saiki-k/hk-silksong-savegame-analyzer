@@ -53,6 +53,7 @@ export function FilterControls({
         isExpanded={isExpanded}
         onToggle={() => setIsExpanded(!isExpanded)}
         hasUploadedSaveFile={hasUploadedSaveFile}
+        inShowEverythingMode={inShowEverythingMode}
       />
     </div>
   );
