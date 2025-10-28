@@ -68,7 +68,7 @@ interface FiltersBarProps {
     actFilter: ActFilter;
   };
   inShowEverythingMode: boolean;
-  onGlobalFilterChange: (filterType: string, value: any) => void;
+  onGlobalFilterChange: (filterType: string, value: boolean | ActFilter) => void;
   onShowEverythingToggle: () => void;
   isExpanded: boolean;
 }

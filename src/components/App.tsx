@@ -7,6 +7,7 @@ import { NORMALISED_DICT_MAP, type DictMapWithSaveData } from "@/dictionary";
 import { computeDictMapWithSaveData } from "@/utils";
 
 import type { TabId } from "./features/TabBar/tabs";
+import type { ActFilter } from "./features/FilterControls";
 
 import { AppContainer } from "./features/AppContainer";
 
@@ -77,7 +78,7 @@ export default function App() {
     setInShowEverythingMode(!inShowEverythingMode);
   };
 
-  const handleGlobalFilterChange = (filterType: string, value: any) => {
+  const handleGlobalFilterChange = (filterType: string, value: boolean | ActFilter) => {
     setGlobalFilters(prev => ({ ...prev, [filterType]: value }));
 
     // Update the specific filterType across all existing tab configurations
@@ -90,7 +91,7 @@ export default function App() {
     });
   };
 
-  const handleTabFilterChange = (filterType: string, value: any) => {
+  const handleTabFilterChange = (filterType: string, value: boolean | ActFilter) => {
     const currentTabFilters = tabFilterMap.get(activeTab) ?? globalFilters;
     const newTabFilters = { ...currentTabFilters, [filterType]: value };
     setTabFilterMap(prev => new Map(prev.set(activeTab, newTabFilters)));

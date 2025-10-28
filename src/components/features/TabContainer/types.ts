@@ -12,6 +12,12 @@ export interface StatsItemWithDisplay extends NormalizedItem {
   detailedValue?: string;
 }
 
+export interface TabFilters {
+  showSpoilers?: boolean;
+  showMissingOnly?: boolean;
+  actFilter?: ActFilter;
+}
+
 export interface ComputedTabData {
   category: NormalizedCategory | null;
   hasVisibleItems: boolean;
@@ -31,8 +37,8 @@ export interface TabContainerProps {
     showMissingOnly: boolean;
     actFilter: ActFilter;
   };
-  tabFilterMap: Map<TabId, any>;
-  onTabFilterChange: (filterType: string, value: any) => void;
+  tabFilterMap: Map<TabId, TabFilters>;
+  onTabFilterChange: (filterType: string, value: boolean | ActFilter) => void;
 }
 
 export interface TabContentProps {
@@ -42,5 +48,5 @@ export interface TabContentProps {
   inShowEverythingMode: boolean;
   actFilter: ActFilter;
   computedData: ComputedTabData | undefined;
-  onTabFilterChange: (filterType: string, value: any) => void;
+  onTabFilterChange: (filterType: string, value: boolean | ActFilter) => void;
 }
