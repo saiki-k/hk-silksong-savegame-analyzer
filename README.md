@@ -20,7 +20,7 @@ Once uploaded, you'll see your completion progress and detailed breakdowns of co
 
 Comprehensively tracks everything that contributes to 100% completion in Hollow Knight: Silksong, as well as many additional collectibles and features.
 
-### 🧩 Core Progress Items (that count towards **100% completion**)
+### ✨ Core Progress (items that count towards **100% completion**)
 - **Mask Shards**
 - **Spool Fragments**
 - **Abilities**
@@ -50,9 +50,9 @@ Comprehensively tracks everything that contributes to 100% completion in Hollow 
 - **Maps**
 - **Bellways**
 - **Ventrica Stations**
-
-### 📋 Progression & Journal Entries
 - **Quests**
+
+### 💪 Bestiary
 - **Bosses**
 - **Hunter's Journal**
 
