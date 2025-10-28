@@ -26,7 +26,13 @@ function EditorStatusBar({ isValidJson }: { isValidJson: boolean }) {
   );
 }
 
-function EditorResizeHandle({ isDragging, onMouseDown }: { isDragging: boolean; onMouseDown: (e: React.MouseEvent) => void }) {
+function EditorResizeHandle({
+  isDragging,
+  onMouseDown,
+}: {
+  isDragging: boolean;
+  onMouseDown: (e: React.MouseEvent) => void;
+}) {
   return (
     <div
       onMouseDown={onMouseDown}
@@ -78,9 +84,7 @@ function DownloadButtons({ saveFileObj }: { saveFileObj: SaveFileObj }) {
       <DownloadButton onClick={() => saveFileObj.handlers.saveEncrypted()}>
         💾 Download as (encrypted) .dat
       </DownloadButton>
-      <DownloadButton onClick={() => saveFileObj.handlers.savePlain()}>
-        📃 Download as (plain) .json
-      </DownloadButton>
+      <DownloadButton onClick={() => saveFileObj.handlers.savePlain()}>📃 Download as (plain) .json</DownloadButton>
     </div>
   );
 }
@@ -94,7 +98,7 @@ function LazyEditor({
   editorHeight: number;
   handleChange: (value: string) => void;
 }) {
-  const LoadingComponent = () =>(
+  const LoadingComponent = () => (
     <div
       style={{ width: "100%", height: `${editorHeight}px` }}
       className="flex items-center justify-center bg-[#1e1e1e] text-gray-400 text-center"

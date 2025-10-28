@@ -169,13 +169,7 @@ export function TabContainer(props: TabContainerProps) {
       return undefined;
     }
 
-    const data = computeTabData(
-      category,
-      activeTab,
-      effectiveFilters,
-      inShowEverythingMode,
-      dictMapWithSaveData
-    );
+    const data = computeTabData(category, activeTab, effectiveFilters, inShowEverythingMode, dictMapWithSaveData);
 
     cacheRef.current.set(cacheKey, data);
 

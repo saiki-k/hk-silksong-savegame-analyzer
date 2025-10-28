@@ -124,11 +124,7 @@ export function FileUpload({ saveFileObj }: { saveFileObj: SaveFileObj }) {
       <input ref={inputRef} type="file" className="hidden" onChange={handleChange} />
 
       {/* Save Editor Modal */}
-      <Modal
-        isOpen={isEditorModalOpen}
-        onClose={() => setIsEditorModalOpen(false)}
-        title="Save File Editor"
-      >
+      <Modal isOpen={isEditorModalOpen} onClose={() => setIsEditorModalOpen(false)} title="Save File Editor">
         <SaveEditor saveFileObj={saveFileObj} />
       </Modal>
     </div>

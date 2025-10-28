@@ -30,7 +30,7 @@ export default function App() {
   const [globalFilters, setGlobalFilters] = useState({
     showSpoilers: false,
     showMissingOnly: true,
-    actFilter: new Set([1, 2, 3] as const)
+    actFilter: new Set([1, 2, 3] as const),
   });
   const [tabFilterMap, setTabFilterMap] = useState(new Map());
 
@@ -54,7 +54,7 @@ export default function App() {
     setGlobalFilters({
       showSpoilers: false,
       showMissingOnly: true,
-      actFilter: new Set([1, 2, 3] as const)
+      actFilter: new Set([1, 2, 3] as const),
     });
     setTabFilterMap(new Map());
     setActiveTab("Stats");
@@ -78,13 +78,13 @@ export default function App() {
   };
 
   const handleGlobalFilterChange = (filterType: string, value: any) => {
-    setGlobalFilters(prev => ({...prev, [filterType]: value}));
+    setGlobalFilters(prev => ({ ...prev, [filterType]: value }));
 
     // Update the specific filterType across all existing tab configurations
     setTabFilterMap(prev => {
       const newMap = new Map(prev);
       for (const [tabId, tabFilters] of newMap) {
-        newMap.set(tabId, {...tabFilters, [filterType]: value});
+        newMap.set(tabId, { ...tabFilters, [filterType]: value });
       }
       return newMap;
     });
@@ -92,9 +92,9 @@ export default function App() {
 
   const handleTabFilterChange = (filterType: string, value: any) => {
     const currentTabFilters = tabFilterMap.get(activeTab) ?? globalFilters;
-    const newTabFilters = {...currentTabFilters, [filterType]: value};
+    const newTabFilters = { ...currentTabFilters, [filterType]: value };
     setTabFilterMap(prev => new Map(prev.set(activeTab, newTabFilters)));
-  }
+  };
 
   return (
     <AppContainer>

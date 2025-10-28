@@ -94,7 +94,7 @@ export function FiltersBar({
   const toggleAct = (act: 1 | 2 | 3) => {
     if (filtersDisabled) return;
     const newFilter = toggleActInFilter(actFilter, act);
-    onGlobalFilterChange('actFilter', newFilter);
+    onGlobalFilterChange("actFilter", newFilter);
   };
 
   return (
@@ -110,7 +110,7 @@ export function FiltersBar({
             {hasUploadedSaveFile ? (
               <ShowMissingOnlyButton
                 showMissingOnly={showMissingOnly}
-                onClick={() => onGlobalFilterChange('showMissingOnly', !showMissingOnly)}
+                onClick={() => onGlobalFilterChange("showMissingOnly", !showMissingOnly)}
                 disabled={filtersDisabled}
               />
             ) : (
@@ -144,7 +144,7 @@ export function FiltersBar({
           <div className="w-[200px] flex justify-start">
             <SpoilersButton
               showSpoilers={showSpoilers}
-              onClick={() => onGlobalFilterChange('showSpoilers', !showSpoilers)}
+              onClick={() => onGlobalFilterChange("showSpoilers", !showSpoilers)}
               disabled={filtersDisabled}
             />
           </div>
