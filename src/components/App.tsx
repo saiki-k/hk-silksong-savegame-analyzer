@@ -13,7 +13,6 @@ import { AppContainer } from "./features/AppContainer";
 import { Header } from "./features/Header";
 import { SaveFileInfo } from "./features/SaveFileInfo";
 import { FileUpload } from "./features/FileUpload";
-import { SaveEditor } from "./features/SaveEditor";
 import { FilterControls, type ActFilter } from "./features/FilterControls";
 
 import { Separator } from "./ui/Separator";
@@ -78,7 +77,6 @@ export default function App() {
       <Separator />
 
       <SaveFileInfo onCopyPath={handleCopyPath} />
-      <SaveEditor saveFileObj={saveFileObj} hasUploadedSaveFile={hasUploadedSaveFile} />
       <FileUpload saveFileObj={saveFileObj} />
       <FilterControls
         hasUploadedSaveFile={hasUploadedSaveFile}

@@ -38,7 +38,7 @@ export function FilterControls({
   }, [hasUploadedSaveFile]);
 
   return (
-    <div className="-mt-1">
+    <div className="mt-0">
       <FiltersBar
         hasUploadedSaveFile={hasUploadedSaveFile}
         hasUploadedSaveData={hasUploadedSaveData}

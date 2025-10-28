@@ -61,7 +61,7 @@ export function MapButton({ mapLink, disabled, titleName, children, className }:
             target="_blank"
             rel="noopener noreferrer"
             className="cursor-pointer text-xs text-gray-500 hover:text-blue-400 transition-colors underline decoration-dotted"
-            onClick={(e) => e.stopPropagation()}
+            onClick={e => e.stopPropagation()}
           >
             Open this in a new tab ↗
           </a>

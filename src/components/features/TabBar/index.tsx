@@ -103,7 +103,7 @@ export function TabBar({
   return (
     <div className="mt-4 mb-2 space-y-3">
       {Array.from(groupedTabs.entries()).map(([group, tabs], groupIndex) => {
-        const isFullWidthGroup = group === "exploration" || group === "progression";
+        const isFullWidthGroup = group === "exploration" || group === "bestiary";
         const gridClass = isFullWidthGroup
           ? "grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-2"
           : "grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-2";
