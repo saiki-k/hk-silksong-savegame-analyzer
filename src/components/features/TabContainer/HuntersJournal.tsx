@@ -4,7 +4,7 @@ import type { NormalizedItem } from "@/dictionary";
 import { getHoverBlurClassNames } from "@/utils";
 
 import { CategoryHeader, StatusBar, EmptyState } from "./shared";
-import { Table, MapButton } from "@/components/ui";
+import { Table, MapButton, LazyImage } from "@/components/ui";
 
 export function HuntersJournalContent({
   tabLabel,
@@ -74,14 +74,14 @@ export function HuntersJournalContent({
                     <div
                       className={`relative w-12 h-12 mx-auto ${getHoverBlurClassNames({ shouldBlur, onGroupHover: true })}`}
                     >
-                      <img
-                        src={`/src/assets/${item.additionalMeta.imageAsset}`}
+                      <LazyImage
+                        src={item.additionalMeta.imageAsset}
                         alt={item.name}
                         className="w-full h-full object-contain"
                       />
                       {isCompleted && (
-                        <img
-                          src="/src/assets/journal/Completed_Entry_Border.png"
+                        <LazyImage
+                          src="journal/Completed_Entry_Border.png"
                           alt="Completed Entry Ring"
                           className="absolute inset-0 w-full h-full object-contain pointer-events-none"
                         />
