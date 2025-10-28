@@ -62,30 +62,27 @@ function SpoilersButton({
 interface FiltersBarProps {
   hasUploadedSaveFile: boolean;
   hasUploadedSaveData: boolean;
-  showSpoilers: boolean;
-  showMissingOnly: boolean;
+  globalFilters: {
+    showSpoilers: boolean;
+    showMissingOnly: boolean;
+    actFilter: ActFilter;
+  };
   inShowEverythingMode: boolean;
-  actFilter: ActFilter;
-  onShowSpoilersChange: (value: boolean) => void;
-  onShowMissingOnlyChange: (value: boolean) => void;
+  onGlobalFilterChange: (filterType: string, value: any) => void;
   onShowEverythingToggle: () => void;
-  onActFilterChange: (value: ActFilter) => void;
   isExpanded: boolean;
 }
 
 export function FiltersBar({
   hasUploadedSaveFile,
   hasUploadedSaveData,
-  showSpoilers,
-  showMissingOnly,
+  globalFilters,
   inShowEverythingMode,
-  actFilter,
-  onShowSpoilersChange,
-  onShowMissingOnlyChange,
+  onGlobalFilterChange,
   onShowEverythingToggle,
-  onActFilterChange,
   isExpanded,
 }: FiltersBarProps) {
+  const { showSpoilers, showMissingOnly, actFilter } = globalFilters;
   const actOptions = [
     { value: 1 as const, label: "Act I" },
     { value: 2 as const, label: "Act II" },
@@ -97,7 +94,7 @@ export function FiltersBar({
   const toggleAct = (act: 1 | 2 | 3) => {
     if (filtersDisabled) return;
     const newFilter = toggleActInFilter(actFilter, act);
-    onActFilterChange(newFilter);
+    onGlobalFilterChange('actFilter', newFilter);
   };
 
   return (
@@ -113,7 +110,7 @@ export function FiltersBar({
             {hasUploadedSaveFile ? (
               <ShowMissingOnlyButton
                 showMissingOnly={showMissingOnly}
-                onClick={() => onShowMissingOnlyChange(!showMissingOnly)}
+                onClick={() => onGlobalFilterChange('showMissingOnly', !showMissingOnly)}
                 disabled={filtersDisabled}
               />
             ) : (
@@ -147,7 +144,7 @@ export function FiltersBar({
           <div className="w-[200px] flex justify-start">
             <SpoilersButton
               showSpoilers={showSpoilers}
-              onClick={() => onShowSpoilersChange(!showSpoilers)}
+              onClick={() => onGlobalFilterChange('showSpoilers', !showSpoilers)}
               disabled={filtersDisabled}
             />
           </div>

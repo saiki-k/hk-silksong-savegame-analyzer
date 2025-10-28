@@ -21,27 +21,26 @@ export interface ComputedTabData {
 }
 
 export interface TabContainerProps {
-  dictMapWithSaveData: DictMapWithSaveData | null;
   activeTab: TabId;
+  dictMapWithSaveData: DictMapWithSaveData | null;
   hasUploadedSaveFile: boolean;
   hasUploadedSaveData: boolean;
   inShowEverythingMode: boolean;
-  showMissingOnly: boolean;
-  showSpoilers: boolean;
-  actFilter: ActFilter;
-  onShowMissingOnlyChange: () => void;
-  onShowSpoilersChange: () => void;
-  onActFilterChange: (filter: ActFilter) => void;
+  globalFilters: {
+    showSpoilers: boolean;
+    showMissingOnly: boolean;
+    actFilter: ActFilter;
+  };
+  tabFilterMap: Map<TabId, any>;
+  onTabFilterChange: (filterType: string, value: any) => void;
 }
 
 export interface TabContentProps {
-  tabLabel: string;
+  tabLabel: TabId;
   showSpoilers: boolean;
   showMissingOnly: boolean;
   inShowEverythingMode: boolean;
   actFilter: ActFilter;
-  computedData?: ComputedTabData;
-  onShowMissingOnlyChange: () => void;
-  onShowSpoilersChange: () => void;
-  onActFilterChange: (filter: ActFilter) => void;
+  computedData: ComputedTabData | undefined;
+  onTabFilterChange: (filterType: string, value: any) => void;
 }

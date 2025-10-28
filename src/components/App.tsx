@@ -13,7 +13,7 @@ import { AppContainer } from "./features/AppContainer";
 import { Header } from "./features/Header";
 import { SaveFileInfo } from "./features/SaveFileInfo";
 import { FileUpload } from "./features/FileUpload";
-import { FilterControls, type ActFilter } from "./features/FilterControls";
+import { FilterControls } from "./features/FilterControls";
 
 import { Separator } from "./ui/Separator";
 
@@ -25,10 +25,14 @@ import { Footer } from "./features/Footer";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<TabId>("Stats");
-  const [showSpoilers, setShowSpoilers] = useState(false);
-  const [showMissingOnly, setShowMissingOnly] = useState(true);
   const [inShowEverythingMode, setInShowEverythingMode] = useState(false);
-  const [actFilter, setActFilter] = useState<ActFilter>(new Set([1, 2, 3]));
+
+  const [globalFilters, setGlobalFilters] = useState({
+    showSpoilers: false,
+    showMissingOnly: true,
+    actFilter: new Set([1, 2, 3] as const)
+  });
+  const [tabFilterMap, setTabFilterMap] = useState(new Map());
 
   const saveFileObj = useSaveFile();
 
@@ -47,9 +51,12 @@ export default function App() {
   useEffect(() => {
     // Reset filters when a (new) save file is loaded
     setInShowEverythingMode(false);
-    setShowSpoilers(false);
-    setShowMissingOnly(true);
-    setActFilter(new Set([1, 2, 3]));
+    setGlobalFilters({
+      showSpoilers: false,
+      showMissingOnly: true,
+      actFilter: new Set([1, 2, 3] as const)
+    });
+    setTabFilterMap(new Map());
     setActiveTab("Stats");
   }, [saveFileObj]);
 
@@ -70,6 +77,17 @@ export default function App() {
     setInShowEverythingMode(!inShowEverythingMode);
   };
 
+  const handleGlobalFilterChange = (filterType: string, value: any) => {
+    setGlobalFilters(prev => ({...prev, [filterType]: value}));
+    setTabFilterMap(new Map()); // Clear tab specific filters when global filters change
+  };
+
+  const handleTabFilterChange = (filterType: string, value: any) => {
+    const currentTabFilters = tabFilterMap.get(activeTab) ?? globalFilters;
+    const newTabFilters = {...currentTabFilters, [filterType]: value};
+    setTabFilterMap(prev => new Map(prev.set(activeTab, newTabFilters)));
+  }
+
   return (
     <AppContainer>
       <Header />
@@ -81,14 +99,10 @@ export default function App() {
       <FilterControls
         hasUploadedSaveFile={hasUploadedSaveFile}
         hasUploadedSaveData={hasUploadedSaveData}
-        showSpoilers={showSpoilers}
-        showMissingOnly={showMissingOnly}
+        globalFilters={globalFilters}
         inShowEverythingMode={inShowEverythingMode}
-        actFilter={actFilter}
-        onShowSpoilersChange={setShowSpoilers}
-        onShowMissingOnlyChange={setShowMissingOnly}
+        onGlobalFilterChange={handleGlobalFilterChange}
         onShowEverythingToggle={handleShowEverythingToggle}
-        onActFilterChange={setActFilter}
       />
 
       <Separator />
@@ -109,13 +123,10 @@ export default function App() {
         dictMapWithSaveData={dictMapWithSaveData}
         hasUploadedSaveFile={hasUploadedSaveFile}
         hasUploadedSaveData={hasUploadedSaveData}
-        showMissingOnly={showMissingOnly}
         inShowEverythingMode={inShowEverythingMode}
-        showSpoilers={showSpoilers}
-        actFilter={actFilter}
-        onShowMissingOnlyChange={() => setShowMissingOnly(!showMissingOnly)}
-        onShowSpoilersChange={() => setShowSpoilers(!showSpoilers)}
-        onActFilterChange={setActFilter}
+        globalFilters={globalFilters}
+        tabFilterMap={tabFilterMap}
+        onTabFilterChange={handleTabFilterChange}
       />
 
       <Separator />

@@ -17,11 +17,11 @@ type CacheKey = string;
 function getCacheKey(
   tabId: TabId,
   inShowEverythingMode: boolean,
-  showMissingOnly: boolean,
-  actFilter: ActFilter
+  effectiveFilters: { showMissingOnly: boolean; showSpoilers: boolean; actFilter: ActFilter }
 ): CacheKey {
   if (!tabId) return "";
   if (tabId === "Stats") return "Stats";
+  const { showMissingOnly, actFilter } = effectiveFilters;
   const actFilterStr = Array.from(actFilter).sort().join(",");
   return `${tabId}-inShowEverythingMode:${inShowEverythingMode}-showMissingOnly:${showMissingOnly}-actFilter:${actFilterStr}`;
 }
@@ -29,9 +29,8 @@ function getCacheKey(
 function computeTabData(
   category: NormalizedCategory | null,
   tabLabel: TabId,
-  showMissingOnly: boolean,
+  effectiveFilters: { showMissingOnly: boolean; showSpoilers: boolean; actFilter: ActFilter },
   inShowEverythingMode: boolean,
-  actFilter: ActFilter,
   dictMapWithSaveData: DictMapWithSaveData | null
 ): ComputedTabData {
   if (!category || !dictMapWithSaveData) {
@@ -42,6 +41,8 @@ function computeTabData(
       sectionsLength: 0,
     };
   }
+
+  const { showMissingOnly, actFilter } = effectiveFilters;
 
   // If showMissingOnly (and not inShowEverythingMode), only include items in missingItemPaths
   const filterPaths = showMissingOnly && !inShowEverythingMode ? new Set(dictMapWithSaveData.missingItemPaths) : null;
@@ -130,14 +131,20 @@ export function TabContainer(props: TabContainerProps) {
     hasUploadedSaveFile,
     hasUploadedSaveData,
     dictMapWithSaveData,
-    showMissingOnly,
-    showSpoilers,
-    actFilter,
+    globalFilters,
+    tabFilterMap,
     inShowEverythingMode,
-    onShowMissingOnlyChange,
-    onShowSpoilersChange,
-    onActFilterChange,
+    onTabFilterChange,
   } = props;
+
+  const effectiveFilters = useMemo(() => {
+    const tabSpecificFilters = activeTab ? tabFilterMap.get(activeTab) : undefined;
+    return {
+      showMissingOnly: tabSpecificFilters?.showMissingOnly ?? globalFilters.showMissingOnly,
+      showSpoilers: tabSpecificFilters?.showSpoilers ?? globalFilters.showSpoilers,
+      actFilter: tabSpecificFilters?.actFilter ?? globalFilters.actFilter,
+    };
+  }, [globalFilters, tabFilterMap, activeTab]);
 
   // Persistent cache across renders (only clears when dictMapWithSaveData changes)
   const cacheRef = useRef<Map<CacheKey, ComputedTabData>>(new Map());
@@ -145,7 +152,7 @@ export function TabContainer(props: TabContainerProps) {
     cacheRef.current.clear();
   }, [dictMapWithSaveData]);
 
-  const cacheKey = getCacheKey(activeTab, inShowEverythingMode, showMissingOnly, actFilter);
+  const cacheKey = getCacheKey(activeTab, inShowEverythingMode, effectiveFilters);
 
   const computedData = useMemo(() => {
     if (!activeTab) return undefined;
@@ -165,16 +172,15 @@ export function TabContainer(props: TabContainerProps) {
     const data = computeTabData(
       category,
       activeTab,
-      showMissingOnly,
+      effectiveFilters,
       inShowEverythingMode,
-      actFilter,
       dictMapWithSaveData
     );
 
     cacheRef.current.set(cacheKey, data);
 
     return data;
-  }, [cacheKey, dictMapWithSaveData, activeTab, showMissingOnly, inShowEverythingMode, actFilter]);
+  }, [cacheKey, dictMapWithSaveData, activeTab, effectiveFilters, inShowEverythingMode]);
 
   if (!activeTab) {
     return null;
@@ -193,14 +199,12 @@ export function TabContainer(props: TabContainerProps) {
 
   const tabContentProps: TabContentProps = {
     tabLabel: activeTab,
-    showSpoilers,
-    showMissingOnly,
+    showSpoilers: effectiveFilters.showSpoilers,
+    showMissingOnly: effectiveFilters.showMissingOnly,
     inShowEverythingMode,
-    actFilter,
+    actFilter: effectiveFilters.actFilter,
     computedData,
-    onShowMissingOnlyChange,
-    onShowSpoilersChange,
-    onActFilterChange,
+    onTabFilterChange,
   };
 
   const getTabContent = (activeTab: TabId) => {

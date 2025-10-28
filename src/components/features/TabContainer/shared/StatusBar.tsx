@@ -10,9 +10,7 @@ interface StatusBarProps {
   showMissingOnly: boolean;
   showSpoilers: boolean;
   actFilter: ActFilter;
-  onShowMissingOnlyChange: () => void;
-  onShowSpoilersChange: () => void;
-  onActFilterChange: (filter: ActFilter) => void;
+  onTabFilterChange: (field: "showMissingOnly" | "showSpoilers" | "actFilter", value: boolean | ActFilter) => void;
 }
 
 export function StatusBar({
@@ -23,13 +21,19 @@ export function StatusBar({
   showMissingOnly,
   showSpoilers,
   actFilter,
-  onShowMissingOnlyChange,
-  onShowSpoilersChange,
-  onActFilterChange,
+  onTabFilterChange,
 }: StatusBarProps) {
   const toggleAct = (act: 1 | 2 | 3) => {
     const newFilter = toggleActInFilter(actFilter, act);
-    onActFilterChange(newFilter);
+    onTabFilterChange("actFilter", newFilter);
+  };
+
+  const handleShowMissingOnlyChange = () => {
+    onTabFilterChange("showMissingOnly", !showMissingOnly);
+  };
+
+  const handleShowSpoilersChange = () => {
+    onTabFilterChange("showSpoilers", !showSpoilers);
   };
 
   const isJournalCategory = tabLabel === "Hunter's Journal";
@@ -72,7 +76,7 @@ export function StatusBar({
                 emoji={showMissingOnly ? "🔒" : "🔓"}
                 emojiClassName={`-mt-0.5 -mr-1 ${showMissingOnly ? "" : "ml-0.5"}`}
                 emojiPosition="left"
-                onClick={onShowMissingOnlyChange}
+                onClick={handleShowMissingOnlyChange}
               />
             ) : (
               <span className="">{allText}</span>
@@ -83,7 +87,7 @@ export function StatusBar({
               emoji={showSpoilers ? "😮" : "🤫"}
               emojiClassName="-mr-1"
               emojiPosition="left"
-              onClick={onShowSpoilersChange}
+              onClick={handleShowSpoilersChange}
               disabled={false}
             />
             <span className={`${showSpoilers ? "-ml-1" : ""}`}>

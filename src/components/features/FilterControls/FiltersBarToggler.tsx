@@ -8,7 +8,7 @@ interface FiltersBarTogglerProps {
 }
 
 export function FiltersBarToggler({ isExpanded, onToggle, hasUploadedSaveFile }: FiltersBarTogglerProps) {
-  const displayText = hasUploadedSaveFile ? "Content Filters" : "No save file? You can still see everything.";
+  const displayText = hasUploadedSaveFile ? "Global Filters" : "No save file? You can still see everything.";
 
   return (
     <div

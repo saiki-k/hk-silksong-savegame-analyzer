@@ -12,9 +12,7 @@ export function GenericContent({
   inShowEverythingMode,
   actFilter,
   computedData,
-  onShowMissingOnlyChange,
-  onShowSpoilersChange,
-  onActFilterChange,
+  onTabFilterChange,
 }: TabContentProps) {
   if (!tabLabel || !computedData) {
     return (
@@ -51,9 +49,7 @@ export function GenericContent({
         showMissingOnly={showMissingOnly}
         showSpoilers={showSpoilers}
         actFilter={actFilter}
-        onShowMissingOnlyChange={onShowMissingOnlyChange}
-        onShowSpoilersChange={onShowSpoilersChange}
-        onActFilterChange={onActFilterChange}
+        onTabFilterChange={onTabFilterChange}
       />
 
       {!hasVisibleItems && <EmptyState />}

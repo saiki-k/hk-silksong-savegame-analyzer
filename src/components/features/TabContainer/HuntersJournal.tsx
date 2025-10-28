@@ -13,9 +13,7 @@ export function HuntersJournalContent({
   inShowEverythingMode,
   actFilter,
   computedData,
-  onShowMissingOnlyChange,
-  onShowSpoilersChange,
-  onActFilterChange,
+  onTabFilterChange,
 }: TabContentProps): ReactElement {
   if (!computedData) {
     return <div className="text-white text-center">No "Journal" data available.</div>;
@@ -41,9 +39,7 @@ export function HuntersJournalContent({
         showMissingOnly={showMissingOnly}
         showSpoilers={showSpoilers}
         actFilter={actFilter}
-        onShowMissingOnlyChange={onShowMissingOnlyChange}
-        onShowSpoilersChange={onShowSpoilersChange}
-        onActFilterChange={onActFilterChange}
+        onTabFilterChange={onTabFilterChange}
       />
 
       {!hasVisibleItems && <EmptyState />}
