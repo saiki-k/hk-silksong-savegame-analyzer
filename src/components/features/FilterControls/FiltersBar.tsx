@@ -62,30 +62,27 @@ function SpoilersButton({
 interface FiltersBarProps {
   hasUploadedSaveFile: boolean;
   hasUploadedSaveData: boolean;
-  showSpoilers: boolean;
-  showMissingOnly: boolean;
+  globalFilters: {
+    showSpoilers: boolean;
+    showMissingOnly: boolean;
+    actFilter: ActFilter;
+  };
   inShowEverythingMode: boolean;
-  actFilter: ActFilter;
-  onShowSpoilersChange: (value: boolean) => void;
-  onShowMissingOnlyChange: (value: boolean) => void;
+  onGlobalFilterChange: (filterType: string, value: boolean | ActFilter) => void;
   onShowEverythingToggle: () => void;
-  onActFilterChange: (value: ActFilter) => void;
   isExpanded: boolean;
 }
 
 export function FiltersBar({
   hasUploadedSaveFile,
   hasUploadedSaveData,
-  showSpoilers,
-  showMissingOnly,
+  globalFilters,
   inShowEverythingMode,
-  actFilter,
-  onShowSpoilersChange,
-  onShowMissingOnlyChange,
+  onGlobalFilterChange,
   onShowEverythingToggle,
-  onActFilterChange,
   isExpanded,
 }: FiltersBarProps) {
+  const { showSpoilers, showMissingOnly, actFilter } = globalFilters;
   const actOptions = [
     { value: 1 as const, label: "Act I" },
     { value: 2 as const, label: "Act II" },
@@ -97,59 +94,60 @@ export function FiltersBar({
   const toggleAct = (act: 1 | 2 | 3) => {
     if (filtersDisabled) return;
     const newFilter = toggleActInFilter(actFilter, act);
-    onActFilterChange(newFilter);
+    onGlobalFilterChange("actFilter", newFilter);
   };
 
   return (
     <div
       className={cn(
-        "bg-gradient-to-br from-gray-800/40 to-gray-800/20 border-2 border-gray-600/30",
-        "border-t-0 overflow-hidden transition-all duration-300 ease-in-out",
-        isExpanded ? "max-h-[200px] opacity-100 p-8" : "max-h-0 opacity-0 p-0"
+        "overflow-hidden transition-all duration-300 ease-in-out",
+        isExpanded ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"
       )}
     >
-      <div className="flex items-center justify-between gap-6 text-sm">
-        <div className="w-[200px] flex justify-end">
-          {hasUploadedSaveFile ? (
-            <ShowMissingOnlyButton
-              showMissingOnly={showMissingOnly}
-              onClick={() => onShowMissingOnlyChange(!showMissingOnly)}
+      <div className="bg-gradient-to-br from-gray-800/40 to-gray-800/20 border-2 border-gray-600/30 border-t-0 p-8">
+        <div className="flex items-center justify-between gap-6 text-sm">
+          <div className="w-[200px] flex justify-end">
+            {hasUploadedSaveFile ? (
+              <ShowMissingOnlyButton
+                showMissingOnly={showMissingOnly}
+                onClick={() => onGlobalFilterChange("showMissingOnly", !showMissingOnly)}
+                disabled={filtersDisabled}
+              />
+            ) : (
+              <ShowEverythingButton inShowEverythingMode={inShowEverythingMode} onClick={onShowEverythingToggle} />
+            )}
+          </div>
+
+          <Separator orientation="vertical" />
+
+          <div className="flex items-center gap-2 flex-shrink-0">
+            <div className="flex items-center gap-1.5">
+              {actOptions.map(option => {
+                const isSelected = actFilter.has(option.value);
+                return (
+                  <PillButton
+                    key={option.label}
+                    onClick={() => toggleAct(option.value)}
+                    disabled={filtersDisabled}
+                    selected={isSelected}
+                    aria-label={`Toggle ${option.label}`}
+                  >
+                    {option.label}
+                  </PillButton>
+                );
+              })}
+            </div>
+          </div>
+
+          <Separator orientation="vertical" />
+
+          <div className="w-[200px] flex justify-start">
+            <SpoilersButton
+              showSpoilers={showSpoilers}
+              onClick={() => onGlobalFilterChange("showSpoilers", !showSpoilers)}
               disabled={filtersDisabled}
             />
-          ) : (
-            <ShowEverythingButton inShowEverythingMode={inShowEverythingMode} onClick={onShowEverythingToggle} />
-          )}
-        </div>
-
-        <Separator orientation="vertical" />
-
-        <div className="flex items-center gap-2 flex-shrink-0">
-          <div className="flex items-center gap-1.5">
-            {actOptions.map(option => {
-              const isSelected = actFilter.has(option.value);
-              return (
-                <PillButton
-                  key={option.label}
-                  onClick={() => toggleAct(option.value)}
-                  disabled={filtersDisabled}
-                  selected={isSelected}
-                  aria-label={`Toggle ${option.label}`}
-                >
-                  {option.label}
-                </PillButton>
-              );
-            })}
           </div>
-        </div>
-
-        <Separator orientation="vertical" />
-
-        <div className="w-[200px] flex justify-start">
-          <SpoilersButton
-            showSpoilers={showSpoilers}
-            onClick={() => onShowSpoilersChange(!showSpoilers)}
-            disabled={filtersDisabled}
-          />
         </div>
       </div>
     </div>

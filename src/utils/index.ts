@@ -3,3 +3,5 @@ export { shuffleArray, formatPercent, formatSecondsToHMS, getActFilterText, togg
 export { getHoverBlurClassNames, cn } from "./classNames";
 
 export { computeDictMapWithSaveData } from "./data";
+
+export { getAssetUrl } from "./assets";

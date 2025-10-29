@@ -2,7 +2,7 @@ import type { ALL_TRACKED_CATEGORIES } from "@/dictionary";
 
 export type TabId = (typeof ALL_TRACKED_CATEGORIES)[number]["name"];
 
-export type TabGroup = "core" | "collectibles" | "exploration" | "progression";
+export type TabGroup = "core" | "collectibles" | "exploration" | "bestiary";
 
 interface TabConfig {
   tabId: TabId;
@@ -28,24 +28,24 @@ export const TAB_GROUPS: Record<TabGroup, TabConfig[]> = {
   collectibles: [
     createTab("Lost Fleas"),
     createTab("Relics"),
+    createTab("Keys"),
     createTab("Memory Lockets"),
     createTab("Craftmetals"),
-    // createTab("Pale Oil"), //🚧
     createTab("Mossberries"),
-    createTab("Keys"),
+    // createTab("Pale Oil"), //🚧
     createTab("Silkeaters"),
     // createTab("Void Masses"), //🚧
     // createTab("Devices"), //🚧
     // createTab("Materium"), //🚧
     createTab("Mementos"),
   ],
-  exploration: [createTab("Maps"), createTab("Bellways"), createTab("Ventrica Stations")],
-  progression: [createTab("Quests"), createTab("Bosses"), createTab("Hunter's Journal")],
+  exploration: [createTab("Maps"), createTab("Bellways"), createTab("Ventrica Stations"), createTab("Quests")],
+  bestiary: [createTab("Bosses"), createTab("Hunter's Journal")],
 };
 
 export const GROUP_LABELS: Record<TabGroup, string> = {
   core: "Core Progress",
   collectibles: "Collectibles & Resources",
   exploration: "Exploration & Navigation",
-  progression: "Progression & Journal",
+  bestiary: "Bestiary",
 };

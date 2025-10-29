@@ -25,7 +25,7 @@ const VARIANT_CONFIG = {
     hoverMessage: "🎵✨ Manifesting a fix...",
     "🐣": [
       "https://www.youtube.com/watch?v=z8_7mpKMw0M", // Myla x Sherma Remix
-      "https://www.youtube.com/watch?v=GVABZEa1tIs", // Hollow Knight Cornifer Remix (1 Hour Loop)
+      "https://www.youtube.com/watch?v=RCxoDmHUpMc", // Cornifer Humming Remix
     ],
   },
 } as const;

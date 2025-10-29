@@ -7,27 +7,23 @@ export type ActFilter = Set<1 | 2 | 3>;
 interface FilterControlsProps {
   hasUploadedSaveFile: boolean;
   hasUploadedSaveData: boolean;
-  showSpoilers: boolean;
-  showMissingOnly: boolean;
+  globalFilters: {
+    showSpoilers: boolean;
+    showMissingOnly: boolean;
+    actFilter: ActFilter;
+  };
   inShowEverythingMode: boolean;
-  actFilter: ActFilter;
-  onShowSpoilersChange: (value: boolean) => void;
-  onShowMissingOnlyChange: (value: boolean) => void;
+  onGlobalFilterChange: (filterType: string, value: boolean | ActFilter) => void;
   onShowEverythingToggle: () => void;
-  onActFilterChange: (value: ActFilter) => void;
 }
 
 export function FilterControls({
   hasUploadedSaveFile,
   hasUploadedSaveData,
-  showSpoilers,
-  showMissingOnly,
+  globalFilters,
   inShowEverythingMode,
-  actFilter,
-  onShowSpoilersChange,
-  onShowMissingOnlyChange,
+  onGlobalFilterChange,
   onShowEverythingToggle,
-  onActFilterChange,
 }: FilterControlsProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -38,29 +34,26 @@ export function FilterControls({
   }, [hasUploadedSaveFile]);
 
   return (
-    <div className="-mt-1">
+    <div className="mt-0">
       <FiltersBar
         hasUploadedSaveFile={hasUploadedSaveFile}
         hasUploadedSaveData={hasUploadedSaveData}
-        showSpoilers={showSpoilers}
-        showMissingOnly={showMissingOnly}
+        globalFilters={globalFilters}
         inShowEverythingMode={inShowEverythingMode}
-        actFilter={actFilter}
-        onShowSpoilersChange={onShowSpoilersChange}
-        onShowMissingOnlyChange={onShowMissingOnlyChange}
+        onGlobalFilterChange={onGlobalFilterChange}
         onShowEverythingToggle={() => {
           if (inShowEverythingMode && !hasUploadedSaveData) {
             setIsExpanded(false);
           }
           onShowEverythingToggle();
         }}
-        onActFilterChange={onActFilterChange}
         isExpanded={isExpanded}
       />
       <FiltersBarToggler
         isExpanded={isExpanded}
         onToggle={() => setIsExpanded(!isExpanded)}
         hasUploadedSaveFile={hasUploadedSaveFile}
+        inShowEverythingMode={inShowEverythingMode}
       />
     </div>
   );
