@@ -39,11 +39,11 @@ Comprehensively tracks everything that contributes to 100% completion in Hollow 
 ### 💎 Collectibles & Resources
 - **Lost Fleas**
 - **Relics**
+- **Keys**
 - **Memory Lockets**
 - **Craftmetals**
 - **Mossberries**
 - **Silkeaters**
-- **Keys**
 - **Mementos**
 
 ### 🗺️ Exploration & Navigation
@@ -56,9 +56,13 @@ Comprehensively tracks everything that contributes to 100% completion in Hollow 
 - **Bosses**
 - **Hunter's Journal**
 
-### 🔧 Advanced Features
-- **Save Editor**: A feature-rich editor with advanced search and real-time JSON validation for modifying save files
+
+## 🔧 Advanced Features
+- **Interactive Map**: Each trackable item features a dedicated Map button that opens an interactive modal displaying the in-game map with a precise location marker, helping you navigate directly to that specific item
+
 - **Flexible Filters**: Customize your view with completion status toggles (missing/all items), Act-specific (Act I, Act II, Act III) filters, and spoiler blur toggles
+
+- **Save Editor**: A feature-rich editor with advanced search and real-time JSON validation for modifying save files
 
 
 ## 🐞 Issues & Contributions
