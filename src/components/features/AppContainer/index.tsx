@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { useEffect } from "react";
-import Background from "@/assets/backgrounds/Original.png";
+import Background from "@/assets/backgrounds/Original.webp";
 
 interface AppContainerProps {
   children: ReactNode;
