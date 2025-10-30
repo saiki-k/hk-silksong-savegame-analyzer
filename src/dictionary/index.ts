@@ -16,6 +16,7 @@ import { mossberries } from "./categories/mossberries";
 import { paleOils } from "./categories/paleOils";
 import { keys } from "./categories/keys";
 import { silkeaters } from "./categories/silkeaters";
+import { voidMasses } from "./categories/voidMasses";
 import { devices } from "./categories/devices";
 import { materium } from "./categories/materium";
 import { mementos } from "./categories/mementos";
@@ -42,6 +43,7 @@ export const ALL_TRACKED_CATEGORIES = [
   paleOils,
   keys,
   silkeaters,
+  voidMasses,
   devices,
   materium,
   mementos,

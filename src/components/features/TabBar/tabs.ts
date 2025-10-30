@@ -34,7 +34,7 @@ export const TAB_GROUPS: Record<TabGroup, TabConfig[]> = {
     createTab("Mossberries"),
     createTab("Pale Oils"),
     createTab("Silkeaters"),
-    // createTab("Void Masses"), //🚧
+    createTab("Void Masses"),
     createTab("Devices"),
     createTab("Materium"),
     createTab("Mementos"),
