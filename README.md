@@ -43,7 +43,11 @@ Comprehensively tracks everything that contributes to 100% completion in Hollow 
 - **Memory Lockets**
 - **Craftmetals**
 - **Mossberries**
+- **Pale Oils**
 - **Silkeaters**
+- **Void Masses**
+- **Devices**
+- **Materium**
 - **Mementos**
 
 ### 🗺️ Exploration & Navigation
