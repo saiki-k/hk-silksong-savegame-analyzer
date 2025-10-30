@@ -32,11 +32,11 @@ export const TAB_GROUPS: Record<TabGroup, TabConfig[]> = {
     createTab("Memory Lockets"),
     createTab("Craftmetals"),
     createTab("Mossberries"),
-    // createTab("Pale Oil"), //🚧
+    createTab("Pale Oils"),
     createTab("Silkeaters"),
     // createTab("Void Masses"), //🚧
-    // createTab("Devices"), //🚧
-    // createTab("Materium"), //🚧
+    createTab("Devices"),
+    createTab("Materium"),
     createTab("Mementos"),
   ],
   exploration: [createTab("Maps"), createTab("Bellways"), createTab("Ventrica Stations"), createTab("Quests")],

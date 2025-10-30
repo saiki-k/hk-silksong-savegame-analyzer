@@ -9,6 +9,7 @@ export type JournalParsingInfo = { type: "journal"; internalId: string };
 export type CrestParsingInfo = { type: "crest"; internalId: string };
 export type CollectableParsingInfo = { type: "collectable"; internalId: string };
 export type RelicParsingInfo = { type: "relic"; internalId: string };
+export type MateriumParsingInfo = { type: "materium"; internalId: string };
 export type QuestParsingInfo = { type: "quest"; internalId: string };
 export type SceneDataParsingInfo = { type: "sceneData"; internalId: [string, string, boolean?] }; // [scene name, flag name, inverse?]
 export type SceneVistedParsingInfo = { type: "sceneVisited"; internalId: string };
@@ -23,6 +24,7 @@ export type ParsingInfo =
   | CrestParsingInfo
   | CollectableParsingInfo
   | RelicParsingInfo
+  | MateriumParsingInfo
   | QuestParsingInfo
   | SceneDataParsingInfo
   | SceneVistedParsingInfo

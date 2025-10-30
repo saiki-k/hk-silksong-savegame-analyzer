@@ -103,6 +103,12 @@ export function isItemUnlockedInPlayerSave(
       return { unlocked: !!foundRelic?.Data?.IsCollected };
     },
 
+    materium: (materiumName: string) => {
+      const materium = (playerData as any)?.MateriumCollected?.savedData || [];
+      const foundMaterium = materium.find((m: any) => m?.Name === materiumName);
+      return { unlocked: !!foundMaterium?.Data?.IsCollected || !!foundMaterium?.Data?.HasSeenInRelicBoard};
+    },
+
     quest: (questName: string) => {
       const questEntry = (playerData as any).QuestCompletionData?.savedData?.find((x: any) => x.Name === questName);
       return { unlocked: questEntry?.Data?.IsCompleted ?? false };
