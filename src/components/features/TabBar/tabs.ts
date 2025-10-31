@@ -34,10 +34,10 @@ export const TAB_GROUPS: Record<TabGroup, TabConfig[]> = {
     createTab("Mossberries"),
     createTab("Pale Oil"),
     createTab("Silkeaters"),
-    createTab("Devices"),
+    createTab("Bellhome"),
     createTab("Materium"),
     createTab("Mementos"),
-    // createTab("Rosaries & Shards"), // 🚧
+    // createTab("Caches"), // 🚧 This is where we will track Rosary Stashes & Shell Shard Fossils
   ],
   exploration: [createTab("Maps"), createTab("Bellways"), createTab("Ventrica Stations"), createTab("Quests")],
   bestiary: [createTab("Unique Spawns"), createTab("Bosses"), createTab("Hunter's Journal")],

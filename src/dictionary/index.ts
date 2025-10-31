@@ -10,13 +10,13 @@ import { tools } from "./categories/tools";
 import { crests } from "./categories/crests";
 import { fleas } from "./categories/fleas";
 import { relics } from "./categories/relics";
+import { keys } from "./categories/keys";
 import { memoryLockets } from "./categories/memoryLockets";
 import { craftmetals } from "./categories/craftmetals";
 import { mossberries } from "./categories/mossberries";
 import { paleOil } from "./categories/paleOil";
-import { keys } from "./categories/keys";
 import { silkeaters } from "./categories/silkeaters";
-import { devices } from "./categories/devices";
+import { bellhome } from "./categories/bellhome";
 import { materium } from "./categories/materium";
 import { mementos } from "./categories/mementos";
 import { maps } from "./categories/maps";
@@ -37,13 +37,13 @@ export const ALL_TRACKED_CATEGORIES = [
   crests,
   fleas,
   relics,
+  keys,
   memoryLockets,
   craftmetals,
   mossberries,
   paleOil,
-  keys,
   silkeaters,
-  devices,
+  bellhome,
   materium,
   mementos,
   maps,
