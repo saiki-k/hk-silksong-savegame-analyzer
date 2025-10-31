@@ -88,7 +88,7 @@ export const keys: TrackableCategory = {
           whichAct: 2,
           completionDetails:
             'Songclave: On a corpse at the edge of the area. Sold by Jubilana for 220 Rosaries, if you don\'t pick it up before completing "The Wandering Merchant" wish. Unlocks the elevator in Whiteward.',
-          parsingInfo: { type: "flagMulti", internalId: ["collectedWardKey", "MerchantEnclaveWardKey"] },
+          parsingInfo: { type: "flagAnyOf", internalId: ["collectedWardKey", "MerchantEnclaveWardKey"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478599",
         },
         {

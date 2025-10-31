@@ -2,8 +2,7 @@ import type { TrackableCategory } from "../types";
 
 export const materium: TrackableCategory = {
   name: "Materium",
-  description:
-    "Materials / Items found throughout Pharloom.",
+  description: "Materials found throughout Hornet's journey in Pharloom.",
   sections: [
     {
       items: [
@@ -11,7 +10,7 @@ export const materium: TrackableCategory = {
           name: "Silk",
           whichAct: 1,
           completionDetails: "Entry unlocked upon assembling Materium.",
-          parsingInfo: { type: "materium", internalId: "Silk"},
+          parsingInfo: { type: "materium", internalId: "Silk" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479119",
         },
         {
@@ -45,14 +44,15 @@ export const materium: TrackableCategory = {
         {
           name: "Mossberry",
           whichAct: 1,
-          completionDetails: "Sweet berries with poisonous seeds, that grow in moist environments. Initially gathered as a part of a wish, later used to trade for Rosaries (and a Tool upgrade).",
+          completionDetails:
+            "Sweet berries with poisonous seeds, that grow in moist environments. Initially gathered as a part of a wish, later used to trade for Rosaries (and a Tool upgrade).",
           parsingInfo: { type: "materium", internalId: "Mossberry" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=476900",
         },
         {
           name: "Mossberry Stew",
           whichAct: 2,
-          completionDetails: 'Mossgrotto: Given to you by the Druid when you speak to them during the "Great Taste of Pharloom" Wish.',
+          completionDetails: 'Mossgrotto: Given by Moss Druid as a part of the "Great Taste of Pharloom" wish.',
           parsingInfo: { type: "materium", internalId: "Mossberry Stew" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479220",
         },
@@ -66,7 +66,7 @@ export const materium: TrackableCategory = {
         {
           name: "Flintstone",
           whichAct: 1,
-          completionDetails: "Deep Docks: Near bottom.",
+          completionDetails: "Deep Docks: Found in the lower half. Inspect it to unlock this entry in the Materium.",
           parsingInfo: { type: "materium", internalId: "Smeltstone" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479721",
         },
@@ -108,28 +108,29 @@ export const materium: TrackableCategory = {
         {
           name: "Silver Bell",
           whichAct: 1,
-          completionDetails: 'Bellhart: Found throughout Bellhart during the "Silver Bells" wish.',
+          completionDetails:
+            'Bellhart: Found in the upper and lower bellveins around Bellhart during the "Silver Bells" wish.',
           parsingInfo: { type: "materium", internalId: "Silver Bellclapper" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478206",
         },
         {
           name: "Pale Oil",
           whichAct: 2,
-          completionDetails: 'Found throughout Pharloom (detailed locations in the "Pale Oil" tab).',
+          completionDetails: 'Found in a few locations across Pharloom (more details in the "Pale Oil" tab).',
           parsingInfo: { type: "materium", internalId: "Pale Oil" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479119",
         },
         {
           name: "Plasmium",
           whichAct: 1,
-          completionDetails: 'Collected using the Needle Phial during the "Alchemist\'s Assistant" wish.',
+          completionDetails: 'Wormways: Collected (using the Needle Phial) during the "Alchemist\'s Assistant" wish.',
           parsingInfo: { type: "materium", internalId: "Lifeblood" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478482",
         },
         {
           name: "Plasmified Blood",
           whichAct: 3,
-          completionDetails: 'Collected using the Needle Phial during the "Advanced Alchemy" wish.',
+          completionDetails: 'Wormways: Collected (using the Needle Phial) during the "Advanced Alchemy" wish.',
           parsingInfo: { type: "materium", internalId: "Plasmium Blood" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479278",
         },
@@ -143,7 +144,7 @@ export const materium: TrackableCategory = {
         {
           name: "Pollip Heart",
           whichAct: 1,
-          completionDetails: 'Shellwood: Dropped by flowers during the "Rite of the Poolip" wish.',
+          completionDetails: 'Shellwood: Dropped by Pollips (purple flowers) during the "Rite of the Pollip" wish.',
           parsingInfo: { type: "materium", internalId: "Shell Flower" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478173",
         },
@@ -157,7 +158,7 @@ export const materium: TrackableCategory = {
         {
           name: "Courier's Swag",
           whichAct: 2,
-          completionDetails: "Bellhart: Given by Tipp & Pill during Delivery Wishes.",
+          completionDetails: 'Bellhart: Given by Tipp & Pill during "Delivery" wishes.',
           parsingInfo: { type: "materium", internalId: "Courier Supplies Generic" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478313",
         },
@@ -185,14 +186,14 @@ export const materium: TrackableCategory = {
         {
           name: "Vintage Nectar",
           whichAct: 2,
-          completionDetails: ' Greymoor: Sold by Creige (Halfway Home) during the "Great Taste of Pharloom" wish.',
+          completionDetails: ' Greymoor (Halfway Home): Sold by Creige during the "Great Taste of Pharloom" wish.',
           parsingInfo: { type: "materium", internalId: "Vintage Nectar" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479166",
         },
         {
           name: "Pickled Muckmaggot",
           whichAct: 2,
-          completionDetails: "Sinner\'s Road: Dropped by Disgraced Chef Lugoli.",
+          completionDetails: "Sinner's Road: Dropped by Disgraced Chef Lugoli.",
           parsingInfo: { type: "materium", internalId: "Pickled Roach Egg" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478993",
         },
@@ -220,7 +221,7 @@ export const materium: TrackableCategory = {
         {
           name: "Magnetite",
           whichAct: 3,
-          completionDetails: "Mount Fay: Found in Brightvein.",
+          completionDetails: "Mount Fay: Found in Brightvein. Inspect it to unlock this entry in the Materium.",
           parsingInfo: { type: "materium", internalId: "Magnetite" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479619",
         },
@@ -234,35 +235,35 @@ export const materium: TrackableCategory = {
         {
           name: "Seared Organ",
           whichAct: 2,
-          completionDetails: 'Harvested from a defeated creature during the "Broodfeast" (Act3: "Runtfeast") wish.',
+          completionDetails: 'Harvested from defeated creatures during the "Broodfeast" (ACT 3: "Runtfeast") wish.',
           parsingInfo: { type: "materium", internalId: "Enemy Morsel Seared" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478865",
         },
         {
           name: "Shredded Organ",
           whichAct: 2,
-          completionDetails: 'Harvested from a defeated creature during the "Broodfeast" (Act3: "Runtfeast") wish.',
+          completionDetails: 'Harvested from defeated creatures during the "Broodfeast" (ACT 3: "Runtfeast") wish.',
           parsingInfo: { type: "materium", internalId: "Enemy Morsel Shredded" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478865",
         },
         {
           name: "Skewered Organ",
           whichAct: 2,
-          completionDetails: 'Harvested from a defeated creature during the "Broodfeast" (Act3: "Runtfeast") wish.',
+          completionDetails: 'Harvested from defeated creatures during the "Broodfeast" (ACT 3: "Runtfeast") wish.',
           parsingInfo: { type: "materium", internalId: "Enemy Morsel Speared" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478865",
         },
         {
           name: "Voltridian",
           whichAct: 2,
-          completionDetails: "Sands of Karak: Found in Voltnest.",
+          completionDetails: "Sands of Karak: Found in Voltnest. Inspect it to unlock this entry in the Materium.",
           parsingInfo: { type: "materium", internalId: "Voltstone" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479225",
         },
         {
           name: "Hermit's Soul",
           whichAct: 2,
-          completionDetails: 'Bellhart: Given by the Bell Hermit during the "Silk and Soul" wish.',
+          completionDetails: 'Bellhart: Given by Bell Hermit during the "Silk and Soul" wish.',
           parsingInfo: { type: "materium", internalId: "Snare Soul Bell Hermit" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479258",
         },
@@ -276,18 +277,18 @@ export const materium: TrackableCategory = {
         {
           name: "Seeker's Soul",
           whichAct: 2,
-          completionDetails: "Bilewater:Found after defeating Groal the Great.",
+          completionDetails: "Bilewater: Inside a hut found after defeating Groal the Great.",
           parsingInfo: { type: "materium", internalId: "Snare Soul Swamp Bug" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478863",
         },
-     {
+        {
           name: "Pollen Heart",
           whichAct: 3,
           completionDetails: "Shellwood: Awarded after defeating Nyleth.",
           parsingInfo: { type: "materium", internalId: "Flower Heart" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479404",
         },
-      {
+        {
           name: "Hunter's Heart",
           whichAct: 3,
           completionDetails: "Far Fields: Awarded after defeating Skarrsinger Karmelita.",
@@ -297,14 +298,14 @@ export const materium: TrackableCategory = {
         {
           name: "Encrusted Heart",
           whichAct: 3,
-          completionDetails: "Sands of Karak: Awarded after defeating Crust King Khann in Coral Tower.",
+          completionDetails: "Sands of Karak (Coral Tower): Awarded after defeating Crust King Khann.",
           parsingInfo: { type: "materium", internalId: "Coral Heart" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480327",
         },
         {
           name: "Conjoined Heart",
           whichAct: 3,
-          completionDetails: "Verdania: Awarded after defeating the Clover Dancers in Lost Verdania.",
+          completionDetails: "Verdania (Lost Verdania): Awarded after defeating the Clover Dancers.",
           parsingInfo: { type: "materium", internalId: "Clover Heart" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479631",
         },

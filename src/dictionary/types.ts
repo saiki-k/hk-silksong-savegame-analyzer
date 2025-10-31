@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 export type FlagParsingInfo = { type: "flag"; internalId: string };
-export type FlagMultiParsingInfo = { type: "flagMulti"; internalId: string[] };
+export type FlagAnyOfParsingInfo = { type: "flagAnyOf"; internalId: string[] };
 export type FlagMinParsingInfo = { type: "flagMin"; internalId: [string, number] }; // [flag name, required min. value]
 export type FlagReturnParsingInfo = { type: "flagReturn"; internalId: string };
 export type ToolParsingInfo = { type: "tool"; internalId: string[] };
@@ -16,7 +16,7 @@ export type SceneVistedParsingInfo = { type: "sceneVisited"; internalId: string 
 export type MementoDepositParsingInfo = { type: "mementoDeposit"; internalId: string };
 export type ParsingInfo =
   | FlagParsingInfo
-  | FlagMultiParsingInfo
+  | FlagAnyOfParsingInfo
   | FlagMinParsingInfo
   | FlagReturnParsingInfo
   | ToolParsingInfo
@@ -29,7 +29,7 @@ export type ParsingInfo =
   | SceneDataParsingInfo
   | SceneVistedParsingInfo
   | MementoDepositParsingInfo;
-export type ParsingInfoMulti = ParsingInfo[];
+export type ParsingInfoAnyOf = ParsingInfo[];
 
 export type CategoryItem = {
   name: string;
@@ -38,7 +38,7 @@ export type CategoryItem = {
   completionPercent?: number;
   prereqs?: string[];
   completionDetails: string;
-  parsingInfo: ParsingInfo | ParsingInfoMulti;
+  parsingInfo: ParsingInfo | ParsingInfoAnyOf;
   mapLink: string;
   additionalMeta?: {
     killsRequired?: number;

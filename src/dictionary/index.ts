@@ -13,7 +13,7 @@ import { relics } from "./categories/relics";
 import { memoryLockets } from "./categories/memoryLockets";
 import { craftmetals } from "./categories/craftmetals";
 import { mossberries } from "./categories/mossberries";
-import { paleOils } from "./categories/paleOils";
+import { paleOil } from "./categories/paleOil";
 import { keys } from "./categories/keys";
 import { silkeaters } from "./categories/silkeaters";
 import { voidMasses } from "./categories/voidMasses";
@@ -40,7 +40,7 @@ export const ALL_TRACKED_CATEGORIES = [
   memoryLockets,
   craftmetals,
   mossberries,
-  paleOils,
+  paleOil,
   keys,
   silkeaters,
   voidMasses,

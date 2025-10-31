@@ -1,15 +1,15 @@
-import type { ParsingInfo, ParsingInfoMulti } from "./types";
+import type { ParsingInfo, ParsingInfoAnyOf } from "./types";
 
-function isParsingInfoMulti(parsingInfo: ParsingInfo | ParsingInfoMulti): parsingInfo is ParsingInfoMulti {
+function isParsingInfoAnyOf(parsingInfo: ParsingInfo | ParsingInfoAnyOf): parsingInfo is ParsingInfoAnyOf {
   return Array.isArray(parsingInfo);
 }
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export function isItemUnlockedInPlayerSave(
-  itemParsingInfo: ParsingInfo | ParsingInfoMulti,
+  itemParsingInfo: ParsingInfo | ParsingInfoAnyOf,
   saveData: any
 ): { unlocked: boolean; returnValue?: number } {
-  if (isParsingInfoMulti(itemParsingInfo)) {
+  if (isParsingInfoAnyOf(itemParsingInfo)) {
     let unlocked = false;
     let returnValue: number | undefined;
 
@@ -33,7 +33,7 @@ export function isItemUnlockedInPlayerSave(
       return { unlocked };
     },
 
-    flagMulti: (flagNames: string[]) => {
+    flagAnyOf: (flagNames: string[]) => {
       let unlocked = false;
       for (const flagName of flagNames) {
         if ((playerData as any)[flagName]) {
@@ -106,7 +106,7 @@ export function isItemUnlockedInPlayerSave(
     materium: (materiumName: string) => {
       const materium = (playerData as any)?.MateriumCollected?.savedData || [];
       const foundMaterium = materium.find((m: any) => m?.Name === materiumName);
-      return { unlocked: !!foundMaterium?.Data?.IsCollected || !!foundMaterium?.Data?.HasSeenInRelicBoard};
+      return { unlocked: !!foundMaterium?.Data?.IsCollected || !!foundMaterium?.Data?.HasSeenInRelicBoard };
     },
 
     quest: (questName: string) => {
