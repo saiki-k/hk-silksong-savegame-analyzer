@@ -2501,7 +2501,7 @@ const manuallyExtractedEnemyMetadata = {
         ** - Weapon Level 3: enemy_modifier = 16.84 / 17 ≈ 0.99
         ** - Weapon Level 4: enemy_modifier = 20.65 / 21 ≈ 0.98
         */
-        damageModifiers: [1, 1, 1, 1, 1], 
+        damageModifiers: [1, 1, 1, 1, 1],
       },
     ],
   },

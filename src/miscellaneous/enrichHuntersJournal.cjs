@@ -1,44 +1,46 @@
-const fs = require('fs');
-const path = require('path');
-const https = require('https');
+const fs = require("fs");
+const path = require("path");
+const https = require("https");
 
-const metadata = require('./extractedMetadata.cjs');
+const metadata = require("./extractedMetadata.cjs");
 const { enemyMetadata, completionVariantsMetadata } = metadata;
 
-const journalModule = require('../dictionary/categories/huntersJournal.ts');
+const journalModule = require("../dictionary/categories/huntersJournal.ts");
 const huntersJournal = journalModule.huntersJournal;
 
-const bossesModule = require('../dictionary/categories/bosses.ts');
+const bossesModule = require("../dictionary/categories/bosses.ts");
 const bosses = bossesModule.bosses;
 
-const OUTPUT_FILENAME = 'huntersJournalEnriched.ts';
-const OUTPUT_PATH = path.join(__dirname, '../dictionary/categories', OUTPUT_FILENAME);
-const BOSSES_OUTPUT_FILENAME = 'bossesEnriched.ts';
-const BOSSES_OUTPUT_PATH = path.join(__dirname, '../dictionary/categories', BOSSES_OUTPUT_FILENAME);
-const JOURNAL_ASSETS_DIR = path.join(__dirname, '../assets/journal');
+const OUTPUT_FILENAME = "huntersJournalEnriched.ts";
+const OUTPUT_PATH = path.join(__dirname, "../dictionary/categories", OUTPUT_FILENAME);
+const BOSSES_OUTPUT_FILENAME = "bossesEnriched.ts";
+const BOSSES_OUTPUT_PATH = path.join(__dirname, "../dictionary/categories", BOSSES_OUTPUT_FILENAME);
+const JOURNAL_ASSETS_DIR = path.join(__dirname, "../assets/journal");
 
 function downloadFile(url, filepath) {
   return new Promise((resolve, reject) => {
-    https.get(url, (response) => {
-      if (response.statusCode === 200) {
-        const fileStream = fs.createWriteStream(filepath);
-        response.pipe(fileStream);
-        fileStream.on('finish', () => {
-          fileStream.close();
-          resolve();
-        });
-      } else {
-        reject(new Error(`Failed to download: ${response.statusCode}`));
-      }
-    }).on('error', (err) => {
-      reject(err);
-    });
+    https
+      .get(url, response => {
+        if (response.statusCode === 200) {
+          const fileStream = fs.createWriteStream(filepath);
+          response.pipe(fileStream);
+          fileStream.on("finish", () => {
+            fileStream.close();
+            resolve();
+          });
+        } else {
+          reject(new Error(`Failed to download: ${response.statusCode}`));
+        }
+      })
+      .on("error", err => {
+        reject(err);
+      });
   });
 }
 
 async function downloadJournalImages(huntersJournal, enemyMetadata) {
-  console.log('=== DOWNLOADING JOURNAL IMAGES ===\n');
-  
+  console.log("=== DOWNLOADING JOURNAL IMAGES ===\n");
+
   if (!fs.existsSync(JOURNAL_ASSETS_DIR)) {
     fs.mkdirSync(JOURNAL_ASSETS_DIR, { recursive: true });
   }
@@ -52,7 +54,7 @@ async function downloadJournalImages(huntersJournal, enemyMetadata) {
     for (const item of section.items) {
       const meta = enemyMetadata[item.name];
       if (meta && meta.imageUrl) {
-        const filename = item.name.replace(/\s+/g, '_') + '.png';
+        const filename = item.name.replace(/\s+/g, "_") + ".png";
         const filepath = path.join(JOURNAL_ASSETS_DIR, filename);
 
         try {
@@ -80,7 +82,7 @@ async function downloadJournalImages(huntersJournal, enemyMetadata) {
       console.log(`  - "${name}": ${error}`);
     });
   }
-  console.log('');
+  console.log("");
 
   return { successCount, skippedCount, failCount, failedDownloads };
 }
@@ -98,7 +100,7 @@ function collectJournalNames(huntersJournal) {
 function analyzeHpDamageMatches(journalNames, enemyMetadata) {
   const matched = [];
   const notInMetadata = [];
-  
+
   journalNames.forEach(name => {
     if (enemyMetadata[name] && enemyMetadata[name].values) {
       matched.push({ name, valuesCount: enemyMetadata[name].values.length });
@@ -106,9 +108,9 @@ function analyzeHpDamageMatches(journalNames, enemyMetadata) {
       notInMetadata.push(name);
     }
   });
-  
+
   const notInJournal = Object.keys(enemyMetadata).filter(key => !journalNames.includes(key));
-  
+
   return { matched, notInMetadata, notInJournal };
 }
 
@@ -117,11 +119,11 @@ function analyzeCompletionVariants(journalNames, completionVariantsMetadata) {
   const minionsToBosses = {};
   const bossesNotInJournal = [];
   const minionsNotInJournal = [];
-  
+
   Object.entries(completionVariantsMetadata).forEach(([boss, minions]) => {
     if (journalNames.includes(boss)) {
       bossesToMinions[boss] = minions;
-      
+
       minions.forEach(minion => {
         if (journalNames.includes(minion)) {
           if (!minionsToBosses[minion]) {
@@ -138,13 +140,13 @@ function analyzeCompletionVariants(journalNames, completionVariantsMetadata) {
       bossesNotInJournal.push(boss);
     }
   });
-  
+
   return { bossesToMinions, minionsToBosses, bossesNotInJournal, minionsNotInJournal };
 }
 
 function addHpDamageInfo(enrichedHuntersJournal, enemyMetadata) {
   let count = 0;
-  
+
   enrichedHuntersJournal.sections.forEach(section => {
     section.items.forEach(item => {
       const meta = enemyMetadata[item.name];
@@ -157,14 +159,14 @@ function addHpDamageInfo(enrichedHuntersJournal, enemyMetadata) {
       }
     });
   });
-  
+
   return count;
 }
 
 function addCompletionVariants(enrichedHuntersJournal, bossesToMinions, minionsToBosses) {
   let bossCount = 0;
   let minionCount = 0;
-  
+
   enrichedHuntersJournal.sections.forEach(section => {
     section.items.forEach(item => {
       if (bossesToMinions[item.name]) {
@@ -174,7 +176,7 @@ function addCompletionVariants(enrichedHuntersJournal, bossesToMinions, minionsT
         item.additionalMeta.completesEntries = bossesToMinions[item.name];
         bossCount++;
       }
-      
+
       if (minionsToBosses[item.name]) {
         if (!item.additionalMeta) {
           item.additionalMeta = {};
@@ -182,26 +184,26 @@ function addCompletionVariants(enrichedHuntersJournal, bossesToMinions, minionsT
         const bosses = minionsToBosses[item.name];
         const [boss] = bosses;
         if (bosses.length !== 1) {
-          console.warn(`⚠️  Warning: "${item.name}" has ${bosses.length} boss variants: ${bosses.join(', ')}`);
+          console.warn(`⚠️  Warning: "${item.name}" has ${bosses.length} boss variants: ${bosses.join(", ")}`);
         }
         item.additionalMeta.completedByEntry = boss;
         minionCount++;
       }
     });
   });
-  
+
   return { bossCount, minionCount };
 }
 
 function addImageAssets(enrichedHuntersJournal, enemyMetadata) {
   let count = 0;
-  
+
   enrichedHuntersJournal.sections.forEach(section => {
     section.items.forEach(item => {
       const meta = enemyMetadata[item.name];
       if (meta && meta.imageUrl) {
-        const filename = item.name.replace(/\s+/g, '_') + '.png';
-        
+        const filename = item.name.replace(/\s+/g, "_") + ".png";
+
         if (!item.additionalMeta) {
           item.additionalMeta = {};
         }
@@ -210,25 +212,25 @@ function addImageAssets(enrichedHuntersJournal, enemyMetadata) {
       }
     });
   });
-  
+
   return count;
 }
 
 function addImageAssetsToBosses(enrichedBosses, enemyMetadata) {
   let count = 0;
   const nameMapping = {
-    'Raging Conchfly': 'Great Conchfly',
-    'Great Conchflies': 'Great Conchfly',
+    "Raging Conchfly": "Great Conchfly",
+    "Great Conchflies": "Great Conchfly",
   };
-  
+
   enrichedBosses.sections.forEach(section => {
     section.items.forEach(item => {
       const lookupName = nameMapping[item.name] || item.name;
       const meta = enemyMetadata[lookupName];
-      
+
       if (meta && meta.imageUrl) {
-        const filename = lookupName.replace(/\s+/g, '_') + '.png';
-        
+        const filename = lookupName.replace(/\s+/g, "_") + ".png";
+
         if (!item.additionalMeta) {
           item.additionalMeta = {};
         }
@@ -237,43 +239,37 @@ function addImageAssetsToBosses(enrichedBosses, enemyMetadata) {
       }
     });
   });
-  
+
   return count;
 }
 
 function writeEnrichedJournal(enrichedHuntersJournal, outputPath) {
   const jsonString = JSON.stringify(enrichedHuntersJournal, null, 2);
 
-  const singleLineParsingInfo = jsonString.replace(
-    /"parsingInfo":\s*\{[^}]*\}/gs,
-    (match) => {
-      const obj = match.match(/"parsingInfo":\s*(\{[^}]*\})/s)[1];
-      return `"parsingInfo": ${obj.replace(/\s+/g, ' ')}`;
-    }
-  );
-  
+  const singleLineParsingInfo = jsonString.replace(/"parsingInfo":\s*\{[^}]*\}/gs, match => {
+    const obj = match.match(/"parsingInfo":\s*(\{[^}]*\})/s)[1];
+    return `"parsingInfo": ${obj.replace(/\s+/g, " ")}`;
+  });
+
   let outputContent = 'import type { TrackableCategory } from "../types";\n\n';
   outputContent += `export const huntersJournal: TrackableCategory = ${singleLineParsingInfo};\n`;
 
-  fs.writeFileSync(outputPath, outputContent, 'utf-8');
+  fs.writeFileSync(outputPath, outputContent, "utf-8");
   return outputPath;
 }
 
 function writeEnrichedBosses(enrichedBosses, outputPath) {
   const jsonString = JSON.stringify(enrichedBosses, null, 2);
 
-  const singleLineParsingInfo = jsonString.replace(
-    /"parsingInfo":\s*\{[^}]*\}/gs,
-    (match) => {
-      const obj = match.match(/"parsingInfo":\s*(\{[^}]*\})/s)[1];
-      return `"parsingInfo": ${obj.replace(/\s+/g, ' ')}`;
-    }
-  );
-  
+  const singleLineParsingInfo = jsonString.replace(/"parsingInfo":\s*\{[^}]*\}/gs, match => {
+    const obj = match.match(/"parsingInfo":\s*(\{[^}]*\})/s)[1];
+    return `"parsingInfo": ${obj.replace(/\s+/g, " ")}`;
+  });
+
   let outputContent = 'import type { TrackableCategory } from "../types";\n\n';
   outputContent += `export const bosses: TrackableCategory = ${singleLineParsingInfo};\n`;
 
-  fs.writeFileSync(outputPath, outputContent, 'utf-8');
+  fs.writeFileSync(outputPath, outputContent, "utf-8");
   return outputPath;
 }
 
@@ -281,13 +277,13 @@ function runAnalysis(huntersJournal, enemyMetadata, completionVariantsMetadata) 
   const journalNames = collectJournalNames(huntersJournal);
   console.log(`Total journal entries: ${journalNames.length}\n`);
 
-  console.log('=== HP AND DAMAGE INFO ANALYSIS ===');
+  console.log("=== HP AND DAMAGE INFO ANALYSIS ===");
   const hpAnalysis = analyzeHpDamageMatches(journalNames, enemyMetadata);
   console.log(`✅ Matched entries: ${hpAnalysis.matched.length}`);
   console.log(`❌ Not in metadata: ${hpAnalysis.notInMetadata.length}`);
   console.log(`⚠️  Metadata not in journal: ${hpAnalysis.notInJournal.length}\n`);
 
-  console.log('=== COMPLETION VARIANTS ANALYSIS ===');
+  console.log("=== COMPLETION VARIANTS ANALYSIS ===");
   const completionVariantsAnalysis = analyzeCompletionVariants(journalNames, completionVariantsMetadata);
   console.log(`✅ Bosses with completion variants: ${Object.keys(completionVariantsAnalysis.bossesToMinions).length}`);
   console.log(`✅ Minions completed by bosses: ${Object.keys(completionVariantsAnalysis.minionsToBosses).length}`);
@@ -295,15 +291,15 @@ function runAnalysis(huntersJournal, enemyMetadata, completionVariantsMetadata) 
   console.log(`❌ Minions not in journal: ${completionVariantsAnalysis.minionsNotInJournal.length}\n`);
 
   if (completionVariantsAnalysis.bossesNotInJournal.length > 0) {
-    console.log('Bosses not in journal:');
+    console.log("Bosses not in journal:");
     completionVariantsAnalysis.bossesNotInJournal.forEach(boss => console.log(`  - "${boss}"`));
-    console.log('');
+    console.log("");
   }
 
   if (completionVariantsAnalysis.minionsNotInJournal.length > 0) {
-    console.log('Minions not in journal:');
+    console.log("Minions not in journal:");
     completionVariantsAnalysis.minionsNotInJournal.forEach(minion => console.log(`  - "${minion}"`));
-    console.log('');
+    console.log("");
   }
 
   return { hpAnalysis, completionVariantsAnalysis };
@@ -312,29 +308,29 @@ function runAnalysis(huntersJournal, enemyMetadata, completionVariantsMetadata) 
 function addHpDamageInfoToBosses(enrichedBosses, enemyMetadata) {
   let count = 0;
   const nameMapping = {
-    'Raging Conchfly': 'Great Conchfly',
-    'Great Conchflies': 'Great Conchfly',
+    "Raging Conchfly": "Great Conchfly",
+    "Great Conchflies": "Great Conchfly",
   };
-  
+
   enrichedBosses.sections.forEach(section => {
     section.items.forEach(item => {
       const lookupName = nameMapping[item.name] || item.name;
       const meta = enemyMetadata[lookupName];
-      
+
       if (meta && meta.values) {
         if (!item.additionalMeta) {
           item.additionalMeta = {};
         }
-        
+
         // For bosses with variants, pick the correct one
-        if (item.name === 'Raging Conchfly' && meta.values.length > 1) {
-          const ragingVariant = meta.values.find(v => v.variantName === 'Raging Conchfly');
+        if (item.name === "Raging Conchfly" && meta.values.length > 1) {
+          const ragingVariant = meta.values.find(v => v.variantName === "Raging Conchfly");
           if (ragingVariant) {
             item.additionalMeta.hpAndDamageInfo = [ragingVariant];
           } else {
             item.additionalMeta.hpAndDamageInfo = meta.values;
           }
-        } else if (item.name === 'Great Conchflies' && meta.values.length > 1) {
+        } else if (item.name === "Great Conchflies" && meta.values.length > 1) {
           // Use the base variant (without variantName)
           const baseVariant = meta.values.find(v => !v.variantName);
           if (baseVariant) {
@@ -349,24 +345,24 @@ function addHpDamageInfoToBosses(enrichedBosses, enemyMetadata) {
       }
     });
   });
-  
+
   return count;
 }
 
 function runTransformation(huntersJournal, enemyMetadata, completionVariantsAnalysis, outputPath = OUTPUT_PATH) {
-  console.log('=== STARTING HUNTERS JOURNAL TRANSFORMATION ===\n');
+  console.log("=== STARTING HUNTERS JOURNAL TRANSFORMATION ===\n");
 
   const enrichedHuntersJournal = JSON.parse(JSON.stringify(huntersJournal));
 
-  console.log('Step 1: Adding image assets...');
+  console.log("Step 1: Adding image assets...");
   const imageCount = addImageAssets(enrichedHuntersJournal, enemyMetadata);
   console.log(`✓ Added to ${imageCount} entries\n`);
 
-  console.log('Step 2: Adding HP and damage info...');
+  console.log("Step 2: Adding HP and damage info...");
   const hpCount = addHpDamageInfo(enrichedHuntersJournal, enemyMetadata);
   console.log(`✓ Added to ${hpCount} entries\n`);
 
-  console.log('Step 3: Adding completion variants...');
+  console.log("Step 3: Adding completion variants...");
   const completionCounts = addCompletionVariants(
     enrichedHuntersJournal,
     completionVariantsAnalysis.bossesToMinions,
@@ -377,43 +373,43 @@ function runTransformation(huntersJournal, enemyMetadata, completionVariantsAnal
 
   writeEnrichedJournal(enrichedHuntersJournal, outputPath);
 
-  console.log('=== HUNTERS JOURNAL TRANSFORMATION COMPLETE ===');
+  console.log("=== HUNTERS JOURNAL TRANSFORMATION COMPLETE ===");
   console.log(`New file created: ${outputPath}\n`);
 }
 
 function runBossesTransformation(bosses, enemyMetadata, outputPath = BOSSES_OUTPUT_PATH) {
-  console.log('=== STARTING BOSSES TRANSFORMATION ===\n');
+  console.log("=== STARTING BOSSES TRANSFORMATION ===\n");
 
   const enrichedBosses = JSON.parse(JSON.stringify(bosses));
 
-  console.log('Step 1: Adding image assets to bosses...');
+  console.log("Step 1: Adding image assets to bosses...");
   const imageCount = addImageAssetsToBosses(enrichedBosses, enemyMetadata);
   console.log(`✓ Added to ${imageCount} entries\n`);
 
-  console.log('Step 2: Adding HP and damage info to bosses...');
+  console.log("Step 2: Adding HP and damage info to bosses...");
   const hpCount = addHpDamageInfoToBosses(enrichedBosses, enemyMetadata);
   console.log(`✓ Added to ${hpCount} entries\n`);
 
   writeEnrichedBosses(enrichedBosses, outputPath);
 
-  console.log('=== BOSSES TRANSFORMATION COMPLETE ===');
+  console.log("=== BOSSES TRANSFORMATION COMPLETE ===");
   console.log(`New file created: ${outputPath}\n`);
 }
 
 async function run() {
-  console.log('=== METADATA ENRICHMENT SCRIPT ===\n');
-  
-  console.log('--- HUNTERS JOURNAL ---\n');
+  console.log("=== METADATA ENRICHMENT SCRIPT ===\n");
+
+  console.log("--- HUNTERS JOURNAL ---\n");
   const { completionVariantsAnalysis } = runAnalysis(huntersJournal, enemyMetadata, completionVariantsMetadata);
-  
+
   await downloadJournalImages(huntersJournal, enemyMetadata);
-  
+
   runTransformation(huntersJournal, enemyMetadata, completionVariantsAnalysis);
-  
-  console.log('--- BOSSES ---\n');
+
+  console.log("--- BOSSES ---\n");
   runBossesTransformation(bosses, enemyMetadata);
-  
-  console.log('=== ALL ENRICHMENT COMPLETE ===');
+
+  console.log("=== ALL ENRICHMENT COMPLETE ===");
 }
 
 run();

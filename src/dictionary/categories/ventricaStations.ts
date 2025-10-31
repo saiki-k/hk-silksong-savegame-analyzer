@@ -13,7 +13,7 @@ export const ventricaStations: TrackableCategory = {
           whichAct: 2,
           completionDetails: "Unlocks after opening any one of the Ventrica Stations.",
           parsingInfo: {
-            type: "flagMulti",
+            type: "flagAnyOf",
             internalId: [
               "UnlockedArboriumTube",
               "UnlockedHangTube",

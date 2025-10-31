@@ -1,15 +1,15 @@
-import type { ParsingInfo, ParsingInfoMulti } from "./types";
+import type { ParsingInfo, ParsingInfoAnyOf } from "./types";
 
-function isParsingInfoMulti(parsingInfo: ParsingInfo | ParsingInfoMulti): parsingInfo is ParsingInfoMulti {
+function isParsingInfoAnyOf(parsingInfo: ParsingInfo | ParsingInfoAnyOf): parsingInfo is ParsingInfoAnyOf {
   return Array.isArray(parsingInfo);
 }
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export function isItemUnlockedInPlayerSave(
-  itemParsingInfo: ParsingInfo | ParsingInfoMulti,
+  itemParsingInfo: ParsingInfo | ParsingInfoAnyOf,
   saveData: any
 ): { unlocked: boolean; returnValue?: number } {
-  if (isParsingInfoMulti(itemParsingInfo)) {
+  if (isParsingInfoAnyOf(itemParsingInfo)) {
     let unlocked = false;
     let returnValue: number | undefined;
 
@@ -33,7 +33,7 @@ export function isItemUnlockedInPlayerSave(
       return { unlocked };
     },
 
-    flagMulti: (flagNames: string[]) => {
+    flagAnyOf: (flagNames: string[]) => {
       let unlocked = false;
       for (const flagName of flagNames) {
         if ((playerData as any)[flagName]) {
@@ -79,8 +79,6 @@ export function isItemUnlockedInPlayerSave(
         if (foundEntry.Record.Kills >= 0) {
           unlocked = true;
         }
-      } else {
-        console.log(`Journal entry not found: ${entryName}`);
       }
       return { unlocked, returnValue: killsAchieved };
     },
@@ -106,7 +104,7 @@ export function isItemUnlockedInPlayerSave(
     materium: (materiumName: string) => {
       const materium = (playerData as any)?.MateriumCollected?.savedData || [];
       const foundMaterium = materium.find((m: any) => m?.Name === materiumName);
-      return { unlocked: !!foundMaterium?.Data?.IsCollected || !!foundMaterium?.Data?.HasSeenInRelicBoard};
+      return { unlocked: !!foundMaterium?.Data?.IsCollected || !!foundMaterium?.Data?.HasSeenInRelicBoard };
     },
 
     quest: (questName: string) => {
@@ -114,11 +112,18 @@ export function isItemUnlockedInPlayerSave(
       return { unlocked: questEntry?.Data?.IsCompleted ?? false };
     },
 
-    sceneData: ([sceneName, id, inverse = false]: [string, string, boolean?]) => {
+    sceneDataBool: ([sceneName, id]: [string, string]) => {
       const sceneData = (saveData as any).sceneData || {};
       const allEntries = sceneData.persistentBools?.serializedList || [];
       const foundEntry = allEntries.find((x: any) => x.SceneName === sceneName && x.ID === id);
-      return { unlocked: inverse ? foundEntry?.Value === false : foundEntry?.Value === true };
+      return { unlocked: Boolean(foundEntry?.Value) };
+    },
+
+    sceneDataInt: ([sceneName, id]: [string, string]) => {
+      const sceneData = (saveData as any).sceneData || {};
+      const allEntries = sceneData.persistentInts?.serializedList || [];
+      const foundEntry = allEntries.find((x: any) => x.SceneName === sceneName && x.ID === id);
+      return { unlocked: Boolean(foundEntry?.Value) };
     },
 
     sceneVisited: (sceneName: string) => {

@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 export type FlagParsingInfo = { type: "flag"; internalId: string };
-export type FlagMultiParsingInfo = { type: "flagMulti"; internalId: string[] };
+export type FlagAnyOfParsingInfo = { type: "flagAnyOf"; internalId: string[] };
 export type FlagMinParsingInfo = { type: "flagMin"; internalId: [string, number] }; // [flag name, required min. value]
 export type FlagReturnParsingInfo = { type: "flagReturn"; internalId: string };
 export type ToolParsingInfo = { type: "tool"; internalId: string[] };
@@ -11,12 +11,13 @@ export type CollectableParsingInfo = { type: "collectable"; internalId: string }
 export type RelicParsingInfo = { type: "relic"; internalId: string };
 export type MateriumParsingInfo = { type: "materium"; internalId: string };
 export type QuestParsingInfo = { type: "quest"; internalId: string };
-export type SceneDataParsingInfo = { type: "sceneData"; internalId: [string, string, boolean?] }; // [scene name, flag name, inverse?]
+export type SceneDataBoolParsingInfo = { type: "sceneDataBool"; internalId: [string, string] }; // [scene name, flag name]
+export type SceneDataIntParsingInfo = { type: "sceneDataInt"; internalId: [string, string] }; // [scene name, int name]
 export type SceneVistedParsingInfo = { type: "sceneVisited"; internalId: string };
 export type MementoDepositParsingInfo = { type: "mementoDeposit"; internalId: string };
 export type ParsingInfo =
   | FlagParsingInfo
-  | FlagMultiParsingInfo
+  | FlagAnyOfParsingInfo
   | FlagMinParsingInfo
   | FlagReturnParsingInfo
   | ToolParsingInfo
@@ -26,10 +27,11 @@ export type ParsingInfo =
   | RelicParsingInfo
   | MateriumParsingInfo
   | QuestParsingInfo
-  | SceneDataParsingInfo
+  | SceneDataBoolParsingInfo
+  | SceneDataIntParsingInfo
   | SceneVistedParsingInfo
   | MementoDepositParsingInfo;
-export type ParsingInfoMulti = ParsingInfo[];
+export type ParsingInfoAnyOf = ParsingInfo[];
 
 export type CategoryItem = {
   name: string;
@@ -38,7 +40,7 @@ export type CategoryItem = {
   completionPercent?: number;
   prereqs?: string[];
   completionDetails: string;
-  parsingInfo: ParsingInfo | ParsingInfoMulti;
+  parsingInfo: ParsingInfo | ParsingInfoAnyOf;
   mapLink: string;
   additionalMeta?: {
     killsRequired?: number;

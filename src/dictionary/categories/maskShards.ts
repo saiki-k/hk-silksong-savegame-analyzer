@@ -24,7 +24,7 @@ export const maskShards: TrackableCategory = {
           completionPercent: 0.25,
           prereqs: ["Swift Step"],
           completionDetails: "Wormways: Behind a breakable wall at the water's edge.",
-          parsingInfo: { type: "sceneData", internalId: ["Crawl_02", "Heart Piece"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Crawl_02", "Heart Piece"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478091",
         },
         {
@@ -33,7 +33,7 @@ export const maskShards: TrackableCategory = {
           completionPercent: 0.25,
           prereqs: ["Drifter's Cloak"],
           completionDetails: "Far Fields: In a hidden area found towards the left of the Seamstress' Home.",
-          parsingInfo: { type: "sceneData", internalId: ["Bone_East_20", "Heart Piece"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Bone_East_20", "Heart Piece"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477975",
         },
         {
@@ -41,7 +41,7 @@ export const maskShards: TrackableCategory = {
           whichAct: 1,
           completionPercent: 0.25,
           completionDetails: "Shellwood: At the end of a platforming challenge in a room behind a breakable wall.",
-          parsingInfo: { type: "sceneData", internalId: ["Shellwood_14", "Heart Piece"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Shellwood_14", "Heart Piece"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478177",
         },
         {
@@ -50,7 +50,7 @@ export const maskShards: TrackableCategory = {
           completionPercent: 0.25,
           prereqs: ["Cling Grip"],
           completionDetails: "Deep Docks: Near the Deep Docks entrance, approach from The Marrow.",
-          parsingInfo: { type: "sceneData", internalId: ["Dock_08", "Heart Piece"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Dock_08", "Heart Piece"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477901",
         },
         {
@@ -59,7 +59,7 @@ export const maskShards: TrackableCategory = {
           completionPercent: 0.25,
           prereqs: ["Needolin"],
           completionDetails: "Weavenest Atla: Behind a breakable wall.",
-          parsingInfo: { type: "sceneData", internalId: ["Weave_05b", "Heart Piece"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Weave_05b", "Heart Piece"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478233",
         },
         {
@@ -75,7 +75,7 @@ export const maskShards: TrackableCategory = {
           whichAct: 2,
           completionPercent: 0.25,
           completionDetails: "Cogwork Core: At the top of the left-most tunnel, reached after an arena battle.",
-          parsingInfo: { type: "sceneData", internalId: ["Song_09", "Heart Piece"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Song_09", "Heart Piece"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478615",
         },
         {
@@ -83,7 +83,7 @@ export const maskShards: TrackableCategory = {
           whichAct: 2,
           completionPercent: 0.25,
           completionDetails: "Whispering Vaults",
-          parsingInfo: { type: "sceneData", internalId: ["Library_05", "Heart Piece"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Library_05", "Heart Piece"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478671",
         },
         {
@@ -93,7 +93,7 @@ export const maskShards: TrackableCategory = {
           prereqs: ["Clawline"],
           completionDetails:
             "Bilewater: At the end of a couple of long corridors, filled with Slubberlugs and parasite-infested waters.",
-          parsingInfo: { type: "sceneData", internalId: ["Shadow_13", "Heart Piece"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Shadow_13", "Heart Piece"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478849",
         },
         {
@@ -102,7 +102,7 @@ export const maskShards: TrackableCategory = {
           completionPercent: 0.25,
           prereqs: ["Clawline"],
           completionDetails: "Far Fields: At the top of the Skull Cavern.",
-          parsingInfo: { type: "sceneData", internalId: ["Bone_East_LavaChallenge", "Heart Piece (1)"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Bone_East_LavaChallenge", "Heart Piece (1)"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478841",
         },
         {
@@ -111,7 +111,7 @@ export const maskShards: TrackableCategory = {
           completionPercent: 0.25,
           completionDetails:
             "The Slab: At the top of a room behind a locked door (requires Key of Apostate) that holds a platforming challenge.",
-          parsingInfo: { type: "sceneData", internalId: ["Slab_17", "Heart Piece"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Slab_17", "Heart Piece"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479001",
         },
         {
@@ -121,7 +121,7 @@ export const maskShards: TrackableCategory = {
           prereqs: ["Faydown Cloak"],
           completionDetails:
             "Mount Fay: Inside a large hollow cylinder, in an area towards the left of the bottom-most bench.",
-          parsingInfo: { type: "sceneData", internalId: ["Peak_04c", "Heart Piece"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Peak_04c", "Heart Piece"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479038",
         },
         {
@@ -130,7 +130,7 @@ export const maskShards: TrackableCategory = {
           completionPercent: 0.25,
           prereqs: ["Faydown Cloak"],
           completionDetails: "Wisp Thicket: At the end of a platforming challenge  in the left-most area.",
-          parsingInfo: { type: "sceneData", internalId: ["Wisp_07", "Heart Piece"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Wisp_07", "Heart Piece"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479151",
         },
         {
@@ -148,7 +148,7 @@ export const maskShards: TrackableCategory = {
           completionPercent: 0.25,
           prereqs: ["Faydown Cloak"],
           completionDetails: "Blasted Steps: At the top of an area near the map boundary.",
-          parsingInfo: { type: "sceneData", internalId: ["Coral_19b", "Heart Piece"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Coral_19b", "Heart Piece"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478498",
         },
         {
@@ -181,7 +181,7 @@ export const maskShards: TrackableCategory = {
           completionPercent: 0.25,
           prereqs: ["Silk Soar"],
           completionDetails: "Mount Fay: At the very top of Brightvein.",
-          parsingInfo: { type: "sceneData", internalId: ["Peak_06", "Heart Piece"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Peak_06", "Heart Piece"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479460",
         },
       ],

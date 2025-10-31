@@ -13,7 +13,7 @@ export const spoolFragments: TrackableCategory = {
           whichAct: 1,
           completionPercent: 0.5,
           completionDetails: "Bone Bottom: Above the Bone Bottom settlement.",
-          parsingInfo: { type: "sceneData", internalId: ["Bone_11b", "Silk Spool"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Bone_11b", "Silk Spool"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478080",
         },
         {
@@ -21,7 +21,7 @@ export const spoolFragments: TrackableCategory = {
           whichAct: 1,
           completionPercent: 0.5,
           completionDetails: "Deep Docks: At the end of a long room.",
-          parsingInfo: { type: "sceneData", internalId: ["Bone_East_13", "Silk Spool"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Bone_East_13", "Silk Spool"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477926",
         },
         {
@@ -30,7 +30,7 @@ export const spoolFragments: TrackableCategory = {
           completionPercent: 0.5,
           prereqs: ["Cling Grip"],
           completionDetails: "Greymoor: In an area that's towards the top-right of the Bellshrine.",
-          parsingInfo: { type: "sceneData", internalId: ["Greymoor_02", "Silk Spool"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Greymoor_02", "Silk Spool"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478263",
         },
         {
@@ -39,7 +39,7 @@ export const spoolFragments: TrackableCategory = {
           completionPercent: 0.5,
           prereqs: ["Cling Grip"],
           completionDetails: "The Slab: At the top of a frosty section towards the left.",
-          parsingInfo: { type: "sceneData", internalId: ["Peak_01", "Silk Spool"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Peak_01", "Silk Spool"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478475",
         },
         {
@@ -48,7 +48,7 @@ export const spoolFragments: TrackableCategory = {
           completionPercent: 0.5,
           prereqs: ["Needolin"],
           completionDetails: "Weavenest Atla: Behind a breakable wall.",
-          parsingInfo: { type: "sceneData", internalId: ["Weave_11", "Silk Spool"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Weave_11", "Silk Spool"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478230",
         },
         {
@@ -73,7 +73,7 @@ export const spoolFragments: TrackableCategory = {
           whichAct: 2,
           completionPercent: 0.5,
           completionDetails: "Cogwork Core (Bottom-right)",
-          parsingInfo: { type: "sceneData", internalId: ["Cog_07", "Silk Spool"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Cog_07", "Silk Spool"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478618",
         },
         {
@@ -81,7 +81,7 @@ export const spoolFragments: TrackableCategory = {
           whichAct: 2,
           completionPercent: 0.5,
           completionDetails: "Underworks: In a hidden area, almost at the bottom-right.",
-          parsingInfo: { type: "sceneData", internalId: ["Library_11b", "Silk Spool"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Library_11b", "Silk Spool"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478704",
         },
         {
@@ -89,7 +89,7 @@ export const spoolFragments: TrackableCategory = {
           whichAct: 2,
           completionPercent: 0.5,
           completionDetails: "Grand Gate: At the very top.",
-          parsingInfo: { type: "sceneData", internalId: ["Song_19_entrance", "Silk Spool"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Song_19_entrance", "Silk Spool"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478586",
         },
         {
@@ -97,7 +97,7 @@ export const spoolFragments: TrackableCategory = {
           whichAct: 2,
           completionPercent: 0.5,
           completionDetails: "Underworks: Behind an arena battle.",
-          parsingInfo: { type: "sceneData", internalId: ["Under_10", "Silk Spool"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Under_10", "Silk Spool"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478931",
         },
         {
@@ -106,7 +106,7 @@ export const spoolFragments: TrackableCategory = {
           completionPercent: 0.5,
           completionDetails:
             "Whiteward: At the bottom of the elevator shaft, requires the elevator to be called up first.",
-          parsingInfo: { type: "sceneData", internalId: ["Ward_01", "Silk Spool"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Ward_01", "Silk Spool"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479317",
         },
         {
@@ -122,7 +122,7 @@ export const spoolFragments: TrackableCategory = {
           whichAct: 2,
           completionPercent: 0.5,
           completionDetails: "Deep Docks (Bottom-right)",
-          parsingInfo: { type: "sceneData", internalId: ["Dock_03c", "Silk Spool"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Dock_03c", "Silk Spool"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478825",
         },
         {
@@ -131,7 +131,7 @@ export const spoolFragments: TrackableCategory = {
           completionPercent: 0.5,
           prereqs: ["Clawline"],
           completionDetails: "High Halls: At the very top.",
-          parsingInfo: { type: "sceneData", internalId: ["Hang_03_top", "Silk Spool"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Hang_03_top", "Silk Spool"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478909",
         },
         {
@@ -140,7 +140,7 @@ export const spoolFragments: TrackableCategory = {
           completionPercent: 0.5,
           prereqs: ["Faydown Cloak"],
           completionDetails: "Memorium (Bottom-left)",
-          parsingInfo: { type: "sceneData", internalId: ["Arborium_09", "Silk Spool"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Arborium_09", "Silk Spool"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479117",
         },
         {

@@ -10,20 +10,20 @@ import { tools } from "./categories/tools";
 import { crests } from "./categories/crests";
 import { fleas } from "./categories/fleas";
 import { relics } from "./categories/relics";
+import { keys } from "./categories/keys";
 import { memoryLockets } from "./categories/memoryLockets";
 import { craftmetals } from "./categories/craftmetals";
 import { mossberries } from "./categories/mossberries";
-import { paleOils } from "./categories/paleOils";
-import { keys } from "./categories/keys";
+import { paleOil } from "./categories/paleOil";
 import { silkeaters } from "./categories/silkeaters";
-import { voidMasses } from "./categories/voidMasses";
-import { devices } from "./categories/devices";
+import { bellhome } from "./categories/bellhome";
 import { materium } from "./categories/materium";
 import { mementos } from "./categories/mementos";
 import { maps } from "./categories/maps";
 import { bellways } from "./categories/bellways";
 import { ventricaStations } from "./categories/ventricaStations";
 import { quests } from "./categories/quests";
+import { uniqueSpawns } from "./categories/uniqueSpawns";
 import { bosses } from "./categories/bosses";
 import { huntersJournal } from "./categories/huntersJournal";
 
@@ -37,20 +37,20 @@ export const ALL_TRACKED_CATEGORIES = [
   crests,
   fleas,
   relics,
+  keys,
   memoryLockets,
   craftmetals,
   mossberries,
-  paleOils,
-  keys,
+  paleOil,
   silkeaters,
-  voidMasses,
-  devices,
+  bellhome,
   materium,
   mementos,
   maps,
   bellways,
   ventricaStations,
   quests,
+  uniqueSpawns,
   bosses,
   huntersJournal,
 ] as TrackableCategory[];

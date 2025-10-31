@@ -32,15 +32,21 @@ export const TAB_GROUPS: Record<TabGroup, TabConfig[]> = {
     createTab("Memory Lockets"),
     createTab("Craftmetals"),
     createTab("Mossberries"),
-    createTab("Pale Oils"),
+    createTab("Pale Oil"),
     createTab("Silkeaters"),
-    createTab("Void Masses"),
-    createTab("Devices"),
+    createTab("Bellhome"),
     createTab("Materium"),
     createTab("Mementos"),
+    /*
+     ** The intent here is to eventually track the following sections:
+     ** Rosary Stashes
+     ** Shell Shard Fossils
+     ** Breakable Walls
+     */
+    // createTab("Caches & Secrets"), // 🚧
   ],
   exploration: [createTab("Maps"), createTab("Bellways"), createTab("Ventrica Stations"), createTab("Quests")],
-  bestiary: [createTab("Bosses"), createTab("Hunter's Journal")],
+  bestiary: [createTab("Unique Spawns"), createTab("Bosses"), createTab("Hunter's Journal")],
 };
 
 export const GROUP_LABELS: Record<TabGroup, string> = {

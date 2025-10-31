@@ -2,7 +2,7 @@ import type { TrackableCategory } from "../types";
 
 export const huntersJournal: TrackableCategory = {
   name: "Hunter's Journal",
-  description: "Bugs and creatures encountered across various areas of Pharloom.",
+  description: "Creatures and entities encountered across various areas of Pharloom.",
   sections: [
     {
       items: [
