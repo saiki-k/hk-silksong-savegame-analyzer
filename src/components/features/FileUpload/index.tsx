@@ -121,7 +121,7 @@ export function FileUpload({ saveFileObj }: { saveFileObj: SaveFileObj }) {
 
       <div className="relative z-10 min-h-[60px] flex flex-col items-center justify-center">{renderContent()}</div>
 
-      <input ref={inputRef} type="file" className="hidden" onChange={handleChange} />
+      <input ref={inputRef} type="file" className="hidden" onChange={handleChange} aria-label="Upload save file" />
 
       {/* Save Editor Modal */}
       <Modal isOpen={isEditorModalOpen} onClose={() => setIsEditorModalOpen(false)} title="Save File Editor">

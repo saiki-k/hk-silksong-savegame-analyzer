@@ -4,7 +4,7 @@
 
 For all the completionists out there, this app helps you track your in-game progress using your save file.
 
-![Bellways tracked on Silksong Completionist](./screenshots/bellways.png)
+![Hunter's Journal tracked on Silksong Completionist](./screenshots/journal.png)
 
 ## ⚙️ Usage
 
