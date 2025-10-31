@@ -4,7 +4,9 @@ import type { NormalizedItem } from "@/dictionary";
 import { getHoverBlurClassNames } from "@/utils";
 
 import { CategoryHeader, StatusBar, EmptyState } from "./shared";
-import { Table, MapButton, LazyImage } from "@/components/ui";
+import { Table } from "@/components/ui/Table";
+import { MapButton } from "@/components/ui/MapButton";
+import { LazyImage } from "@/components/ui/LazyImage";
 
 export function BossesContent({
   tabLabel,

@@ -1,4 +1,4 @@
-import { MapButton } from "@/components/ui";
+import { MapButton } from "@/components/ui/MapButton";
 import { getHoverBlurClassNames } from "@/utils";
 
 const simpleLockLocations = [

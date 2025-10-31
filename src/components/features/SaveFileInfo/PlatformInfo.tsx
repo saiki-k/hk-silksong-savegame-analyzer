@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "@/components/ui";
+import { Button } from "@/components/ui/Button";
 import { cn } from "@/utils";
 
 import { PLATFORM_OPTIONS, type PlatformId } from "./PlatformOptions";

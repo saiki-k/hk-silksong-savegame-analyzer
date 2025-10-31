@@ -1,6 +1,6 @@
-import type { ALL_TRACKED_CATEGORIES } from "@/dictionary";
+import type { CategoryName } from "@/dictionary";
 
-export type TabId = (typeof ALL_TRACKED_CATEGORIES)[number]["name"];
+export type TabId = CategoryName;
 
 export type TabGroup = "core" | "collectibles" | "exploration" | "bestiary";
 

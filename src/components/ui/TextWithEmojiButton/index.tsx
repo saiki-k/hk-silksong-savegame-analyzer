@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui";
+import { Button } from "@/components/ui/Button";
 import { cn } from "@/utils";
 
 interface TextWithEmojiButtonProps {

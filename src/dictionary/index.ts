@@ -1,60 +1,52 @@
 import type { TrackableCategory } from "./types";
 import { normalizeDictionary } from "./normalizer";
+import { loadAllCategories, type CategoryName } from "./loader";
 
-import { stats } from "./categories/stats";
-import { maskShards } from "./categories/maskShards";
-import { spoolFragments } from "./categories/spoolFragments";
-import { abilities } from "./categories/abilities";
-import { upgrades } from "./categories/upgrades";
-import { tools } from "./categories/tools";
-import { crests } from "./categories/crests";
-import { fleas } from "./categories/fleas";
-import { relics } from "./categories/relics";
-import { keys } from "./categories/keys";
-import { memoryLockets } from "./categories/memoryLockets";
-import { craftmetals } from "./categories/craftmetals";
-import { mossberries } from "./categories/mossberries";
-import { paleOil } from "./categories/paleOil";
-import { silkeaters } from "./categories/silkeaters";
-import { bellhome } from "./categories/bellhome";
-import { materium } from "./categories/materium";
-import { mementos } from "./categories/mementos";
-import { maps } from "./categories/maps";
-import { bellways } from "./categories/bellways";
-import { ventricaStations } from "./categories/ventricaStations";
-import { quests } from "./categories/quests";
-import { uniqueSpawns } from "./categories/uniqueSpawns";
-import { bosses } from "./categories/bosses";
-import { huntersJournal } from "./categories/huntersJournal";
+let _cachedCategories: TrackableCategory[] | null = null;
+let _cachedDictMap: ReturnType<typeof normalizeDictionary> | null = null;
 
-export const ALL_TRACKED_CATEGORIES = [
-  stats,
-  maskShards,
-  spoolFragments,
-  abilities,
-  upgrades,
-  tools,
-  crests,
-  fleas,
-  relics,
-  keys,
-  memoryLockets,
-  craftmetals,
-  mossberries,
-  paleOil,
-  silkeaters,
-  bellhome,
-  materium,
-  mementos,
-  maps,
-  bellways,
-  ventricaStations,
-  quests,
-  uniqueSpawns,
-  bosses,
-  huntersJournal,
-] as TrackableCategory[];
+export const getAllCategories = async (): Promise<TrackableCategory[]> => {
+  if (!_cachedCategories) {
+    _cachedCategories = await loadAllCategories();
+  }
+  return _cachedCategories;
+};
 
-export const NORMALISED_DICT_MAP = normalizeDictionary(ALL_TRACKED_CATEGORIES);
+export const getNormalizedDictMap = async () => {
+  if (!_cachedDictMap) {
+    const categories = await getAllCategories();
+    _cachedDictMap = normalizeDictionary(categories);
+  }
+  return _cachedDictMap;
+};
 
+export const ALL_CATEGORY_NAMES: CategoryName[] = [
+  "Stats",
+  "Mask Shards", 
+  "Spool Fragments",
+  "Abilities",
+  "Upgrades",
+  "Tools",
+  "Crests",
+  "Lost Fleas",
+  "Relics", 
+  "Keys",
+  "Memory Lockets",
+  "Craftmetals",
+  "Mossberries",
+  "Pale Oil",
+  "Silkeaters",
+  "Bellhome",
+  "Materium",
+  "Mementos",
+  "Maps",
+  "Bellways",
+  "Ventrica Stations",
+  "Quests",
+  "Unique Spawns",
+  "Bosses",
+  "Hunter's Journal",
+];
+
+export { loadCategory, loadCategories, type CategoryName } from "./loader";
 export type { DictMapWithSaveData, NormalizedItem, NormalizedCategory, NormalizedSection, ItemPath } from "./types";

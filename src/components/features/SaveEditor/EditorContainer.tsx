@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, lazy, Suspense, type ReactElement } from "react";
 import type { SaveFileObj } from "@/hooks";
-import { Button } from "@/components/ui";
+import { Button } from "@/components/ui/Button";
 import { cn } from "@/utils";
 
 const Editor = lazy(() => import("@monaco-editor/react"));

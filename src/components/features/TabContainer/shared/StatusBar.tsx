@@ -1,4 +1,5 @@
-import { TextWithEmojiButton, PillButton } from "@/components/ui";
+import { TextWithEmojiButton } from "@/components/ui/TextWithEmojiButton";
+import { PillButton } from "@/components/ui/PillButton";
 import type { ActFilter } from "@/components/features/FilterControls";
 import { getActFilterText, toggleActInFilter } from "@/utils";
 

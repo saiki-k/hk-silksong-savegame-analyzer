@@ -2,7 +2,7 @@
 
 import { useSaveFile } from "@/hooks";
 
-import { NORMALISED_DICT_MAP, type DictMapWithSaveData } from "@/dictionary";
+import { getNormalizedDictMap, type DictMapWithSaveData } from "@/dictionary";
 
 import { computeDictMapWithSaveData } from "@/utils";
 
@@ -27,6 +27,8 @@ import { Footer } from "./features/Footer";
 export default function App() {
   const [activeTab, setActiveTab] = useState<TabId>("Stats");
   const [inShowEverythingMode, setInShowEverythingMode] = useState(false);
+  const [isLoadingDict, setIsLoadingDict] = useState(true);
+  const [normalizedDictMap, setNormalizedDictMap] = useState<Awaited<ReturnType<typeof getNormalizedDictMap>> | null>(null);
 
   const [globalFilters, setGlobalFilters] = useState({
     showSpoilers: false,
@@ -40,14 +42,26 @@ export default function App() {
   const hasUploadedSaveFile = Boolean(saveFileObj.state.fileName && saveFileObj.state.isSaveFileDecrypted);
   const hasUploadedSaveData = Boolean(hasUploadedSaveFile && !saveFileObj.state.errorMessage);
 
+  useEffect(() => {
+    const loadDictionary = async () => {
+      try {
+        const dictMap = await getNormalizedDictMap();
+        setNormalizedDictMap(dictMap);
+      } finally {
+        setIsLoadingDict(false);
+      }
+    };
+    loadDictionary();
+  }, []);
+
   const dictMapWithSaveData = useMemo((): DictMapWithSaveData | null => {
-    if (!hasUploadedSaveData && !inShowEverythingMode) {
+    if (!normalizedDictMap || (!hasUploadedSaveData && !inShowEverythingMode)) {
       return null;
     }
 
     const parsedJson = !inShowEverythingMode && (saveFileObj.state.parsedJson ?? {});
-    return computeDictMapWithSaveData(NORMALISED_DICT_MAP, parsedJson, inShowEverythingMode);
-  }, [saveFileObj.state.parsedJson, hasUploadedSaveData, inShowEverythingMode]);
+    return computeDictMapWithSaveData(normalizedDictMap, parsedJson, inShowEverythingMode);
+  }, [normalizedDictMap, saveFileObj.state.parsedJson, hasUploadedSaveData, inShowEverythingMode]);
 
   useEffect(() => {
     // Reset filters when a (new) save file is loaded
@@ -60,6 +74,20 @@ export default function App() {
     setTabFilterMap(new Map());
     setActiveTab("Stats");
   }, [saveFileObj]);
+
+  if (isLoadingDict) {
+    return (
+      <AppContainer>
+        <Header />
+
+        <Separator />
+        
+        <div className="flex items-center justify-center min-h-[400px]">
+          <div className="text-lg text-white">Loading...</div>
+        </div>
+      </AppContainer>
+    );
+  }
 
   const handleCopyPath = (path: string) => {
     navigator.clipboard.writeText(path);

@@ -3,7 +3,8 @@ import type { NormalizedSection, NormalizedItem } from "@/dictionary";
 import { getHoverBlurClassNames, cn } from "@/utils";
 
 import { CategoryHeader, SectionHeader, StatusBar, EmptyState } from "./shared";
-import { Table, MapButton } from "@/components/ui";
+import { Table } from "@/components/ui/Table";
+import { MapButton } from "@/components/ui/MapButton";
 
 export function GenericContent({
   tabLabel,

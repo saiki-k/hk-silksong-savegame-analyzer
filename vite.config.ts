@@ -13,6 +13,17 @@ export default defineConfig({
     },
   },
   build: {
-    chunkSizeWarningLimit: 600, // default is 500 kB
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          if (id.includes('/dictionary/categories/')) {
+            const categoryMatch = id.match(/\/dictionary\/categories\/([^/]+)\.ts$/);
+            if (categoryMatch) {
+              return `category-${categoryMatch[1]}`;
+            }
+          }
+        }
+      }
+    }
   },
 });

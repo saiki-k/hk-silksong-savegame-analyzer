@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Button, Modal } from "@/components/ui";
+import { Button } from "@/components/ui/Button";
+import { Modal } from "@/components/ui/Modal";
 import { cn } from "@/utils";
 
 interface MapButtonProps {

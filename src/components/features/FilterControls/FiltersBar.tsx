@@ -1,4 +1,6 @@
-import { TextWithEmojiButton, PillButton, Separator } from "@/components/ui";
+import { TextWithEmojiButton } from "@/components/ui/TextWithEmojiButton";
+import { PillButton } from "@/components/ui/PillButton";
+import { Separator } from "@/components/ui/Separator";
 import { cn, toggleActInFilter } from "@/utils";
 import type { ActFilter } from "./index";
 

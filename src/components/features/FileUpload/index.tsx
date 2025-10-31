@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
 import type { ChangeEvent } from "react";
 import type { SaveFileObj } from "@/hooks";
-import { PillButton, Modal } from "@/components/ui";
+import { PillButton } from "@/components/ui/PillButton";
+import { Modal } from "@/components/ui/Modal";
 import { SaveEditor } from "@/components/features/SaveEditor";
 
 export function FileUpload({ saveFileObj }: { saveFileObj: SaveFileObj }) {

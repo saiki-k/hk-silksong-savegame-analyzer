@@ -204,7 +204,7 @@ export function TabContainer(props: TabContainerProps) {
   const getTabContent = (activeTab: TabId) => {
     switch (activeTab) {
       case "Stats":
-        return <StatsContent {...tabContentProps} tabLabel="At a glance..." />;
+        return <StatsContent {...tabContentProps} tabLabel="Stats" />;
       case "Hunter's Journal":
         return <HuntersJournalContent {...tabContentProps} />;
       case "Bosses":
