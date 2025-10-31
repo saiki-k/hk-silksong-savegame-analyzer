@@ -28,7 +28,9 @@ Comprehensively tracks everything that contributes to 100% completion in Hollow 
   - Silk Hearts
   - Cloak Abilities *(these don't contribute to 100% completion)*
   - Ancestral Arts
-  - Other (Unique) Abilities: <details><summary>Spoiler</summary>Sylphsong</details><details><summary>Spoiler</summary>Everbloom</details>
+  - Other (Unique) Abilities
+    - Sylphsong
+    - Everbloom
 - **Upgrades**
   - Needle Upgrades
   - Tool Pouch Upgrades
@@ -45,7 +47,9 @@ Comprehensively tracks everything that contributes to 100% completion in Hollow 
 - **Mossberries**
 - **Pale Oil**
 - **Silkeaters**
-- **Devices**: <details><summary>Spoiler</summary>Materium</details><details><summary>Spoiler</summary>Farsight</details>
+- **Bellhome**:
+  - Furnishings & Decor
+  - Devices & Fixtures
 - **Materium**
 - **Mementos**
 
@@ -56,7 +60,11 @@ Comprehensively tracks everything that contributes to 100% completion in Hollow 
 - **Quests**
 
 ### 💪 Bestiary
-- **Unique Spawns**: <details><summary>Spoiler</summary>Void Masses</details><details><summary>Spoiler</summary>Rhinogrunds</details><details><summary>Spoiler</summary>Covetous Pilgrims</details><details><summary>Spoiler</summary>Shardillards</details>
+- **Unique Spawns**
+  - Rhinogrunds
+  - Covetous Pilgrims
+  - Shardillards
+  - Void Masses
 - **Bosses**
 - **Hunter's Journal**
 
