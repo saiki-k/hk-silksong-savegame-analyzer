@@ -43,14 +43,14 @@ export const uniqueSpawns: TrackableCategory = {
           whichAct: 1,
           completionDetails: "Shellwood: In the room with the grave.",
           parsingInfo: { type: "sceneDataBool", internalId: ["Shellgrave", "Rosary Pilgrim"] },
-          mapLink: "https://hollowknight.wiki/w/Covetous_Pilgrim",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478300",
         },
         {
           name: "Covetous Pilgrim #2",
           whichAct: 2,
           completionDetails: "Bilewater: Found in the room where Shakra was, after defeating Groal the Great.",
           parsingInfo: { type: "sceneDataBool", internalId: ["Shadow_23", "Rosary Pilgrim"] },
-          mapLink: "https://hollowknight.wiki/w/Covetous_Pilgrim",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480194",
         },
         {
           name: "Covetous Pilgrim #3",
@@ -58,7 +58,7 @@ export const uniqueSpawns: TrackableCategory = {
           completionDetails:
             "Moss Grotto (Bonegrave): Found outside the Chapel of the Wanderer during the first visit in ACT 3",
           parsingInfo: { type: "sceneDataBool", internalId: ["Bonegrave", "Rosary Pilgrim"] },
-          mapLink: "https://hollowknight.wiki/w/Covetous_Pilgrim",
+          mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480387",
         },
       ],
     },
