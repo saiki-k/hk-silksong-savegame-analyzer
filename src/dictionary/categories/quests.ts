@@ -448,7 +448,10 @@ export const quests: TrackableCategory = {
           name: "Broodfeast / Runtfeast (ACT 3)",
           whichAct: 2,
           completionDetails: "Putrified Ducts: Wish from Huntress / Runt (ACT 3).",
-          parsingInfo: [{ type: "quest", internalId: "Huntress Quest" }, { type: "quest", internalId: "Huntress Quest Runt" }],
+          parsingInfo: [
+            { type: "quest", internalId: "Huntress Quest" },
+            { type: "quest", internalId: "Huntress Quest Runt" },
+          ],
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478865",
         },
       ],
