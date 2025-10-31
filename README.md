@@ -49,7 +49,7 @@ Comprehensively tracks everything that contributes to 100% completion in Hollow 
 - **Mossberries**
 - **Pale Oil**
 - **Silkeaters**
-- **Bellhome**:
+- **Bellhome**
   - Furnishings & Decor
   - Devices & Fixtures
 - **Materium**
