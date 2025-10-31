@@ -45,7 +45,6 @@ Comprehensively tracks everything that contributes to 100% completion in Hollow 
 - **Mossberries**
 - **Pale Oil**
 - **Silkeaters**
-- **Void Masses**
 - **Devices**: <details><summary>Spoiler</summary>Materium</details><details><summary>Spoiler</summary>Farsight</details>
 - **Materium**
 - **Mementos**
@@ -57,6 +56,7 @@ Comprehensively tracks everything that contributes to 100% completion in Hollow 
 - **Quests**
 
 ### 💪 Bestiary
+- **Unique Spawns**: <details><summary>Spoiler</summary>Void Masses</details><details><summary>Spoiler</summary>Rhinogrunds</details><details><summary>Spoiler</summary>Covetous Pilgrims</details><details><summary>Spoiler</summary>Shardillards</details>
 - **Bosses**
 - **Hunter's Journal**
 

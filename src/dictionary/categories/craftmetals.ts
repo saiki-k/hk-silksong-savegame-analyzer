@@ -20,7 +20,7 @@ export const craftmetals: TrackableCategory = {
           name: "Craftmetal #2",
           whichAct: 1,
           completionDetails: "The Marrow: At the end of a booby-trapped tunnel in a secret room.",
-          parsingInfo: { type: "sceneData", internalId: ["Bone_07", "Collectable Item Pickup - Tool Metal"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Bone_07", "Collectable Item Pickup - Tool Metal"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477894",
         },
         {
@@ -28,14 +28,14 @@ export const craftmetals: TrackableCategory = {
           whichAct: 1,
           completionDetails:
             "Deep Docks: Inside a chest behind the blockade. Whack it, or get one of the nearby enemies' explosive projectiles to clear it.",
-          parsingInfo: { type: "sceneData", internalId: ["Dock_03", "Collectable Item Pickup"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Dock_03", "Collectable Item Pickup"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=477937",
         },
         {
           name: "Craftmetal #4",
           whichAct: 1,
           completionDetails: "Blasted Steps: At the end of a passage filled with worms and falling rocks.",
-          parsingInfo: { type: "sceneData", internalId: ["Coral_32", "Collectable Item Pickup - Tool Metal"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Coral_32", "Collectable Item Pickup - Tool Metal"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478541",
         },
         {
@@ -43,7 +43,7 @@ export const craftmetals: TrackableCategory = {
           whichAct: 2,
           completionDetails:
             "Underworks: At the end of a lava-filled tunnel. Taking it will trigger an Undercrank ambush.",
-          parsingInfo: { type: "sceneData", internalId: ["Under_19b", "Collectable Item Pickup - Tool Metal"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Under_19b", "Collectable Item Pickup - Tool Metal"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478711",
         },
         {
@@ -51,7 +51,7 @@ export const craftmetals: TrackableCategory = {
           whichAct: 2,
           prereqs: ["Faydown Cloak"],
           completionDetails: "Putrified Ducts: Far-right of Pale Lake, in a crevice above the water.",
-          parsingInfo: { type: "sceneData", internalId: ["Aqueduct_05", "Collectable Item Pickup - Tool Metal"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Aqueduct_05", "Collectable Item Pickup - Tool Metal"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479139",
         },
         {
@@ -59,7 +59,7 @@ export const craftmetals: TrackableCategory = {
           whichAct: 2,
           completionDetails:
             "Wisp Thicket: At the end of a hidden path, found in the top-left part of the area filled with (fire) Wisp spawners.",
-          parsingInfo: { type: "sceneData", internalId: ["Wisp_05", "Collectable Item Pickup - Tool Metal"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Wisp_05", "Collectable Item Pickup - Tool Metal"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479157",
         },
         {

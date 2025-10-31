@@ -10,7 +10,7 @@ export const paleOil: TrackableCategory = {
           name: "Pale Oil #1",
           whichAct: 2,
           completionDetails: "Choral Chambers: Complete a box puzzle in Whispering Vaults, to reach a room to the east containing the Pale Oil.",
-          parsingInfo: { type: "sceneData", internalId: ["Library_03", "Collectable Item Pickup"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Library_03", "Collectable Item Pickup"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478668",
         },
         {

@@ -16,7 +16,6 @@ import { mossberries } from "./categories/mossberries";
 import { paleOil } from "./categories/paleOil";
 import { keys } from "./categories/keys";
 import { silkeaters } from "./categories/silkeaters";
-import { voidMasses } from "./categories/voidMasses";
 import { devices } from "./categories/devices";
 import { materium } from "./categories/materium";
 import { mementos } from "./categories/mementos";
@@ -24,6 +23,7 @@ import { maps } from "./categories/maps";
 import { bellways } from "./categories/bellways";
 import { ventricaStations } from "./categories/ventricaStations";
 import { quests } from "./categories/quests";
+import { uniqueSpawns } from "./categories/uniqueSpawns";
 import { bosses } from "./categories/bosses";
 import { huntersJournal } from "./categories/huntersJournal";
 
@@ -43,7 +43,6 @@ export const ALL_TRACKED_CATEGORIES = [
   paleOil,
   keys,
   silkeaters,
-  voidMasses,
   devices,
   materium,
   mementos,
@@ -51,6 +50,7 @@ export const ALL_TRACKED_CATEGORIES = [
   bellways,
   ventricaStations,
   quests,
+  uniqueSpawns,
   bosses,
   huntersJournal,
 ] as TrackableCategory[];

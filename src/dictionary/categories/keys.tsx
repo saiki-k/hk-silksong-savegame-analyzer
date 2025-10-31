@@ -38,7 +38,7 @@ export const keys: TrackableCategory = {
           name: "Simple Key #4",
           whichAct: 2,
           completionDetails: "Sands of Karak (Far-right): Held by a corpse sitting on the right-most bench.",
-          parsingInfo: { type: "sceneData", internalId: ["Bellshrine_Coral", "Collectable Item Pickup"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Bellshrine_Coral", "Collectable Item Pickup"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479215",
         },
       ],

@@ -34,13 +34,13 @@ export const TAB_GROUPS: Record<TabGroup, TabConfig[]> = {
     createTab("Mossberries"),
     createTab("Pale Oil"),
     createTab("Silkeaters"),
-    createTab("Void Masses"),
     createTab("Devices"),
     createTab("Materium"),
     createTab("Mementos"),
+    // createTab("Rosaries & Shards"), // 🚧
   ],
   exploration: [createTab("Maps"), createTab("Bellways"), createTab("Ventrica Stations"), createTab("Quests")],
-  bestiary: [createTab("Bosses"), createTab("Hunter's Journal")],
+  bestiary: [createTab("Unique Spawns"), createTab("Bosses"), createTab("Hunter's Journal")],
 };
 
 export const GROUP_LABELS: Record<TabGroup, string> = {

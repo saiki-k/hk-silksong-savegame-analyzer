@@ -65,7 +65,7 @@ export const upgrades: TrackableCategory = {
             "The Marrow: Complete Loddie's first pin challenge by hitting the target 15 times, or pick it up from this location in ACT 3.",
           parsingInfo: [
             { type: "flagMin", internalId: ["pinGalleriesCompleted", 1] },
-            { type: "sceneData", internalId: ["Bone_12", "Ladybug Craft Pickup"] },
+            { type: "sceneDataBool", internalId: ["Bone_12", "Ladybug Craft Pickup"] },
           ],
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=478252",
         },
@@ -82,7 +82,7 @@ export const upgrades: TrackableCategory = {
           whichAct: 2,
           completionPercent: 1,
           completionDetails: "Putrified Ducts (Fleatopia): Find 20 Lost Fleas in Pharloom.",
-          parsingInfo: { type: "sceneData", internalId: ["Aqueduct_05", "Caravan Troupe Leader Fleatopia NPC"] },
+          parsingInfo: { type: "sceneDataBool", internalId: ["Aqueduct_05", "Caravan Troupe Leader Fleatopia NPC"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479436",
         },
       ],

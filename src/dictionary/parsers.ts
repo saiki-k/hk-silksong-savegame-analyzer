@@ -79,8 +79,6 @@ export function isItemUnlockedInPlayerSave(
         if (foundEntry.Record.Kills >= 0) {
           unlocked = true;
         }
-      } else {
-        console.log(`Journal entry not found: ${entryName}`);
       }
       return { unlocked, returnValue: killsAchieved };
     },
@@ -114,11 +112,18 @@ export function isItemUnlockedInPlayerSave(
       return { unlocked: questEntry?.Data?.IsCompleted ?? false };
     },
 
-    sceneData: ([sceneName, id, inverse = false]: [string, string, boolean?]) => {
+    sceneDataBool: ([sceneName, id]: [string, string]) => {
       const sceneData = (saveData as any).sceneData || {};
       const allEntries = sceneData.persistentBools?.serializedList || [];
       const foundEntry = allEntries.find((x: any) => x.SceneName === sceneName && x.ID === id);
-      return { unlocked: inverse ? foundEntry?.Value === false : foundEntry?.Value === true };
+      return { unlocked: Boolean(foundEntry?.Value) };
+    },
+
+    sceneDataInt: ([sceneName, id]: [string, string]) => {
+      const sceneData = (saveData as any).sceneData || {};
+      const allEntries = sceneData.persistentInts?.serializedList || [];
+      const foundEntry = allEntries.find((x: any) => x.SceneName === sceneName && x.ID === id);
+      return { unlocked: Boolean(foundEntry?.Value) };
     },
 
     sceneVisited: (sceneName: string) => {
