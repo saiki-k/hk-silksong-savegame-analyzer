@@ -13,7 +13,7 @@ export const uniqueSpawns: TrackableCategory = {
           name: "Rhinogrund #1",
           whichAct: 1,
           completionDetails:
-            "Far Fields (Pilgrim's Rest): Found towards east, trapped on the opposite side of a gate, repeatedly ramming it to try and escape. To access it, a platforming challenge via a hidden path in the lower-right corner of the region's Bellway station must be completed.",
+            "Far Fields (Pilgrim's Rest): Missable. Found towards east, trapped on the opposite side of a gate, repeatedly ramming it to try and escape. To access it, a platforming challenge via a hidden path in the lower-right corner of the region's Bellway station must be completed.",
           parsingInfo: { type: "flag", internalId: "churchRhinoKilled" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480179",
         },
