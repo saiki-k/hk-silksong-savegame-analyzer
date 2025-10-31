@@ -37,7 +37,13 @@ export const TAB_GROUPS: Record<TabGroup, TabConfig[]> = {
     createTab("Bellhome"),
     createTab("Materium"),
     createTab("Mementos"),
-    // createTab("Caches"), // 🚧 This is where we will track Rosary Stashes & Shell Shard Fossils
+    /*
+     ** The intent here is to eventually track the following sections:
+     ** Rosary Stashes
+     ** Shell Shard Fossils
+     ** Breakable Walls
+     */
+    // createTab("Caches & Secrets"), // 🚧
   ],
   exploration: [createTab("Maps"), createTab("Bellways"), createTab("Ventrica Stations"), createTab("Quests")],
   bestiary: [createTab("Unique Spawns"), createTab("Bosses"), createTab("Hunter's Journal")],

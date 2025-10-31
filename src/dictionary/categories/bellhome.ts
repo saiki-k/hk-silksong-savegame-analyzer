@@ -53,7 +53,8 @@ export const bellhome: TrackableCategory = {
     },
     {
       name: "Devices & Fixtures",
-      description: "Functional devices and fixtures for the Bellhome, that provide (passive) benefits, and information about the world of Pharloom.",
+      description:
+        "Functional devices and fixtures for the Bellhome, that provide (passive) benefits, and information about the world of Pharloom.",
       items: [
         {
           name: "Materium",
@@ -67,7 +68,7 @@ export const bellhome: TrackableCategory = {
           name: "Crawbell",
           whichAct: 3,
           completionDetails:
-            "Greymoor: Found right after collecting the \"Craw Memento\". It passively generates rosaries and shell shards over time.",
+            'Greymoor: Found right after collecting the "Craw Memento". It passively generates rosaries and shell shards over time.',
           parsingInfo: { type: "flag", internalId: "CrawbellInstalled" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479580",
         },

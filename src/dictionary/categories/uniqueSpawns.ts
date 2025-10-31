@@ -6,12 +6,14 @@ export const uniqueSpawns: TrackableCategory = {
   sections: [
     {
       name: "Rhinogrunds",
-      description: "Long-horned beast of Pharloom's lowlands. It is only possible to encounter three Rhinogrunds per save.",
+      description:
+        "Long-horned beast of Pharloom's lowlands. It is only possible to encounter three Rhinogrunds per save.",
       items: [
         {
           name: "Rhinogrund #1",
           whichAct: 1,
-          completionDetails: "Far Fields (Pilgrim's Rest): Found towards east, trapped on the opposite side of a gate, repeatedly ramming it to try and escape. To access it, a platforming challenge via a hidden path in the lower-right corner of the region's Bellway station must be completed.",
+          completionDetails:
+            "Far Fields (Pilgrim's Rest): Found towards east, trapped on the opposite side of a gate, repeatedly ramming it to try and escape. To access it, a platforming challenge via a hidden path in the lower-right corner of the region's Bellway station must be completed.",
           parsingInfo: { type: "flag", internalId: "churchRhinoKilled" },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480179",
         },
@@ -33,7 +35,8 @@ export const uniqueSpawns: TrackableCategory = {
     },
     {
       name: "Covetous Pilgrims",
-      description: "Strong bugs replete with rosaries. It is only possible to encounter three Covetous Pilgrims per save.",
+      description:
+        "Strong bugs replete with rosaries. It is only possible to encounter three Covetous Pilgrims per save.",
       items: [
         {
           name: "Covetous Pilgrim #1",
@@ -52,7 +55,8 @@ export const uniqueSpawns: TrackableCategory = {
         {
           name: "Covetous Pilgrim #3",
           whichAct: 3,
-          completionDetails: "Moss Grotto (Bonegrave): Found outside the Chapel of the Wanderer during the first visit in ACT 3",
+          completionDetails:
+            "Moss Grotto (Bonegrave): Found outside the Chapel of the Wanderer during the first visit in ACT 3",
           parsingInfo: { type: "sceneDataBool", internalId: ["Bonegrave", "Rosary Pilgrim"] },
           mapLink: "https://hollowknight.wiki/w/Covetous_Pilgrim",
         },
@@ -65,7 +69,8 @@ export const uniqueSpawns: TrackableCategory = {
         {
           name: "Shardillard #1",
           whichAct: 1,
-          completionDetails: "Deep Docks: Found hanging under a floating platform in the long hall beneath the \"Swift Step\" room.",
+          completionDetails:
+            'Deep Docks: Found hanging under a floating platform in the long hall beneath the "Swift Step" room.',
           parsingInfo: { type: "sceneDataInt", internalId: ["Bone_East_03", "Shell Fossil Mimic"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480168",
         },
@@ -79,7 +84,8 @@ export const uniqueSpawns: TrackableCategory = {
         {
           name: "Shardillard #3",
           whichAct: 1,
-          completionDetails: "The Marrow: Found in the long room to the right of the Bellway bench, to the left of a magnetite platform.",
+          completionDetails:
+            "The Marrow: Found in the long room to the right of the Bellway bench, to the left of a magnetite platform.",
           parsingInfo: { type: "sceneDataInt", internalId: ["Bone_14", "Shell Fossil Mimic"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480160",
         },
@@ -93,14 +99,16 @@ export const uniqueSpawns: TrackableCategory = {
         {
           name: "Shardillard #5",
           whichAct: 2,
-          completionDetails: "Sands of Karak: Found near the eastmost bench, go left, drop down and look for a suspicious-looking Shell Shard cache.",
+          completionDetails:
+            "Sands of Karak: Found near the eastmost bench, go left, drop down and look for a suspicious-looking Shell Shard cache.",
           parsingInfo: { type: "sceneDataInt", internalId: ["Coral_38", "Shell Fossil Mimic"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=479213",
         },
         {
           name: "Shardillard #6",
           whichAct: 2,
-          completionDetails: "The Marrow: Found at the highest point, attached to the top left wall. Only appears after beating Lace in The Cradle.",
+          completionDetails:
+            "The Marrow: Found at the highest point, attached to the top left wall. Only appears after beating Lace in The Cradle.",
           parsingInfo: { type: "sceneDataInt", internalId: ["Bone_06", "Shell Fossil Mimic AppearVariant"] },
           mapLink: "https://mapgenie.io/hollow-knight-silksong/maps/pharloom?locationIds=480162",
         },
